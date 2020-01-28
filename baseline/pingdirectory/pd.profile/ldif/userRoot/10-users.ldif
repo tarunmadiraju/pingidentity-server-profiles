@@ -32,11 +32,11 @@ objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 objectClass: pf-connected-identities
-sn: Tancordo
-cn: Sidonia Tancordo
+sn: Madiraju
+cn: Tarun Madiraju
 givenName: Sidonia
 uid: user.2
-mail: user.2@example.com
+mail: tarunmadiraju@pingidentity.com
 userPassword: 2FederateM0re
 pf-connected-identity: auth-source=pf-local-identity:user-id=user.2
 

@@ -1,0 +1,26 @@
+version: "3.1"
+
+services:
+  pingdirectory:
+    image: pingidentity/pingdirectory:latest
+    environment:
+      - SERVER_PROFILE_URL=https://github.com/tarunmadiraju/pingidentity-server-profiles.git
+      - SERVER_PROFILE_PATH=baseline/pingdirectory
+      - PING_IDENTITY_ACCEPT_EULA=YES
+      - PING_IDENTITY_DEVOPS_USER=tarunmadiraju@pingidentity.com
+      - PING_IDENTITY_DEVOPS_KEY=3a6cdf55-89d7-4cd2-9ece-c8c0131957b1
+    ports:
+      - 1637:636
+      - 1444:443
+    networks:
+      - pingnet
+                    
+  pingdataconsole:
+    image: pingidentity/pingdataconsole:latest
+    ports:
+      - 8444:8443
+    networks:
+      - pingnet
+
+networks:
+    pingnet:
