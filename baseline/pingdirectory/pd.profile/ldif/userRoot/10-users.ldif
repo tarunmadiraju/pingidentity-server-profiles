@@ -34,7 +34,7 @@ objectClass: inetOrgPerson
 objectClass: pf-connected-identities
 sn: Madiraju
 cn: Tarun Madiraju
-givenName: Sidonia
+givenName: Tarun
 uid: user.2
 mail: tarunmadiraju@pingidentity.com
 userPassword: 2FederateM0re
