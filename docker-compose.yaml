@@ -10,15 +10,15 @@ services:
       - PING_IDENTITY_DEVOPS_USER=tarunmadiraju@pingidentity.com
       - PING_IDENTITY_DEVOPS_KEY=3a6cdf55-89d7-4cd2-9ece-c8c0131957b1
     ports:
-      - 1637:636
-      - 1444:443
+      - 1636:636
+      - 1443:443
     networks:
       - pingnet
                     
   pingdataconsole:
     image: pingidentity/pingdataconsole:latest
     ports:
-      - 8444:8443
+      - 8443:8443
     networks:
       - pingnet
 
