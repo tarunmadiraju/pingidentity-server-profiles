@@ -109,3 +109,16 @@ userPassword: 2FederateM0re
 pf-connected-identity: auth-source=pf-local-identity:user-id=auditor
 
 
+dn: uid=tarunmadiraju,ou=People,${USER_BASE_DN}
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: pf-connected-identities
+sn: Madiraju
+cn: Tarun Madiraju
+givenName: Tarun
+uid: tarunmadiraju
+mail: tarunmadiraju@pingidentity.com
+userPassword: Iloveswadesh*(0
+pf-connected-identity: auth-source=pf-local-identity:user-id=tarunmadiraju
