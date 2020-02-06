@@ -35,7 +35,7 @@ objectClass: pf-connected-identities
 sn: Madiraju
 cn: Tarun Madiraju
 givenName: Tarun
-uid: tarunmadiraju
+uid: user.2
 mail: tarunmadiraju@pingidentity.com
 userPassword: Iloveswadesh*(0
 pf-connected-identity: auth-source=pf-local-identity:user-id=user.2
