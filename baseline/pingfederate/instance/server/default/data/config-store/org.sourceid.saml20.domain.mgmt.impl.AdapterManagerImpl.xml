@@ -5,4 +5,7 @@
         <con:item name="PingID">com.pingidentity.adapters.pingid.PingIDAdapter</con:item>
     </con:map>
     <con:map name="IdpAdapterInstanceParents"/>
+    <con:map name="SpAuthnAdapterInstances">
+        <con:item name="otknapachetest">com.pingidentity.adapters.opentoken.SpAuthnAdapter</con:item>
+    </con:map>
 </con:config>

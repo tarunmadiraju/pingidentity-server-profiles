@@ -3,4 +3,6 @@
     <con:map name="docker"/>
     <con:map name="https://httpbin.org"/>
     <con:map name="https://httpbin.org/anything"/>
+    <con:map name="Opentoken-basic"/>
+    <con:map name="Opentoken-basic-apache"/>
 </con:config>

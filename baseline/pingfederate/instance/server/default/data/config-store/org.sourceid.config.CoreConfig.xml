@@ -89,7 +89,7 @@
     <item name="TrustHSMKeystoreType2">default</item>
     <!--General keystore information: name and password-->
     <item name="GeneralKeystoreName">ping-general.jks</item>
-    <item name="GeneralKeystorePassword"/>
+    <item name="GeneralKeystorePassword">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..DVIDREdpcZUqKFKmcSsMRw.Nt0V_ODTSbdexgKr4FyiNdW0uXIeWW2jY5xxIgwxo9g.BtrBpmEv0EfUV1yhUT0scw</item>
     <!--Do not modify-->
     <item name="GeneralKeystoreType2">default</item>
     <!--Map of General keystore aliases to passwords; the system uses this map
