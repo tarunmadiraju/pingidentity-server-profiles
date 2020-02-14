@@ -6,12 +6,9 @@
     <c:item name="VerificationKeySetRefreshIntervalMins">60</c:item>
     <c:item name="AllowedClockSkewSecs">300</c:item>
     <c:item name="EnableAdminConsoleSso">false</c:item>
-    
     <c:item name="ClientAuthnKeyPairLifetimeDays">1095</c:item>
     <c:item name="ClientAuthnKeyPairActivationDelaySecs">900</c:item>
-    
     <c:item name="ValidateSsoRedirectUri">true</c:item>
-    
     <c:item name="ClientAuthnTokenLifetimeMins">10</c:item>
     <c:item name="EnableMonitoring">true</c:item>
     <c:item name="EndpointMetadataCacheExpirySecs">3600</c:item>
@@ -24,6 +21,5 @@
     <c:list name="CryptoManagerRoles">
         <c:ListItem>GLOBAL_ADMIN</c:ListItem>
     </c:list>
-    <c:list name="AuditorRoles">
-    </c:list>
+    <c:list name="AuditorRoles"></c:list>
 </c:config>
