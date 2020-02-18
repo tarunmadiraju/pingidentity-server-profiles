@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:AccessTokenManagerConfiguration inheritAccessControlSettings="false" inheritSelectionSettings="false" inheritSessionValidationSettings="false" restrictClients="false" checkSessionRevocationStatus="false" checkValidAuthnSession="false" updateAuthnSessionActivity="false" defaultSubjectAttribute="" isInheritExtendedContractAttributes="false" name="JSON Web Tokens" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+<urn:AccessTokenManagerConfiguration inheritAccessControlSettings="false" inheritSelectionSettings="false" inheritSessionValidationSettings="false" restrictClients="false" checkSessionRevocationStatus="false" checkValidAuthnSession="false" updateAuthnSessionActivity="false" defaultSubjectAttribute="OrgName" isInheritExtendedContractAttributes="false" name="JSON Web Tokens" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
     <urn:Fields>
         <urn:Field name="Token Lifetime">120</urn:Field>
         <urn:Field name="JWS Algorithm">RS256</urn:Field>
@@ -26,6 +26,7 @@
         <urn:Field name="JWKS Endpoint Cache Duration">720</urn:Field>
         <urn:Field name="Publish Key ID X.509 URL">false</urn:Field>
         <urn:Field name="Publish Thumbprint X.509 URL">false</urn:Field>
+        <urn:Field name="Expand Scope Groups">false</urn:Field>
     </urn:Fields>
     <urn:AdvancedFields>
         <urn:Field name="Include Key ID Header Parameter">true</urn:Field>
@@ -44,18 +45,21 @@
         <urn:Field name="JWKS Endpoint Cache Duration">720</urn:Field>
         <urn:Field name="Publish Key ID X.509 URL">false</urn:Field>
         <urn:Field name="Publish Thumbprint X.509 URL">false</urn:Field>
+        <urn:Field name="Expand Scope Groups">false</urn:Field>
     </urn:AdvancedFields>
     <urn:Tables>
         <urn:Table name="Symmetric Keys"/>
         <urn:Table name="Certificates">
-            <urn:Row>
+            <urn:Row defaultRow="false">
                 <urn:Field name="Key ID">k1</urn:Field>
                 <urn:Field name="Certificate">v8m5h9qrw85dgmndgv47k76xz</urn:Field>
             </urn:Row>
         </urn:Table>
     </urn:Tables>
     <urn:ExtendedContractAttributes>
+        <urn:AttributeName>First_name</urn:AttributeName>
+        <urn:AttributeName>mail</urn:AttributeName>
         <urn:AttributeName>Username</urn:AttributeName>
-        <urn:AttributeName>OrgName</urn:AttributeName>
+        <urn:AttributeName>Last_name</urn:AttributeName>
     </urn:ExtendedContractAttributes>
 </urn:AccessTokenManagerConfiguration>
