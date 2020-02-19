@@ -54,7 +54,12 @@
             </urn1:AttributeSource>
             <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         </urn:UserInfoMapping>
-        <urn:scopeAttributesMap/>
+        <urn:scopeAttributesMap>
+            <urn:item>
+                <urn:key>openid</urn:key>
+                <urn:value>Last_name email given_name</urn:value>
+            </urn:item>
+        </urn:scopeAttributesMap>
         <urn:attributeContractInclusionMap>
             <urn:item>
                 <urn:key>Last_name</urn:key>
