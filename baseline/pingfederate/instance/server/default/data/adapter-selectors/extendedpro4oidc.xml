@@ -6,6 +6,8 @@
     <urn:AdvancedFields/>
     <urn:Tables/>
     <urn:ExtendedContractAttributes>
+        <urn:AttributeName>nomfa</urn:AttributeName>
+        <urn:AttributeName>mfa</urn:AttributeName>
         <urn:AttributeName>good</urn:AttributeName>
     </urn:ExtendedContractAttributes>
 </urn:PluginConfiguration>
