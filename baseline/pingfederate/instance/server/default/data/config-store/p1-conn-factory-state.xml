@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:config xmlns:con="http://www.sourceid.org/2004/05/config"></con:config>
+<con:config xmlns:con="http://www.sourceid.org/2004/05/config">
+    <con:item name="SpConnectionId">iPaTYRBMZz39KUg0w3Lh3.HHIk8</con:item>
+</con:config>

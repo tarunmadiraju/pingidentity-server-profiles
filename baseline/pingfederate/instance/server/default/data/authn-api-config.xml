@@ -5,7 +5,6 @@
             <corsUrl>https://identologist.glitch.me*</corsUrl>
         </application>
         <application description="" id="CDv1OWGz8BAarIP3EIlJGlQ5F" name="API EXPLORER" url="https://identologist.identologist.ping-eng.com:9031/pf-ws/authn/explorer"/>
-        <application description="" id="sNxfb8BgmEmyWchCn3I55fgsp" name="Cprice" url="https://glitch.com/~cold-handstand"/>
     </apiApplications>
     <apiSettings apiEnabled="true" defaultApplicationId="iybzK2ELajtphr8f0JxoQygRi" enableApiDescriptions="true"/>
 </authnApiConfig>

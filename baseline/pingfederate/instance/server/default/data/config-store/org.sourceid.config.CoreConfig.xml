@@ -12,6 +12,7 @@
      password to that particular key.-->
     <map name="DsigPrivateKeyPasswords">
         <item name="v8m5h9qrw85dgmndgv47k76xz">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiI5LjIuMC4xMCJ9..lnQoasV2J29-6KtVWlIWLQ.5of9PpT1aJtyrjWAX_LTz3SfghNxIFBLmU8_8tne0rU.FL732jjTyz1sTcAu9Msi2A</item>
+        <item name="cm46uiylxlky0yvsem1ef00hv">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..xWEe8_XFz5ZYQXJ0LgpkUQ.QY5rrieGMyPY9Qg50XXz7_vZHSWhg7wCj1k1NnliobM.B5qiwpBEz_OayCCA4cZpsw</item>
     </map>
     <!--DSIG HSM Keystore information: name and password-->
     <item name="DsigHSMKeystoreName">ping-dsig.hsmks</item>
@@ -97,7 +98,9 @@
      authentication, etc. For each item, the name of the item maps
      to the alias of a private key, and the value of the item is the
      password to that particular key.-->
-    <map name="GeneralPrivateKeyPasswords"/>
+    <map name="GeneralPrivateKeyPasswords">
+        <item name="1igpsnffphtgzzypz4s2wba2r">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..i5scS8gGGEXromv0wElsrg.py201lGodGNM07tjL74z60c7PxWXdtXE6BMVnz4GM5E.KLjTrbESupypPuYKqutHbQ</item>
+    </map>
     <!--General HSM keystore information: name and password-->
     <item name="GeneralHSMKeystoreName">ping-general.hsmks</item>
     <item name="GeneralHSMKeystorePassword"/>
