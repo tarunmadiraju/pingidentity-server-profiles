@@ -40,5 +40,25 @@ services:
     networks:
       - pingnet
 
+  pingaccess:
+    image: pingidentity/pingaccess:latest
+    #command: wait-for pingfederate:9031 -t 820 -- entrypoint.sh start-server
+    command: entrypoint.sh start-server
+    environment:
+      - SERVER_PROFILE_URL=https://github.com/tarunmadiraju/pingidentity-server-profiles.git
+      - SERVER_PROFILE_PATH=baseline/pingaccess
+      - OPERATIONAL_MODE=STANDALONE
+      - PA_CONSOLE_HOST=pingaccess
+      - INITIAL_ADMIN_PASSWORD=2FederateM0re
+      - PING_IDENTITY_ACCEPT_EULA=YES
+      - PING_IDENTITY_DEVOPS_USER=tarunmadiraju@pingidentity.com
+      - PING_IDENTITY_DEVOPS_KEY=3a6cdf55-89d7-4cd2-9ece-c8c0131957b1
+
+    ports:
+      - 443:3000
+      - 9000:9000
+    networks:
+      - pingnet
+
 networks:
     pingnet:
