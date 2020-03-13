@@ -3,5 +3,6 @@
     <con:map name="adapter-selectors">
         <con:item name="RequestParam">com.pingidentity.pf.selectors.http.HttpRequestParamAuthnSelector</con:item>
         <con:item name="extendedpro4oidc">com.pingidentity.pf.selectors.ExtendedPropertyAuthnSelector</con:item>
+        <con:item name="PA">com.pingidentity.pf.selectors.saml.SamlAuthnContextAdapterSelector</con:item>
     </con:map>
 </con:config>

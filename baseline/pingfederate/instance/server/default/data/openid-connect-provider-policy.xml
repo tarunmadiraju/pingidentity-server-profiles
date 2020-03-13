@@ -35,9 +35,23 @@
     <urn:ProviderPolicyGroup policyId="pingaccess" idTokenLife="5" includeSriInIdToken="true" includeUserInfoInIdToken="true" includeSHashInIdToken="false" returnIdTokenOnRefreshGrant="false" policyName="pingaccess" accessTokenManagerId="jwt">
         <urn:UserInfoMapping>
             <urn1:AttributeMap Name="sub" Type="Token" Value="Username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="First_name" Type="LDAP" AttributeSourceId="PD" Value="givenName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="mail" Type="LDAP" AttributeSourceId="PD" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="Last_name" Type="LDAP" AttributeSourceId="PD" Value="sn" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeSource Id="PD" Description="PD" Type="LDAP" DataSourceId="LDAP-D803C87FAB2ADFB4B0A947B64BA6F0C6093A5CA3" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+                <urn1:Parameter Name="filter" Value="uid=${Username}"/>
+                <urn1:Parameter Name="search_base" Value="dc=example,dc=com"/>
+                <urn1:Parameter Name="search_scope" Value="SUBTREE_SCOPE"/>
+                <urn1:Parameter Name="memberof_nested_group" Value="false"/>
+            </urn1:AttributeSource>
             <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         </urn:UserInfoMapping>
-        <urn:scopeAttributesMap/>
+        <urn:scopeAttributesMap>
+            <urn:item>
+                <urn:key>openid</urn:key>
+                <urn:value>First_name Last_name mail</urn:value>
+            </urn:item>
+        </urn:scopeAttributesMap>
         <urn:attributeContractInclusionMap/>
     </urn:ProviderPolicyGroup>
     <urn:ProviderPolicyGroup policyId="OIDC+basic" idTokenLife="5" includeSriInIdToken="false" includeUserInfoInIdToken="false" includeSHashInIdToken="true" returnIdTokenOnRefreshGrant="false" policyName="OIDC+basic" accessTokenManagerId="jwt">
