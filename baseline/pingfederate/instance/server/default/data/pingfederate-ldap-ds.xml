@@ -5,10 +5,29 @@
         <ldap:principal>cn=pingfederate</ldap:principal>
         <ldap:use-ssl>false</ldap:use-ssl>
         <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
-        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiI5LjIuMS4xIn0..ZLVmgXJVySez9CFG-XpFjA.rSvFI6kQuVjdUVpRYZQfyg.YIs9McL1ZipQCkIuIWvnwQ</ldap:credentials>
+        <ldap:ad-referral>false</ldap:ad-referral>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..uZOaYB55XDPRNgiM239hGw.3GjGw3m244ZD3IUFipcNNw.qkyS-UnGhrcScNUefrLFIA</ldap:credentials>
         <ldap:authenticationMeth>simple</ldap:authenticationMeth>
         <ldap:description>pingdirectory</ldap:description>
         <ldap:name>pingdirectory</ldap:name>
         <ldap:binaryAttributes/>
+        <ldap:ldapHostTagList>
+            <ldap:tagEntry host="pingdirectory" tags=""/>
+        </ldap:ldapHostTagList>
+    </ldap:ldap-source>
+    <ldap:ldap-source id="LDAP-8E9E4C77F6E71F317BD8865F133F3A22EC47AE3B" maskAttributeValues="false" ldapType="ActiveDirectory" ldapTypeDesc="Active Directory" testOnBorrow="false" testOnReturn="false" createIfNecessary="true" minIdle="10" maxActive="100" maxWait="-1" timeBetweenEvictionRunsMillis="60000" readTimeoutMillis="3000" connTimeoutMillis="3000" verifyHost="true" dnsTtlMillis="60000" ldapDnsSrvPrefix="_ldap._tcp" ldapsDnsSrvPrefix="_ldaps._tcp">
+        <ldap:host>EC2AMAZ-2MNFVU0.tarun.lab</ldap:host>
+        <ldap:principal>CN=keto,CN=Users,DC=tarun,DC=lab</ldap:principal>
+        <ldap:use-ssl>false</ldap:use-ssl>
+        <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
+        <ldap:ad-referral>false</ldap:ad-referral>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..MvJSWAqmz37-I-tKSpW7Rg.AJ3yovR3pmpbxwmP-g_lyg.I3IiDzvVREE82qb3igIx-Q</ldap:credentials>
+        <ldap:authenticationMeth>simple</ldap:authenticationMeth>
+        <ldap:description>AD</ldap:description>
+        <ldap:name>AD</ldap:name>
+        <ldap:binaryAttributes/>
+        <ldap:ldapHostTagList>
+            <ldap:tagEntry host="EC2AMAZ-2MNFVU0.tarun.lab" tags=""/>
+        </ldap:ldapHostTagList>
     </ldap:ldap-source>
 </ldap:ldap-sources>
