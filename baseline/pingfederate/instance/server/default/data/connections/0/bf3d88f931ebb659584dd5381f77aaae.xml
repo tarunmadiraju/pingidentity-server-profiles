@@ -15,21 +15,16 @@
                 <urn:AllowAllEntities>false</urn:AllowAllEntities>
                 <urn:AdditionalAllowedEntities/>
             </urn:AdditionalAllowedEntitiesConfiguration>
+            <urn:ExtendedProperties name="passwordless" value="form+mfa"/>
         </urn:EntityExtension>
     </md:Extensions>
     <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" AuthnRequestsSigned="false" WantAssertionsSigned="false" SignResponseAsRequired="true">
         <md:Extensions>
-            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2020-03-16T21:01:06.639Z">
+            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2020-03-16T23:51:39.572Z">
                 <urn:IncomingBindings Artifact="true" POST="true" Redirect="true" SOAP="true"/>
                 <urn:EnabledProfiles IDPInitiatedSSO="true" IDPInitiatedSLO="false" SPInitiatedSSO="false" SPInitiatedSLO="false"/>
                 <urn:SP AssertionValidityAfterMinutes="5" AssertionValidityBeforeMinutes="5" ConnectionTargetType="Standard" EnableCDCDuringSSO="false">
-                    <urn:C2cContractToAssertionMapping AbortIfNotFoundInAnyDataSources="false" RestrictVirtualServerIds="false" C2cContractId="hoPZhAW3jzkH4EyW" C2cContractName="MFA">
-                        <urn:DefaultAttributeMapping>
-                            <urn:AttributeMap Name="SAML_SUBJECT" Type="Authentication Policy Contract" Value="subject"/>
-                            <urn:TokenAuthorizationIssuanceCriteria/>
-                        </urn:DefaultAttributeMapping>
-                    </urn:C2cContractToAssertionMapping>
-                    <urn:C2cContractToAssertionMapping AbortIfNotFoundInAnyDataSources="false" RestrictVirtualServerIds="false" C2cContractId="lhDkrJX7W3QOe3nG" C2cContractName="IF">
+                    <urn:C2cContractToAssertionMapping AbortIfNotFoundInAnyDataSources="false" RestrictVirtualServerIds="false" C2cContractId="51jU77l0f0fte53t" C2cContractName="Passwordless">
                         <urn:DefaultAttributeMapping>
                             <urn:AttributeMap Name="SAML_SUBJECT" Type="Authentication Policy Contract" Value="subject"/>
                             <urn:TokenAuthorizationIssuanceCriteria/>

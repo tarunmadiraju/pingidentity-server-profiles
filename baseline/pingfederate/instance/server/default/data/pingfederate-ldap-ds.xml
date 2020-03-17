@@ -6,7 +6,7 @@
         <ldap:use-ssl>false</ldap:use-ssl>
         <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
         <ldap:ad-referral>false</ldap:ad-referral>
-        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..uZOaYB55XDPRNgiM239hGw.3GjGw3m244ZD3IUFipcNNw.qkyS-UnGhrcScNUefrLFIA</ldap:credentials>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..fA7lCaZ7QbWj-y3vO2Tt6g.kv9M28jUD1ZK9kUM2hIgvA.YjlDmdEHFWP-Pp6weEi8tw</ldap:credentials>
         <ldap:authenticationMeth>simple</ldap:authenticationMeth>
         <ldap:description>pingdirectory</ldap:description>
         <ldap:name>pingdirectory</ldap:name>
@@ -21,7 +21,7 @@
         <ldap:use-ssl>false</ldap:use-ssl>
         <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
         <ldap:ad-referral>false</ldap:ad-referral>
-        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..MvJSWAqmz37-I-tKSpW7Rg.AJ3yovR3pmpbxwmP-g_lyg.I3IiDzvVREE82qb3igIx-Q</ldap:credentials>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..4QIS3jBiptTX3hontB4zhg.Ap34t8oS_i2-cpFXnalWOw.a7Hg2pYQWcaOv-kkt3x-Gg</ldap:credentials>
         <ldap:authenticationMeth>simple</ldap:authenticationMeth>
         <ldap:description>AD</ldap:description>
         <ldap:name>AD</ldap:name>
