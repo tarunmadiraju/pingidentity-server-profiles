@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <authnSessionPolicies>
     <applicationPolicy idleTimeoutMins="60" maxTimeoutMins="480"/>
-    <globalPolicy enableSessions="true" idleTimeoutDisplayUnit="MINUTES" idleTimeoutMins="60" maxTimeoutDisplayUnit="MINUTES" maxTimeoutMins="480" persistentSessions="false"/>
+    <globalPolicy enableSessions="false" idleTimeoutDisplayUnit="MINUTES" idleTimeoutMins="60" maxTimeoutDisplayUnit="MINUTES" maxTimeoutMins="480" persistentSessions="false"/>
     <sourcePolicies>
         <policy authnContextSensitive="false" authnSourceId="HTMLFormPD" authnSourceType="ADAPTER" enableSessions="true" id="hqQLAXjVUr1hJgfOhsdgc7Lne" idleTimeoutMins="2" maxTimeoutMins="2" persistent="false" timeoutDisplayUnit="MINUTES"/>
     </sourcePolicies>

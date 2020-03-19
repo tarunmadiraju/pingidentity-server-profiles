@@ -15,14 +15,18 @@
                 <urn:AllowAllEntities>false</urn:AllowAllEntities>
                 <urn:AdditionalAllowedEntities/>
             </urn:AdditionalAllowedEntitiesConfiguration>
-            <urn:ExtendedProperties name="passwordless" value="form+mfa"/>
+            <urn:ExtendedProperties name="passwordless" value="form"/>
         </urn:EntityExtension>
     </md:Extensions>
     <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" AuthnRequestsSigned="false" WantAssertionsSigned="false" SignResponseAsRequired="true">
         <md:Extensions>
-            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2020-03-16T23:51:39.572Z">
+            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2020-03-18T23:36:10.613Z">
                 <urn:IncomingBindings Artifact="true" POST="true" Redirect="true" SOAP="true"/>
                 <urn:EnabledProfiles IDPInitiatedSSO="true" IDPInitiatedSLO="false" SPInitiatedSSO="false" SPInitiatedSLO="false"/>
+                <urn:MessageCustomizationHook contextName="assertion">#cal = new org.apache.xmlbeans.XmlCalendar(new java.util.Date()),
+#cal.setTimeZone(@java.util.TimeZone@getTimeZone("UTC")),
+#cal.add(@java.util.Calendar@MINUTE, 60),
+#AssertionType.getAuthnStatementArray(0).setSessionNotOnOrAfter(cal)</urn:MessageCustomizationHook>
                 <urn:SP AssertionValidityAfterMinutes="5" AssertionValidityBeforeMinutes="5" ConnectionTargetType="Standard" EnableCDCDuringSSO="false">
                     <urn:C2cContractToAssertionMapping AbortIfNotFoundInAnyDataSources="false" RestrictVirtualServerIds="false" C2cContractId="51jU77l0f0fte53t" C2cContractName="Passwordless">
                         <urn:DefaultAttributeMapping>
