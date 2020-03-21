@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <md:EntityDescriptor entityID="https://httpbin.org" urn:name="Dummy SP Connection" ID="gpFvXmhDHSRUSHWLZLZ_XBIU_YK" urn:LogLevel="STANDARD" urn:isActive="true" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2">
     <md:Extensions>
-        <urn:EntityExtension PFVersion="9.2.1.1" LicenseGroup="">
+        <urn:EntityExtension PFVersion="10.0.0.15" LicenseGroup="">
             <urn:DigitialSignatureAliases SigningKeyAlias="v8m5h9qrw85dgmndgv47k76xz" includeX509inXmlSig="false" includeRawKeyInXmlSig="false" SigningAlgorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
             <urn:Encryption>
                 <urn:EncryptionPolicy EncryptionAlgorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc" KeyTransportAlgorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p" EncryptAssertion="false" EncryptSubjectNameID="false" SLOEncryptSubjectNameID="false"/>
@@ -19,11 +19,11 @@
     </md:Extensions>
     <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" AuthnRequestsSigned="false" WantAssertionsSigned="false" SignResponseAsRequired="true">
         <md:Extensions>
-            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2019-02-28T22:30:59.255Z">
+            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2020-03-20T20:13:21.424Z">
                 <urn:IncomingBindings Artifact="true" POST="true" Redirect="true" SOAP="true"/>
                 <urn:EnabledProfiles IDPInitiatedSSO="true" IDPInitiatedSLO="false" SPInitiatedSSO="false" SPInitiatedSLO="false"/>
                 <urn:SP AssertionValidityAfterMinutes="5" AssertionValidityBeforeMinutes="5" ConnectionTargetType="Standard" EnableCDCDuringSSO="false">
-                    <urn:C2cContractToAssertionMapping AbortIfNotFoundInAnyDataSources="false" RestrictVirtualServerIds="false" C2cContractId="Zxp6N6W5PH9onACT" C2cContractName="simplecontract">
+                    <urn:C2cContractToAssertionMapping AbortIfNotFoundInAnyDataSources="false" RestrictVirtualServerIds="false" C2cContractId="lhDkrJX7W3QOe3nG" C2cContractName="IF">
                         <urn:DefaultAttributeMapping>
                             <urn:AttributeMap Name="SAML_SUBJECT" Type="Authentication Policy Contract" Value="subject"/>
                             <urn:TokenAuthorizationIssuanceCriteria/>
