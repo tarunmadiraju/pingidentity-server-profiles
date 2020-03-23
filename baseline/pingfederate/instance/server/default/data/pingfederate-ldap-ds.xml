@@ -6,7 +6,7 @@
         <ldap:use-ssl>false</ldap:use-ssl>
         <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
         <ldap:ad-referral>false</ldap:ad-referral>
-        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..fA7lCaZ7QbWj-y3vO2Tt6g.kv9M28jUD1ZK9kUM2hIgvA.YjlDmdEHFWP-Pp6weEi8tw</ldap:credentials>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..mhNlCrGdSQMEh0a7Da3kJQ.c2dP-IqNVlby2jdqJgjJcg.7pMgBPgnBv4Yg6-mV09njA</ldap:credentials>
         <ldap:authenticationMeth>simple</ldap:authenticationMeth>
         <ldap:description>pingdirectory</ldap:description>
         <ldap:name>pingdirectory</ldap:name>
@@ -21,13 +21,28 @@
         <ldap:use-ssl>false</ldap:use-ssl>
         <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
         <ldap:ad-referral>false</ldap:ad-referral>
-        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..4QIS3jBiptTX3hontB4zhg.Ap34t8oS_i2-cpFXnalWOw.a7Hg2pYQWcaOv-kkt3x-Gg</ldap:credentials>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..2ZRv9a6W7iHupxlaccMBng.xFODQr6zap0gyIML6-qGKQ._Og77HWGjqT7FzxEuNmMIg</ldap:credentials>
         <ldap:authenticationMeth>simple</ldap:authenticationMeth>
         <ldap:description>AD</ldap:description>
         <ldap:name>AD</ldap:name>
         <ldap:binaryAttributes/>
         <ldap:ldapHostTagList>
             <ldap:tagEntry host="EC2AMAZ-2MNFVU0.tarun.lab" tags=""/>
+        </ldap:ldapHostTagList>
+    </ldap:ldap-source>
+    <ldap:ldap-source id="LDAP-5D9CDED034812CB99F213873F661F81EF0703644" maskAttributeValues="false" ldapType="Generic" ldapTypeDesc="Generic" testOnBorrow="false" testOnReturn="false" createIfNecessary="true" minIdle="10" maxActive="100" maxWait="-1" timeBetweenEvictionRunsMillis="60000" readTimeoutMillis="3000" connTimeoutMillis="3000" verifyHost="true" dnsTtlMillis="60000" ldapDnsSrvPrefix="_ldap._tcp" ldapsDnsSrvPrefix="_ldaps._tcp">
+        <ldap:host>ldap.jumpcloud.com</ldap:host>
+        <ldap:principal>uid=jumpservice,ou=Users,o=5e67073ec060a657bb5abddd,dc=jumpcloud,dc=com</ldap:principal>
+        <ldap:use-ssl>false</ldap:use-ssl>
+        <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
+        <ldap:ad-referral>false</ldap:ad-referral>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..OyRq87A6Tki6GOCZjhLa2Q.FMwv3zkyQDLNa5pLvaTtNQ.bJpp5hb9BLQ5cs1LqBloqA</ldap:credentials>
+        <ldap:authenticationMeth>simple</ldap:authenticationMeth>
+        <ldap:description>jumpcloud</ldap:description>
+        <ldap:name>jumpcloud</ldap:name>
+        <ldap:binaryAttributes/>
+        <ldap:ldapHostTagList>
+            <ldap:tagEntry host="ldap.jumpcloud.com" tags=""/>
         </ldap:ldapHostTagList>
     </ldap:ldap-source>
 </ldap:ldap-sources>

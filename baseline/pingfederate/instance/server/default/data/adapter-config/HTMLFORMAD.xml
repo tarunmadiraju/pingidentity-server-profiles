@@ -91,6 +91,9 @@
     <urn:Tables>
         <urn:Table name="Credential Validators">
             <urn:Row defaultRow="false">
+                <urn:Field name="Password Credential Validator Instance">jump</urn:Field>
+            </urn:Row>
+            <urn:Row defaultRow="false">
                 <urn:Field name="Password Credential Validator Instance">AD</urn:Field>
             </urn:Row>
         </urn:Table>
