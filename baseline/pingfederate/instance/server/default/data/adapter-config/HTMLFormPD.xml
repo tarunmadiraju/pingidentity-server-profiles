@@ -14,7 +14,7 @@
         <urn:Field name="Password Reset Type">NONE</urn:Field>
         <urn:Field name="Password Reset Policy Contract"/>
         <urn:Field name="Account Unlock">false</urn:Field>
-        <urn:Field name="Local Identity Profile">RBSQIwi5KWYN9ZGK</urn:Field>
+        <urn:Field name="Local Identity Profile">nTSRkjGG6ES4PVxB</urn:Field>
         <urn:Field name="Notification Publisher"/>
         <urn:Field name="Enable Username Recovery">false</urn:Field>
         <urn:Field name="Login Template">html.form.login.template.html</urn:Field>

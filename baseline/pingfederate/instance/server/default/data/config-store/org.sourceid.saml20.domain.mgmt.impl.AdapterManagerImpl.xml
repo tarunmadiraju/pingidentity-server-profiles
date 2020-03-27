@@ -6,6 +6,7 @@
         <con:item name="IdentityF">com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter</con:item>
         <con:item name="Kerberos">com.pingidentity.adapters.kerberos.idp.KerberosAuthenticationAdapter</con:item>
         <con:item name="HTMLFORMAD">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
+        <con:item name="Google">com.pingidentity.adapter.idp.google.GoogleAuthenticationAdapter</con:item>
     </con:map>
     <con:map name="IdpAdapterInstanceParents"/>
     <con:map name="SpAuthnAdapterInstances">
