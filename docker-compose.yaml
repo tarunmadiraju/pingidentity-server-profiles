@@ -62,6 +62,23 @@ services:
       - 9000:9000
     networks:
       - pingnet
-
+        
+  pingdatagovernance:
+    image: pingidentity/pingdatagovernance:latest
+    env_file:
+      - ~/.pingidentity/devops
+    command: wait-for pingfederate:9031 -t 300 -- entrypoint.sh start-server
+    environment:
+      - SERVER_PROFILE_URL=https://github.com/tarunmadiraju/pingidentity-server-profiles.git
+      - SERVER_PROFILE_PATH=baseline/pingdatagovernance
+      - PING_IDENTITY_ACCEPT_EULA=YES
+      - PING_IDENTITY_DEVOPS_USER=tarunmadiraju@pingidentity.com
+      - PING_IDENTITY_DEVOPS_KEY=3a6cdf55-89d7-4cd2-9ece-c8c0131957b1
+    env_file:
+      - ~/.pingidentity/devops
+    ports:
+      - 2443:443
+    networks:
+      - pingnet
 networks:
     pingnet:
