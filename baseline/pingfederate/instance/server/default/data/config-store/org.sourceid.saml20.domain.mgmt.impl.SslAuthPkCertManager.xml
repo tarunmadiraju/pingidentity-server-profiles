@@ -7,4 +7,5 @@
     <con:map name="Opentoken-basic-apache"/>
     <con:map name="http://pingone.com/e8935338-340d-4c0a-89e4-639ab4be15da"/>
     <con:map name="Identologist.P14C"/>
+    <con:map name="https://saml.salesforce.com"/>
 </con:config>
