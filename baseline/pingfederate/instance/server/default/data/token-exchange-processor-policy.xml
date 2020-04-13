@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:TokenExchangeProcessorPolicies defaultTokenExchangeProcessorPolicyId="testtokenexchange" xmlns:urn="urn:pingidentity.com:pf:oauth:token:exchange">
+    <urn:TokenExchangeProcessorPolicy id="testtokenexchange" name="testtokenexchange" actorTokenRequired="false">
+        <urn:ExtendedAttributeContract/>
+        <urn:TokenExchangeProcessorMapping subjectTokenType="urn:ietf:params:oauth:token-type:access_token" subjectTokenProcessorId="OAUTHTP" actorTokenType="" actorTokenProcessorId="">
+            <urn:AttributeMappingType>
+                <urn1:AttributeMap Name="subject" Type="Subject Token" Value="subjecttoken.First_name" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            </urn:AttributeMappingType>
+        </urn:TokenExchangeProcessorMapping>
+    </urn:TokenExchangeProcessorPolicy>
+</urn:TokenExchangeProcessorPolicies>

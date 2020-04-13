@@ -59,6 +59,13 @@
         </urn1:AttributeSource>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:UserKeyToAccessTokenMapping>
+    <urn:UserKeyToAccessTokenMapping contextId="urn:ietf:params:oauth:grant-type:token-exchange|testtokenexchange" tokenManagerId="jwt">
+        <urn1:AttributeMap Name="First_name" Type="Processor Policy" Value="tepp.subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="mail" Type="Processor Policy" Value="tepp.subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="Username" Type="Processor Policy" Value="tepp.subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="Last_name" Type="Processor Policy" Value="tepp.subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:UserKeyToAccessTokenMapping>
     <urn:UserKeyToAccessTokenMapping contextId="authz_req|apc.Zxp6N6W5PH9onACT" tokenManagerId="jwt">
         <urn1:AttributeMap Name="First_name" Type="Authentication Policy Contract" Value="apc.subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="mail" Type="Authentication Policy Contract" Value="apc.subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
@@ -66,6 +73,11 @@
         <urn1:AttributeMap Name="Last_name" Type="Authentication Policy Contract" Value="apc.subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:UserKeyToAccessTokenMapping>
+    <urn:AdapterToUserKeyMapping sourcePluginId="HTMLFORMAD">
+        <urn1:AttributeMap Name="USER_NAME" Type="Adapter" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="USER_KEY" Type="Adapter" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:AdapterToUserKeyMapping>
     <urn:PasswordCredentialValidatorToUserKeyMapping sourcePluginId="pingdirectory">
         <urn1:AttributeMap Name="USER_KEY" Type="Password Credential Validator" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
