@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:AccessTokenManagerConfiguration inheritAccessControlSettings="true" inheritSelectionSettings="true" inheritSessionValidationSettings="true" isInheritExtendedContractAttributes="true" name="PINGACCESS" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields/>
+    <urn:AdvancedFields/>
+    <urn:Tables/>
+</urn:AccessTokenManagerConfiguration>

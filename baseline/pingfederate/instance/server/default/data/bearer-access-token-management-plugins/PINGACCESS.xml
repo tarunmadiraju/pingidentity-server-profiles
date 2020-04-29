@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:AccessTokenManagerConfiguration inheritAccessControlSettings="true" inheritSelectionSettings="true" inheritSessionValidationSettings="true" isInheritExtendedContractAttributes="true" name="PINGACCESS" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+<urn:AccessTokenManagerConfiguration inheritAccessControlSettings="true" inheritSelectionSettings="true" inheritSessionValidationSettings="true" defaultSubjectAttribute="" isInheritExtendedContractAttributes="false" name="PINGACCESS" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
     <urn:Fields/>
     <urn:AdvancedFields/>
     <urn:Tables/>
+    <urn:ExtendedContractAttributes>
+        <urn:AttributeName>Role</urn:AttributeName>
+        <urn:AttributeName>First_name</urn:AttributeName>
+        <urn:AttributeName>mail</urn:AttributeName>
+        <urn:AttributeName>Username</urn:AttributeName>
+        <urn:AttributeName>Last_name</urn:AttributeName>
+    </urn:ExtendedContractAttributes>
 </urn:AccessTokenManagerConfiguration>

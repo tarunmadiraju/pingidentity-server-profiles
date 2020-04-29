@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:TokenProcessorConfiguration isInheritAttributeSettings="false" maskOgnlValues="false" isInheritExtendedContractAttributes="false" name="OAUTHTP" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Access Token Manager">jwt</urn:Field>
+        <urn:Field name="Scope value as single string">false</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields/>
+    <urn:Tables/>
+    <urn:ExtendedContractAttributes>
+        <urn:AttributeName>First_name</urn:AttributeName>
+    </urn:ExtendedContractAttributes>
+</urn:TokenProcessorConfiguration>
