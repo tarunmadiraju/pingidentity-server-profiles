@@ -8,6 +8,7 @@
     <urn:AdvancedFields/>
     <urn:Tables/>
     <urn:ExtendedContractAttributes>
+        <urn:AttributeName>PINGID</urn:AttributeName>
         <urn:AttributeName>IdentityF</urn:AttributeName>
     </urn:ExtendedContractAttributes>
 </urn:PluginConfiguration>
