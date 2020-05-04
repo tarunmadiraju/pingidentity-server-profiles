@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:PluginConfiguration isInheritExtendedContractAttributes="false" name="PA" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Add or Update AuthN Context Attribute">true</urn:Field>
+        <urn:Field name="Enable 'No Match' Result Value">true</urn:Field>
+        <urn:Field name="Enable 'Not in Request' Result Value">true</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields/>
+    <urn:Tables/>
+    <urn:ExtendedContractAttributes>
+        <urn:AttributeName>PINGID</urn:AttributeName>
+        <urn:AttributeName>IdentityF</urn:AttributeName>
+    </urn:ExtendedContractAttributes>
+</urn:PluginConfiguration>

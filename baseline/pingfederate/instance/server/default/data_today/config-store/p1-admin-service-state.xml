@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:config xmlns:con="http://www.sourceid.org/2004/05/config">
+    <con:item name="Associated">true</con:item>
+    <con:item name="ApplicationDockEndpoint">https://desktop.pingone.com/cd-765210829.pingidentity</con:item>
+    <con:item name="ProvisioningBaseUrl">https://scim.connect.pingidentity.com/prov-service</con:item>
+    <con:item name="KeyPairAlias">1igpsnffphtgzzypz4s2wba2r</con:item>
+    <con:item name="ClientId">a1543e0d-e883-45cd-ae8b-57ca2d8e870a</con:item>
+    <con:item name="AccountId">e8935338-340d-4c0a-89e4-639ab4be15da</con:item>
+    <con:item name="CompanyName">tarunmadiraju@pingidentity.com</con:item>
+</con:config>

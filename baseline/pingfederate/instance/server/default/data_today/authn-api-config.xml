@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<authnApiConfig>
+    <apiApplications>
+        <application description="" id="iybzK2ELajtphr8f0JxoQygRi" name="Widget" url="https://identologist.glitch.me">
+            <corsUrl>https://identologist.glitch.me*</corsUrl>
+        </application>
+        <application description="" id="CDv1OWGz8BAarIP3EIlJGlQ5F" name="API EXPLORER" url="https://identologist.identologist.ping-eng.com:9031/pf-ws/authn/explorer"/>
+    </apiApplications>
+    <apiSettings apiEnabled="true" defaultApplicationId="iybzK2ELajtphr8f0JxoQygRi" enableApiDescriptions="true"/>
+</authnApiConfig>
