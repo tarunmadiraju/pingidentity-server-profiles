@@ -50,7 +50,7 @@ sn: Knio
 cn: Pierre-Marc Knio
 givenName: Pierre-Marc
 uid: user.3
-mail: user.3@example.com
+mail: user.3@pekininsurance.com
 userPassword: 2FederateM0re
 pf-connected-identity: auth-source=pf-local-identity:user-id=user.3
 
