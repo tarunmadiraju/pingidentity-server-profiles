@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urn:TokenExchangeGeneratorPolicies defaultTokenExchangeGeneratorPolicyId="testtokenexchangegeneratorgroup" xmlns:urn="urn:pingidentity.com:pf:oauth:token:exchange">
-    <urn:TokenExchangeGeneratorPolicy id="testtokenexchangegeneratorgroup" name="testtokenexchangegeneratorgroup" defaultTokenType="urn:ietf:params:oauth:token-type:saml2">
-        <urn:ResourceUri>https://tarun.com</urn:ResourceUri>
-        <urn:TokenExchangeGeneratorTypeMapping tokenType="urn:ietf:params:oauth:token-type:saml2" tokenGeneratorId="testtokengenerator"/>
-    </urn:TokenExchangeGeneratorPolicy>
-</urn:TokenExchangeGeneratorPolicies>

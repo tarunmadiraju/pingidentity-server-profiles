@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<loc:localIdentity profileId="nTSRkjGG6ES4PVxB" profileName="Google" contractId="H1yG0ZQsd6wdLehS" profileEnabled="false" registrationEnabled="false" xmlns:loc="http://pingidentity.com/2017/07/localIdentity">
-    <loc:auth-sources>
-        <loc:auth-source id="btw1ZC8yTLFLP1Ut" name="google">
-            <loc:update-policy attributeStorageEnabled="false" retainAttributes="false" updateAttributes="false" updateInterval="0.0"/>
-        </loc:auth-source>
-    </loc:auth-sources>
-</loc:localIdentity>

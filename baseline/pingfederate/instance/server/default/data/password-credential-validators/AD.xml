@@ -2,18 +2,18 @@
 <urn:PluginConfiguration isInheritExtendedContractAttributes="false" name="AD" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
     <urn:Fields>
         <urn:Field name="LDAP Datastore">LDAP-8E9E4C77F6E71F317BD8865F133F3A22EC47AE3B</urn:Field>
-        <urn:Field name="Search Base">OU=User,DC=tarun,DC=lab</urn:Field>
+        <urn:Field name="Search Base">CN=Users,DC=tarun,DC=lab</urn:Field>
         <urn:Field name="Search Filter">sAMAccountName =${username}</urn:Field>
         <urn:Field name="Scope of Search">Subtree</urn:Field>
-        <urn:Field name="Case-Sensitive Matching">true</urn:Field>
+        <urn:Field name="Case-Sensitive Matching">false</urn:Field>
         <urn:Field name="Display Name Attribute">displayName</urn:Field>
         <urn:Field name="Mail Attribute">mail</urn:Field>
         <urn:Field name="SMS Attribute"/>
         <urn:Field name="PingID Username Attribute"/>
         <urn:Field name="Mail Search Filter"/>
-        <urn:Field name="Username Attribute"/>
+        <urn:Field name="Username Attribute">sAMAccountName</urn:Field>
         <urn:Field name="Mail Verified Attribute"/>
-        <urn:Field name="Enable PingDirectory Detailed Password Policy Requirement Messaging">true</urn:Field>
+        <urn:Field name="Enable PingDirectory Detailed Password Policy Requirement Messaging">false</urn:Field>
     </urn:Fields>
     <urn:AdvancedFields>
         <urn:Field name="Display Name Attribute">displayName</urn:Field>
@@ -21,9 +21,9 @@
         <urn:Field name="SMS Attribute"/>
         <urn:Field name="PingID Username Attribute"/>
         <urn:Field name="Mail Search Filter"/>
-        <urn:Field name="Username Attribute"/>
+        <urn:Field name="Username Attribute">sAMAccountName</urn:Field>
         <urn:Field name="Mail Verified Attribute"/>
-        <urn:Field name="Enable PingDirectory Detailed Password Policy Requirement Messaging">true</urn:Field>
+        <urn:Field name="Enable PingDirectory Detailed Password Policy Requirement Messaging">false</urn:Field>
     </urn:AdvancedFields>
     <urn:Tables>
         <urn:Table name="Authentication Error Overrides"/>
