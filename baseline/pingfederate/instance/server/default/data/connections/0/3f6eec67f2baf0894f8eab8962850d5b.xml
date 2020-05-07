@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor entityID="urn:amazon:webservices" urn:name="urn:amazon:webservices" ID="cYQK8dxnlqXXqihEweCgsCUhnzh" urn:baseUrl="https://signin.aws.amazon.com" urn:LogLevel="STANDARD" urn:isActive="true" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2">
+    <md:Extensions>
+        <urn:EntityExtension PFVersion="10.0.0.15" LicenseGroup="">
+            <urn:DigitialSignatureAliases SigningKeyAlias="cm46uiylxlky0yvsem1ef00hv" includeX509inXmlSig="true" includeRawKeyInXmlSig="true" SigningAlgorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+            <urn:Encryption>
+                <urn:EncryptionPolicy EncryptionAlgorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc" KeyTransportAlgorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p" EncryptAssertion="false" EncryptSubjectNameID="false" SLOEncryptSubjectNameID="false"/>
+                <urn:DecryptionPolicy AssertionEncrypted="false" SubjectNameIDEncrypted="false" AttributeEncrypted="false" SLOSubjectNameIDEncrypted="false"/>
+            </urn:Encryption>
+            <urn:ConnectionTemplateProperties/>
+            <urn:MetadataUrlId>5sWF8aO1bHv3XyZ8XOZ2FjsYr</urn:MetadataUrlId>
+            <urn:enableAutoMetadataUpdate>true</urn:enableAutoMetadataUpdate>
+            <urn:AdditionalAllowedEntitiesConfiguration>
+                <urn:AllowAdditionalEntities>false</urn:AllowAdditionalEntities>
+                <urn:AllowAllEntities>false</urn:AllowAllEntities>
+                <urn:AdditionalAllowedEntities/>
+            </urn:AdditionalAllowedEntitiesConfiguration>
+            <urn:ExtendedProperties name="passwordless" value="formad"/>
+        </urn:EntityExtension>
+    </md:Extensions>
+    <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" AuthnRequestsSigned="false" WantAssertionsSigned="true" SignResponseAsRequired="false">
+        <md:Extensions>
+            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2020-05-06T23:10:48.873Z">
+                <urn:IncomingBindings Artifact="false" POST="true" Redirect="true" SOAP="false"/>
+                <urn:EnabledProfiles IDPInitiatedSSO="true" IDPInitiatedSLO="false" SPInitiatedSSO="true" SPInitiatedSLO="false"/>
+                <urn:SP AssertionValidityAfterMinutes="5" AssertionValidityBeforeMinutes="5" ConnectionTargetType="Standard" EnableCDCDuringSSO="false">
+                    <urn:C2cContractToAssertionMapping AbortIfNotFoundInAnyDataSources="false" RestrictVirtualServerIds="false" C2cContractId="51jU77l0f0fte53t" C2cContractName="Passwordless">
+                        <urn:DefaultAttributeMapping>
+                            <urn:AttributeMap Name="https://aws.amazon.com/SAML/Attributes/RoleSessionName" Type="LDAP" AttributeSourceId="ActiveDirectory" Value="givenName"/>
+                            <urn:AttributeMap Name="https://aws.amazon.com/SAML/Attributes/Role" Type="Expression" Value="#roles = new java.util.ArrayList(),  #groups = #this.get(&quot;ds.ActiveDirectory.memberOf&quot;)!=null?#this.get(&quot;ds.ActiveDirectory.memberOf&quot;).getValues() : {},  #awsARN = &quot;arn:aws:iam::172114503251&quot;,   #awsIDP = &quot;Pingfederate&quot;,    #awsGroupFilter = &quot;aws-&quot;,    #groups.{            #group = #this,            #group = new javax.naming.ldap.LdapName(#group),            #cn = #group.getRdn(#group.size() - 1).getValue().toString(),            #cn.contains(#awsprdfilter)?#roles.add(#awsprdarn + &quot;:role/&quot; + #cn + &quot;,&quot; + #awsprdarn + &quot;:saml-provider/&quot; + #awsprdidp):null  },  #this.get(&quot;ds.ActiveDirectory.memberOf&quot;)!=null?new org.sourceid.saml20.adapter.attribute.AttributeValue(#roles) : null"/>
+                            <urn:AttributeMap Name="SAML_SUBJECT" Type="Authentication Policy Contract" Value="subject"/>
+                            <urn:AttributeSource Id="ActiveDirectory" Description="ActiveDirectory" Type="LDAP" DataSourceId="LDAP-8E9E4C77F6E71F317BD8865F133F3A22EC47AE3B">
+                                <urn:Parameter Name="filter" Value="samaccountname=${subject}"/>
+                                <urn:Parameter Name="search_base" Value="CN=Users,DC=tarun,DC=lab"/>
+                                <urn:Parameter Name="search_scope" Value="SUBTREE_SCOPE"/>
+                                <urn:Parameter Name="memberof_nested_group" Value="false"/>
+                            </urn:AttributeSource>
+                            <urn:TokenAuthorizationIssuanceCriteria/>
+                        </urn:DefaultAttributeMapping>
+                    </urn:C2cContractToAssertionMapping>
+                    <urn:NameIdentifierMappingType IncludeAdditionalAttributes="false" IncludeAdditionalTransientAttributes="false"/>
+                </urn:SP>
+            </urn:RoleExtension>
+        </md:Extensions>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+        <md:AssertionConsumerService index="1" Location="/saml" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" isDefault="true"/>
+        <md:AttributeConsumingService index="0">
+            <md:ServiceName xml:lang="en">AttributeContract</md:ServiceName>
+            <md:RequestedAttribute Name="https://aws.amazon.com/SAML/Attributes/RoleSessionName" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="https://aws.amazon.com/SAML/Attributes/Role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+        </md:AttributeConsumingService>
+    </md:SPSSODescriptor>
+    <md:RoleDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" xsi:type="urn:PFAvailableCertsRoleDescriptorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    <md:ContactPerson contactType="administrative"/>
+</md:EntityDescriptor>

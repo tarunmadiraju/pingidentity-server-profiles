@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mu:metadataUrls xmlns:mu="http://pingidentity.com/2015/01/metadata-url">
+    <mu:metadataUrlCertType>
+        <mu:id>5sWF8aO1bHv3XyZ8XOZ2FjsYr</mu:id>
+        <mu:name>AWS</mu:name>
+        <mu:metadataUrl>https://signin.aws.amazon.com/static/saml-metadata.xml</mu:metadataUrl>
+        <mu:certAlias xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <mu:validateSignature>true</mu:validateSignature>
+    </mu:metadataUrlCertType>
 </mu:metadataUrls>

@@ -2,7 +2,7 @@
 <urn:AdapterConfiguration authnCtxClassRef="" isInheritAttributeSettings="false" isInheritAttributeMapping="false" maskOgnlValues="false" isInheritExtendedContractAttributes="false" name="HTMLFORMAD" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
     <urn:Fields>
         <urn:Field name="Challenge Retries">3</urn:Field>
-        <urn:Field name="Session State">None</urn:Field>
+        <urn:Field name="Session State">Globally</urn:Field>
         <urn:Field name="Session Timeout">60</urn:Field>
         <urn:Field name="Session Max Timeout">480</urn:Field>
         <urn:Field name="Allow Password Changes">true</urn:Field>
@@ -95,11 +95,20 @@
             </urn:Row>
         </urn:Table>
     </urn:Tables>
-    <urn:ExtendedContractAttributes/>
+    <urn:ExtendedContractAttributes>
+        <urn:AttributeName>memberof</urn:AttributeName>
+    </urn:ExtendedContractAttributes>
     <urn:UniqueKeyField>username</urn:UniqueKeyField>
     <urn:AttributeMapping>
         <urn1:AttributeMap Name="policy.action" Type="Adapter" Value="policy.action" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="memberof" Type="Adapter" Value="memberof" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="username" Type="Adapter" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeSource Id="ActiveDirectory" Description="ActiveDirectory" Type="LDAP" DataSourceId="LDAP-8E9E4C77F6E71F317BD8865F133F3A22EC47AE3B" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+            <urn1:Parameter Name="filter" Value="samaccountname=${username}"/>
+            <urn1:Parameter Name="search_base" Value="CN=Users,DC=tarun,DC=lab"/>
+            <urn1:Parameter Name="search_scope" Value="SUBTREE_SCOPE"/>
+            <urn1:Parameter Name="memberof_nested_group" Value="false"/>
+        </urn1:AttributeSource>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:AttributeMapping>
 </urn:AdapterConfiguration>
