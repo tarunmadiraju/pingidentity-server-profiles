@@ -4,4 +4,8 @@
         <met:urlId>2e7edf08-9f16-4fd7-9ade-4e99fd422bb5</met:urlId>
         <met:notificationSent>false</met:notificationSent>
     </met:metadataNotificationType>
+    <met:metadataNotificationType>
+        <met:urlId>5sWF8aO1bHv3XyZ8XOZ2FjsYr</met:urlId>
+        <met:notificationSent>false</met:notificationSent>
+    </met:metadataNotificationType>
 </met:metadataNotificationSettings>
