@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<loc:localIdentity profileId="RBSQIwi5KWYN9ZGK" profileName="pingdirectory" contractId="Zxp6N6W5PH9onACT" profileEnabled="true" registrationEnabled="true" xmlns:loc="http://pingidentity.com/2017/07/localIdentity">
-    <loc:auth-sources/>
+<loc:localIdentity profileId="RBSQIwi5KWYN9ZGK" profileName="pingdirectory" contractId="QuHcnHbtwj8WxJlX" profileEnabled="true" registrationEnabled="true" xmlns:loc="http://pingidentity.com/2017/07/localIdentity">
+    <loc:auth-sources>
+        <loc:auth-source id="6ms82V2pmaYQbf26" name="google">
+            <loc:update-policy attributeStorageEnabled="false" retainAttributes="false" updateAttributes="false" updateInterval="0.0"/>
+        </loc:auth-source>
+    </loc:auth-sources>
     <loc:fields maskOgnlValues="false">
         <loc:field type="EMAIL" default-value="" id="mail" label="Email address">
             <loc:appliesTo profile="true" registration="true"/>

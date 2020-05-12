@@ -3,13 +3,13 @@
     <urn:Fields>
         <urn:Field name="PingID SDK Properties">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUiLCJ6aXAiOiJERUYifQ..TlKC8Ni42eDJX4_j6PDRng.vK1_mlzZeke3_r5sm9ybTKIP7DgHyZ0u_zuZ9bIUhTho6E195Y4cnSxhqFV8mk56lOOWextnoVPczreEqzBX0jpUJsYlATR90G_08AowwSZmOZZHsGnhekc0sPhGQHx4dt1VYLFv-ltNFcxSD9pU-G0IBOxuKKcUIArbIw04f4WvH7MOgB7WHfZdXnriKdTyUM35R-m66qTnHIS2pOve4y-unm1IMbhvRRhwxZzI3E_WVELvg6gnUfcBNDwwA-jnlEVViJl4TtO6sRbwtKtYzV-k-ua6EQGTTEw6rPFZKAzqeLWawnbR6NWCENr6cikZeyccZGzAKO9SaXqJIvD65tjt27oEL3ZqcMRRIpqwoEA.e3Lmr7UcXJ9YP4WkESPz4Q</urn:Field>
         <urn:Field name="Application ID">21a7d4c1-ca63-4cb6-8972-ac63a9e10667</urn:Field>
-        <urn:Field name="Device Pairing">manual</urn:Field>
-        <urn:Field name="Unpaired Users - Manual Pairing">block</urn:Field>
-        <urn:Field name="Unpaired Users - Web Login">block</urn:Field>
+        <urn:Field name="Device Pairing">automatic</urn:Field>
+        <urn:Field name="Unpaired Users - Manual Pairing">bypass</urn:Field>
+        <urn:Field name="Unpaired Users - Web Login">bypass</urn:Field>
         <urn:Field name="Additional Trusted Devices">separate</urn:Field>
         <urn:Field name="MFA timeout"/>
         <urn:Field name="User Verification">bypass</urn:Field>
-        <urn:Field name="Authentication During Errors">block</urn:Field>
+        <urn:Field name="Authentication During Errors">bypass</urn:Field>
         <urn:Field name="Heartbeat Timeout"/>
         <urn:Field name="HTML Template">pingid.sdk.login.template.html</urn:Field>
         <urn:Field name="Messages File">pingid-sdk-messages</urn:Field>

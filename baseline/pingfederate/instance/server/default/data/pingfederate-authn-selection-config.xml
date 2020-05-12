@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:AuthnSelectionConfig lastModifiedMillis="1589241834189" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
+<urn:AuthnSelectionConfig lastModifiedMillis="1589313147999" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
     <urn:AuthnSelectionTrees>
         <urn:AuthnSelectionTree treeName="Social-login-oidc" disabled="false" authnApiApp="">
             <urn:AstRoot context="">
-                <urn:AstAction authnSelectorId="extendedpro4oidc" xsi:type="urn:AuthnSelectorActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                <urn:AstChild context="good">
+                <urn:AstAction authnSelectorId="dummyconnection" xsi:type="urn:AuthnSelectorActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                <urn:AstChild context="No">
+                    <urn:AstAction noOpType="CONTINUE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                </urn:AstChild>
+                <urn:AstChild context="Yes">
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFormPD</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                         <urn:attributeRule>
                             <urn:IncomingAttr>policy.action</urn:IncomingAttr>
-                            <urn:Operand>EQUALS_CASE_INSENSITIVE</urn:Operand>
+                            <urn:Operand>EQUALS</urn:Operand>
                             <urn:ExpectedValue>google</urn:ExpectedValue>
                             <urn:Result>google users</urn:Result>
+                        </urn:attributeRule>
+                        <urn:attributeRule>
+                            <urn:IncomingAttr>policy.action</urn:IncomingAttr>
+                            <urn:Operand>EQUALS</urn:Operand>
+                            <urn:ExpectedValue>identity.registration</urn:ExpectedValue>
+                            <urn:Result>registration</urn:Result>
                         </urn:attributeRule>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
@@ -27,35 +36,32 @@
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                         </urn:AstChild>
                         <urn:AstChild context="Success">
-                            <urn:AstAction lipId="nTSRkjGG6ES4PVxB" xsi:type="urn:LocalIdentityMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                                <urn:InboundAttributeMapping/>
+                            <urn:AstAction lipId="RBSQIwi5KWYN9ZGK" xsi:type="urn:LocalIdentityMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                <urn:InboundAttributeMapping>
+                                    <urn1:AttributeMap Name="pf.local.identity.unique.id" Type="Adapter" AttributeSourceId="Google" Value="email" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                </urn:InboundAttributeMapping>
                                 <urn:OutboundAttributeMapping>
-                                    <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="Google" Value="email" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:AttributeMap Name="subject" Type="Local Account" AttributeSourceId="RBSQIwi5KWYN9ZGK" Value="uid" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                     <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                 </urn:OutboundAttributeMapping>
                             </urn:AstAction>
                         </urn:AstChild>
                     </urn:AstChild>
-                    <urn:AstChild context="Success">
-                        <urn:AstAction apcId="H1yG0ZQsd6wdLehS" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                            <urn:AttributeMapping>
-                                <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="HTMLFormPD" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                    <urn:AstChild context="registration">
+                        <urn:AstAction lipId="RBSQIwi5KWYN9ZGK" xsi:type="urn:LocalIdentityMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <urn:InboundAttributeMapping>
                                 <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                            </urn:AttributeMapping>
+                            </urn:InboundAttributeMapping>
+                            <urn:OutboundAttributeMapping>
+                                <urn1:AttributeMap Name="subject" Type="Local Account" AttributeSourceId="RBSQIwi5KWYN9ZGK" Value="uid" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                            </urn:OutboundAttributeMapping>
                         </urn:AstAction>
-                    </urn:AstChild>
-                </urn:AstChild>
-                <urn:AstChild context="mfa">
-                    <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                        <urn:AuthnSourceKey type="ADAPTER">HTMLFormPD</urn:AuthnSourceKey>
-                        <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
-                    </urn:AstAction>
-                    <urn:AstChild context="Fail">
-                        <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                     </urn:AstChild>
                     <urn:AstChild context="Success">
                         <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                            <urn:AuthnSourceKey type="ADAPTER">PingID</urn:AuthnSourceKey>
+                            <urn:AuthnSourceKey type="ADAPTER">PingIDSDKPF</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                             <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFormPD" Value="username"/>
                         </urn:AstAction>
@@ -63,17 +69,41 @@
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                         </urn:AstChild>
                         <urn:AstChild context="Success">
-                            <urn:AstAction apcId="H1yG0ZQsd6wdLehS" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                                <urn:AttributeMapping>
-                                    <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="PingID" Value="subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                            <urn:AstAction lipId="RBSQIwi5KWYN9ZGK" xsi:type="urn:LocalIdentityMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                <urn:InboundAttributeMapping>
+                                    <urn1:AttributeMap Name="pf.local.identity.unique.id" Type="Adapter" AttributeSourceId="PingIDSDKPF" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                     <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                                </urn:AttributeMapping>
+                                </urn:InboundAttributeMapping>
+                                <urn:OutboundAttributeMapping>
+                                    <urn1:AttributeMap Name="subject" Type="Local Account" AttributeSourceId="RBSQIwi5KWYN9ZGK" Value="uid" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                </urn:OutboundAttributeMapping>
                             </urn:AstAction>
                         </urn:AstChild>
                     </urn:AstChild>
                 </urn:AstChild>
-                <urn:AstChild context="nomfa">
-                    <urn:AstAction noOpType="CONTINUE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            </urn:AstRoot>
+        </urn:AuthnSelectionTree>
+        <urn:AuthnSelectionTree treeName="userregistration" disabled="false" authnApiApp="">
+            <urn:AstRoot context="">
+                <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <urn:AuthnSourceKey type="ADAPTER">HTMLFormPD</urn:AuthnSourceKey>
+                    <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                </urn:AstAction>
+                <urn:AstChild context="Fail">
+                    <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                </urn:AstChild>
+                <urn:AstChild context="Success">
+                    <urn:AstAction lipId="RBSQIwi5KWYN9ZGK" xsi:type="urn:LocalIdentityMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <urn:InboundAttributeMapping>
+                            <urn1:AttributeMap Name="pf.local.identity.unique.id" Type="Adapter" AttributeSourceId="HTMLFormPD" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                            <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                        </urn:InboundAttributeMapping>
+                        <urn:OutboundAttributeMapping>
+                            <urn1:AttributeMap Name="subject" Type="Local Account" AttributeSourceId="RBSQIwi5KWYN9ZGK" Value="uid" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                            <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                        </urn:OutboundAttributeMapping>
+                    </urn:AstAction>
                 </urn:AstChild>
             </urn:AstRoot>
         </urn:AuthnSelectionTree>
@@ -294,7 +324,6 @@
                             <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                         </urn:InboundAttributeMapping>
                         <urn:OutboundAttributeMapping>
-                            <urn1:AttributeMap Name="mail" Type="Local Account" AttributeSourceId="RBSQIwi5KWYN9ZGK" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             <urn1:AttributeMap Name="subject" Type="Local Account" AttributeSourceId="RBSQIwi5KWYN9ZGK" Value="entryUUID" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                         </urn:OutboundAttributeMapping>
@@ -408,7 +437,7 @@
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                         <urn:attributeRule>
                             <urn:IncomingAttr>policy.action</urn:IncomingAttr>
-                            <urn:Operand>EQUALS_CASE_INSENSITIVE</urn:Operand>
+                            <urn:Operand>EQUALS</urn:Operand>
                             <urn:ExpectedValue>google</urn:ExpectedValue>
                             <urn:Result>google users</urn:Result>
                         </urn:attributeRule>

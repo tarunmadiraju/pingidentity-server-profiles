@@ -9,4 +9,5 @@
     <con:map name="Identologist.P14C"/>
     <con:map name="https://saml.salesforce.com"/>
     <con:map name="urn:amazon:webservices"/>
+    <con:map name="https://httpbin.org/anything-bkp"/>
 </con:config>

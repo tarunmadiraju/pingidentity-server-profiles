@@ -5,5 +5,6 @@
         <con:item name="extendedpro4oidc">com.pingidentity.pf.selectors.ExtendedPropertyAuthnSelector</con:item>
         <con:item name="PA">com.pingidentity.pf.selectors.saml.SamlAuthnContextAdapterSelector</con:item>
         <con:item name="passwordless">com.pingidentity.pf.selectors.ExtendedPropertyAuthnSelector</con:item>
+        <con:item name="dummyconnection">com.pingidentity.pf.selectors.connectionset.ConnectionSetAdapterSelector</con:item>
     </con:map>
 </con:config>
