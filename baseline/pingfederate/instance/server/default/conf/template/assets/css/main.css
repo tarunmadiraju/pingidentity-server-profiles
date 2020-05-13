@@ -4197,8 +4197,9 @@ body .ping-signin .ping-footer-container .ping-footer .ping-credits, body .ping-
   background-image: url("../images/powered-by-ping-identity.svg");
 }
 body.columns-layout .ping-signin .ping-header {
-  display: none;
+  display: flex;
 }
+
 body.columns-layout .ping-signin .ping-body-container {
   max-width: 790px;
   padding: 60px 50px 50px;
