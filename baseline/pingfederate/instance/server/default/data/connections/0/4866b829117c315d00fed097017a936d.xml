@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor entityID="https://auth.pingone.com/13f48a3a-6ed9-4d67-9b65-c2256df981d9" urn:name="FED-HUB-PFAS-SP-COMPANYX" ID="UJk7fkbdJPPJVn1g72AtILgYOOY" urn:LogLevel="STANDARD" urn:isActive="true" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2">
+    <md:Extensions>
+        <urn:EntityExtension PFVersion="10.0.0.15" LicenseGroup="">
+            <urn:VirtualIdentity EntityID="FED-HUB-PFAS-SP"/>
+            <urn:DefaultVirtualIdentity EntityID="FED-HUB-PFAS-SP"/>
+            <urn:DigitialSignatureAliases>
+                <urn:ActiveVerificationCertAlias>74nxr0ik7agi6irjc8umz2l2a</urn:ActiveVerificationCertAlias>
+            </urn:DigitialSignatureAliases>
+            <urn:Encryption>
+                <urn:EncryptionPolicy EncryptionAlgorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc" KeyTransportAlgorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p" EncryptAssertion="false" EncryptSubjectNameID="false" SLOEncryptSubjectNameID="false"/>
+                <urn:DecryptionPolicy AssertionEncrypted="false" SubjectNameIDEncrypted="false" AttributeEncrypted="false" SLOSubjectNameIDEncrypted="false"/>
+            </urn:Encryption>
+            <urn:ConnectionTemplateProperties/>
+            <urn:MetadataUrlId xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <urn:enableAutoMetadataUpdate>false</urn:enableAutoMetadataUpdate>
+            <urn:AdditionalAllowedEntitiesConfiguration>
+                <urn:AllowAdditionalEntities>false</urn:AllowAdditionalEntities>
+                <urn:AllowAllEntities>false</urn:AllowAllEntities>
+                <urn:AdditionalAllowedEntities/>
+            </urn:AdditionalAllowedEntitiesConfiguration>
+        </urn:EntityExtension>
+    </md:Extensions>
+    <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" WantAuthnRequestsSigned="false">
+        <md:Extensions>
+            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2020-05-20T23:58:22.290Z">
+                <urn:IncomingBindings Artifact="false" POST="true" Redirect="true" SOAP="false"/>
+                <urn:EnabledProfiles IDPInitiatedSSO="true" IDPInitiatedSLO="false" SPInitiatedSSO="true" SPInitiatedSLO="false"/>
+                <urn:IDP AssertionsSigned="false" DefaultTargetResource="">
+                    <urn:ConnectionContractMapping C2cContractId="51jU77l0f0fte53t" C2cContractName="Passwordless" RestrictVirtualServerIds="false">
+                        <urn:AttributeMap Name="subject" Type="Assertion" Value="SAML_SUBJECT"/>
+                        <urn:TokenAuthorizationIssuanceCriteria/>
+                    </urn:ConnectionContractMapping>
+                    <urn:AccountLinkingAndMapping Type="mapping" IncludeAdditionalAttributes="false"/>
+                    <urn:ErrPageMsg/>
+                </urn:IDP>
+            </urn:RoleExtension>
+        </md:Extensions>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://identologist.identologist.ping-eng.com:9031/sp/ACS.saml2"/>
+    </md:IDPSSODescriptor>
+    <md:RoleDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" xsi:type="urn:PFAvailableCertsRoleDescriptorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <urn:availableCert>
+            <urn:Base64EncodedCert>MIIDSjCCAjKgAwIBAgIGAWiSc9pDMA0GCSqGSIb3DQEBCwUAMGYxCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDTzEPMA0GA1UEBxMGRGVudmVyMQ0wCwYDVQQKEwRQaW5nMQwwCgYDVQQLEwNEZXYxHDAaBgNVBAMTE0NvbmZpZyBTaWduaW5nIENlcnQwHhcNMTkwMTI4MDMxNDUyWhcNMzQwMTI0MDMxNDUyWjBmMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ08xDzANBgNVBAcTBkRlbnZlcjENMAsGA1UEChMEUGluZzEMMAoGA1UECxMDRGV2MRwwGgYDVQQDExNDb25maWcgU2lnbmluZyBDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArAVRkqw28AdAxAFGYGB/9I2ufb2t1FX7476niunwGCbCnpuLr998AVQ0SlA2TcQ/k3CSjLvpWpO3G4FpeyE/z/q2RZz/uK2ojX63Th90w7N3vvu7V2jIj/YpYvmWXO7xA6CgSEJfeoMJtt/1OolyzR8Cef1o6AOxN+VskpUJCDu4RiqmRUoF22KqXZuLU7MtZd7XN+TbpuJkA0yiqoqAuzvV1vMYCY7L0T+iosONxMKtY05N9mMoj5AAJqixRk3acCb8S2UzGTcrzyKG6t6DSuJIsTgHysgaOaB9bGLEpCI8rUJ/XdeKvLILOo1C5NsBJQ4NPhtEJ4dX8nhRqWg+VwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCPIZyGpDai+VljSka31hwcnw2l/CVrUIb94nWEooFO/OQS6oUkUIqtKMN11kVn8c4rNhn5felCo747VS5fLQvHTY9p+qtghHcyPD7X5YZL6MU2vqPInls9I5ACFmA9pZpB4bMLjvWcQvc5xYq3FRQtCUvnQLhVvSyRq+Uky5lZ95i3RQ3iVWipCPLI0qZlmmy1pbmsEcu+/eEEoFnRQZo6n4AQhZLV0yjzcx3qEuszXMwuVXj/YpFW43RcTmt0xVa4laCmEUo9ENpe2GPbvOKKw17Xx8JhGccj24JmR7npi8lCU4uflLKtSQAFMDIsM283F1wVExFxuLzbQuj5FntY</urn:Base64EncodedCert>
+            <urn:alias>zce51zu1nz6gw83ll6xx6f0rk</urn:alias>
+        </urn:availableCert>
+        <urn:availableCert>
+            <urn:Base64EncodedCert>MIIDbDCCAlSgAwIBAgIGAXChKtzfMA0GCSqGSIb3DQEBCwUAMHcxCzAJBgNVBAYTAlVTMRYwFAYDVQQKDA1QaW5nIElkZW50aXR5MRYwFAYDVQQLDA1QaW5nIElkZW50aXR5MTgwNgYDVQQDDC9QaW5nT25lIFNTTyBDZXJ0aWZpY2F0ZSBmb3IgRGVmYXVsdCBlbnZpcm9ubWVudDAeFw0yMDAzMDMxNjExNDVaFw0yMTAzMDMxNjExNDVaMHcxCzAJBgNVBAYTAlVTMRYwFAYDVQQKDA1QaW5nIElkZW50aXR5MRYwFAYDVQQLDA1QaW5nIElkZW50aXR5MTgwNgYDVQQDDC9QaW5nT25lIFNTTyBDZXJ0aWZpY2F0ZSBmb3IgRGVmYXVsdCBlbnZpcm9ubWVudDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK30EGsOO4Hd4iwMhOZe+2Lx6kkWJJTtabLR9FgCgJFAtGSG0sbCZaKLYCE8rVkq6jRaIdjFkiurXHMviqZ96TSnZ9a2nBfMb7lrZ47n6RkZG7jFeb6f5sDhqYLxbwMWLXngOks9mpQ1f5tTZki+tVsJP1jn3jxtre9C4DdPlA+BO/JnW1iMv19s68nPPJ0va8g0BQ0YGHgLHqAeeCEkd9U/ivGjgRKYT7voNj73ITH95rQvPvaClfTv44LtCbFiHu57FXCvovvF0W6uwxQH3e1wyZtD51zpeClCWVck9PgJM69/u77hoXlxW8V57gherhMhQqaYjxb77lLh3g1Oc+MCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEALLO0PUIR7IVoiyaIXnCWOFnorBtBD1Ruxruda9uEN9vhb5Dn3agtrjpppplYZuq84zDjZjHawRST/hH+c4NZmLLUPUhZJqseFS/F4JK44MDCcplHJbc4wa6a4k5oJjhoCYTbtxUwcohwQWyO2QsKW9ebr/pD9uHr9jx7s45JwvHEi6CN9wBbwNp0z70kodG16FcweipzS/DDPHEv2Z28B6Ix54kMb5t3ZbONZBAmJzov47OchOKSH19+R0FkP/klOT+2/BVE46Hg8j/8V7X5fEur+XHdOmTPn+eXsUZtzpOJiRWvswHLXqS1F1ufojANgtSRmLw3QOsB53iw0/N62g==</urn:Base64EncodedCert>
+            <urn:alias>74nxr0ik7agi6irjc8umz2l2a</urn:alias>
+        </urn:availableCert>
+    </md:RoleDescriptor>
+    <md:ContactPerson contactType="administrative"/>
+</md:EntityDescriptor>

@@ -10,4 +10,6 @@
     <con:map name="https://saml.salesforce.com"/>
     <con:map name="urn:amazon:webservices"/>
     <con:map name="https://httpbin.org/anything-bkp"/>
+    <con:map name="FED-HUB-PFAS-SP"/>
+    <con:map name="https://auth.pingone.com/13f48a3a-6ed9-4d67-9b65-c2256df981d9"/>
 </con:config>

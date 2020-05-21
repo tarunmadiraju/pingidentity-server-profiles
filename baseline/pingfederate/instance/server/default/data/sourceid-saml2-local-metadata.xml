@@ -2,7 +2,7 @@
 <EntityDescriptor entityID="urn:saml2:tarunmadirajupingidentitycom" cacheDuration="PT1440M" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:sid="urn:sourceid.org:saml2:local-metadata-extension:v2">
     <!--This block contains Ping's proprietary endpoints-->
     <Extensions>
-        <sid:SourceIDExtension BaseURL="https://identologist.identologist.ping-eng.com:9031" Saml1xId="identologist:default:entityId" WsFedID="" Saml1xSrcId="" EnableWsFedIdP="false" EnableWsFedSp="false" EnableSaml20IdP="true" EnableSaml20Sp="true" EnableSaml11Rp="false" EnableSaml11Ap="false" EnableSaml10Rp="false" EnableSaml10Ap="false" EnableSpWsTrustSts="true" EnableInboundProvisioning="false" EnableIdpWsTrustSts="true" EnableX509Discovery="false" EnableIdpDiscovery="false" DisableAutomaticConnectionValidation="false" DataStoreValidationInterval="300" CustomGlobalHttpHeaderName="" ClientIpHeaderIndex="last" ForwardedHostHeaderName="" ForwardedHostHeaderIndex="last" ProxyTerminatesHttpsConns="false" MetadataSigningKeyAlias="" MetadataSigningAlgorithm="" MetadataSigningKeyMD5Fingerprint="" ConfirmIdpSlo="false" ClientCertSSLHeaderName="" ClientCertChainSSLHeaderName="" EnableOIDCSp="false">
+        <sid:SourceIDExtension BaseURL="https://identologist.identologist.ping-eng.com:9031" Saml1xId="identologist:default:entityId" WsFedID="https://identologist.identologist.ping-eng.com:9031" Saml1xSrcId="" EnableWsFedIdP="true" EnableWsFedSp="false" EnableSaml20IdP="true" EnableSaml20Sp="true" EnableSaml11Rp="true" EnableSaml11Ap="true" EnableSaml10Rp="true" EnableSaml10Ap="true" EnableSpWsTrustSts="true" EnableInboundProvisioning="true" EnableIdpWsTrustSts="true" EnableX509Discovery="true" EnableIdpDiscovery="true" DisableAutomaticConnectionValidation="false" DataStoreValidationInterval="300" CustomGlobalHttpHeaderName="" ClientIpHeaderIndex="last" ForwardedHostHeaderName="" ForwardedHostHeaderIndex="last" ProxyTerminatesHttpsConns="false" MetadataSigningKeyAlias="" MetadataSigningAlgorithm="" MetadataSigningKeyMD5Fingerprint="" ConfirmIdpSlo="false" ClientCertSSLHeaderName="" ClientCertChainSSLHeaderName="" EnableOIDCSp="false">
             <sid:LocalPathsDescriptor Suffix=".ping" ResumePathPrefix="/resume">
                 <sid:IDPLocalPaths>
                     <!--This endpoint is used by an IdP application to ask
@@ -36,6 +36,7 @@
             </sid:LocalPathsDescriptor>
             <sid:ApplicationURLs/>
             <sid:UrlToAdapterMap Url="http://identologist.identologist.ping-eng.com:8080/docker.html*" TargetType="ADAPTER" AdapterInstance="otknapachetest"/>
+            <sid:UrlToAdapterMap Url="https://identologist.identologist.ping-eng.com:9031/sp/startSSO.ping?PartnerIdpId=https%3A%2F%2Fauth.pingone.com%2F13f48a3a-6ed9-4d67-9b65-c2256df981d9" TargetType="SP_CONN" AdapterInstance="TEu24HK_ZiqcFeKJsNUdfT8WF36"/>
             <sid:IdpDiscovery CommonDomainServer="false" IdPCommonDomainClient="false" SPCommonDomainClient="false" WriteCookiePath="/writecookie.cdc" ReadCookiePath="/readcookie.cdc">
                 <sid:CommonDomainClient CommonDomainServiceBaseUrl=""/>
                 <sid:CommonDomainService CommonDomain="" CookieLifeDays="365"/>

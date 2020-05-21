@@ -2,4 +2,6 @@
 <con:config xmlns:con="http://www.sourceid.org/2004/05/config">
     <con:item name="SPOverrideMode">STANDARD</con:item>
     <con:item name="SPOverrideOn">false</con:item>
+    <con:item name="IdPOverrideMode">STANDARD</con:item>
+    <con:item name="IdPOverrideOn">false</con:item>
 </con:config>
