@@ -2,8 +2,6 @@
 <md:EntityDescriptor entityID="https://auth.pingone.com/13f48a3a-6ed9-4d67-9b65-c2256df981d9" urn:name="FED-HUB-PFAS-SP-COMPANYX" ID="UJk7fkbdJPPJVn1g72AtILgYOOY" urn:LogLevel="STANDARD" urn:isActive="true" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2">
     <md:Extensions>
         <urn:EntityExtension PFVersion="10.0.0.15" LicenseGroup="">
-            <urn:VirtualIdentity EntityID="FED-HUB-PFAS-SP"/>
-            <urn:DefaultVirtualIdentity EntityID="FED-HUB-PFAS-SP"/>
             <urn:DigitialSignatureAliases>
                 <urn:ActiveVerificationCertAlias>74nxr0ik7agi6irjc8umz2l2a</urn:ActiveVerificationCertAlias>
             </urn:DigitialSignatureAliases>
@@ -23,11 +21,11 @@
     </md:Extensions>
     <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" WantAuthnRequestsSigned="false">
         <md:Extensions>
-            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2020-05-20T23:58:22.290Z">
+            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2020-05-22T16:31:27.331Z">
                 <urn:IncomingBindings Artifact="false" POST="true" Redirect="true" SOAP="false"/>
                 <urn:EnabledProfiles IDPInitiatedSSO="true" IDPInitiatedSLO="false" SPInitiatedSSO="true" SPInitiatedSLO="false"/>
                 <urn:IDP AssertionsSigned="false" DefaultTargetResource="">
-                    <urn:ConnectionContractMapping C2cContractId="51jU77l0f0fte53t" C2cContractName="Passwordless" RestrictVirtualServerIds="false">
+                    <urn:ConnectionContractMapping C2cContractId="rUfeBaF470eSF47y" C2cContractName="KLA" RestrictVirtualServerIds="false">
                         <urn:AttributeMap Name="subject" Type="Assertion" Value="SAML_SUBJECT"/>
                         <urn:TokenAuthorizationIssuanceCriteria/>
                     </urn:ConnectionContractMapping>
@@ -36,7 +34,7 @@
                 </urn:IDP>
             </urn:RoleExtension>
         </md:Extensions>
-        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://identologist.identologist.ping-eng.com:9031/sp/ACS.saml2"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://auth.pingone.com/13f48a3a-6ed9-4d67-9b65-c2256df981d9/saml20/idp/sso"/>
     </md:IDPSSODescriptor>
     <md:RoleDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" xsi:type="urn:PFAvailableCertsRoleDescriptorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <urn:availableCert>

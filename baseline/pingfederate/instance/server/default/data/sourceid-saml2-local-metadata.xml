@@ -36,7 +36,7 @@
             </sid:LocalPathsDescriptor>
             <sid:ApplicationURLs/>
             <sid:UrlToAdapterMap Url="http://identologist.identologist.ping-eng.com:8080/docker.html*" TargetType="ADAPTER" AdapterInstance="otknapachetest"/>
-            <sid:UrlToAdapterMap Url="https://identologist.identologist.ping-eng.com:9031/sp/startSSO.ping?PartnerIdpId=https%3A%2F%2Fauth.pingone.com%2F13f48a3a-6ed9-4d67-9b65-c2256df981d9" TargetType="SP_CONN" AdapterInstance="TEu24HK_ZiqcFeKJsNUdfT8WF36"/>
+            <sid:UrlToAdapterMap Url="https://identologist.identologist.ping-eng.com:9031/sp/ACS.saml2" TargetType="SP_CONN" AdapterInstance="TEu24HK_ZiqcFeKJsNUdfT8WF36"/>
             <sid:IdpDiscovery CommonDomainServer="false" IdPCommonDomainClient="false" SPCommonDomainClient="false" WriteCookiePath="/writecookie.cdc" ReadCookiePath="/readcookie.cdc">
                 <sid:CommonDomainClient CommonDomainServiceBaseUrl=""/>
                 <sid:CommonDomainService CommonDomain="" CookieLifeDays="365"/>
