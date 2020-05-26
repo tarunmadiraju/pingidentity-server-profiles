@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:AuthnSelectionConfig lastModifiedMillis="1590179471907" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
+<urn:AuthnSelectionConfig lastModifiedMillis="1590515327378" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
     <urn:AuthnSelectionTrees>
         <urn:AuthnSelectionTree treeName="Social-login-oidc" disabled="false" authnApiApp="">
             <urn:AstRoot context="">
@@ -354,28 +354,27 @@
             <urn:AstRoot context="">
                 <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     <urn:AuthnSourceKey type="ADAPTER">IdentityF</urn:AuthnSourceKey>
-                    <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                    <urn:fallbackToSuccess>false</urn:fallbackToSuccess>
                     <urn:attributeRule>
                         <urn:IncomingAttr>domain</urn:IncomingAttr>
                         <urn:Operand>MULTIVALUE_CONTAINS_CASE_INSENSITIVE</urn:Operand>
-                        <urn:ExpectedValue>pingidentity.com</urn:ExpectedValue>
-                        <urn:Result>pingidentity.com</urn:Result>
+                        <urn:ExpectedValue>kla.com</urn:ExpectedValue>
+                        <urn:Result>kla</urn:Result>
                     </urn:attributeRule>
                     <urn:attributeRule>
                         <urn:IncomingAttr>domain</urn:IncomingAttr>
                         <urn:Operand>MULTIVALUE_CONTAINS_CASE_INSENSITIVE</urn:Operand>
-                        <urn:ExpectedValue>starwars.com</urn:ExpectedValue>
-                        <urn:Result>starwars.com</urn:Result>
+                        <urn:ExpectedValue>companyx.com</urn:ExpectedValue>
+                        <urn:Result>companyx</urn:Result>
                     </urn:attributeRule>
                 </urn:AstAction>
                 <urn:AstChild context="Fail">
                     <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                 </urn:AstChild>
-                <urn:AstChild context="pingidentity.com">
+                <urn:AstChild context="kla">
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                        <urn:AuthnSourceKey type="ADAPTER">HTMLFormPD</urn:AuthnSourceKey>
+                        <urn:AuthnSourceKey type="ADAPTER">x509</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
-                        <urn:InputIdMapping Type="Adapter" AttributeSourceId="IdentityF" Value="subject"/>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -383,13 +382,13 @@
                     <urn:AstChild context="Success">
                         <urn:AstAction apcId="lhDkrJX7W3QOe3nG" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <urn:AttributeMapping>
-                                <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="HTMLFormPD" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="x509" Value="SubjectDN" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                 <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             </urn:AttributeMapping>
                         </urn:AstAction>
                     </urn:AstChild>
                 </urn:AstChild>
-                <urn:AstChild context="starwars.com">
+                <urn:AstChild context="companyx">
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFORMAD</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
@@ -402,24 +401,6 @@
                         <urn:AstAction apcId="lhDkrJX7W3QOe3nG" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <urn:AttributeMapping>
                                 <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="HTMLFORMAD" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                                <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                            </urn:AttributeMapping>
-                        </urn:AstAction>
-                    </urn:AstChild>
-                </urn:AstChild>
-                <urn:AstChild context="Success">
-                    <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                        <urn:AuthnSourceKey type="ADAPTER">PingID</urn:AuthnSourceKey>
-                        <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
-                        <urn:InputIdMapping Type="Adapter" AttributeSourceId="IdentityF" Value="subject"/>
-                    </urn:AstAction>
-                    <urn:AstChild context="Fail">
-                        <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-                    </urn:AstChild>
-                    <urn:AstChild context="Success">
-                        <urn:AstAction apcId="lhDkrJX7W3QOe3nG" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                            <urn:AttributeMapping>
-                                <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="PingID" Value="subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                 <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             </urn:AttributeMapping>
                         </urn:AstAction>

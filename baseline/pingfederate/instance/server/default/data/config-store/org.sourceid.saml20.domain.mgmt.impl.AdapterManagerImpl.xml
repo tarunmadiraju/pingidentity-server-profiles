@@ -9,6 +9,7 @@
         <con:item name="Google">com.pingidentity.adapter.idp.google.GoogleAuthenticationAdapter</con:item>
         <con:item name="IFPINGID">com.pingidentity.pf.adapters.composite.CompositeAdapter</con:item>
         <con:item name="PingIDSDKPF">com.pingidentity.adapters.pingid.PingIDSDKAdapter</con:item>
+        <con:item name="x509">com.pingidentity.adapters.idp.clientcert.ClientCertIdpAuthnAdapter</con:item>
     </con:map>
     <con:map name="IdpAdapterInstanceParents"/>
     <con:map name="SpAuthnAdapterInstances">
