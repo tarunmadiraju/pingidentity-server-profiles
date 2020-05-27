@@ -39,6 +39,7 @@ services:
     ports:
       - 9031:9031
       - 9999:9999
+      - 2443:2443
     networks:
       - pingnet
 
