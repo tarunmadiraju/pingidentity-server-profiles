@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urn:AdapterConfiguration authnCtxClassRef="" isInheritAttributeSettings="false" isInheritAttributeMapping="false" maskOgnlValues="false" isInheritExtendedContractAttributes="false" name="x509" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
     <urn:Fields>
-        <urn:Field name="Client Auth Port">8443</urn:Field>
-        <urn:Field name="Client Auth Hostname">identologist.identologist.ping-eng.com</urn:Field>
+        <urn:Field name="Client Auth Port">2443</urn:Field>
+        <urn:Field name="Client Auth Hostname"/>
         <urn:Field name="Parse Client Cert Subject and Issuer DNs">true</urn:Field>
         <urn:Field name="Match Issuer DN in Client X.509 certificate">false</urn:Field>
         <urn:Field name="Return Success On SLO">false</urn:Field>
