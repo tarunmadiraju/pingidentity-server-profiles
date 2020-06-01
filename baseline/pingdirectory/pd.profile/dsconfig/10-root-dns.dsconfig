@@ -1,3 +1,4 @@
+#p
 #
 # Set an alias for pingdirectory's administrator to have a
 # console login experience consistent with that of pingfederate
@@ -35,6 +36,7 @@ dsconfig create-root-dn-user \
   --set privilege:unindexed-search \
   --set privilege:config-read \
   --set is-proxyable:prohibited \
+  --set privilege:proxied-auth \
   --set password<${ROOT_USER_PASSWORD_FILE}
 
 #
