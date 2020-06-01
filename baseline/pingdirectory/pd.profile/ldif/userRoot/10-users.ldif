@@ -11,6 +11,7 @@ uid: user.0
 mail: user.0@example.com
 userPassword: 2FederateM0re
 pf-connected-identity: auth-source=pf-local-identity:user-id=user.0
+ds-privilege-name: proxied-auth
 
 dn: uid=user.1,ou=People,${USER_BASE_DN}
 objectClass: top
