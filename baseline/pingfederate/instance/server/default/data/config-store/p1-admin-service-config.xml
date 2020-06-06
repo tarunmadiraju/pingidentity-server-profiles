@@ -5,7 +5,7 @@
     <c:item name="ConnTimeoutMillis">10000</c:item>
     <c:item name="VerificationKeySetRefreshIntervalMins">60</c:item>
     <c:item name="AllowedClockSkewSecs">300</c:item>
-    <c:item name="EnableAdminConsoleSso">true</c:item>
+    <c:item name="EnableAdminConsoleSso">false</c:item>
     <c:item name="ClientAuthnKeyPairLifetimeDays">1095</c:item>
     <c:item name="ClientAuthnKeyPairActivationDelaySecs">900</c:item>
     <c:item name="ValidateSsoRedirectUri">true</c:item>

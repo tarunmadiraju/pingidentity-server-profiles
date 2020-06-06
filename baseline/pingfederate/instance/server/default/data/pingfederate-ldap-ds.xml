@@ -6,7 +6,7 @@
         <ldap:use-ssl>false</ldap:use-ssl>
         <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
         <ldap:ad-referral>false</ldap:ad-referral>
-        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..2Tacelz7xYQDcLndVs7rJA.FAumk8Ro_MoCjgZ_2ej6Aw.hcufixYDL1Os4m4iBnMKJw</ldap:credentials>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..K51Q-EdwYYRL2qPEZWRgZw.JuHjh__7B791Oygew1_tTQ.i1hJg0AfkLklnA0YPCjL3A</ldap:credentials>
         <ldap:authenticationMeth>simple</ldap:authenticationMeth>
         <ldap:description>pingdirectory</ldap:description>
         <ldap:name>pingdirectory</ldap:name>
@@ -21,7 +21,7 @@
         <ldap:use-ssl>true</ldap:use-ssl>
         <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
         <ldap:ad-referral>false</ldap:ad-referral>
-        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..1ypBg8HzD0tPucHF3kTDGg.wCBOVAVUSuQ4w4hUObAOdQ.HbLfYAYaibLF3utlpmdB2A</ldap:credentials>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..ZMVHir1Cs3tvAY5zJXOgpA.Bvn3TXRNQjmjMdiijZHICQ.lUyJRXMYNkMU8mg3PsCylQ</ldap:credentials>
         <ldap:authenticationMeth>simple</ldap:authenticationMeth>
         <ldap:description>AD</ldap:description>
         <ldap:name>AD</ldap:name>
@@ -30,13 +30,28 @@
             <ldap:tagEntry host="EC2AMAZ-2MNFVU0.tarun.lab" tags=""/>
         </ldap:ldapHostTagList>
     </ldap:ldap-source>
+    <ldap:ldap-source id="LDAP-8CAB180E7019F21460BA3CBCE0687A84BBE88555" maskAttributeValues="false" ldapType="ActiveDirectory" ldapTypeDesc="Active Directory" testOnBorrow="false" testOnReturn="false" createIfNecessary="true" minIdle="10" maxActive="100" maxWait="-1" timeBetweenEvictionRunsMillis="60000" readTimeoutMillis="3000" connTimeoutMillis="3000" verifyHost="true" dnsTtlMillis="60000" ldapDnsSrvPrefix="_ldap._tcp" ldapsDnsSrvPrefix="_ldaps._tcp">
+        <ldap:host>10.101.47.73</ldap:host>
+        <ldap:principal>CN=Administrator,CN=Users,DC=faspoz,DC=com</ldap:principal>
+        <ldap:use-ssl>false</ldap:use-ssl>
+        <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
+        <ldap:ad-referral>false</ldap:ad-referral>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..7Khw8OJuc2TiV9IX-r46wg.BnJ8JgKkKH-dvNArGV2BiQ.DHI_pnDWbH3r-AiedEq_Uw</ldap:credentials>
+        <ldap:authenticationMeth>simple</ldap:authenticationMeth>
+        <ldap:description>faspozAD</ldap:description>
+        <ldap:name>faspozAD</ldap:name>
+        <ldap:binaryAttributes/>
+        <ldap:ldapHostTagList>
+            <ldap:tagEntry host="10.101.47.73" tags="faspoz"/>
+        </ldap:ldapHostTagList>
+    </ldap:ldap-source>
     <ldap:ldap-source id="LDAP-5D9CDED034812CB99F213873F661F81EF0703644" maskAttributeValues="false" ldapType="Generic" ldapTypeDesc="Generic" testOnBorrow="false" testOnReturn="false" createIfNecessary="true" minIdle="10" maxActive="100" maxWait="-1" timeBetweenEvictionRunsMillis="60000" readTimeoutMillis="3000" connTimeoutMillis="3000" verifyHost="true" dnsTtlMillis="60000" ldapDnsSrvPrefix="_ldap._tcp" ldapsDnsSrvPrefix="_ldaps._tcp">
         <ldap:host>ldap.jumpcloud.com</ldap:host>
         <ldap:principal>uid=jumpservice,ou=Users,o=5e67073ec060a657bb5abddd,dc=jumpcloud,dc=com</ldap:principal>
         <ldap:use-ssl>false</ldap:use-ssl>
         <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
         <ldap:ad-referral>false</ldap:ad-referral>
-        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..NivaAE6i3ddhEick6e9dIA.bzxM_5okiQeJycXaVoMXCw.iUoja8c0n5nzom3bJkqqXA</ldap:credentials>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..gUnU81G9nG_FzbHpgLNsAQ.oGt3T2UBPUgTULFrsOmV6g.GURt7VvH1tE_n_J9IA8jkw</ldap:credentials>
         <ldap:authenticationMeth>simple</ldap:authenticationMeth>
         <ldap:description>jumpcloud</ldap:description>
         <ldap:name>jumpcloud</ldap:name>

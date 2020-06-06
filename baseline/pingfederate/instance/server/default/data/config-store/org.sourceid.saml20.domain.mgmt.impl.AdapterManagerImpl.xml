@@ -10,6 +10,7 @@
         <con:item name="IFPINGID">com.pingidentity.pf.adapters.composite.CompositeAdapter</con:item>
         <con:item name="PingIDSDKPF">com.pingidentity.adapters.pingid.PingIDSDKAdapter</con:item>
         <con:item name="x509">com.pingidentity.adapters.idp.clientcert.ClientCertIdpAuthnAdapter</con:item>
+        <con:item name="HTMLFORMfaspozad">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
     </con:map>
     <con:map name="IdpAdapterInstanceParents"/>
     <con:map name="SpAuthnAdapterInstances">

@@ -38,7 +38,7 @@
             <loc:parameter param-name="Mask Log Values" value="false"/>
         </loc:field>
     </loc:fields>
-    <loc:email-verification-config emailVerificationEnabled="false" verifyEmailTemplateName="message-template-email-ownership-verification.html" emailVerificationSentTemplateName="local.identity.email.verification.sent.html" emailVerificationSuccessTemplateName="local.identity.email.verification.success.html" emailVerificationErrorTemplateName="local.identity.email.verification.error.html" otlTimeToLive="1440" verificationEmailField="" verificationStatusField="" notificationPublisherId=""/>
+    <loc:email-verification-config emailVerificationEnabled="true" verifyEmailTemplateName="message-template-email-ownership-verification.html" emailVerificationSentTemplateName="local.identity.email.verification.sent.html" emailVerificationSuccessTemplateName="local.identity.email.verification.success.html" emailVerificationErrorTemplateName="local.identity.email.verification.error.html" otlTimeToLive="1440" verificationEmailField="mail" verificationStatusField="uid" notificationPublisherId="mailtrap"/>
     <loc:registration-config captchaEnabled="false" templateName="local.identity.registration.html"/>
     <loc:profile-config templateName="local.identity.profile.html" deleteIdentityEnabled="true"/>
     <loc:datastore-mapping>
