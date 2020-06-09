@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:AuthnSelectionConfig lastModifiedMillis="1591383893252" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
+<urn:AuthnSelectionConfig lastModifiedMillis="1591740940786" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
     <urn:AuthnSelectionTrees>
         <urn:AuthnSelectionTree treeName="Social-login-oidc" disabled="false" authnApiApp="">
             <urn:AstRoot context="">
@@ -112,7 +112,7 @@
                 <urn:AstAction authnSelectorId="PA" xsi:type="urn:AuthnSelectorActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                 <urn:AstChild context="IdentityF">
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                        <urn:AuthnSourceKey type="ADAPTER">IdentityF</urn:AuthnSourceKey>
+                        <urn:AuthnSourceKey type="ADAPTER">HTMLFORMPINGID</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
@@ -121,7 +121,7 @@
                     <urn:AstChild context="Success">
                         <urn:AstAction apcId="smHHo4nmBNUncT5e" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <urn:AttributeMapping>
-                                <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="IdentityF" Value="subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="HTMLFORMPINGID" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                 <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             </urn:AttributeMapping>
                         </urn:AstAction>
