@@ -2,8 +2,8 @@
 <urn:AdapterConfiguration authnCtxClassRef="" isInheritAttributeSettings="false" isInheritAttributeMapping="false" maskOgnlValues="false" isInheritExtendedContractAttributes="false" name="Google" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
     <urn:Fields>
         <urn:Field name="Attribute Retrieval">1</urn:Field>
-        <urn:Field name="Client ID">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..idqiVWI_pnJr9Q10nqNexA.HsqOhlXDTAndzLdn7ih7T72FltiZQjLrj-gW_7wUuAu9jsla_ZjnfUCL_zsHfRgkm2maeicmpQ-rY3kuN45HJI9dZjrwwR8H3AWsIZqUKRs.2FqAp5YlEdIZwvsH6ZP09A</urn:Field>
-        <urn:Field name="Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..-XHjRC2Ln-IjnnX07f0nRA.Jlpg7yCWwF40PEJcAXGkiTiTf6mK4e5C01H9bcgp4kM.5-dD52Fft1tFJqE89LklLA</urn:Field>
+        <urn:Field name="Client ID">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..U4Xueie8-DjrESOEgKHe-A.UoXPDnn4f5Zm2ROgqCD2gMaUqmm1itviKN8Ga4AuwNAji1pMuyv9MUbMh72rQLiFMupXI59vgBobKSArez4L92ctGC9aSRd9XjXRYHPrU-Q.r3gGUcG5HxXJ550hbLyMfg</urn:Field>
+        <urn:Field name="Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ.._HaNiAeTK_7EhgqTsPQh6A.TU0CPJQ9l5-DGrNPZYvPC0vRJA8XxJ0BtZp3S1Buoog.atU8-V9EGWSQYuh08QKZLQ</urn:Field>
         <urn:Field name="Refresh Token"/>
         <urn:Field name="Error Redirect URL"/>
         <urn:Field name="Unauthorized Redirect URL"/>

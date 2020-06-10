@@ -15,12 +15,12 @@
                 <urn:AllowAllEntities>false</urn:AllowAllEntities>
                 <urn:AdditionalAllowedEntities/>
             </urn:AdditionalAllowedEntitiesConfiguration>
-            <urn:ExtendedProperties name="passwordless" value="formad"/>
+            <urn:ExtendedProperties name="passwordless" value="kerberos+mfa"/>
         </urn:EntityExtension>
     </md:Extensions>
     <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" AuthnRequestsSigned="false" WantAssertionsSigned="false" SignResponseAsRequired="true">
         <md:Extensions>
-            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2020-06-06T00:54:37.792Z">
+            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2020-06-10T18:15:32.922Z">
                 <urn:IncomingBindings Artifact="true" POST="true" Redirect="true" SOAP="true"/>
                 <urn:EnabledProfiles IDPInitiatedSSO="true" IDPInitiatedSLO="false" SPInitiatedSSO="false" SPInitiatedSLO="false"/>
                 <urn:MessageCustomizationHook contextName="assertion">#cal = new org.apache.xmlbeans.XmlCalendar(new java.util.Date()),
