@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-echo Hello from the baseline server profile 20-restart-sequence.sh.pre hook!
+echo Hello from the baseline server profile 182-pre-setup.sh.pre hook!
 echo "====> USER_BASE_DN=[${USER_BASE_DN}]"
 computedDomain=$(echo ${USER_BASE_DN} | sed 's/^dc=\([^,]*\).*/\1/' )
 computedOrg=$(echo ${USER_BASE_DN} | sed 's/^o=\([^,]*\).*/\1/' )
@@ -29,5 +29,5 @@ END_ORG
 
 else
     echo_red "ERROR: the base is expected to be dc=<your domain> or o=<your org>"
-    exit 20
+    exit 183
 fi
