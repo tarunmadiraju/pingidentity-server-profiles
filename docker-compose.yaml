@@ -90,6 +90,7 @@ services:
       - SERVER_PROFILE_PATH=baseline/pingcentral/external-mysql-db
       - PING_CENTRAL_BLIND_TRUST=true
       - PING_CENTRAL_VERIFY_HOSTNAME=false
+      - PING_IDENTITY_ACCEPT_EULA=YES  
       - MYSQL_SERVICE_HOST=pingcentral-db
       - MYSQL_SERVICE_PORT=3306
       - MYSQL_DATABASE=pingcentral
