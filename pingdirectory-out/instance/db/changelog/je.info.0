@@ -1,0 +1,76 @@
+2020-09-04 17:50:03.781 UTC CONFIG [/opt/out/instance/db/changelog] Starting TOTAL_RECOVERY Recovery Info null useMinReplicatedNodeId=0 useMaxNodeId=0 useMinReplicatedDbId=0 useMaxDbId=0 useMinReplicatedTxnId=0 useMaxTxnId=0
+2020-09-04 17:50:03.783 UTC CONFIG [/opt/out/instance/db/changelog] Recovery w/no files.
+2020-09-04 17:50:03.813 UTC CONFIG [/opt/out/instance/db/changelog] Starting POPULATE_UP Recovery Info null useMinReplicatedNodeId=0 useMaxNodeId=0 useMinReplicatedDbId=0 useMaxDbId=0 useMinReplicatedTxnId=0 useMaxTxnId=0
+2020-09-04 17:50:03.851 UTC CONFIG [/opt/out/instance/db/changelog] Stopping POPULATE_UP Recovery Info null useMinReplicatedNodeId=0 useMaxNodeId=0 useMinReplicatedDbId=0 useMaxDbId=0 useMinReplicatedTxnId=0 useMaxTxnId=0
+2020-09-04 17:50:03.851 UTC CONFIG [/opt/out/instance/db/changelog] Starting POPULATE_EP Recovery Info null useMinReplicatedNodeId=0 useMaxNodeId=0 useMinReplicatedDbId=0 useMaxDbId=0 useMinReplicatedTxnId=0 useMaxTxnId=0
+2020-09-04 17:50:03.862 UTC CONFIG [/opt/out/instance/db/changelog] Stopping POPULATE_EP Recovery Info null useMinReplicatedNodeId=0 useMaxNodeId=0 useMinReplicatedDbId=0 useMaxDbId=0 useMinReplicatedTxnId=0 useMaxTxnId=0
+2020-09-04 17:50:03.862 UTC CONFIG [/opt/out/instance/db/changelog] Starting REMOVE_TEMP_DBS Recovery Info null useMinReplicatedNodeId=0 useMaxNodeId=0 useMinReplicatedDbId=0 useMaxDbId=0 useMinReplicatedTxnId=0 useMaxTxnId=0
+2020-09-04 17:50:03.863 UTC CONFIG [/opt/out/instance/db/changelog] Stopping REMOVE_TEMP_DBS Recovery Info null useMinReplicatedNodeId=0 useMaxNodeId=0 useMinReplicatedDbId=0 useMaxDbId=0 useMinReplicatedTxnId=0 useMaxTxnId=0
+2020-09-04 17:50:03.863 UTC CONFIG [/opt/out/instance/db/changelog] Starting CKPT Recovery Info null useMinReplicatedNodeId=0 useMaxNodeId=0 useMinReplicatedDbId=0 useMaxDbId=0 useMinReplicatedTxnId=0 useMaxTxnId=0
+2020-09-04 17:50:03.871 UTC CONFIG [/opt/out/instance/db/changelog] Checkpoint 1: source=recovery success=true nFullINFlushThisRun=4 nDeltaINFlushThisRun=0
+2020-09-04 17:50:03.874 UTC CONFIG [/opt/out/instance/db/changelog] Stopping CKPT Recovery Info null useMinReplicatedNodeId=0 useMaxNodeId=0 useMinReplicatedDbId=0 useMaxDbId=0 useMinReplicatedTxnId=0 useMaxTxnId=0
+2020-09-04 17:50:03.875 UTC CONFIG [/opt/out/instance/db/changelog] Stopping TOTAL_RECOVERY Recovery Info null useMinReplicatedNodeId=0 useMaxNodeId=0 useMinReplicatedDbId=0 useMaxDbId=0 useMinReplicatedTxnId=0 useMaxTxnId=0
+2020-09-04 17:50:03.882 UTC CONFIG [/opt/out/instance/db/changelog] Stopping TOTAL_ENV_OPEN Recovery Info null useMinReplicatedNodeId=0 useMaxNodeId=0 useMinReplicatedDbId=0 useMaxDbId=0 useMinReplicatedTxnId=0 useMaxTxnId=0
+2020-09-04 17:50:04.023 UTC CONFIG [/opt/out/instance/db/changelog] Checkpoint 2: source=api success=true nFullINFlushThisRun=12 nDeltaINFlushThisRun=0
+2020-09-04 17:52:03.996 UTC CONFIG [/opt/out/instance/db/changelog] Checkpoint 3: source=api success=true nFullINFlushThisRun=17 nDeltaINFlushThisRun=1
+2020-09-04 17:53:03.998 UTC CONFIG [/opt/out/instance/db/changelog] Checkpoint 4: source=api success=true nFullINFlushThisRun=54 nDeltaINFlushThisRun=0
+2020-09-04 19:53:04.080 UTC CONFIG [/opt/out/instance/db/changelog] Checkpoint 5: source=api success=true nFullINFlushThisRun=45 nDeltaINFlushThisRun=1
+2020-09-05 00:00:03.883 UTC INFO [/opt/out/instance/db/changelog] Start verify of data files
+2020-09-05 00:00:04.793 UTC INFO [/opt/out/instance/db/changelog] End verify of data files
+2020-09-05 00:00:04.793 UTC INFO [/opt/out/instance/db/changelog] Start verify all databases
+2020-09-05 00:00:04.806 UTC INFO [/opt/out/instance/db/changelog] End verify all databases
+2020-09-06 00:00:03.882 UTC INFO [/opt/out/instance/db/changelog] Start verify of data files
+2020-09-06 00:00:04.786 UTC INFO [/opt/out/instance/db/changelog] End verify of data files
+2020-09-06 00:00:04.786 UTC INFO [/opt/out/instance/db/changelog] Start verify all databases
+2020-09-06 00:00:04.790 UTC INFO [/opt/out/instance/db/changelog] End verify all databases
+2020-09-07 00:00:03.882 UTC INFO [/opt/out/instance/db/changelog] Start verify of data files
+2020-09-07 00:00:04.788 UTC INFO [/opt/out/instance/db/changelog] End verify of data files
+2020-09-07 00:00:04.788 UTC INFO [/opt/out/instance/db/changelog] Start verify all databases
+2020-09-07 00:00:04.789 UTC INFO [/opt/out/instance/db/changelog] End verify all databases
+2020-09-08 00:00:03.883 UTC INFO [/opt/out/instance/db/changelog] Start verify of data files
+2020-09-08 00:00:04.785 UTC INFO [/opt/out/instance/db/changelog] End verify of data files
+2020-09-08 00:00:04.785 UTC INFO [/opt/out/instance/db/changelog] Start verify all databases
+2020-09-08 00:00:04.787 UTC INFO [/opt/out/instance/db/changelog] End verify all databases
+2020-09-09 00:00:03.882 UTC INFO [/opt/out/instance/db/changelog] Start verify of data files
+2020-09-09 00:00:04.791 UTC INFO [/opt/out/instance/db/changelog] End verify of data files
+2020-09-09 00:00:04.791 UTC INFO [/opt/out/instance/db/changelog] Start verify all databases
+2020-09-09 00:00:04.793 UTC INFO [/opt/out/instance/db/changelog] End verify all databases
+2020-09-09 20:16:06.759 UTC CONFIG [/opt/out/instance/db/changelog] Checkpoint 6: source=api success=true nFullINFlushThisRun=44 nDeltaINFlushThisRun=2
+2020-09-09 21:14:06.780 UTC CONFIG [/opt/out/instance/db/changelog] Checkpoint 7: source=api success=true nFullINFlushThisRun=28 nDeltaINFlushThisRun=4
+2020-09-09 21:18:06.784 UTC CONFIG [/opt/out/instance/db/changelog] Checkpoint 8: source=api success=true nFullINFlushThisRun=10 nDeltaINFlushThisRun=0
+2020-09-09 22:58:06.853 UTC CONFIG [/opt/out/instance/db/changelog] Checkpoint 9: source=api success=true nFullINFlushThisRun=35 nDeltaINFlushThisRun=3
+2020-09-09 23:18:06.866 UTC CONFIG [/opt/out/instance/db/changelog] Checkpoint 10: source=api success=true nFullINFlushThisRun=25 nDeltaINFlushThisRun=1
+2020-09-10 00:00:03.882 UTC INFO [/opt/out/instance/db/changelog] Start verify of data files
+2020-09-10 00:00:05.085 UTC INFO [/opt/out/instance/db/changelog] End verify of data files
+2020-09-10 00:00:05.085 UTC INFO [/opt/out/instance/db/changelog] Start verify all databases
+2020-09-10 00:00:05.088 UTC INFO [/opt/out/instance/db/changelog] End verify all databases
+2020-09-11 00:00:03.882 UTC INFO [/opt/out/instance/db/changelog] Start verify of data files
+2020-09-11 00:00:05.084 UTC INFO [/opt/out/instance/db/changelog] End verify of data files
+2020-09-11 00:00:05.085 UTC INFO [/opt/out/instance/db/changelog] Start verify all databases
+2020-09-11 00:00:05.086 UTC INFO [/opt/out/instance/db/changelog] End verify all databases
+2020-09-12 00:00:03.883 UTC INFO [/opt/out/instance/db/changelog] Start verify of data files
+2020-09-12 00:00:05.085 UTC INFO [/opt/out/instance/db/changelog] End verify of data files
+2020-09-12 00:00:05.085 UTC INFO [/opt/out/instance/db/changelog] Start verify all databases
+2020-09-12 00:00:05.086 UTC INFO [/opt/out/instance/db/changelog] End verify all databases
+2020-09-13 00:00:03.882 UTC INFO [/opt/out/instance/db/changelog] Start verify of data files
+2020-09-13 00:00:05.085 UTC INFO [/opt/out/instance/db/changelog] End verify of data files
+2020-09-13 00:00:05.085 UTC INFO [/opt/out/instance/db/changelog] Start verify all databases
+2020-09-13 00:00:05.086 UTC INFO [/opt/out/instance/db/changelog] End verify all databases
+2020-09-14 00:00:03.882 UTC INFO [/opt/out/instance/db/changelog] Start verify of data files
+2020-09-14 00:00:05.084 UTC INFO [/opt/out/instance/db/changelog] End verify of data files
+2020-09-14 00:00:05.084 UTC INFO [/opt/out/instance/db/changelog] Start verify all databases
+2020-09-14 00:00:05.088 UTC INFO [/opt/out/instance/db/changelog] End verify all databases
+2020-09-15 00:00:03.883 UTC INFO [/opt/out/instance/db/changelog] Start verify of data files
+2020-09-15 00:00:05.085 UTC INFO [/opt/out/instance/db/changelog] End verify of data files
+2020-09-15 00:00:05.085 UTC INFO [/opt/out/instance/db/changelog] Start verify all databases
+2020-09-15 00:00:05.086 UTC INFO [/opt/out/instance/db/changelog] End verify all databases
+2020-09-16 00:00:03.883 UTC INFO [/opt/out/instance/db/changelog] Start verify of data files
+2020-09-16 00:00:05.085 UTC INFO [/opt/out/instance/db/changelog] End verify of data files
+2020-09-16 00:00:05.085 UTC INFO [/opt/out/instance/db/changelog] Start verify all databases
+2020-09-16 00:00:05.087 UTC INFO [/opt/out/instance/db/changelog] End verify all databases
+2020-09-16 00:29:09.935 UTC CONFIG [/opt/out/instance/db/changelog] Checkpoint 11: source=api success=true nFullINFlushThisRun=38 nDeltaINFlushThisRun=0
+2020-09-16 00:30:09.939 UTC CONFIG [/opt/out/instance/db/changelog] Checkpoint 12: source=api success=true nFullINFlushThisRun=35 nDeltaINFlushThisRun=1
+2020-09-17 00:00:03.882 UTC INFO [/opt/out/instance/db/changelog] Start verify of data files
+2020-09-17 00:00:05.185 UTC INFO [/opt/out/instance/db/changelog] End verify of data files
+2020-09-17 00:00:05.185 UTC INFO [/opt/out/instance/db/changelog] Start verify all databases
+2020-09-17 00:00:05.186 UTC INFO [/opt/out/instance/db/changelog] End verify all databases

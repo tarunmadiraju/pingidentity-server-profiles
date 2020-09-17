@@ -1,0 +1,533 @@
+Sep 04, 2020 5:47:32 PM com.unboundid.quicksetup.QuickSetupLog initLogFileHandler
+INFO: QuickSetup application launched September 4, 2020 at 5:47:32 PM GMT
+Sep 04, 2020 5:47:38 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration writeConfigFile
+INFO: tuning-param.DISABLE_LARGE_PAGE_SUPPORT=false was not written because tuning parameter DISABLE_LARGE_PAGE_SUPPORT is deprecated.
+Sep 04, 2020 5:47:38 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: launching [/opt/out/instance/lib/_script-util.sh] in order to test JVM option -client -Xmx64m -Xms64m -Dcom.unboundid.directory.server.SkipJavaVersionCheck=true
+Sep 04, 2020 5:47:40 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: returnCode: 0
+Sep 04, 2020 5:47:40 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration optionsSupported
+INFO: Options supported: -client -Xmx64m -Xms64m
+Sep 04, 2020 5:47:40 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration getJVMOptionsString
+INFO: Option not tested but assumed to be supported: -Xlog:gc*:file=${INSTANCE_ROOT}/logs/jvm/gc.log:time,uptime,level,tags:filecount=3,filesize=100m
+Sep 04, 2020 5:47:40 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: launching [/opt/out/instance/lib/_script-util.sh] in order to test JVM option -server -Xmx768m -Xms768m -XX:MaxNewSize=64m -XX:NewSize=64m -XX:+PrintCommandLineFlags -XX:+UseBiasedLocking -XX:-OmitStackTraceInFastThrow -XX:RefDiscoveryPolicy=1 -XX:MaxTenuringThreshold=2 -XX:+HeapDumpOnOutOfMemoryError -Dcom.unboundid.directory.server.SkipJavaVersionCheck=true
+Sep 04, 2020 5:47:41 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: returnCode: 0
+Sep 04, 2020 5:47:41 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration optionsSupported
+INFO: Options supported: -server -Xmx768m -Xms768m -XX:MaxNewSize=64m -XX:NewSize=64m -XX:+PrintCommandLineFlags -XX:+UseBiasedLocking -XX:-OmitStackTraceInFastThrow -XX:RefDiscoveryPolicy=1 -XX:MaxTenuringThreshold=2 -XX:+HeapDumpOnOutOfMemoryError
+Sep 04, 2020 5:47:41 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: launching [/opt/out/instance/lib/_script-util.sh] in order to test JVM option -XX:+UseConcMarkSweepGC -XX:+CMSConcurrentMTEnabled -XX:+CMSParallelRemarkEnabled -XX:+CMSParallelSurvivorRemarkEnabled -XX:+CMSParallelInitialMarkEnabled -XX:+CMSScavengeBeforeRemark -XX:ConcGCThreads=1 -XX:CMSMaxAbortablePrecleanTime=3600000 -XX:CMSWaitDuration=3600000 -XX:CMSInitiatingOccupancyFraction=80 -XX:+UseCMSInitiatingOccupancyOnly -Dcom.unboundid.directory.server.SkipJavaVersionCheck=true
+Sep 04, 2020 5:47:42 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: returnCode: 0
+Sep 04, 2020 5:47:42 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration optionsSupported
+INFO: Options supported: -XX:+UseConcMarkSweepGC -XX:+CMSConcurrentMTEnabled -XX:+CMSParallelRemarkEnabled -XX:+CMSParallelSurvivorRemarkEnabled -XX:+CMSParallelInitialMarkEnabled -XX:+CMSScavengeBeforeRemark -XX:ConcGCThreads=1 -XX:CMSMaxAbortablePrecleanTime=3600000 -XX:CMSWaitDuration=3600000 -XX:CMSInitiatingOccupancyFraction=80 -XX:+UseCMSInitiatingOccupancyOnly
+Sep 04, 2020 5:47:42 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: launching [/opt/out/instance/lib/_script-util.sh] in order to test JVM option -XX:+UseG1GC -XX:InitiatingHeapOccupancyPercent=80 -XX:ConcGCThreads=1 -Dcom.unboundid.directory.server.SkipJavaVersionCheck=true
+Sep 04, 2020 5:47:43 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: returnCode: 0
+Sep 04, 2020 5:47:43 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration optionsSupported
+INFO: Options supported: -XX:+UseG1GC -XX:InitiatingHeapOccupancyPercent=80 -XX:ConcGCThreads=1
+Sep 04, 2020 5:47:43 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: launching [/opt/out/instance/lib/_script-util.sh] in order to test JVM option -server -Xmx768m -Xms768m -XX:+UseParallelGC -XX:NewRatio=8 -XX:+UseNUMA -XX:+HeapDumpOnOutOfMemoryError -Dcom.unboundid.directory.server.SkipJavaVersionCheck=true
+Sep 04, 2020 5:47:45 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: returnCode: 0
+Sep 04, 2020 5:47:45 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration optionsSupported
+INFO: Options supported: -server -Xmx768m -Xms768m -XX:+UseParallelGC -XX:NewRatio=8 -XX:+UseNUMA -XX:+HeapDumpOnOutOfMemoryError
+Sep 04, 2020 5:47:45 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: launching [/opt/out/instance/lib/_script-util.sh] in order to test JVM option -server -Xmx512m -Xms512m -XX:+UseParallelGC -XX:NewRatio=8 -XX:+HeapDumpOnOutOfMemoryError -Dcom.unboundid.directory.server.SkipJavaVersionCheck=true
+Sep 04, 2020 5:47:46 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: returnCode: 0
+Sep 04, 2020 5:47:46 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration optionsSupported
+INFO: Options supported: -server -Xmx512m -Xms512m -XX:+UseParallelGC -XX:NewRatio=8 -XX:+HeapDumpOnOutOfMemoryError
+Sep 04, 2020 5:47:46 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: launching [/opt/out/instance/lib/_script-util.sh] in order to test JVM option -client -Xms512m -Xmx512m -Dcom.unboundid.directory.server.SkipJavaVersionCheck=true
+Sep 04, 2020 5:47:47 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: returnCode: 0
+Sep 04, 2020 5:47:47 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration optionsSupported
+INFO: Options supported: -client -Xms512m -Xmx512m
+Sep 04, 2020 5:47:47 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: launching [/opt/out/instance/lib/_script-util.sh] in order to test JVM option -client -Xmx1g -Dcom.unboundid.directory.server.SkipJavaVersionCheck=true
+Sep 04, 2020 5:47:48 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: returnCode: 0
+Sep 04, 2020 5:47:48 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration optionsSupported
+INFO: Options supported: -client -Xmx1g
+Sep 04, 2020 5:47:48 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: launching [/opt/out/instance/lib/_script-util.sh] in order to test JVM option -server -Xmx768m -Xms768m -Dcom.unboundid.directory.server.SkipJavaVersionCheck=true
+Sep 04, 2020 5:47:49 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: returnCode: 0
+Sep 04, 2020 5:47:49 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration optionsSupported
+INFO: Options supported: -server -Xmx768m -Xms768m
+Sep 04, 2020 5:47:49 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: launching [/opt/out/instance/lib/_script-util.sh] in order to test JVM option -server -Xmx768m -Xms768m -XX:+UseParallelGC -Dcom.unboundid.directory.server.SkipJavaVersionCheck=true
+Sep 04, 2020 5:47:51 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: returnCode: 0
+Sep 04, 2020 5:47:51 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration optionsSupported
+INFO: Options supported: -server -Xmx768m -Xms768m -XX:+UseParallelGC
+Sep 04, 2020 5:47:51 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: launching [/opt/out/instance/lib/_script-util.sh] in order to test JVM option -server -Xmx256m -Xms256m -XX:+UseParallelGC -Dcom.unboundid.directory.server.SkipJavaVersionCheck=true
+Sep 04, 2020 5:47:52 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: returnCode: 0
+Sep 04, 2020 5:47:52 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration optionsSupported
+INFO: Options supported: -server -Xmx256m -Xms256m -XX:+UseParallelGC
+Sep 04, 2020 5:47:52 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: launching [/opt/out/instance/lib/_script-util.sh] in order to test JVM option -client -Xmx512m -Xms512m -Dcom.unboundid.directory.server.SkipJavaVersionCheck=true
+Sep 04, 2020 5:47:53 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: returnCode: 0
+Sep 04, 2020 5:47:53 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration optionsSupported
+INFO: Options supported: -client -Xmx512m -Xms512m
+Sep 04, 2020 5:47:53 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: launching [/opt/out/instance/lib/_script-util.sh] in order to test JVM option -client -Xmx256m -Xms256m -Dcom.unboundid.directory.server.SkipJavaVersionCheck=true
+Sep 04, 2020 5:47:54 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration supportsOption
+INFO: returnCode: 0
+Sep 04, 2020 5:47:54 PM com.unboundid.quicksetup.installer.SystemJvmConfiguration optionsSupported
+INFO: Options supported: -client -Xmx256m -Xms256m
+Sep 04, 2020 5:47:56 PM com.unboundid.quicksetup.installer.Installer configureServer
+INFO: license key: /opt/out/instance/PingDirectory.lic
+Sep 04, 2020 5:47:56 PM com.unboundid.quicksetup.installer.Installer configureServer
+INFO: configure DS cmd: -C com.unboundid.directory.server.extensions.ConfigFileHandler --configFile /opt/out/instance/config/config.ldif -p 389 -P 636 -q --httpsPort 443 -k cn=JKS,cn=Key Manager Providers,cn=config -t cn=JKS,cn=Trust Manager Providers,cn=config --trustManagerPath config/truststore --trustManagerPinFile config/truststore.pin -D cn=administrator -w {rootUserPassword} -b dc=example,dc=com -d 36 -R /opt/out/instance --licenseKeyFile /opt/out/instance/PingDirectory.lic
+Sep 04, 2020 5:47:57 PM com.unboundid.quicksetup.Application$ApplicationPrintStream println
+INFO: Successfully wrote the updated Directory Server configuration
+Sep 04, 2020 5:47:57 PM com.unboundid.quicksetup.Application$ApplicationPrintStream println
+INFO: 
+
+Sep 04, 2020 5:48:04 PM com.unboundid.quicksetup.installer.InstallerHelper invokeImportLDIF
+INFO: Import command and args list is [/opt/out/instance/bin/import-ldif, -n, userRoot, -l, /tmp/unboundid-base-entry1572744501072247639.ldif, -F, -Q]
+Sep 04, 2020 5:48:16 PM com.unboundid.quicksetup.installer.InstallerHelper invokeImportLDIF
+WARNING: Sep 04, 2020 5:48:16 PM com.unboundid.directory.server.util.SetupUtils getJavaHome
+Sep 04, 2020 5:48:16 PM com.unboundid.quicksetup.installer.InstallerHelper invokeImportLDIF
+WARNING: INFO: Java home from 'JAVA_HOME' environment variable: /opt/java
+Sep 04, 2020 5:48:19 PM com.unboundid.quicksetup.installer.InstallerHelper invokeImportLDIF
+INFO: Import exit code is 0
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/ds-plugin-autoincrement-0.0.8.jar
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/config/update/file-directives.properties
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/config/update
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/config/schema/90-autoincrement.ldif
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/config/schema
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/config/install.dsconfig
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/config
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/lib/internal-licenses-7.0.jar
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/lib/unboundid-ldapsdk-4.0.0.jar
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/lib
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/index.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/images/vendor-name-on-white.png
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/images/favicon.ico
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/images
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/com_pingidentity_ds_util_Installer.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/unboundid.css
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/index.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/help-doc.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/allclasses-noframe.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/allclasses-frame.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/class-use/Installer.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/class-use
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/package-use.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/Installer.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/package-tree.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/package-frame.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/package-summary.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/Autoincrement.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/Sequence.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/class-use/Autoincrement.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/class-use/Sequence.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/class-use/AutoincrementAttribute.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/class-use/AutoincrementMonitorProvider.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/class-use/AutoincrementConstants.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/class-use
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/package-use.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/AutoincrementAttribute.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/AutoincrementMonitorProvider.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/AutoincrementConstants.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/package-tree.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/package-frame.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/package-summary.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/overview-summary.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/constant-values.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/ping-javadoc-stylesheet.css
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/overview-tree.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/script.js
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/package-list
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/overview-frame.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/index-all.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/deprecated-list.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/com_pingidentity_ds_plugin_AutoincrementAttribute.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/com_pingidentity_ds_plugin_Autoincrement.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/ds-plugin-autoincrement-0.0.8.jar' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/ds-plugin-autoincrement-0.0.8.jar'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/config/update/file-directives.properties' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/config/update/file-directives.properties'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/config/schema/90-autoincrement.ldif' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/config/schema/90-autoincrement.ldif'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/config/install.dsconfig' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/config/install.dsconfig'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/lib/internal-licenses-7.0.jar' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/lib/internal-licenses-7.0.jar'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/lib/unboundid-ldapsdk-4.0.0.jar' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/lib/unboundid-ldapsdk-4.0.0.jar'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/index.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/index.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/images/vendor-name-on-white.png' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/images/vendor-name-on-white.png'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/images/favicon.ico' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/images/favicon.ico'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/com_pingidentity_ds_util_Installer.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/com_pingidentity_ds_util_Installer.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/unboundid.css' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/unboundid.css'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/index.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/index.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/help-doc.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/help-doc.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/allclasses-noframe.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/allclasses-noframe.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/allclasses-frame.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/allclasses-frame.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/class-use/Installer.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/util/class-use/Installer.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/package-use.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/util/package-use.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/Installer.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/util/Installer.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/package-tree.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/util/package-tree.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/package-frame.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/util/package-frame.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/package-summary.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/util/package-summary.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/Autoincrement.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/plugin/Autoincrement.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/Sequence.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/plugin/Sequence.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/class-use/Autoincrement.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/plugin/class-use/Autoincrement.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/class-use/Sequence.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/plugin/class-use/Sequence.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/class-use/AutoincrementAttribute.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/plugin/class-use/AutoincrementAttribute.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/class-use/AutoincrementMonitorProvider.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/plugin/class-use/AutoincrementMonitorProvider.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/class-use/AutoincrementConstants.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/plugin/class-use/AutoincrementConstants.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/package-use.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/plugin/package-use.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/AutoincrementAttribute.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/plugin/AutoincrementAttribute.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/AutoincrementMonitorProvider.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/plugin/AutoincrementMonitorProvider.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/AutoincrementConstants.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/plugin/AutoincrementConstants.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/package-tree.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/plugin/package-tree.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/package-frame.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/plugin/package-frame.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/package-summary.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/com/pingidentity/ds/plugin/package-summary.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/overview-summary.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/overview-summary.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/constant-values.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/constant-values.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/ping-javadoc-stylesheet.css' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/ping-javadoc-stylesheet.css'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/overview-tree.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/overview-tree.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/script.js' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/script.js'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/package-list' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/package-list'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/overview-frame.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/overview-frame.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/index-all.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/index-all.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/deprecated-list.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/javadoc/deprecated-list.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/com_pingidentity_ds_plugin_AutoincrementAttribute.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/com_pingidentity_ds_plugin_AutoincrementAttribute.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$CopyOperation apply
+INFO: copying file '/opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/com_pingidentity_ds_plugin_Autoincrement.html' to '/opt/out/instance/extensions/com.pingidentity.ds-plugin-autoincrement/docs/com_pingidentity_ds_plugin_Autoincrement.html'
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/ds-plugin-autoincrement-0.0.8.jar
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/config/update/file-directives.properties
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/config/update
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/config/schema/90-autoincrement.ldif
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/config/schema
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/config/install.dsconfig
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/config
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/lib/internal-licenses-7.0.jar
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/lib/unboundid-ldapsdk-4.0.0.jar
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/lib
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/index.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/images/vendor-name-on-white.png
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/images/favicon.ico
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/images
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/com_pingidentity_ds_util_Installer.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/unboundid.css
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/index.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/help-doc.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/allclasses-noframe.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/allclasses-frame.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/class-use/Installer.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/class-use
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/package-use.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/Installer.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/package-tree.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/package-frame.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util/package-summary.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/util
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/Autoincrement.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/Sequence.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/class-use/Autoincrement.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/class-use/Sequence.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/class-use/AutoincrementAttribute.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/class-use/AutoincrementMonitorProvider.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/class-use/AutoincrementConstants.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/class-use
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/package-use.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/AutoincrementAttribute.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/AutoincrementMonitorProvider.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/AutoincrementConstants.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/package-tree.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/package-frame.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin/package-summary.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds/plugin
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity/ds
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com/pingidentity
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/com
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/overview-summary.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/constant-values.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/ping-javadoc-stylesheet.css
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/overview-tree.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/script.js
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/package-list
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/overview-frame.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/index-all.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc/deprecated-list.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/javadoc
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/com_pingidentity_ds_plugin_AutoincrementAttribute.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  file /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs/com_pingidentity_ds_plugin_Autoincrement.html
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8/docs
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8
+Sep 04, 2020 5:48:25 PM com.unboundid.quicksetup.util.FileManager$DeleteOperation apply
+INFO: deleting  directory /opt/out/instance/tmp/manage-extension
+Sep 04, 2020 5:49:24 PM com.unboundid.quicksetup.util.ServerController startServer
+INFO: starting server
+Sep 04, 2020 5:49:28 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: -XX:-AlwaysTenure -XX:ConcGCThreads=1 -XX:G1ConcRefinementThreads=4 -XX:GCDrainStackTargetSize=64 -XX:+HeapDumpOnOutOfMemoryError -XX:InitialHeapSize=805306368 -XX:InitialTenuringThreshold=2 -XX:InitiatingHeapOccupancyPercent=80 -XX:MaxHeapSize=805306368 -XX:MaxNewSize=67108864 -XX:MaxTenuringThreshold=2 -XX:-NeverTenure -XX:NewSize=67108864 -XX:-OmitStackTraceInFastThrow -XX:+PrintCommandLineFlags -XX:RefDiscoveryPolicy=1 -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:+UseBiasedLocking -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseG1GC 
+Sep 04, 2020 5:49:29 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: WARNING: An illegal reflective access operation has occurred
+Sep 04, 2020 5:49:29 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: WARNING: Illegal reflective access by com.unboundid.directory.server.core.DirectoryServer (file:/opt/out/instance/lib/PingDirectory.jar) to field sun.management.RuntimeImpl.jvm
+Sep 04, 2020 5:49:29 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: WARNING: Please consider reporting this to the maintainers of com.unboundid.directory.server.core.DirectoryServer
+Sep 04, 2020 5:49:29 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+Sep 04, 2020 5:49:29 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: WARNING: All illegal access operations will be denied in a future release
+Sep 04, 2020 5:49:32 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: [04/Sep/2020:17:49:32.663 +0000] category=CORE severity=NOTICE msgID=458886 msg="Ping Identity Directory Server 8.1.0.0 (build 20200615191920Z, Rv8.1.0.0-GA) starting up"
+Sep 04, 2020 5:49:35 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: [04/Sep/2020:17:49:35.042 +0000] category=EXTENSIONS severity=NOTICE msgID=1880555611 msg="Administrative alert type=server-starting id=46263161-6ea1-422c-a245-228f3fd1c650 class=com.unboundid.directory.server.core.DirectoryServer msg='The Directory Server is starting'"
+Sep 04, 2020 5:49:37 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: [04/Sep/2020:17:49:37.987 +0000] category=CONFIG severity=NOTICE msgID=1882652783 msg="Initializing mirrored topology and cluster-wide configuration"
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: 
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: 
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: 
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: ********************************************************************************
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: [04/Sep/2020:17:49:39.274 +0000] category=EXTENSIONS severity=SEVERE_WARNING msgID=1880227932 msg="Administrative alert type=debug-logging-enabled id=1b425e9c-66b1-4c8c-b084-823fd55766cb class=com.unboundid.directory.server.loggers.debug.TextDebugLogPublisher msg='A Debug Log Publisher is enabled. When Debug Targets are configured to restrict what is logged, the performance impact is typically negligible. However, it is good practice to disable the Debug Log Publisher once the required information has been collected'"
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: ********************************************************************************
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: 
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: 
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: 
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: [04/Sep/2020:17:49:39 +0000] MILD_WARNING The Directory Server has sent an alert notification generated by class com.unboundid.directory.server.loggers.debug.TextDebugLogPublisher (alert type debug-logging-enabled, alert ID 1882259580):  A Debug Log Publisher is enabled. When Debug Targets are configured to restrict what is logged, the performance impact is typically negligible. However, it is good practice to disable the Debug Log Publisher once the required information has been collected
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: [04/Sep/2020:17:49:39 +0000] SEVERE_WARNING The Directory Server has sent an alert notification generated by class com.unboundid.directory.server.core.AlertHandlerConfigManager (alert type no-enabled-alert-handlers, alert ID 1879180503):  No alert handlers have been enabled. Alerts will be written to logs/errors, but administrators will not be otherwise notified of current or impending problems. The server uses alerts to self-report many problems or precursors to potential problems. If an administrator does not receive these alerts, then there might be a server outage that was avoidable. In production environments, we strongly recommend enabling the SMTP Alert Handler to send emails, the JMX or SNMP Alert Handler to send notifications to a monitoring application, or creating a custom alert handler. In non-product environments, this alarm can be suppressed by adding 'no-enabled-alert-handlers' to the 'suppressed-alarm' configuration property on the Alarm Manager configuration object
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: ********************************************************************************
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: [04/Sep/2020:17:49:39.276 +0000] category=EXTENSIONS severity=SEVERE_WARNING msgID=1880227932 msg="Administrative alert type=no-enabled-alert-handlers id=01510f9b-917b-416a-9a8b-4d1bf407f47c class=com.unboundid.directory.server.core.AlertHandlerConfigManager msg='No alert handlers have been enabled. Alerts will be written to logs/errors, but administrators will not be otherwise notified of current or impending problems. The server uses alerts to self-report many problems or precursors to potential problems. If an administrator does not receive these alerts, then there might be a server outage that was avoidable. In production environments, we strongly recommend enabling the SMTP Alert Handler to send emails, the JMX or SNMP Alert Handler to send notifications to a monitoring application, or creating a custom alert handler. In non-product environments, this alarm can be suppressed by adding 'no-enabled-alert-handlers' to the 'suppressed-alarm' configuration property on the Alarm Manager configuration object'"
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: ********************************************************************************
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: 
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: 
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: 
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: ********************************************************************************
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: [04/Sep/2020:17:49:39.670 +0000] category=EXTENSIONS severity=SEVERE_WARNING msgID=1880227932 msg="Administrative alert type=low-disk-space-warning id=f6dd4a55-fadd-4901-b39b-8d2cf8e24b4d class=com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider msg='The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  2277482496, usablePercent:  4), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  2277482496, usablePercent:  4), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  2277482496, usablePercent:  4), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  2277482496, usablePercent:  4), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  2277482496, usablePercent:  4)'"
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: ********************************************************************************
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: 
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: 
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: 
+Sep 04, 2020 5:49:39 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: [04/Sep/2020:17:49:39 +0000] SEVERE_WARNING The Directory Server has sent an alert notification generated by class com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider (alert type low-disk-space-warning, alert ID 1879179401):  The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  2277482496, usablePercent:  4), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  2277482496, usablePercent:  4), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  2277482496, usablePercent:  4), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  2277482496, usablePercent:  4), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  2277482496, usablePercent:  4)
+Sep 04, 2020 5:49:45 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: ********************************************************************************
+Sep 04, 2020 5:49:45 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: [04/Sep/2020:17:49:45.335 +0000] category=EXTENSIONS severity=SEVERE_WARNING msgID=1880228292 msg="The Linux kernel parameter vm.swappiness is set to '60' instead of '0'.  This non-zero setting allows Linux to swap temporarily inactive parts of the JVM out of memory to disk.  When the JVM later accesses large amounts of this swapped out memory (for instance during a garbage collection cycle), the server can experience pauses of several seconds where no processing occurs.  We strongly recommend setting this value to '0' by executing 'sysctl -w vm.swappiness=0' as root to change the current value in the operating system and by adding a line 'vm.swappiness = 0' to /etc/sysctl.conf to ensure that the correct setting is applied when the system restarts. If a system performance service such as tuned is used, also apply the vm.swappiness setting to the active profile or disable the service. To check for an active performance profile run the tuned-adm active command"
+Sep 04, 2020 5:49:45 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: ********************************************************************************
+Sep 04, 2020 5:49:45 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: 
+Sep 04, 2020 5:49:45 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: 
+Sep 04, 2020 5:49:45 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: 
+Sep 04, 2020 5:49:45 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: [04/Sep/2020:17:49:45.365 +0000] category=CORE severity=NOTICE msgID=458887 msg="The Directory Server (Ping Identity Directory Server 8.1.0.0 build 20200615191920Z, Rv8.1.0.0-GA) has started successfully"
+Sep 04, 2020 5:49:45 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: [04/Sep/2020:17:49:45.366 +0000] category=EXTENSIONS severity=NOTICE msgID=1880555611 msg="Administrative alert type=server-started id=e3ae7cd2-a0c4-40cd-ab7c-824ac5b8c0f4 class=com.unboundid.directory.server.core.DirectoryServer msg='The Directory Server (Ping Identity Directory Server 8.1.0.0 build 20200615191920Z, Rv8.1.0.0-GA) has started successfully'"
+Sep 04, 2020 5:49:45 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: [04/Sep/2020:17:49:45.375 +0000] category=EXTENSIONS severity=NOTICE msgID=1880555611 msg="Administrative alert type=server-shutting-down id=9012ff66-2b8b-401b-b113-3855bdc8b7da class=com.unboundid.directory.server.core.DirectoryServer msg='The Directory Server has started the shutdown process.  The shutdown was initiated by an instance of class com.unboundid.directory.server.core.DirectoryServer and the reason provided for the shutdown was Start check complete.  The server will now shut down'"
+Sep 04, 2020 5:49:45 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: [04/Sep/2020:17:49:45 +0000] NOTICE The Directory Server has sent an alert notification generated by class com.unboundid.directory.server.core.DirectoryServer (alert type server-shutting-down, alert ID 458893):  The Directory Server has started the shutdown process.  The shutdown was initiated by an instance of class com.unboundid.directory.server.core.DirectoryServer and the reason provided for the shutdown was Start check complete.  The server will now shut down
+Sep 04, 2020 5:49:45 PM com.unboundid.quicksetup.util.ServerController$StartReader$1 run
+INFO: server: [04/Sep/2020:17:49:45.855 +0000] category=CORE severity=NOTICE msgID=458955 msg="The Directory Server is now stopped"
+Sep 04, 2020 5:49:45 PM com.unboundid.quicksetup.util.ServerController startServer
+INFO: /opt/out/instance/bin/start-server return value: 0

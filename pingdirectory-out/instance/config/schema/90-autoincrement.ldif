@@ -1,0 +1,12 @@
+dn: cn=schema
+objectClass: top
+objectClass: ldapSubentry
+objectClass: subschema
+cn: schema
+attributeTypes: ( autoincrementSequenceCache-OID NAME 'autoincrementSequenceCache' DESC 'The maximum number of cache hits before persisting and replicating' SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE USAGE userApplications )
+attributeTypes: ( autoincrementSequenceMin-OID NAME 'autoincrementSequenceMin' DESC 'The lower boundary for the sequence' SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE USAGE userApplications )
+attributeTypes: ( autoincrementSequenceMax-OID NAME 'autoincrementSequenceMax' DESC 'The upper boundary for the sequence' SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE USAGE userApplications )
+attributeTypes: ( autoincrementSequenceIncrement-OID NAME 'autoincrementSequenceIncrement' DESC 'The amount by which the sequence value should be incremented' SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE USAGE userApplications )
+attributeTypes: ( autoincrementSequenceCycle-OID NAME 'autoincrementSequenceCycle' DESC 'The number of times the sequence has looped' SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE USAGE userApplications )
+attributeTypes: ( autoincrementSequenceValue-OID NAME 'autoincrementSequenceValue' DESC 'The current value for the sequence' SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE USAGE userApplications )
+objectClasses: ( autoincrementSequence-OID NAME 'autoincrementSequence' DESC 'Describes the structure of autoincrement sequence entries' STRUCTURAL MUST ( autoincrementSequenceCache $ autoincrementSequenceCycle $ autoincrementSequenceIncrement $ autoincrementSequenceMax $ autoincrementSequenceMin $ autoincrementSequenceValue ) )

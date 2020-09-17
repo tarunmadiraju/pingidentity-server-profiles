@@ -1,0 +1,3 @@
+# Log file created at 16/Sep/2020:17:50:34 +0000 after rotating from file http-detailed-access.20200916175034Z
+[17/Sep/2020:06:13:52.476 +0000] RESULT instanceName="b1e39ef4129d" threadID=184 requestID=43 correlationID="f1e6f581-ed28-45c2-a04d-675e41d4ba5a" from="209.17.97.122:52334" method="GET" url="https://10.10.1.3:443/" requestHeader="User-Agent: Mozilla/5.0 (compatible; Nimbostratus-Bot/v1.3.2; http://cloudsystemnetworks.com)" requestHeader="Host: 54.213.196.7:1443" statusCode=404 etime=1.072 responseContentLength=232 responseHeader="Cache-Control: must-revalidate,no-cache,no-store" responseHeader="Date: Thu, 17 Sep 2020 06:13:52 GMT" responseContentType="text/html;charset=iso-8859-1"
+# Log file rotated at 17/Sep/2020:17:50:36 +0000

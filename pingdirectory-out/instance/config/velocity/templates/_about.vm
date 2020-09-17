@@ -1,0 +1,21 @@
+<div class="modal fade ab" id="splashscreen">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="border:none">
+        <button type="button" class="close" data-dismiss="modal">x</button>
+      </div>
+      <div class="modal-body ab-body">
+        <div class="ab-app-logo">
+          <img src="/view/statics/img/ping-identity-square-logo.png" alt="${ubid_server.shortVendorName} Logo">
+        </div>
+        <div class="ab-app-name">${ubid_server.basicProductName}</div>
+        <div class="ab-app-version"> ${ubid_server.versionNumber}</div>
+        <div class="ab-contact-info"> UnboundID Corp.<!--${ubid_server.fullVendorName}--><br/>
+          13809 Research Blvd, Suite 500<br/>
+          Austin, TX 78750<br/>
+          +1 512 600 7700</div>
+        <div><a class="ab-email-info" href="mailto:info@unboundid.com">info@unboundid.com</a></div>
+      </div>
+    </div>
+  </div>
+</div>

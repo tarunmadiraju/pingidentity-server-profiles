@@ -1,0 +1,169 @@
+The following tables provide estimates of the database cache requirements for the imported data
+including a breakdown by individual indexes. The estimates provided are an upper bound on the cache
+requirements. The actual cache used might be slightly less.
+
+
+      --- Disk and Memory Usage Summary ---
+                              :   
+------------------------------:---
+Number of Entries             : 43
+Required Database Cache (MB)  :  0
+Size on Disk (MB)             :  0
+Operational Size on Disk (MB) :  0
+db-cleaner-min-utilization    : 75
+db-cache-percent              : 36
+
+--
+The estimated operational size on disk is based on the current size and the current configured
+value of db-cleaner-min-utilization, which indicates the target percentage of the database on disk
+that contains active data instead of stale records. This setting does not have an impact on the
+in-memory database cache requirements. Making this value larger generally will reduce the size on
+disk, but this can also impact write performance.
+
+
+      --- Database Cache Usage Breakdown (Estimated) ---
+                : DB Cache :  Percentage
+                :     (MB) : of DB Cache
+----------------:----------:------------
+Encoded entries :        0 :        0.0%
+Indexes         :        0 :        0.1%
+Totals          :        0 :        0.1%
+
+--
+With the currently configured server JVM size of 768m and db-cache-percent of 36%, a maximum of 276
+MB will be used for the database cache.
+--
+This table provides a breakdown of how the database cache is used between the different types of
+databases. For each database type, the total estimated memory required is shown along with how much
+of the currently configured database cache this represents. If the total percentage of the database
+cache exceeds 100%, then the current data set is not fully cacheable with the current
+configuration, and further recommendations will be provided below for addressing this.
+
+
+      --- Encoded Entry Sizes (id2entry database values) ---
+                              : All Entries : < 500 bytes : 500 bytes - 1KB : 1KB - 5KB
+------------------------------:-------------:-------------:-----------------:----------
+Encoded Entry Count For Range :          43 :          28 :               7 :         8
+Average Size For Range        :         559 :         196 :             894 :     1,535
+
+--
+This table provides a breakdown of the encoded sizes of the entries that were imported. If an entry
+is configured to be fully or partially uncached, then only the cached size of the entry (which
+could be 0 for fully uncached entries) is reflected here. For each entry size range, the number of
+entries within that range and their average encoded size is displayed.
+
+
+      --- Detailed Index Database Cache Usage (Estimated) ---
+Name                          : Type      : # Keys :  Avg Key :     Avg Entries : DB Cache :  Percentage
+                              :           :        : Size (B) : Matched Per Key :     (MB) : of DB Cache
+------------------------------:-----------:--------:----------:-----------------:----------:------------
+aci                           : presence  :      1 :      1.0 :             5.0 :      0.0 :       0.0% 
+cn                            : equality  :     20 :     13.2 :             1.1 :      0.0 :       0.0% 
+cn                            : substring :    211 :      5.1 :             1.3 :      0.0 :       0.0% 
+entryUUID                     : equality  :     43 :     16.0 :             1.0 :      0.0 :       0.0% 
+givenName                     : equality  :     12 :      7.0 :             1.2 :      0.0 :       0.0% 
+givenName                     : substring :     81 :      4.0 :             1.2 :      0.0 :       0.0% 
+mail                          : equality  :      5 :     21.8 :             1.2 :      0.0 :       0.0% 
+member                        : equality  :      7 :     41.4 :             2.0 :      0.0 :       0.0% 
+objectClass                   : equality  :      9 :     12.9 :            14.0 :      0.0 :       0.0% 
+pf-connected-identity         : equality  :     14 :     46.3 :             1.0 :      0.0 :       0.0% 
+pf-oauth-client-id            : equality  :     14 :     10.9 :             1.0 :      0.0 :       0.0% 
+pf-oauth-client-id            : ordering  :     14 :     10.9 :             1.0 :      0.0 :       0.0% 
+pf-oauth-client-id            : substring :     73 :      5.2 :             2.1 :      0.0 :       0.0% 
+pf-oauth-client-last-modified : ordering  :     13 :     13.0 :             1.1 :      0.0 :       0.0% 
+pf-oauth-client-name          : equality  :     14 :     19.3 :             1.0 :      0.0 :       0.0% 
+pf-oauth-client-name          : ordering  :     14 :     19.3 :             1.0 :      0.0 :       0.0% 
+pf-oauth-client-name          : substring :    174 :      5.4 :             1.6 :      0.0 :       0.0% 
+sn                            : equality  :     12 :      7.2 :             1.2 :      0.0 :       0.0% 
+sn                            : substring :     81 :      4.1 :             1.3 :      0.0 :       0.0% 
+uid                           : equality  :     14 :      8.3 :             1.0 :      0.0 :       0.0% 
+compact_dn2id                 : system    :     44 :     25.1 :             1.0 :      0.0 :       0.0% 
+id2children                   : system    :      4 :      4.0 :            10.5 :      0.0 :       0.0% 
+id2subtree                    : system    :      4 :      4.0 :            19.5 :      0.0 :       0.0% 
+Totals                        :           :        :          :                 :      0.2 :       0.1% 
+
+
+
+      --- Estimated Database Cache Limits ---
+                               : Current Data Set and :   Limits for Current :      Limits for This
+                               : Memory Configuration : Memory Configuration :         Machine with
+                               :                      :                      :      Most Aggressive
+                               :                      :                      : Memory Configuration
+-------------------------------:----------------------:----------------------:---------------------
+Configured JVM Heap Size       :                 768m :                 768m :                  10g
+Configured db-cache-percent    :                  36% :                  36% :                  68%
+Cacheable Entries              :                   43 :   Data set too small :   Data set too small
+                               :                      :         for estimate :         for estimate
+Percentage of Current Data Set :                 100% :   Data set too small :   Data set too small
+                               :                      :         for estimate :         for estimate
+Cache Percent Full             :                   0% :                  90% :                  90%
+
+--
+The cache usage estimates of the imported data set are compared to the limits of the current
+configuration as well as the limits of this system. These limits only consider the memory cache
+limits of the system. The available disk space can also limit the size of a data set especially for
+disk-bound configurations.
+--
+All recommendations are based on a maximum database cache percent full of 90%. This leaves some
+headroom for database growth, including the server's operational attributes, such as
+modifyTimestamp, that are added to entries when they are modified. These recommendations assume
+this backend is the primary memory consumer. If this server has other Local DB backends, a large
+number of static groups, or entry caches that are configured to store a large number of entries,
+then less memory can be devoted to this database cache, and hence fewer entries can be stored.
+--
+The maximum JVM heap size for the server can be adjusted using the dsjavaproperties tool. The
+db-cache-percent configuration setting for the userRoot backend can be changed by using the
+dsconfig command-line tool.
+
+
+      --- Alternate Database Cache Requirements per Cache Mode (Estimated) ---
+Name                          : Type         : Current Cache Mode    :       Current : cache-keys-and-values : cache-keys-only :    no-caching
+                              :              :                       : % of DB Cache :         % of DB Cache :   % of DB Cache : % of DB Cache
+------------------------------:--------------:-----------------------:---------------:-----------------------:-----------------:--------------
+id2entry                      : entries      : cache-keys-and-values :          0.0% :                  0.0% :            0.0% :          0.0%
+aci                           : index        : cache-keys-and-values :          0.0% :                  0.0% :            0.0% :          0.0%
+cn                            : index        : cache-keys-and-values :          0.0% :                  0.0% :            0.0% :          0.0%
+entryUUID                     : index        : cache-keys-and-values :          0.0% :                  0.0% :            0.0% :          0.0%
+givenName                     : index        : cache-keys-and-values :          0.0% :                  0.0% :            0.0% :          0.0%
+mail                          : index        : cache-keys-and-values :          0.0% :                  0.0% :            0.0% :          0.0%
+member                        : index        : cache-keys-and-values :          0.0% :                  0.0% :            0.0% :          0.0%
+objectClass                   : index        : cache-keys-and-values :          0.0% :                  0.0% :            0.0% :          0.0%
+pf-connected-identity         : index        : cache-keys-and-values :          0.0% :                  0.0% :            0.0% :          0.0%
+pf-oauth-client-id            : index        : cache-keys-and-values :          0.0% :                  0.0% :            0.0% :          0.0%
+pf-oauth-client-last-modified : index        : cache-keys-and-values :          0.0% :                  0.0% :            0.0% :          0.0%
+pf-oauth-client-name          : index        : cache-keys-and-values :          0.0% :                  0.0% :            0.0% :          0.0%
+sn                            : index        : cache-keys-and-values :          0.0% :                  0.0% :            0.0% :          0.0%
+uid                           : index        : cache-keys-and-values :          0.0% :                  0.0% :            0.0% :          0.0%
+dn2id                         : system index : cache-keys-and-values :          0.0% :                  0.0% :            0.0% :          0.0%
+id2children                   : system index : cache-keys-and-values :          0.0% :                  0.0% :            0.0% :          0.0%
+id2subtree                    : system index : cache-keys-and-values :          0.0% :                  0.0% :            0.0% :          0.0%
+Totals                        :              :                       :          0.1% :                  0.1% :            0.1% :          0.0%
+
+--
+This table gives an estimate of the database cache requirements for each individual database (e.g.,
+index) for each cache-mode. For data sets that cannot be fully cached (i.e., all databases do not
+fit in the database cache with a cache mode of cache-keys-and-values), it is often easiest to just
+set the default-cache-mode on the backend to cache-keys-only. When this leads to too much or too
+little caching, this table provides details about the expected cache savings by changing the
+cache-mode for each database. Note that, for indexes with mostly unique keys, there is very little
+difference between the cache requirements between cache-keys-and-values and cache-keys-only cache
+modes since the values (matched entry IDs) can be embedded within the internal database structure.
+A mode of no-caching does not cache the keys or values of the database but still does cache some
+internal database structure, which leads to a small percentage of database cache usage.
+--
+The relative size of each database is presented as a percentage of the currently configured
+database cache size. The csv file,
+/opt/out/instance/logs/tools/import-database-cache-summary-userRoot.csv, includes the raw,
+estimated size of each database.
+
+
+
+WARNING! The current server configuration is not optimized for the imported data set. Details:
+
+  1. The server is not configured to preload the database into the database cache at startup. This
+     can lead to reduced performance until traffic warms the cache, which can take hours to weeks
+     based on the size of the data set. Consider setting the 'prime-method' parameter of the
+     userRoot backend to 'preload'. This will result in longer startup times but will ensure
+     optimal performance when the server begins accepting connections.
+
+

@@ -1,0 +1,13 @@
+PingDirectory Server
+
+This archive contains the PingDirectory Server.
+
+To configure the server, run the setup script on UNIX-based platforms, or the
+setup.bat batch file on Windows.  To start the server, run bin/start-server on
+UNIX-based platforms, or bat\start-server.bat on Windows systems.
+
+Portions of this product are made available under the Common Development and
+Distribution License (CDDL).  The complete text for this license, and for
+alternate licenses of included components, may be found in the legal
+directory.
+

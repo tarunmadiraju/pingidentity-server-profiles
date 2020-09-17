@@ -1,0 +1,78 @@
+<com.unboundid.directory.model.metrics.MetricDefinition version="2" complexity="ADVANCED" collectorGroup="SERVER">
+  <id>
+    <idString>garbage-collections</idString>
+  </id>
+  <displayName>
+    <MessageDescriptor.Arg0 key="INFO_GARBAGE_COLLECTIONS_NAME" ordinal="-1">
+      <rbBase>messages/ubid_metric</rbBase>
+      <category>UBID_METRIC</category>
+      <severity>INFORMATION</severity>
+    </MessageDescriptor.Arg0>
+    <object-array/>
+  </displayName>
+  <shortDisplayName>
+    <MessageDescriptor.Arg0 key="INFO_GARBAGE_COLLECTIONS_SHORT_NAME" ordinal="-1">
+      <rbBase>messages/ubid_metric</rbBase>
+      <category>UBID_METRIC</category>
+      <severity>INFORMATION</severity>
+    </MessageDescriptor.Arg0>
+    <object-array/>
+  </shortDisplayName>
+  <description>
+    <MessageDescriptor.Arg0 key="INFO_GARBAGE_COLLECTIONS_DESCRIPTION" ordinal="-1">
+      <rbBase>messages/ubid_metric</rbBase>
+      <category>UBID_METRIC</category>
+      <severity>INFORMATION</severity>
+    </MessageDescriptor.Arg0>
+    <object-array/>
+  </description>
+  <group>JVM</group>
+  <metricType>Count</metricType>
+  <availableStatistics>
+    <com.unboundid.directory.model.metrics.Statistic>COUNT</com.unboundid.directory.model.metrics.Statistic>
+  </availableStatistics>
+  <countUnits>
+    <singularName>
+      <MessageDescriptor.Arg0 key="INFO_GARBAGE_COLLECTION_SINGULAR" ordinal="-1">
+        <rbBase>messages/ubid_metric</rbBase>
+        <category>UBID_METRIC</category>
+        <severity>INFORMATION</severity>
+      </MessageDescriptor.Arg0>
+      <object-array/>
+    </singularName>
+    <pluralName>
+      <MessageDescriptor.Arg0 key="INFO_GARBAGE_COLLECTION_PLURAL" ordinal="-1">
+        <rbBase>messages/ubid_metric</rbBase>
+        <category>UBID_METRIC</category>
+        <severity>INFORMATION</severity>
+      </MessageDescriptor.Arg0>
+      <object-array/>
+    </pluralName>
+    <abbreviatedName>
+      <MessageDescriptor.Arg0 key="INFO_GARBAGE_COLLECTION_ABBREV" ordinal="-1">
+        <rbBase>messages/ubid_metric</rbBase>
+        <category>UBID_METRIC</category>
+        <severity>INFORMATION</severity>
+      </MessageDescriptor.Arg0>
+      <object-array/>
+    </abbreviatedName>
+  </countUnits>
+  <valueUnits/>
+  <dimensions>
+    <com.unboundid.directory.model.metrics.Dimension>
+      <id>
+        <idString>garbage-collector</idString>
+      </id>
+    </com.unboundid.directory.model.metrics.Dimension>
+    <com.unboundid.directory.model.metrics.Dimension>
+      <id>
+        <idString>garbage-collector-action</idString>
+      </id>
+    </com.unboundid.directory.model.metrics.Dimension>
+    <com.unboundid.directory.model.metrics.Dimension>
+      <id>
+        <idString>garbage-collection-cause</idString>
+      </id>
+    </com.unboundid.directory.model.metrics.Dimension>
+  </dimensions>
+</com.unboundid.directory.model.metrics.MetricDefinition>

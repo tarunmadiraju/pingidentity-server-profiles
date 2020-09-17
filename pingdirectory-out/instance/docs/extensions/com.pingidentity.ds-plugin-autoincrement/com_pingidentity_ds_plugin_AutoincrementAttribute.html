@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+    <head>
+        <title>Generated Documentation for AutoincrementAttribute</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="unboundid.css" type="text/css">
+        <link rel="shortcut icon" href="images/favicon.ico">
+    </head>
+
+    <body>
+      <header class="titletable" width="100%">
+          <div class="title" width="50%">
+              <h1>Generated Documentation for AutoincrementAttribute</h1>
+          </div>
+          <div class="logo" width="50%">
+              <a href="http://www.unboundid.com" target="_parent">
+                  <img src="images/vendor-name-on-white.png" width="198" height="58" border="0" alt="Ping Identity">
+              </a>
+          </div>
+      </header>
+
+      <section id="content">
+
+        <section id="description">
+                                                    <p>This extension allows to configure an attribute to be populated by one sequence</p>
+                                <p>It relies on an Autoincrement extension to have been configured prior and will use one sequence to populate the attribute.</p>
+                                <p>Assuming the Autoincrement is already configured, you will minimally want to create a simple request criteria to curtail the plugin operation, like:<pre>dsconfig create-request-criteria 
+    --criteria-name new-employee  
+    --type simple  
+    --set operation-type:add  
+    --set operation-origin:external-request  
+    --set included-target-entry-dn:ou=People,dc=example,dc=com  
+    --set "any-included-target-entry-filter:(objectClass=inetOrgPerson)"  
+    --set "any-included-target-entry-filter:(objectClass=ubidPerson)"  
+    --set "any-included-target-entry-filter:(objectClass=ubidPersonAux)" </pre></p>
+                                <p>Then you can create an AutoincrementAttribute plugin like so:<pre>    dsconfig create-plugin 
+    --plugin-name auto-new-employee-id  
+    --type third-party  
+    --set enabled:true  
+    --set plugin-type:preparseadd  
+    --set invoke-for-internal-operations:false  
+    --set request-criteria:new-employee 
+    --set extension-class:com.pingidentity.ds.plugin.AutoincrementAttribute  
+    --set extension-argument:sequence-dn=uid=sequence.0,dc=example,dc=com  
+    --set extension-argument:attribute=employeeNumber</pre></p>
+                                  </section>
+
+        <section id="arguments">
+                                  <h2>Allowed Arguments</h2>
+                                <p>
+                  <table border="0" width="100%">
+                      <tr width="100%">
+                          <td width="20%"><b>Argument Name:</b></td>
+                          <td width="80%">sequence-dn</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Description:</b></td>
+                          <td width="80%">The DN of the sequence to use to populate the attribute</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Data Type:</b></td>
+                          <td width="80%">LDAP Distinguished Name</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Is Required:</b></td>
+                          <td width="80%">true</td>
+                      </tr>
+                                          <tr width="100%">
+                          <td width="20%"><b>Maximum Occurrences:</b></td>
+                          <td width="80%"> 1 </td>
+                      </tr>
+                  </table>
+                  </p>
+                                <p>
+                  <table border="0" width="100%">
+                      <tr width="100%">
+                          <td width="20%"><b>Argument Name:</b></td>
+                          <td width="80%">attribute</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Description:</b></td>
+                          <td width="80%">The attribute to populate with the value of the target sequence</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Data Type:</b></td>
+                          <td width="80%">String</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Is Required:</b></td>
+                          <td width="80%">true</td>
+                      </tr>
+                                          <tr width="100%">
+                          <td width="20%"><b>Maximum Occurrences:</b></td>
+                          <td width="80%"> 1 </td>
+                      </tr>
+                  </table>
+                  </p>
+                                <p>
+                  <table border="0" width="100%">
+                      <tr width="100%">
+                          <td width="20%"><b>Argument Name:</b></td>
+                          <td width="80%">valueAttribute</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Description:</b></td>
+                          <td width="80%">Name of the attributeName containing the sequence value.</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Data Type:</b></td>
+                          <td width="80%">String</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Is Required:</b></td>
+                          <td width="80%">false</td>
+                      </tr>
+                                          <tr width="100%">
+                          <td width="20%"><b>Maximum Occurrences:</b></td>
+                          <td width="80%"> 1 </td>
+                      </tr>
+                  </table>
+                  </p>
+                                </section>
+
+        <section id="usages">
+                            </section>
+
+      </section>
+
+      <footer>Copyright &copy; 2010-2016&ndash; UnboundID Corp. &ndash; All rights reserved.</footer>
+    </body>
+</html>

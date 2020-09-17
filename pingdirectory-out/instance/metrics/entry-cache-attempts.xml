@@ -1,0 +1,68 @@
+<com.unboundid.directory.model.metrics.MetricDefinition version="3" complexity="ADVANCED" collectorGroup="ENTRY_CACHE">
+  <id>
+    <idString>entry-cache-attempts</idString>
+  </id>
+  <displayName>
+    <MessageDescriptor.Arg0 key="INFO_ENTRY_CACHE_ATTEMPTS_NAME" ordinal="-1">
+      <rbBase>messages/ubid_metric</rbBase>
+      <category>UBID_METRIC</category>
+      <severity>INFORMATION</severity>
+    </MessageDescriptor.Arg0>
+    <object-array/>
+  </displayName>
+  <shortDisplayName>
+    <MessageDescriptor.Arg0 key="INFO_ENTRY_CACHE_ATTEMPTS_SHORT_NAME" ordinal="-1">
+      <rbBase>messages/ubid_metric</rbBase>
+      <category>UBID_METRIC</category>
+      <severity>INFORMATION</severity>
+    </MessageDescriptor.Arg0>
+    <object-array/>
+  </shortDisplayName>
+  <description>
+    <MessageDescriptor.Arg0 key="INFO_ENTRY_CACHE_ATTEMPTS_DESCRIPTION" ordinal="-1">
+      <rbBase>messages/ubid_metric</rbBase>
+      <category>UBID_METRIC</category>
+      <severity>INFORMATION</severity>
+    </MessageDescriptor.Arg0>
+    <object-array/>
+  </description>
+  <group>DIRECTORY_ENTRY_CACHE</group>
+  <metricType>Count</metricType>
+  <availableStatistics>
+    <com.unboundid.directory.model.metrics.Statistic>COUNT</com.unboundid.directory.model.metrics.Statistic>
+  </availableStatistics>
+  <countUnits>
+    <singularName>
+      <MessageDescriptor.Arg0 key="INFO_CACHE_GET_SINGULAR" ordinal="-1">
+        <rbBase>messages/ubid_metric</rbBase>
+        <category>UBID_METRIC</category>
+        <severity>INFORMATION</severity>
+      </MessageDescriptor.Arg0>
+      <object-array/>
+    </singularName>
+    <pluralName>
+      <MessageDescriptor.Arg0 key="INFO_CACHE_GET_PLURAL" ordinal="-1">
+        <rbBase>messages/ubid_metric</rbBase>
+        <category>UBID_METRIC</category>
+        <severity>INFORMATION</severity>
+      </MessageDescriptor.Arg0>
+      <object-array/>
+    </pluralName>
+    <abbreviatedName>
+      <MessageDescriptor.Arg0 key="INFO_CACHE_GET_ABBREV" ordinal="-1">
+        <rbBase>messages/ubid_metric</rbBase>
+        <category>UBID_METRIC</category>
+        <severity>INFORMATION</severity>
+      </MessageDescriptor.Arg0>
+      <object-array/>
+    </abbreviatedName>
+  </countUnits>
+  <valueUnits/>
+  <dimensions>
+    <com.unboundid.directory.model.metrics.Dimension>
+      <id>
+        <idString>cache-name</idString>
+      </id>
+    </com.unboundid.directory.model.metrics.Dimension>
+  </dimensions>
+</com.unboundid.directory.model.metrics.MetricDefinition>

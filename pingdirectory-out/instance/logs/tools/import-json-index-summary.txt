@@ -1,0 +1,6 @@
+          --- Index Summary Statistics ---
+Index Name                                       : Attribute Type      : Field Path : Limit : >Limit : Max :        1-4
+                                                 :                     :            :       :        :     : (Embedded)
+-------------------------------------------------:---------------------:------------:-------:--------:-----:-----------
+dc_example_dc_com_ubidEmailJSON.json.value       : ubidEmailJSON       :      value : 4,000 :        :     :           
+dc_example_dc_com_ubidPhoneNumberJSON.json.value : ubidPhoneNumberJSON :      value : 4,000 :        :     :           

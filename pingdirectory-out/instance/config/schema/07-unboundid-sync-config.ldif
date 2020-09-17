@@ -1,0 +1,1251 @@
+# Copyright 2007-2020 Ping Identity Corporation
+# All Rights Reserved
+#
+# This file contains schema definitions for configuration elements used by
+# Ping Identity Sync Server
+dn: cn=schema
+objectClass: top
+objectClass: ldapSubentry
+objectClass: subschema
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.44
+  NAME 'ds-cfg-changelog-table-name'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.45
+  NAME 'ds-cfg-sync-source'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.46
+  NAME 'ds-cfg-sync-destination'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.209
+  NAME 'ds-cfg-auto-mapped-source-attribute'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.427
+  NAME 'ds-cfg-excluded-auto-mapped-source-attributes'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.56
+  NAME 'ds-cfg-synchronize-creates'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.57
+  NAME 'ds-cfg-synchronize-modifies'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.58
+  NAME 'ds-cfg-synchronize-deletes'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.59
+  NAME 'ds-cfg-destination-correlation-attributes'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.203
+  NAME 'ds-cfg-retry-backoff-initial-wait'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.204
+  NAME 'ds-cfg-retry-backoff-max-wait'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.205
+  NAME 'ds-cfg-retry-backoff-increase-by'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.206
+  NAME 'ds-cfg-retry-backoff-percentage-increase'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.207
+  NAME 'ds-cfg-max-operation-attempts'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.208
+  NAME 'ds-cfg-change-detection-polling-interval'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2271
+  NAME 'ds-cfg-max-rate-per-second'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.43
+  NAME 'ds-cfg-attribute-map'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.37
+  NAME 'ds-cfg-to-attribute'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.39
+  NAME 'ds-cfg-from-attribute'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.251
+  NAME 'ds-sync-pipe-state-binary'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.252
+  NAME 'ds-sync-pipe-state-text'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.253
+  NAME 'ds-cfg-logged-message-type'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.257
+  NAME 'ds-cfg-ignore-changes-by-dn'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.258
+  NAME 'ds-cfg-scramble-value'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.426
+  NAME 'ds-cfg-started'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.438
+  NAME 'ds-task-sync-pipe-name'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.447
+  NAME 'ds-cfg-sync-server-priority-index'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.448
+  NAME 'ds-cfg-sync-master'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.450
+  NAME 'ds-cfg-sync-failover-polling-interval'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.455
+  NAME 'ds-cfg-also-depends-on-src-attribute'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.467
+  NAME 'ds-active-directory-user-dn'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.468
+  NAME 'ds-active-directory-secure-value'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.469
+  NAME 'ds-active-directory-last-processed-csn'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.470
+  NAME 'ds-active-directory-object-guid'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.471
+  NAME 'ds-active-directory-pwd-mod-csn'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.511
+  NAME 'ds-cfg-changelog-search-type'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.522
+  NAME 'ds-cfg-sync-on-every-update'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.523
+  NAME 'ds-cfg-ignore-zero-length-values'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.524
+  NAME 'ds-cfg-replace-all-attr-values'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.525
+  NAME 'ds-cfg-modifies-as-creates'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.526
+  NAME 'ds-cfg-creates-as-modifies'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.535
+  NAME 'ds-task-change-number'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.536
+  NAME 'ds-task-server-name'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.537
+  NAME 'ds-task-startpoint-rewind-duration'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.541
+  NAME 'ds-cfg-response-timeout'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.570
+  NAME 'ds-cfg-max-backtrack-replication-latency'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.576
+  NAME 'ds-cfg-max-failover-error-code-frequency'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.580
+  NAME 'ds-cfg-ignore-changes-by-user'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.629
+  NAME 'ds-cfg-destination-correlation-attributes-on-delete'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.630
+  NAME 'ds-cfg-max-failed-op-background-retries'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.631
+  NAME 'ds-cfg-failed-op-background-retry-delay'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.654
+  NAME 'ds-task-beginning-of-changelog'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.655
+  NAME 'ds-task-end-of-changelog'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.644
+  NAME 'ds-cfg-max-open-connections'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.643
+  NAME 'ds-cfg-database-entry-type'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.657
+  NAME 'ds-cfg-use-changelog-batch-request'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.658
+  NAME 'ds-task-change-sequence-number'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.662
+  NAME 'ds-cfg-proxy-server'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.703
+  NAME 'ds-cfg-attribute-synchronization-mode'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.734
+  NAME 'ds-cfg-synchronization-mode'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.735
+  NAME 'ds-cfg-sync-backlog-alert-threshold'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.736
+  NAME 'ds-cfg-destination-create-only-attribute'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.750
+  NAME 'ds-cfg-synchronize-even-if-out-of-date'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.753
+  NAME 'ds-cfg-allow-destination-renames'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.776
+  NAME 'ds-cfg-shared-mutex-name'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.826
+  NAME 'ds-cfg-filter-changes-by-user'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.850
+  NAME 'ds-cfg-include-changes-for-unchanged-attributes'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.897
+  NAME 'ds-cfg-scim-service-url'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.899
+  NAME 'ds-cfg-hostname-verification-method'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.900
+  NAME 'ds-cfg-rename-policy'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.966
+  NAME 'ds-cfg-oauth-token'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.967
+  NAME 'ds-cfg-oauth-token-type'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.970
+  NAME 'ds-cfg-include-sync-pipe'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1337
+  NAME 'ds-active-directory-last-uploaded-csn'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1689
+  NAME 'ds-cfg-conditional-value-pattern'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1809
+  NAME 'ds-cfg-excluded-auto-mapped-source-attribute-regex'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1923
+  NAME 'ds-cfg-sync-failover-connection-timeout'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1924
+  NAME 'ds-cfg-sync-failover-response-timeout'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1927
+  NAME 'ds-cfg-log-redaction-regex'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1963
+  NAME 'ds-cfg-id-field'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1964
+  NAME 'ds-cfg-include-field'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1965
+  NAME 'ds-cfg-exclude-field'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1980
+  NAME 'ds-cfg-destination-attribute'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1995
+  NAME 'ds-cfg-exclude-value'
+  EQUALITY caseExactMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1997
+  NAME 'ds-cfg-require-secure-connection-for-clear-text-passwords'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1998
+  NAME 'ds-cfg-password-synchronization-format'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2090
+  NAME 'ds-cfg-oauth-client-id'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2091
+  NAME 'ds-cfg-oauth-client-secret'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.40
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2092
+  NAME 'ds-cfg-environment-id'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2115
+  NAME 'ds-cfg-default-population-id'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2327
+  NAME 'ds-cfg-default-population-name'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2128
+  NAME 'ds-cfg-api-url'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2129
+  NAME 'ds-cfg-auth-url'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2227
+  NAME 'ds-cfg-unique-id-attribute'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2228
+  NAME 'ds-cfg-change-detector'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2239
+  NAME 'ds-cfg-failover-changelog-replay-duration'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2279
+  NAME 'ds-cfg-bootstrap-server'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2280
+  NAME 'ds-cfg-kafka-port'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2281
+  NAME 'ds-cfg-kafka-zookeeper-server'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2282
+  NAME 'ds-cfg-kafka-zookeeper-port'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2329
+  NAME 'ds-cfg-cluster'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2308
+  NAME 'ds-cfg-topic'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2311
+  NAME 'ds-cfg-kafka-use-ssl'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2317
+  NAME 'ds-cfg-message-key-attribute'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2318
+  NAME 'ds-cfg-producer-property'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2293
+  NAME 'ds-cfg-realtime-sync-polling-offset'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2294
+  NAME 'ds-cfg-population-to-synchronize'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2295
+  NAME 'ds-cfg-actor-id-to-ignore'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2296
+  NAME 'ds-cfg-base64-encode-value'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2297
+  NAME 'ds-cfg-base64-decode-value'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2333
+  NAME 'ds-cfg-attribute-comparison-method'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2340
+  NAME 'ds-cfg-json-type'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2466
+  NAME 'ds-cfg-changes-queue-size'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.26
+  NAME 'ds-cfg-attribute-map'
+  SUP top
+  STRUCTURAL
+  MUST  ( cn )
+  MAY ds-cfg-description
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.27
+  NAME 'ds-cfg-attribute-mapping'
+  SUP top
+  STRUCTURAL
+  MUST  ( ds-cfg-to-attribute $
+          ds-cfg-java-class )
+  MAY   ( ds-cfg-description $
+          ds-cfg-also-depends-on-src-attribute $
+          ds-cfg-exclude-value $
+          ds-cfg-sync-on-every-update )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.38
+  NAME 'ds-cfg-direct-attribute-mapping'
+  SUP ds-cfg-attribute-mapping
+  STRUCTURAL
+  MUST  ( ds-cfg-to-attribute $
+          ds-cfg-from-attribute $
+          ds-cfg-scramble-value $
+          ds-cfg-java-class )
+  MAY   ( ds-cfg-base64-encode-value $
+          ds-cfg-base64-decode-value )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.77
+  NAME 'ds-cfg-dn-attribute-mapping'
+  SUP ds-cfg-attribute-mapping
+  STRUCTURAL
+  MUST  ( ds-cfg-to-attribute $
+          ds-cfg-from-attribute $
+          ds-cfg-dn-map $
+          ds-cfg-java-class )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.80
+  NAME 'ds-cfg-constructed-attribute-mapping'
+  SUP ds-cfg-attribute-mapping
+  STRUCTURAL
+  MUST  ( ds-cfg-to-attribute $
+          ds-cfg-java-class )
+  MAY   ( ds-cfg-value-pattern $
+          ds-cfg-conditional-value-pattern )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.28
+  NAME 'ds-cfg-sync-class'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $
+         ds-cfg-destination-correlation-attributes $
+         ds-cfg-evaluation-order-index $
+         ds-cfg-synchronize-creates $
+         ds-cfg-synchronize-modifies $
+         ds-cfg-synchronize-deletes $
+         ds-cfg-auto-mapped-source-attribute )
+  MAY ( ds-cfg-attribute-map $
+        ds-cfg-dn-map $
+        ds-cfg-include-base-dn $
+        ds-cfg-include-filter $
+        ds-cfg-description $
+        ds-cfg-excluded-auto-mapped-source-attributes $
+        ds-cfg-excluded-auto-mapped-source-attribute-regex $
+        ds-cfg-destination-correlation-attributes-on-delete $
+        ds-cfg-attribute-synchronization-mode $
+        ds-cfg-ignore-zero-length-values $
+        ds-cfg-replace-all-attr-values $
+        ds-cfg-creates-as-modifies $
+        ds-cfg-modifies-as-creates $
+        ds-cfg-destination-create-only-attribute $
+        ds-cfg-allow-destination-renames $
+        ds-cfg-plugin $
+        ds-cfg-attribute-comparison-method )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.29
+  NAME 'ds-cfg-sync-source'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $ ds-cfg-java-class )
+  MAY ( ds-cfg-description )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.71
+  NAME 'ds-cfg-ldap-sync-source'
+  SUP ds-cfg-sync-source
+  STRUCTURAL
+  MUST ( ds-cfg-base-dn )
+  MAY ( ds-cfg-response-timeout $
+        ds-cfg-max-failover-error-code-frequency $
+        ds-cfg-plugin )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.81
+  NAME 'ds-cfg-changelog-sync-source'
+  SUP ds-cfg-ldap-sync-source
+  STRUCTURAL
+  MAY ( ds-cfg-ignore-changes-by-dn $
+        ds-cfg-sync-backlog-alert-threshold $
+        ds-cfg-max-backtrack-replication-latency )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.82
+  NAME 'ds-cfg-unboundid-sync-source'
+  SUP ds-cfg-changelog-sync-source
+  STRUCTURAL
+  MUST  ( cn )
+  MAY ( ds-cfg-use-changelog-batch-request $
+        ds-cfg-server $
+        ds-cfg-proxy-server )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.158
+  NAME 'ds-cfg-sun-ds-sync-source'
+  SUP ds-cfg-changelog-sync-source
+  STRUCTURAL
+  MUST  ( cn $
+          ds-cfg-server )
+  MAY ( ds-cfg-changelog-search-type )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.33
+  NAME 'ds-cfg-sync-destination'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $ ds-cfg-java-class )
+  MAY ( ds-cfg-description )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.83
+  NAME 'ds-cfg-ldap-sync-destination'
+  SUP ds-cfg-sync-destination
+  STRUCTURAL
+  MUST ( ds-cfg-base-dn )
+  MAY ( ds-cfg-response-timeout $
+        ds-cfg-max-failover-error-code-frequency $
+        ds-cfg-require-secure-connection-for-clear-text-passwords $
+        ds-cfg-password-synchronization-format $
+        ds-cfg-plugin )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.84
+  NAME 'ds-cfg-unboundid-sync-destination'
+  SUP ds-cfg-ldap-sync-destination
+  STRUCTURAL
+  MAY ( ds-cfg-server $
+        ds-cfg-proxy-server )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.159
+  NAME 'ds-cfg-sun-ds-sync-destination'
+  SUP ds-cfg-ldap-sync-destination
+  STRUCTURAL
+  MUST ( ds-cfg-server )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.36
+  NAME 'ds-cfg-sync-pipe'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $
+          ds-cfg-sync-source $
+          ds-cfg-sync-destination $
+          ds-cfg-change-detection-polling-interval $
+          ds-cfg-num-worker-threads $
+          ds-cfg-max-operation-attempts $
+          ds-cfg-retry-backoff-initial-wait $
+          ds-cfg-retry-backoff-max-wait $
+          ds-cfg-retry-backoff-increase-by $
+          ds-cfg-retry-backoff-percentage-increase )
+  MAY ( ds-cfg-description $
+          ds-cfg-started $
+          ds-cfg-synchronization-mode $
+          ds-cfg-max-failed-op-background-retries $
+          ds-cfg-failed-op-background-retry-delay $
+          ds-cfg-plugin $
+          ds-cfg-synchronize-even-if-out-of-date $
+          ds-cfg-shared-mutex-name $
+          ds-cfg-filter-changes-by-user $
+          ds-cfg-include-changes-for-unchanged-attributes $
+          ds-cfg-max-rate-per-second $
+          ds-cfg-changes-queue-size )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.152
+  NAME 'ds-cfg-global-sync-configuration'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $
+         ds-cfg-started )
+  MAY ( ds-cfg-changelog-password-decryption-key $
+        ds-cfg-sync-failover-polling-interval $
+        ds-cfg-sync-failover-connection-timeout $
+        ds-cfg-sync-failover-response-timeout $
+        ds-cfg-log-redaction-regex )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.69
+  NAME 'ds-cfg-mock-sync-source'
+  SUP ds-cfg-sync-source
+  STRUCTURAL
+  MUST  ( cn $
+          ds-cfg-server )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.70
+  NAME 'ds-cfg-mock-sync-destination'
+  SUP ds-cfg-sync-destination
+  STRUCTURAL
+  MUST ( cn $
+         ds-cfg-server )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.85
+  NAME 'ds-root-sync-state'
+  SUP top
+  STRUCTURAL
+  MUST ( cn )
+  MAY ( ds-cfg-sync-master )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.86
+  NAME 'ds-root-sync-pipe-state'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $
+         ds-sync-pipe-state-binary $
+         ds-sync-pipe-state-text )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.87
+  NAME 'ds-cfg-sync-log-publisher'
+  SUP ds-cfg-log-publisher
+  STRUCTURAL
+  MAY ( ds-cfg-logged-message-type $
+        ds-cfg-include-sync-pipe )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.88
+  NAME 'ds-cfg-file-based-sync-log-publisher'
+  SUP ds-cfg-sync-log-publisher
+  STRUCTURAL
+  MUST ( ds-cfg-log-file $
+         ds-cfg-asynchronous $
+         ds-cfg-log-file-permissions )
+  MAY ( ds-cfg-rotation-policy $
+        ds-cfg-rotation-action $
+        ds-cfg-rotation-listener $
+        ds-cfg-retention-policy $
+        ds-cfg-time-interval $
+        ds-cfg-buffer-size $
+        ds-cfg-auto-flush $
+        ds-cfg-append $
+        ds-cfg-queue-size $
+        ds-cfg-timestamp-precision $
+        ds-cfg-compression-mechanism $
+        ds-cfg-sign-log $
+        ds-cfg-encrypt-log $
+        ds-cfg-encryption-settings-definition-id )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.91
+  NAME 'ds-sync-pipe-monitor-entry'
+  SUP ds-monitor-entry
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.162
+  NAME 'ds-task-set-startpoint'
+  SUP ds-task
+  STRUCTURAL
+  MUST ( ds-task-sync-pipe-name )
+  MAY ( ds-task-change-number $
+        ds-task-change-sequence-number $
+        ds-task-beginning-of-changelog $
+        ds-task-end-of-changelog $
+        ds-task-startpoint-rewind-duration $
+        ds-task-server-name )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.164
+  NAME 'ds-cfg-sync-server-external-server'
+  SUP ds-cfg-ldap-external-server
+  STRUCTURAL
+  MUST ( ds-cfg-sync-server-priority-index )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.172
+  NAME 'ds-cfg-active-directory-sync-source'
+  SUP ds-cfg-ldap-sync-source
+  STRUCTURAL
+  MUST ( cn $
+         ds-cfg-server )
+  MAY ( ds-cfg-ignore-changes-by-dn )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.173
+  NAME 'ds-cfg-active-directory-external-server'
+  SUP ds-cfg-ldap-external-server
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.177
+  NAME 'ds-active-directory-password-mods-root'
+  SUP top
+  STRUCTURAL
+  MUST ( cn )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.178
+  NAME 'ds-active-directory-password-mods-domain-branch'
+  SUP top
+  STRUCTURAL
+  MUST ( cn )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.179
+  NAME 'ds-active-directory-password-mod'
+  SUP top
+  STRUCTURAL
+  MUST ( ds-active-directory-pwd-mod-csn $
+         ds-active-directory-object-guid $
+         ds-active-directory-user-dn $
+         ds-active-directory-secure-value )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.180
+  NAME 'ds-active-directory-password-mods-dc-branch'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $
+         ds-active-directory-last-processed-csn )
+  MAY ( ds-active-directory-last-uploaded-csn )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.181
+  NAME 'ds-cfg-active-directory-sync-destination'
+  SUP ds-cfg-ldap-sync-destination
+  STRUCTURAL
+  MUST ( cn $
+         ds-cfg-server )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.205
+  NAME 'ds-cfg-sync-failed-ops-log-publisher'
+  SUP ds-cfg-sync-log-publisher
+  STRUCTURAL
+  MUST ( ds-cfg-log-file $
+         ds-cfg-asynchronous $
+         ds-cfg-log-file-permissions $
+         ds-cfg-java-class )
+  MAY ( ds-cfg-logged-message-type $
+        ds-cfg-rotation-policy $
+        ds-cfg-rotation-action $
+        ds-cfg-rotation-listener $
+        ds-cfg-retention-policy $
+        ds-cfg-time-interval $
+        ds-cfg-buffer-size $
+        ds-cfg-auto-flush $
+        ds-cfg-append $
+        ds-cfg-queue-size $
+        ds-cfg-compression-mechanism $
+        ds-cfg-sign-log $
+        ds-cfg-encrypt-log $
+        ds-cfg-encryption-settings-definition-id )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.226
+  NAME 'ds-cfg-jdbc-sync-source'
+  SUP ds-cfg-sync-source
+  STRUCTURAL
+  MUST ( cn $
+          ds-cfg-server $
+          ds-cfg-max-open-connections $
+          ds-cfg-database-entry-type )
+  MAY ( ds-cfg-ignore-changes-by-user $
+        ds-cfg-changelog-maximum-age )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.227
+  NAME 'ds-cfg-jdbc-sync-destination'
+  SUP ds-cfg-sync-destination
+  STRUCTURAL
+  MUST  ( cn $
+          ds-cfg-server $
+          ds-cfg-max-open-connections )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.260
+  NAME 'ds-cfg-sync-pipe-plugin'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $
+         ds-cfg-java-class )
+  MAY ( ds-cfg-description )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.261
+  NAME 'ds-cfg-third-party-sync-pipe-plugin'
+  SUP ds-cfg-sync-pipe-plugin
+  STRUCTURAL
+  MUST ( ds-cfg-extension-class )
+  MAY ( ds-cfg-extension-argument )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.262
+  NAME 'ds-cfg-scripted-sync-pipe-plugin'
+  SUP ds-cfg-sync-pipe-plugin
+  STRUCTURAL
+  MAY ( ds-cfg-script-argument )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.263
+  NAME 'ds-cfg-groovy-scripted-sync-pipe-plugin'
+  SUP ds-cfg-scripted-sync-pipe-plugin
+  STRUCTURAL
+  MUST ( ds-cfg-script-class )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.272
+  NAME 'ds-cfg-scripted-jdbc-sync-source'
+  SUP ds-cfg-jdbc-sync-source
+  STRUCTURAL
+  MAY ds-cfg-script-argument
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.273
+  NAME 'ds-cfg-scripted-jdbc-sync-destination'
+  SUP ds-cfg-jdbc-sync-destination
+  STRUCTURAL
+  MAY ds-cfg-script-argument
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.274
+  NAME 'ds-cfg-groovy-scripted-jdbc-sync-source'
+  SUP ds-cfg-scripted-jdbc-sync-source
+  STRUCTURAL
+  MAY ds-cfg-script-class
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.275
+  NAME 'ds-cfg-groovy-scripted-jdbc-sync-destination'
+  SUP ds-cfg-scripted-jdbc-sync-destination
+  STRUCTURAL
+  MAY ds-cfg-script-class
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.276
+  NAME 'ds-cfg-third-party-jdbc-sync-source'
+  SUP ds-cfg-jdbc-sync-source
+  STRUCTURAL
+  MUST ds-cfg-extension-class
+  MAY ds-cfg-extension-argument
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.277
+  NAME 'ds-cfg-third-party-jdbc-sync-destination'
+  SUP ds-cfg-jdbc-sync-destination
+  STRUCTURAL
+  MUST ds-cfg-extension-class
+  MAY ds-cfg-extension-argument
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.279
+  NAME 'ds-cfg-sync-destination-plugin'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $
+         ds-cfg-java-class )
+  MAY ( ds-cfg-description )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.268
+  NAME 'ds-cfg-ldap-sync-destination-plugin'
+  SUP ds-cfg-sync-destination-plugin
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.269
+  NAME 'ds-cfg-third-party-ldap-sync-destination-plugin'
+  SUP ds-cfg-ldap-sync-destination-plugin
+  STRUCTURAL
+  MUST ( ds-cfg-extension-class )
+  MAY ( ds-cfg-extension-argument )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.270
+  NAME 'ds-cfg-scripted-ldap-sync-destination-plugin'
+  SUP ds-cfg-ldap-sync-destination-plugin
+  STRUCTURAL
+  MAY ( ds-cfg-script-argument )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.271
+  NAME 'ds-cfg-groovy-scripted-ldap-sync-destination-plugin'
+  SUP ds-cfg-scripted-ldap-sync-destination-plugin
+  STRUCTURAL
+  MUST ( ds-cfg-script-class )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.278
+  NAME 'ds-cfg-sync-source-plugin'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $
+         ds-cfg-java-class )
+  MAY ( ds-cfg-description )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.264
+  NAME 'ds-cfg-ldap-sync-source-plugin'
+  SUP ds-cfg-sync-source-plugin
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.265
+  NAME 'ds-cfg-third-party-ldap-sync-source-plugin'
+  SUP ds-cfg-ldap-sync-source-plugin
+  STRUCTURAL
+  MUST ( ds-cfg-extension-class )
+  MAY ( ds-cfg-extension-argument )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.266
+  NAME 'ds-cfg-scripted-ldap-sync-source-plugin'
+  SUP ds-cfg-ldap-sync-source-plugin
+  STRUCTURAL
+  MAY ( ds-cfg-script-argument )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.267
+  NAME 'ds-cfg-groovy-scripted-ldap-sync-source-plugin'
+  SUP ds-cfg-scripted-ldap-sync-source-plugin
+  STRUCTURAL
+  MUST ( ds-cfg-script-class )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.282
+  NAME 'ds-cfg-alcatel-lucent-sync-source'
+  SUP ds-cfg-unboundid-sync-source
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.283
+  NAME 'ds-cfg-alcatel-lucent-sync-destination'
+  SUP ds-cfg-unboundid-sync-destination
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.290
+  NAME 'ds-cfg-scripted-sync-destination'
+  SUP ds-cfg-sync-destination
+  STRUCTURAL
+  MAY ( ds-cfg-script-argument )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.291
+  NAME 'ds-cfg-third-party-sync-destination'
+  SUP ds-cfg-sync-destination
+  STRUCTURAL
+  MUST ds-cfg-extension-class
+  MAY ds-cfg-extension-argument
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.292
+  NAME 'ds-cfg-groovy-scripted-sync-destination'
+  SUP ds-cfg-scripted-sync-destination
+  STRUCTURAL
+  MAY ds-cfg-script-class
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.319
+  NAME 'ds-cfg-scripted-sync-source'
+  SUP ds-cfg-sync-source
+  STRUCTURAL
+  MAY ( ds-cfg-script-argument $
+        ds-cfg-ignore-changes-by-user )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.320
+  NAME 'ds-cfg-third-party-sync-source'
+  SUP ds-cfg-sync-source
+  STRUCTURAL
+  MUST ds-cfg-extension-class
+  MAY ( ds-cfg-extension-argument $
+        ds-cfg-ignore-changes-by-user )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.321
+  NAME 'ds-cfg-groovy-scripted-sync-source'
+  SUP ds-cfg-scripted-sync-source
+  STRUCTURAL
+  MAY ds-cfg-script-class
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.341
+  NAME 'ds-cfg-scim-external-server'
+  SUP ds-cfg-external-server
+  STRUCTURAL
+  MUST ( ds-cfg-scim-service-url $
+         ds-cfg-connection-security $
+         ds-cfg-authentication-method )
+  MAY ( ds-cfg-location $
+        ds-cfg-user-name $
+        ds-cfg-password $
+        ds-cfg-hostname-verification-method $
+        ds-cfg-key-manager-provider $
+        ds-cfg-trust-manager-provider $
+        ds-cfg-connect-timeout $
+        ds-cfg-response-timeout $
+        ds-cfg-oauth-token $
+        ds-cfg-oauth-token-type )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.342
+  NAME 'ds-cfg-scim-sync-destination'
+  SUP ds-cfg-sync-destination
+  STRUCTURAL
+  MUST  ( cn $
+          ds-cfg-server )
+  MAY ( ds-cfg-resource-mapping-file $
+        ds-cfg-rename-policy )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.720
+  NAME 'ds-cfg-opendj-external-server'
+  SUP ds-cfg-ldap-external-server
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.721
+  NAME 'ds-cfg-opendj-sync-source'
+  SUP ds-cfg-changelog-sync-source
+  STRUCTURAL
+  MUST  ( cn $
+          ds-cfg-server )
+  MAY ( ds-cfg-changelog-search-type )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.722
+  NAME 'ds-cfg-oracle-unified-directory-external-server'
+  SUP ds-cfg-ldap-external-server
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.723
+  NAME 'ds-cfg-oracle-unified-directory-sync-source'
+  SUP ds-cfg-changelog-sync-source
+  STRUCTURAL
+  MUST  ( cn $
+          ds-cfg-server )
+  MAY ( ds-cfg-changelog-search-type )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.708
+  NAME 'ds-cfg-scim-sync-source'
+  SUP ds-cfg-sync-source
+  STRUCTURAL
+  MUST  ( cn $
+          ds-cfg-server $
+          ds-cfg-scim-resync-query-attribute $
+          ds-cfg-scim-resync-batch-size )
+  MAY ( ds-cfg-resource-mapping-file $
+        ds-cfg-rename-policy )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.724
+  NAME 'ds-cfg-generic-ldap-sync-destination'
+  SUP ds-cfg-ldap-sync-destination
+  STRUCTURAL
+  MUST ( ds-cfg-server )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.746
+  NAME 'ds-cfg-json-attribute'
+  SUP top
+  STRUCTURAL
+  MUST  ( ds-cfg-destination-attribute )
+  MAY   ( ds-cfg-description $
+          ds-cfg-id-field $
+          ds-cfg-include-field $
+          ds-cfg-exclude-field )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.787
+  NAME 'ds-cfg-ping-one-customer-sync-destination'
+  SUP ds-cfg-sync-destination
+  STRUCTURAL
+  MUST  ( ds-cfg-oauth-client-id $
+          ds-cfg-oauth-client-secret $
+          ds-cfg-environment-id $
+          ds-cfg-api-url $
+          ds-cfg-auth-url )
+  MAY   ( ds-cfg-default-population-id $
+          ds-cfg-default-population-name )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.824
+  NAME 'ds-cfg-generic-ldap-sync-source'
+  SUP ds-cfg-changelog-sync-source
+  STRUCTURAL
+  MUST  ( cn $
+          ds-cfg-server )
+  MAY ( ds-cfg-changelog-search-type $
+        ds-cfg-unique-id-attribute $
+        ds-cfg-failover-changelog-replay-duration $
+        ds-cfg-change-detector )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.825
+  NAME 'ds-cfg-change-detector'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $ ds-cfg-java-class )
+  MAY ( ds-cfg-description )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.826
+  NAME 'ds-cfg-third-party-change-detector'
+  SUP ds-cfg-change-detector
+  STRUCTURAL
+  MUST ds-cfg-extension-class
+  MAY ( ds-cfg-extension-argument )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.838
+  NAME 'ds-cfg-ping-one-customer-sync-source'
+  SUP ds-cfg-sync-source
+  STRUCTURAL
+  MUST  ( ds-cfg-oauth-client-id $
+          ds-cfg-oauth-client-secret $
+          ds-cfg-environment-id $
+          ds-cfg-api-url $
+          ds-cfg-auth-url )
+  MAY   ( ds-cfg-realtime-sync-polling-offset $
+          ds-cfg-population-to-synchronize $
+          ds-cfg-actor-id-to-ignore )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.852
+  NAME 'ds-cfg-kafka-cluster-external-server'
+  SUP ds-cfg-external-server
+  STRUCTURAL
+  MUST ( ds-cfg-bootstrap-server )
+  MAY  ( ds-cfg-producer-property $
+         ds-cfg-use-ssl $
+         ds-cfg-trust-manager-provider $
+         ds-cfg-key-manager-provider )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.843
+  NAME 'ds-cfg-kafka-sync-destination'
+  SUP ds-cfg-sync-destination
+  STRUCTURAL
+  MUST ( ds-cfg-topic $
+         ds-cfg-cluster )
+  MAY  ( ds-cfg-message-key-attribute $
+         ds-cfg-plugin )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.857
+  NAME 'ds-cfg-kafka-sync-destination-plugin'
+  SUP ds-cfg-sync-destination-plugin
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.858
+  NAME 'ds-cfg-third-party-kafka-sync-destination-plugin'
+  SUP ds-cfg-kafka-sync-destination-plugin
+  STRUCTURAL
+  MUST ( ds-cfg-extension-class )
+  MAY ( ds-cfg-extension-argument )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.862
+  NAME 'ds-cfg-json-attribute-mapping'
+  SUP ds-cfg-attribute-mapping
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.863
+  NAME 'ds-cfg-json-attribute-mapping-field'
+  SUP top
+  STRUCTURAL
+  MUST ( ds-cfg-json-field $ ds-cfg-json-type )
+  MAY ( ds-cfg-from-attribute $ ds-cfg-value-pattern $ ds-cfg-description )
+  X-ORIGIN 'UnboundID Directory Server' )

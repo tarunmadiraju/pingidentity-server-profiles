@@ -1,0 +1,48 @@
+          --- Index Summary Statistics ---
+Index                              : Type      :     Limit : >Limit : Max :        1-4 : 5-9 : 10-99
+                                   :           :           :        :     : (Embedded) :     :      
+-----------------------------------:-----------:-----------:--------:-----:------------:-----:------
+accessGrantClientId                : equality  :     4,000 :        :     :            :     :      
+accessGrantExpires                 : ordering  :     4,000 :        :     :            :     :      
+accessGrantGuid                    : equality  :     4,000 :        :     :            :     :      
+accessGrantHashedRefreshTokenValue : equality  :     4,000 :        :     :            :     :      
+accessGrantUniqueUserIdentifier    : equality  :     4,000 :        :     :            :     :      
+aci                                : presence  : 1,000,000 :        :   5 :            :   1 :      
+cn                                 : equality  :     4,000 :        :   2 :         20 :     :      
+cn                                 : substring :     4,000 :        :   5 :        205 :   6 :      
+ds-soft-delete-from-dn             : equality  :     4,000 :        :     :            :     :      
+ds-soft-delete-timestamp           : ordering  :     4,000 :        :     :            :     :      
+entryUUID                          : equality  :     4,000 :        :   1 :         43 :     :      
+givenName                          : equality  :     4,000 :        :   2 :         12 :     :      
+givenName                          : substring :     4,000 :        :   4 :         81 :     :      
+mail                               : equality  :     4,000 :        :   2 :          5 :     :      
+member                             : equality  :     4,000 :        :   4 :          7 :     :      
+objectClass                        : equality  :   100,000 :        :  41 :          1 :   2 :     6
+pf-connected-identity              : equality  :     4,000 :        :   1 :         14 :     :      
+pf-oauth-client-id                 : equality  :     4,000 :        :   1 :         14 :     :      
+pf-oauth-client-id                 : ordering  :     4,000 :        :   1 :         14 :     :      
+pf-oauth-client-id                 : substring :     4,000 :        :  11 :         66 :     :     7
+pf-oauth-client-last-modified      : ordering  :     4,000 :        :   2 :         13 :     :      
+pf-oauth-client-name               : equality  :     4,000 :        :   1 :         14 :     :      
+pf-oauth-client-name               : ordering  :     4,000 :        :   1 :         14 :     :      
+pf-oauth-client-name               : substring :     4,000 :        :  10 :        167 :   6 :     1
+sn                                 : equality  :     4,000 :        :   2 :         12 :     :      
+sn                                 : substring :     4,000 :        :   5 :         80 :   1 :      
+telephoneNumber                    : equality  :     4,000 :        :     :            :     :      
+uid                                : equality  :     4,000 :        :   1 :         14 :     :      
+uniqueMember                       : equality  :     4,000 :        :     :            :     :      
+id2children                        : system    :     4,000 :        :  15 :            :   2 :     2
+id2subtree                         : system    :     4,000 :        :  42 :            :   1 :     3
+
+The first four columns of numbers provide (1) "Limit" - the index entry limit
+(or blank if there is no limit), (2) ">Limit" - the number of keys whose entry
+count exceeds the entry limit, (3) "Max" - the maximum entry count for any key
+in the index, (4) "1-4
+(Embedded)" - the number of keys that can be embedded in the internal
+structure of the index's database since they match only a few entries (these
+values will be cached even if the index is configured with a cache-mode of
+cache-keys-only.) The remaining columns provide the number of keys whose entry
+count falls in the range indicated in the column heading
+* The aci and objectClass indexes have enforced minimum index-entry-limits in
+order to ensure proper server performance. The maximum of the configured value
+or enforced minimum will be used

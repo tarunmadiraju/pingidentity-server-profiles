@@ -1,0 +1,7 @@
+This directory is intended for custom Velocity template files that implement new
+pages or override existing stock pages.
+
+To customize the content of the stock pages, copy files from the
+config/velocity/templates directory to the analogous subdirectory here and make
+changes to the copied file.  Files here will override those in the config
+directory.

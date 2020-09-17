@@ -1,0 +1,166 @@
+[04/Sep/2020:17:49:14 +0000]  category=UBID_TOOLS severity=INFORMATION msgID=1889537006 msg=import-ldif was run with the following arguments:  --configClass com.unboundid.directory.server.extensions.ConfigFileHandler --configFile /opt/out/instance/config/config.ldif --backendID userRoot --overwriteExistingEntries --clearBackend --countRejects --ldifFile /tmp/pd.profile-replaced-variables-temp/pd.profile/ldif/userRoot/00-structure.ldif --ldifFile /tmp/pd.profile-replaced-variables-temp/pd.profile/ldif/userRoot/10-users.ldif --ldifFile /tmp/pd.profile-replaced-variables-temp/pd.profile/ldif/userRoot/11-autogen-users.ldif --ldifFile /tmp/pd.profile-replaced-variables-temp/pd.profile/ldif/userRoot/12-engineering.ldif --ldifFile /tmp/pd.profile-replaced-variables-temp/pd.profile/ldif/userRoot/20-groups.ldif --ldifFile /tmp/pd.profile-replaced-variables-temp/pd.profile/ldif/userRoot/30-OAuthClients.ldif --rejectFile /tmp/rejects.ldif --addMissingRdnAttributes
+[04/Sep/2020:17:49:19 +0000]  category=JEB severity=NOTICE msgID=8847533 msg=Ping Identity Directory Server 8.1.0.0 starting import (build 20200615191920Z, Rv8.1.0.0-GA)
+[04/Sep/2020:17:49:19 +0000]  category=UBID_JEB severity=NOTICE msgID=1887895608 msg=Berkeley DB JE Version:  7.5.12
+[04/Sep/2020:17:49:19 +0000]  category=JEB severity=INFORMATION msgID=8388697 msg=Import Thread Count: 16 threads
+[04/Sep/2020:17:49:19 +0000]  category=RUNTIME_INFORMATION severity=NOTICE msgID=20381713 msg=JVM Information: 11.0.8+10-LTS by Azul Systems, Inc., 64-bit architecture, 783,286,272 bytes heap size
+[04/Sep/2020:17:49:19 +0000]  category=RUNTIME_INFORMATION severity=NOTICE msgID=20381714 msg=JVM Host: b1e39ef4129d, running Linux 5.3.0-1033-aws amd64, 16,596,946,944 bytes physical memory size, number of processors available 4
+[04/Sep/2020:17:49:19 +0000]  category=RUNTIME_INFORMATION severity=NOTICE msgID=20381715 msg=JVM Arguments: '-Xmx768m', '-Xms768m', '-XX:+UseParallelGC', '-XX:NewRatio=8', '-XX:+UseNUMA', '-XX:+HeapDumpOnOutOfMemoryError', '--add-opens=java.base/java.io=ALL-UNNAMED', '--add-opens=java.base/java.lang=ALL-UNNAMED', '--add-opens=java.base/java.lang.invoke=ALL-UNNAMED', '--add-opens=java.base/java.lang.reflect=ALL-UNNAMED', '--add-opens=java.base/java.security=ALL-UNNAMED', '--add-opens=java.base/java.text=ALL-UNNAMED', '--add-opens=java.base/java.util=ALL-UNNAMED', '--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED', '--add-opens=java.desktop/java.awt.font=ALL-UNNAMED', '-Dcom.unboundid.directory.server.scriptName=import-ldif'
+[04/Sep/2020:17:49:19 +0000]  category=JEB severity=INFORMATION msgID=8388730 msg=Beginning final index merge
+[04/Sep/2020:17:49:21 +0000]  category=UBID_JEB severity=NOTICE msgID=1887895598 msg=Closing the entry and dn databases in the background
+[04/Sep/2020:17:49:21 +0000]  category=UBID_JEB severity=NOTICE msgID=1887895599 msg=Closing the entry and dn databases complete, duration = 57 ms
+[04/Sep/2020:17:49:22 +0000]  category=USER_DEFINED severity=INFORMATION msgID=-1 msg=
+          --- Index Summary Statistics ---
+Index                              : Type      :     Limit : >Limit : Max :        1-4 : 5-9 : 10-99
+                                   :           :           :        :     : (Embedded) :     :      
+-----------------------------------:-----------:-----------:--------:-----:------------:-----:------
+accessGrantClientId                : equality  :     4,000 :        :     :            :     :      
+accessGrantExpires                 : ordering  :     4,000 :        :     :            :     :      
+accessGrantGuid                    : equality  :     4,000 :        :     :            :     :      
+accessGrantHashedRefreshTokenValue : equality  :     4,000 :        :     :            :     :      
+accessGrantUniqueUserIdentifier    : equality  :     4,000 :        :     :            :     :      
+aci                                : presence  : 1,000,000 :        :   5 :            :   1 :      
+cn                                 : equality  :     4,000 :        :   2 :         20 :     :      
+cn                                 : substring :     4,000 :        :   5 :        205 :   6 :      
+ds-soft-delete-from-dn             : equality  :     4,000 :        :     :            :     :      
+ds-soft-delete-timestamp           : ordering  :     4,000 :        :     :            :     :      
+entryUUID                          : equality  :     4,000 :        :   1 :         43 :     :      
+givenName                          : equality  :     4,000 :        :   2 :         12 :     :      
+givenName                          : substring :     4,000 :        :   4 :         81 :     :      
+mail                               : equality  :     4,000 :        :   2 :          5 :     :      
+member                             : equality  :     4,000 :        :   4 :          7 :     :      
+objectClass                        : equality  :   100,000 :        :  41 :          1 :   2 :     6
+pf-connected-identity              : equality  :     4,000 :        :   1 :         14 :     :      
+pf-oauth-client-id                 : equality  :     4,000 :        :   1 :         14 :     :      
+pf-oauth-client-id                 : ordering  :     4,000 :        :   1 :         14 :     :      
+pf-oauth-client-id                 : substring :     4,000 :        :  11 :         66 :     :     7
+pf-oauth-client-last-modified      : ordering  :     4,000 :        :   2 :         13 :     :      
+pf-oauth-client-name               : equality  :     4,000 :        :   1 :         14 :     :      
+pf-oauth-client-name               : ordering  :     4,000 :        :   1 :         14 :     :      
+pf-oauth-client-name               : substring :     4,000 :        :  10 :        167 :   6 :     1
+sn                                 : equality  :     4,000 :        :   2 :         12 :     :      
+sn                                 : substring :     4,000 :        :   5 :         80 :   1 :      
+telephoneNumber                    : equality  :     4,000 :        :     :            :     :      
+uid                                : equality  :     4,000 :        :   1 :         14 :     :      
+uniqueMember                       : equality  :     4,000 :        :     :            :     :      
+id2children                        : system    :     4,000 :        :  15 :            :   2 :     2
+id2subtree                         : system    :     4,000 :        :  42 :            :   1 :     3
+
+The first four columns of numbers provide (1) "Limit" - the index entry limit
+(or blank if there is no limit), (2) ">Limit" - the number of keys whose entry
+count exceeds the entry limit, (3) "Max" - the maximum entry count for any key
+in the index, (4) "1-4
+(Embedded)" - the number of keys that can be embedded in the internal
+structure of the index's database since they match only a few entries (these
+values will be cached even if the index is configured with a cache-mode of
+cache-keys-only.) The remaining columns provide the number of keys whose entry
+count falls in the range indicated in the column heading
+* The aci and objectClass indexes have enforced minimum index-entry-limits in
+order to ensure proper server performance. The maximum of the configured value
+or enforced minimum will be used
+
+[04/Sep/2020:17:49:22 +0000]  category=UBID_JEB severity=INFORMATION msgID=1887437005 msg=The contents of the index summary table were written to the file /opt/out/instance/logs/tools/import-index-summary.txt
+[04/Sep/2020:17:49:22 +0000]  category=USER_DEFINED severity=INFORMATION msgID=-1 msg=
+          --- Index Summary Statistics ---
+Index Name                                       : Attribute Type      : Field Path : Limit : >Limit : Max :        1-4
+                                                 :                     :            :       :        :     : (Embedded)
+-------------------------------------------------:---------------------:------------:-------:--------:-----:-----------
+dc_example_dc_com_ubidEmailJSON.json.value       : ubidEmailJSON       :      value : 4,000 :        :     :           
+dc_example_dc_com_ubidPhoneNumberJSON.json.value : ubidPhoneNumberJSON :      value : 4,000 :        :     :           
+
+[04/Sep/2020:17:49:22 +0000]  category=UBID_JEB severity=INFORMATION msgID=1887437341 msg=The contents of the JSON index summary table were written to the file /opt/out/instance/logs/tools/import-json-index-summary.txt
+[04/Sep/2020:17:49:22 +0000]  category=JEB severity=INFORMATION msgID=8388732 msg=Final index merge complete (processing time 3 seconds)
+[04/Sep/2020:17:49:23 +0000]  category=USER_DEFINED severity=INFORMATION msgID=-1 msg=
+The following tables provide estimates of the database cache requirements of
+the imported data set as well as recommended limits for this system. The
+estimates provided are an upper bound on the cache requirements. The actual
+cache used might be slightly less. A more detailed break down is available in
+/opt/out/instance/logs/tools/import-database-cache-summary-userRoot.txt.
+
+
+      --- Database Cache Usage Breakdown (Estimated) ---
+                : DB Cache :  Percentage
+                :     (MB) : of DB Cache
+----------------:----------:------------
+Encoded entries :        0 :        0.0%
+Indexes         :        0 :        0.1%
+Totals          :        0 :        0.1%
+
+--
+With the currently configured server JVM size of 768m and db-cache-percent of
+36%, a maximum of 276 MB will be used for the database cache.
+--
+This table provides a breakdown of how the database cache is used between the
+different types of databases. For each database type, the total estimated
+memory required is shown along with how much of the currently configured
+database cache this represents. If the total percentage of the database cache
+exceeds 100%, then the current data set is not fully cacheable with the
+current configuration, and further recommendations will be provided below for
+addressing this.
+
+
+      --- Estimated Database Cache Limits ---
+                               : Current Data Set and :   Limits for Current :      Limits for This
+                               : Memory Configuration : Memory Configuration :         Machine with
+                               :                      :                      :      Most Aggressive
+                               :                      :                      : Memory Configuration
+-------------------------------:----------------------:----------------------:---------------------
+Configured JVM Heap Size       :                 768m :                 768m :                  10g
+Configured db-cache-percent    :                  36% :                  36% :                  68%
+Cacheable Entries              :                   43 :   Data set too small :   Data set too small
+                               :                      :         for estimate :         for estimate
+Percentage of Current Data Set :                 100% :   Data set too small :   Data set too small
+                               :                      :         for estimate :         for estimate
+Cache Percent Full             :                   0% :                  90% :                  90%
+
+--
+The cache usage estimates of the imported data set are compared to the limits
+of the current configuration as well as the limits of this system. These
+limits only consider the memory cache limits of the system. The available disk
+space can also limit the size of a data set especially for disk-bound
+configurations.
+--
+All recommendations are based on a maximum database cache percent full of 90%.
+This leaves some headroom for database growth, including the server's
+operational attributes, such as modifyTimestamp, that are added to entries
+when they are modified. These recommendations assume this backend is the
+primary memory consumer. If this server has other Local DB backends, a large
+number of static groups, or entry caches that are configured to store a large
+number of entries, then less memory can be devoted to this database cache, and
+hence fewer entries can be stored.
+--
+The maximum JVM heap size for the server can be adjusted using the
+dsjavaproperties tool. The db-cache-percent configuration setting for the
+userRoot backend can be changed by using the dsconfig command-line tool.
+
+
+
+WARNING! The current server configuration is not optimized for the imported data set. Details:
+
+  1. The server is not configured to preload the database into the database
+     cache at startup. This can lead to reduced performance until traffic
+     warms the cache, which can take hours to weeks based on the size of the
+     data set. Consider setting the 'prime-method' parameter of the userRoot
+     backend to 'preload'. This will result in longer startup times but will
+     ensure optimal performance when the server begins accepting connections.
+
+
+
+The above database cache estimate tables along with additional details are
+also available in
+'/opt/out/instance/logs/tools/import-database-cache-summary-userRoot.txt' and
+in comma-separated format in
+'/opt/out/instance/logs/tools/import-database-cache-summary-userRoot.csv'.
+
+
+[04/Sep/2020:17:49:23 +0000]  category=JEB severity=NOTICE msgID=8847454 msg=Processed 43 entries, imported 43, skipped 0, and rejected 0 in 4 seconds (average rate 9.1/sec)
+[04/Sep/2020:17:49:23 +0000]  category=JEB severity=NOTICE msgID=8847455 msg=Number of index values that exceeded the entry limit: 0
+[04/Sep/2020:17:49:23 +0000]  category=UBID_JEB severity=INFORMATION msgID=1887437174 msg=Import Summary:
+   Entries Processed:             43
+            Imported:             43 (100.0%)
+             Skipped:              0 (  0.0%)
+            Rejected:              0 (  0.0%)
+
+          Total Time:  4 seconds (4 sec)
+        Average Rate:  9 / second
+[04/Sep/2020:17:49:23 +0000]  category=UBID_JEB severity=NOTICE msgID=1887895562 msg=Closing the database to flush all imported entries
+[04/Sep/2020:17:49:24 +0000]  category=UBID_JEB severity=NOTICE msgID=1887895563 msg=Closing database complete, duration = 32 ms

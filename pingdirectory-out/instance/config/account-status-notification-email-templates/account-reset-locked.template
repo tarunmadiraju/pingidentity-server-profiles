@@ -1,0 +1,83 @@
+## This template may be used to generate an email message that can be sent to
+## a user (and optionally a predefined set of server administrators) if a bind
+## attempt fails because they failed to choose a new password in a timely
+## manner after an administrative password reset.
+##
+## See the README.txt file in this directory for a thorough description of the
+## template file format and the variables and directives that can be used to
+## customize its content.
+
+
+## Populate the values of any variables that will appear in the body of the
+## email message.
+#getNotificationPropertyValue("password-changed-time", "password_reset_time")
+#getFormattedTimestamp($password_reset_time, "K:mm:ss a zzz", "password_reset_time_of_day")
+#getFormattedTimestamp($password_reset_time, "EEEE, MMMM d", "password_reset_date")
+#getNotificationPropertyValue("time-since-password-change", "time_since_password_reset")
+#getNotificationPropertyValue("maximum-password-reset-age", "maximum_password_reset_age")
+
+
+
+----- BEGIN HEADERS -----
+
+## Pull in a template file that will set the value of a number of header fields
+## that will be shared across all types of account status notifications.
+#parse("common-header-fields.vm")
+
+## The subject for the generated email message.
+#set($subject = "Your account has been locked following a password reset")
+SUBJECT: $subject
+
+
+
+----- BEGIN PLAIN-TEXT BODY -----
+
+## Pull in a template file that can provide text at the top of the plain-text
+## body for all types of account status notifications.
+#parse("common-plain-text-body-header.vm")
+
+Your account has been locked because your password had been reset, but you did not choose a new password in a timely manner.
+
+Your password was reset at $password_reset_time_of_day on $password_reset_date ($time_since_password_reset ago), and it has been locked because you failed to choose a new password within $maximum_password_reset_age.
+
+Your account will remain locked until the password is reset again.
+
+## Pull in a template file that can provide text at the bottom of the
+## plain-text body for all types of account status notifications.
+#parse("common-plain-text-body-footer.vm")
+
+
+----- BEGIN HTML BODY -----
+
+<html>
+  <head>
+    <title>$subject</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+
+  <body>
+## Pull in a template file that can provide styling and text at the top of the
+## HTML-formatted body for all types of account status notifications.
+#parse("common-html-body-header.vm")
+
+    <p>
+      Your account has been locked because your password had been reset, but you did not choose a new password in a timely manner.
+   </p>
+
+    <p>
+      Your password was reset at $password_reset_time_of_day on $password_reset_date ($time_since_password_reset ago), and it has been locked because you failed to choose a new password within $maximum_password_reset_age.
+    </p>
+
+    <p>
+      Your account will remain locked until the password is reset again.
+    </p>
+
+## Pull in a template file that can provide styling and text at the bottom of
+## the HTML-formatted body for all types of account status notifications.
+#parse("common-html-body-footer.vm")
+  </body>
+</html>
+
+## Pull in a template file that can provide any attachments that be used for
+## all types of account status notifications.
+#parse("common-attachments.vm")

@@ -1,0 +1,70 @@
+## This template may be used to generate an email message that can be sent to
+## a user (and optionally a predefined set of server administrators) if an
+## authentication attempt fails because the account has an expiration time that
+## is in the past.
+##
+## See the README.txt file in this directory for a thorough description of the
+## template file format and the variables and directives that can be used to
+## customize its content.
+
+
+## Populate the values of any variables that will appear in the body of the
+## email message.
+#getNotificationPropertyValue("account-expiration-time", "account_expiration_timestamp")
+#getFormattedTimestamp($account_expiration_timestamp, "K:mm:ss a zzz", "account_expiration_time_of_day")
+#getFormattedTimestamp($account_expiration_timestamp, "EEEE, MMMM d", "account_expiration_date")
+#getNotificationPropertyValue("time-since-account-expiration", "time_since_expiration")
+
+
+
+----- BEGIN HEADERS -----
+
+## Pull in a template file that will set the value of a number of header fields
+## that will be shared across all types of account status notifications.
+#parse("common-header-fields.vm")
+
+## The subject for the generated email message.
+#set($subject = "Your account has expired")
+SUBJECT: $subject
+
+
+
+----- BEGIN PLAIN-TEXT BODY -----
+
+## Pull in a template file that can provide text at the top of the plain-text
+## body for all types of account status notifications.
+#parse("common-plain-text-body-header.vm")
+
+An authentication attempt failed because your account expired at $account_expiration_time_of_day on $account_expiration_date ($time_since_expiration ago).
+
+## Pull in a template file that can provide text at the bottom of the
+## plain-text body for all types of account status notifications.
+#parse("common-plain-text-body-footer.vm")
+
+
+----- BEGIN HTML BODY -----
+
+<html>
+  <head>
+    <title>$subject</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+
+  <body>
+## Pull in a template file that can provide styling and text at the top of the
+## HTML-formatted body for all types of account status notifications.
+#parse("common-html-body-header.vm")
+
+    <p>
+      An authentication attempt failed because your account expired at $account_expiration_time_of_day on $account_expiration_date ($time_since_expiration ago).
+    </p>
+
+## Pull in a template file that can provide styling and text at the bottom of
+## the HTML-formatted body for all types of account status notifications.
+#parse("common-html-body-footer.vm")
+  </body>
+</html>
+
+## Pull in a template file that can provide any attachments that be used for
+## all types of account status notifications.
+#parse("common-attachments.vm")

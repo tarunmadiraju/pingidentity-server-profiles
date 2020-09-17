@@ -1,0 +1,10 @@
+dsconfig create-plugin \
+    --plugin-name Autoincrement  \
+    --type third-party  \
+    --set enabled:false  \
+    --set plugin-type:postoperationadd  \
+    --set plugin-type:postoperationdelete  \
+    --set plugin-type:postoperationmodify  \
+    --set plugin-type:postoperationmodifydn  \
+    --set plugin-type:preparsesearch  \
+    --set extension-class:com.pingidentity.ds.plugin.Autoincrement

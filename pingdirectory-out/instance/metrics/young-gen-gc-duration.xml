@@ -1,0 +1,87 @@
+<com.unboundid.directory.model.metrics.MetricDefinition version="4" complexity="ADVANCED" collectorGroup="SERVER">
+  <id>
+    <idString>young-gen-gc-duration</idString>
+  </id>
+  <displayName>
+    <MessageDescriptor.Arg0 key="INFO_YOUNG_GEN_GC_DURATION_NAME" ordinal="-1">
+      <rbBase>messages/ubid_metric</rbBase>
+      <category>UBID_METRIC</category>
+      <severity>INFORMATION</severity>
+    </MessageDescriptor.Arg0>
+    <object-array/>
+  </displayName>
+  <shortDisplayName>
+    <MessageDescriptor.Arg0 key="INFO_YOUNG_GEN_GC_DURATION_SHORT_NAME" ordinal="-1">
+      <rbBase>messages/ubid_metric</rbBase>
+      <category>UBID_METRIC</category>
+      <severity>INFORMATION</severity>
+    </MessageDescriptor.Arg0>
+    <object-array/>
+  </shortDisplayName>
+  <description>
+    <MessageDescriptor.Arg0 key="INFO_YOUNG_GEN_GC_DURATION_DESCRIPTION" ordinal="-1">
+      <rbBase>messages/ubid_metric</rbBase>
+      <category>UBID_METRIC</category>
+      <severity>INFORMATION</severity>
+    </MessageDescriptor.Arg0>
+    <object-array/>
+  </description>
+  <group>JVM</group>
+  <metricType>DiscreteValued</metricType>
+  <availableStatistics>
+    <com.unboundid.directory.model.metrics.Statistic>COUNT</com.unboundid.directory.model.metrics.Statistic>
+    <com.unboundid.directory.model.metrics.Statistic>AVERAGE</com.unboundid.directory.model.metrics.Statistic>
+  </availableStatistics>
+  <countUnits>
+    <singularName>
+      <MessageDescriptor.Arg0 key="INFO_YOUNG_GEN_GC_SINGULAR" ordinal="-1">
+        <rbBase>messages/ubid_metric</rbBase>
+        <category>UBID_METRIC</category>
+        <severity>INFORMATION</severity>
+      </MessageDescriptor.Arg0>
+      <object-array/>
+    </singularName>
+    <pluralName>
+      <MessageDescriptor.Arg0 key="INFO_YOUNG_GEN_GC_PLURAL" ordinal="-1">
+        <rbBase>messages/ubid_metric</rbBase>
+        <category>UBID_METRIC</category>
+        <severity>INFORMATION</severity>
+      </MessageDescriptor.Arg0>
+      <object-array/>
+    </pluralName>
+    <abbreviatedName>
+      <MessageDescriptor.Arg0 key="INFO_YOUNG_GEN_GC_ABBREV" ordinal="-1">
+        <rbBase>messages/ubid_metric</rbBase>
+        <category>UBID_METRIC</category>
+        <severity>INFORMATION</severity>
+      </MessageDescriptor.Arg0>
+      <object-array/>
+    </abbreviatedName>
+  </countUnits>
+  <valueUnits>
+    <singularName>
+      <MessageDescriptor.Arg0 key="INFO_MSEC_SINGULAR" ordinal="-1">
+        <rbBase>messages/ubid_metric</rbBase>
+        <category>UBID_METRIC</category>
+        <severity>INFORMATION</severity>
+      </MessageDescriptor.Arg0>
+      <object-array/>
+    </singularName>
+    <pluralName>
+      <MessageDescriptor.Arg0 key="INFO_MSEC_PLURAL" ordinal="-1">
+        <rbBase>messages/ubid_metric</rbBase>
+        <category>UBID_METRIC</category>
+        <severity>INFORMATION</severity>
+      </MessageDescriptor.Arg0>
+      <object-array/>
+    </pluralName>
+    <abbreviatedName>
+      <MessageDescriptor.Arg0 key="INFO_MSEC_ABBREV" ordinal="-1">
+        <rbBase>messages/ubid_metric</rbBase>
+        <category>UBID_METRIC</category>
+        <severity>INFORMATION</severity>
+      </MessageDescriptor.Arg0>
+      <object-array/>
+    </abbreviatedName>
+  </valueUnits>
+</com.unboundid.directory.model.metrics.MetricDefinition>

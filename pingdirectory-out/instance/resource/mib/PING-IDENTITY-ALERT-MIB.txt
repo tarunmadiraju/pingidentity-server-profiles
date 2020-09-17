@@ -1,0 +1,3412 @@
+PING-IDENTITY-ALERT-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+      FROM PING-IDENTITY-TRAP-VARIABLE-MIB
+    NOTIFICATION-GROUP
+      FROM SNMPv2-CONF
+    NOTIFICATION-TYPE,
+    enterprises,
+    MODULE-IDENTITY
+      FROM SNMPv2-SMI
+    ;
+
+pingIdentityAlertModule MODULE-IDENTITY
+  LAST-UPDATED "202006151919Z"
+  ORGANIZATION "Ping Identity Corporation"
+  CONTACT-INFO "www.pingidentity.com"
+  DESCRIPTION
+    "A MIB module defining all the alert notifications that may be sent by the server"
+  REVISION     "202006151919Z"
+  DESCRIPTION
+    "A MIB module defining all the alert notifications that may be sent by the server"
+  ::= { unboundidDsMibTrap 2 }
+
+unboundid OBJECT IDENTIFIER ::= { enterprises 30221 }
+unboundidDs OBJECT IDENTIFIER ::= { unboundid 2 }
+unboundidDsMib OBJECT IDENTIFIER ::= { unboundidDs 10 }
+unboundidDsMibTrap OBJECT IDENTIFIER ::= { unboundidDsMib 2 }
+unboundidDsTrap OBJECT IDENTIFIER ::= { unboundidDsMib 3 }
+
+pingIdentityAlertModuleNotifications NOTIFICATION-GROUP
+  NOTIFICATIONS   {
+    dsReplicationPluginMessageSerializationFailure,
+    dsGlobalIndexPersistenceError,
+    dsMissingSchemaElementsReferencedByBackend,
+    dsSystemCurrentTimeShifted,
+    dsAccessControlDisabled,
+    dsOutOfDiskSpaceError,
+    dsEnteringLockdownMode,
+    dsEmbeddedPostgresqlUnavailable,
+    dsExternalConfigFileEditHandled,
+    dsGlobalIndexInsufficientDiskSpaceError,
+    dsNoEnabledAlertHandlers,
+    dsReplicationGenerationIdMismatch,
+    dsLowDiskSpaceError,
+    dsExecTaskLaunchingCommand,
+    dsCannotAcquireSharedBackendLock,
+    dsHealthCheckUnavailableToDegraded,
+    dsMirroredSubtreeManagerForcedAsMasterError,
+    dsAlarmMajor,
+    dsAlarmMinor,
+    dsDebugLoggingEnabled,
+    dsWorkQueueFull,
+    dsProxyEntryRebalancingAdminActionRequired,
+    dsFileRetentionTaskDeleteFailure,
+    dsMirroredSubtreeManagerForcedAsMasterWarning,
+    dsProxyEntryBalancingErrorMultipleOperationsSucceeded,
+    dsDuplicateErrorAlertsSuppressed,
+    dsLeavingLockdownMode,
+    dsDelegatedAdminConfigurationErrors,
+    dsHttpConnectionHandlerDuplicateServletExtension,
+    dsCannotWriteTaskBackingFile,
+    dsExternalServerInitializationFailed,
+    dsCannotWriteNewSchemaFiles,
+    dsEntryReferencesRemovedAttributeType,
+    dsJeBackgroundSyncFailed,
+    dsSyncPipeInitializationError,
+    dsForceGcComplete,
+    dsInsecureAccessTokenValidatorEnabled,
+    dsRestrictedSubtreeAccessibility,
+    dsDuplicateWarningAlertsSuppressed,
+    dsSyncResourceConnectionError,
+    dsAccessControlEnabled,
+    dsRestartRequired,
+    dsGlobalIndexReadError,
+    dsMirroredSubtreeServerNotInTopology,
+    dsThresholdCriticalExit,
+    dsLargeAttributeUpdateFailure,
+    dsTaskFailed,
+    dsCannotRenameCurrentTaskFile,
+    dsReplicationBacklogged,
+    dsPdpUnavailable,
+    dsReplicationServerListenFailure,
+    dsIndexDegraded,
+    dsCannotScheduleRecurringTaskIteration,
+    dsDuplicateFatalAlertsSuppressed,
+    dsLdifConnectionHandlerIoError,
+    dsLogFileRotationListenerProcessingTakesTooLong,
+    dsCannotRestoreBackup,
+    dsCryptoManagerError,
+    dsDuplicateAlertsSuppressed,
+    dsPdpTrustFrameworkVersionDeprecated,
+    dsGloballyUniqueAttributeConflict,
+    dsLdifBackendCannotWrite,
+    dsReplicationMonitorDataUnavailable,
+    dsJeDaemonThreadException,
+    dsLoggingError,
+    dsReplicationServerChangelogFailure,
+    dsSyncResourceOperationError,
+    dsLdapConnectionHandlerConsecutiveFailures,
+    dsCannotWriteServerStateFile,
+    dsThresholdWarningExit,
+    dsReplicationReplayFailed,
+    dsSyncPipeBacklogAboveThreshold,
+    dsWorkQueueNoThreadsRemaining,
+    dsMonitoringEndpointUnableToConnect,
+    dsMirroredSubtreeManagerNoMasterFound,
+    dsCannotCopySchemaFiles,
+    dsLogFileRotationListenerInvokeError,
+    dsSchemaCheckingDisabled,
+    dsCannotDecodeEntry,
+    dsUncaughtException,
+    dsCannotRegisterBackend,
+    dsExternalConfigFileEditLost,
+    dsFailedToApplyMirroredConfiguration,
+    dsMirroredSubtreeManagerFailedOutboundConnection,
+    dsBrokerStoreUnavailable,
+    dsWorkQueueBacklogged,
+    dsThresholdCriticalEntry,
+    dsAccessControlParseFailure,
+    dsProxyEntryBalancingOperationFailure,
+    dsUniqueAttributeSyncError,
+    dsWorkerThreadCaughtError,
+    dsHealthCheckDegradedToAvailable,
+    dsServerStarted,
+    dsCannotWriteConfiguration,
+    dsSensitiveTraceDataLoggedWarning,
+    dsHealthCheckAvailableToDegraded,
+    dsCannotReleaseSharedBackendLock,
+    dsDeadlockDetected,
+    dsThreadExitHoldingLock,
+    dsBackendInitializationFailed,
+    dsInvalidPrivilege,
+    dsLowDiskSpaceWarning,
+    dsSystemNanotimeStopped,
+    dsUnrecognizedAlertType,
+    dsBackupFailed,
+    dsReplicationMetadataDecodeFailure,
+    dsTaskCompleted,
+    dsAccessLogCriteriaMatched,
+    dsCannotFindRecurringTask,
+    dsJeEnvironmentNotClosedCleanly,
+    dsSyncPipeBacklogBelowThreshold,
+    dsHealthCheckDegradedToUnavailable,
+    dsUniqueAttributeSyncConflict,
+    dsHealthCheckAvailableToUnavailable,
+    dsIndexCorrupt,
+    dsHealthCheckUnavailableToAvailable,
+    dsThresholdWarningEntry,
+    dsMirroredSubtreeManagerOperationError,
+    dsJeRecoveryRequired,
+    dsIndexRebuildCompleted,
+    dsServerShuttingDown,
+    dsUserDefinedFatal,
+    dsUserDefinedInfo,
+    dsJvmMisconfiguration,
+    dsDuplicateInfoAlertsSuppressed,
+    dsExplodedIndexBackgroundDeleteCleanupFailed,
+    dsLdapConnectionHandlerUncaughtError,
+    dsUserDefinedError,
+    dsServerJvmPaused,
+    dsAccessControlChange,
+    dsContinuousGarbageCollectionDetected,
+    dsReplicationUnresolvedConflict,
+    dsUserDefinedWarning,
+    dsTaskStarted,
+    dsThirdPartyExtensionException,
+    dsLdapConnectionHandlerCannotListen,
+    dsAlarmWarning,
+    dsReplicationMissingChanges,
+    dsAlarmCritical,
+    dsIndexRebuildInProgress,
+    dsBackendDisabled,
+    dsCannotRenameNewTaskFile,
+    dsReplicationUnsentChanges,
+    dsUnindexedInternalSearch,
+    dsAlarmCleared,
+    dsGlobalReferentialIntegrityUpdateFailure,
+    dsLdifConnectionHandlerParseError,
+    dsBrokerStoreVersionIncompatible,
+    dsBrokerStoreAvailable,
+    dsOfflineConfigChangeDetected,
+    dsMirroredSubtreeManagerConnectionAsymmetry,
+    dsHttpConnectionHandlerDuplicateContextPath,
+    dsLbaNoAvailableServers,
+    dsUnlicensedProduct,
+    dsForceGcStarting,
+    dsConfigChange,
+    dsJeCleanerDisabled,
+    dsExplodedIndexBackgroundDeleteFailed,
+    dsServerStarting,
+    dsSubtreeDeleteInterrupted
+  }
+  STATUS current
+  DESCRIPTION
+    "A group containing all the alert notifications defined in this MIB"
+  ::= { pingIdentityAlertModule 1 }
+
+
+
+
+dsReplicationPluginMessageSerializationFailure NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the replication plugin failed to serialize or deserialize a replication message. Replicas should be tested for any data inconsistency using - for example - the ldap-diff tool. Manual entry modification may be necessary to remedy this situation"
+  ::= { unboundidDsTrap 53 }
+
+
+dsGlobalIndexPersistenceError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an unexpected error occurred while persisting the global index for a particular entry balancing request processor"
+  ::= { unboundidDsTrap 127 }
+
+
+dsMissingSchemaElementsReferencedByBackend NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a backend references one or more schema elements that are no longer defined in the server, and that operations involving entries containing those schema elements may not be processed correctly"
+  ::= { unboundidDsTrap 162 }
+
+
+dsSystemCurrentTimeShifted NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the system time has shifted backwards, which might have an impact on time-related aspects of the server"
+  ::= { unboundidDsTrap 99 }
+
+
+dsAccessControlDisabled NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that access control evaluation has been disabled"
+  ::= { unboundidDsTrap 1 }
+
+
+dsOutOfDiskSpaceError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "The amount of usable disk space has dropped below the configured out of space error threshold"
+  ::= { unboundidDsTrap 47 }
+
+
+dsEnteringLockdownMode NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server is entering lockdown mode, in which case it will only allow operations from users with the lockdown-mode privilege"
+  ::= { unboundidDsTrap 18 }
+
+
+dsEmbeddedPostgresqlUnavailable NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the embedded PostgreSQL instance within the server is not available, possibly because it was stopped outside of the context of the server instance"
+  ::= { unboundidDsTrap 115 }
+
+
+dsExternalConfigFileEditHandled NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server has detected an external edit to the configuration file with the server online, but that it was able to copy the modifications into a separate file but without applying them"
+  ::= { unboundidDsTrap 19 }
+
+
+dsGlobalIndexInsufficientDiskSpaceError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that there is not enough space on the disk to persist the global index for a particular entry balancing request processor"
+  ::= { unboundidDsTrap 126 }
+
+
+dsNoEnabledAlertHandlers NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "No alert handlers have been enabled. Alerts will be written to logs/errors, but administrators will not be otherwise notified of current or impending problems, which could lead to an outage that was avoidable"
+  ::= { unboundidDsTrap 159 }
+
+
+dsReplicationGenerationIdMismatch NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "The generation ID stored in the backend does not match the generation ID stored in the replication changelog database. To recover initialize from the server that has authoritative data to all other servers participating in replication"
+  ::= { unboundidDsTrap 144 }
+
+
+dsLowDiskSpaceError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "The amount of usable disk space has dropped below the configured low space error threshold"
+  ::= { unboundidDsTrap 46 }
+
+
+dsExecTaskLaunchingCommand NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Exec Task Launching Command"
+  ::= { unboundidDsTrap 154 }
+
+
+dsCannotAcquireSharedBackendLock NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while attempting to acquire a shared backend lock"
+  ::= { unboundidDsTrap 4 }
+
+
+dsHealthCheckUnavailableToDegraded NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the health of an LDAP external server has been reclassified from UNAVAILABLE to DEGRADED"
+  ::= { unboundidDsTrap 60 }
+
+
+dsMirroredSubtreeManagerForcedAsMasterError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the mirrored subtree manager found more than one server that were forced to act as masters"
+  ::= { unboundidDsTrap 134 }
+
+
+dsAlarmMajor NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an alarm condition was observed at major severity"
+  ::= { unboundidDsTrap 123 }
+
+
+dsAlarmMinor NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an alarm condition was observed at minor severity"
+  ::= { unboundidDsTrap 122 }
+
+
+dsDebugLoggingEnabled NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that Debug Logging is enabled"
+  ::= { unboundidDsTrap 140 }
+
+
+dsWorkQueueFull NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the work queue is full and has rejected a client request"
+  ::= { unboundidDsTrap 42 }
+
+
+dsProxyEntryRebalancingAdminActionRequired NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Administrative action is required to bring the servers back to a consistent state after an attempted rebalancing operation"
+  ::= { unboundidDsTrap 101 }
+
+
+dsFileRetentionTaskDeleteFailure NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "File Retention Task Delete Failure"
+  ::= { unboundidDsTrap 155 }
+
+
+dsMirroredSubtreeManagerForcedAsMasterWarning NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the mirrored subtree manager found a server that was forced to act as master"
+  ::= { unboundidDsTrap 133 }
+
+
+dsProxyEntryBalancingErrorMultipleOperationsSucceeded NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an entry balancing request processor successfully executed an operation on multiple backend sets. Only one backend set was expected to succeed with the operation"
+  ::= { unboundidDsTrap 62 }
+
+
+dsDuplicateErrorAlertsSuppressed NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that duplicate error alert notifications have been suppressed"
+  ::= { unboundidDsTrap 91 }
+
+
+dsLeavingLockdownMode NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server is leaving lockdown mode and resuming normal operation"
+  ::= { unboundidDsTrap 29 }
+
+
+dsDelegatedAdminConfigurationErrors NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that Delegated Admin is not configured properly"
+  ::= { unboundidDsTrap 164 }
+
+
+dsHttpConnectionHandlerDuplicateServletExtension NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "An HTTP connection handler is configured with more than one HTTP servlet extension of a type that may only be configured once per HTTP connection handler. The connection handler configuration must be corrected, or undefined behavior may result"
+  ::= { unboundidDsTrap 157 }
+
+
+dsCannotWriteTaskBackingFile NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while trying to write the task backing file"
+  ::= { unboundidDsTrap 16 }
+
+
+dsExternalServerInitializationFailed NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the attempt to initialize an external server failed"
+  ::= { unboundidDsTrap 79 }
+
+
+dsCannotWriteNewSchemaFiles NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while trying to write updated schema files"
+  ::= { unboundidDsTrap 15 }
+
+
+dsEntryReferencesRemovedAttributeType NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an entry retrieved from a backend references an attribute type that has been removed from the server schema"
+  ::= { unboundidDsTrap 163 }
+
+
+dsJeBackgroundSyncFailed NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while attempting to perform a synchronous write in a Berkeley DB JE database environment"
+  ::= { unboundidDsTrap 89 }
+
+
+dsSyncPipeInitializationError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a Sync Pipe experienced an error while initializing"
+  ::= { unboundidDsTrap 83 }
+
+
+dsForceGcComplete NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server has completed a synchronous garbage collection"
+  ::= { unboundidDsTrap 69 }
+
+
+dsInsecureAccessTokenValidatorEnabled NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "An insecure access token validator is enabled. This access token validator does not validate the authenticity of bearer tokens and should only be used in test or demonstration deployments"
+  ::= { unboundidDsTrap 158 }
+
+
+dsRestrictedSubtreeAccessibility NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a subtree has been read-only or hidden for longer than the configured time limit"
+  ::= { unboundidDsTrap 102 }
+
+
+dsDuplicateWarningAlertsSuppressed NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that duplicate warning alert notifications have been suppressed"
+  ::= { unboundidDsTrap 92 }
+
+
+dsSyncResourceConnectionError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that there was an error when establishing a connection to an external server by the server"
+  ::= { unboundidDsTrap 71 }
+
+
+dsAccessControlEnabled NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that access control evaluation has been enabled"
+  ::= { unboundidDsTrap 2 }
+
+
+dsRestartRequired NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "A server restart is required for configuration changes to take effect"
+  ::= { unboundidDsTrap 146 }
+
+
+dsGlobalIndexReadError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an unexpected error occurred while reading the global index for a particular entry balancing request processor from a previous persisted file"
+  ::= { unboundidDsTrap 128 }
+
+
+dsMirroredSubtreeServerNotInTopology NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that this server is no longer functional because it does not exist in the topology registry most likely because it was removed from the topology with the remove-defunct-server tool"
+  ::= { unboundidDsTrap 135 }
+
+
+dsThresholdCriticalExit NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a threshold has exited the critical state"
+  ::= { unboundidDsTrap 106 }
+
+
+dsLargeAttributeUpdateFailure NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while attempting to update large attribute for an entry in a manner that may have resulted in the large attribute information being out of sync with the rest of the entry contents"
+  ::= { unboundidDsTrap 63 }
+
+
+dsTaskFailed NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an administrative task has failed to completed successfully"
+  ::= { unboundidDsTrap 153 }
+
+
+dsCannotRenameCurrentTaskFile NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while trying rename the current task backing file"
+  ::= { unboundidDsTrap 10 }
+
+
+dsReplicationBacklogged NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the replication backlog has exceeded the replication backlog count alert threshold for longer than the replication backlog duration alert threshold"
+  ::= { unboundidDsTrap 65 }
+
+
+dsPdpUnavailable NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "The Policy Decision Service is unavailable"
+  ::= { unboundidDsTrap 166 }
+
+
+dsReplicationServerListenFailure NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the replication server encountered an error while trying to listen on the configured replication port. There may be another application listening on the same port or the replication server host name may not be resolvable. Check the replication server configuration"
+  ::= { unboundidDsTrap 81 }
+
+
+dsIndexDegraded NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a backend is operating with a degraded index that needs to be rebuilt before that index may be used"
+  ::= { unboundidDsTrap 74 }
+
+
+dsCannotScheduleRecurringTaskIteration NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while trying to schedule a recurring task iteration"
+  ::= { unboundidDsTrap 13 }
+
+
+dsDuplicateFatalAlertsSuppressed NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that duplicate fatal alert notifications have been suppressed"
+  ::= { unboundidDsTrap 90 }
+
+
+dsLdifConnectionHandlerIoError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an LDIF connection handler has encountered an I/O error that has prevented it from processing"
+  ::= { unboundidDsTrap 28 }
+
+
+dsLogFileRotationListenerProcessingTakesTooLong NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a logger is rotating files more quickly than its associated rotation listeners can process them"
+  ::= { unboundidDsTrap 142 }
+
+
+dsCannotRestoreBackup NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while trying to restore a backup"
+  ::= { unboundidDsTrap 12 }
+
+
+dsCryptoManagerError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "CryptoManager encountered an unexpected error while synchronizing settings between the topology registry and the trust store backend"
+  ::= { unboundidDsTrap 139 }
+
+
+dsDuplicateAlertsSuppressed NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that duplicate alert notifications have been suppressed"
+  ::= { unboundidDsTrap 17 }
+
+
+dsPdpTrustFrameworkVersionDeprecated NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "The currently configured trust framework version is deprecated and will need to be updated"
+  ::= { unboundidDsTrap 167 }
+
+
+dsGloballyUniqueAttributeConflict NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server has detected a conflict in a globally-unique attribute after a change involving that attribute had already been applied"
+  ::= { unboundidDsTrap 108 }
+
+
+dsLdifBackendCannotWrite NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while trying to write the backing file for the LDIF backend"
+  ::= { unboundidDsTrap 26 }
+
+
+dsReplicationMonitorDataUnavailable NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that replication monitor data is unavailable from cn=monitor"
+  ::= { unboundidDsTrap 66 }
+
+
+dsJeDaemonThreadException NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an exception was encountered during processing within a daemon thread used by a Berkeley DB JE database environment"
+  ::= { unboundidDsTrap 87 }
+
+
+dsLoggingError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while attempting to log a message"
+  ::= { unboundidDsTrap 30 }
+
+
+dsReplicationServerChangelogFailure NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the replication server encountered an error while accessing the replication changelog database. Subsequent database access attempts may also fail. The replication server could lose replication updates if database problems persist"
+  ::= { unboundidDsTrap 54 }
+
+
+dsSyncResourceOperationError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server experienced an error while processing an operation at an external server"
+  ::= { unboundidDsTrap 72 }
+
+
+dsLdapConnectionHandlerConsecutiveFailures NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an LDAP connection handler has experienced consecutive failures and will be disabled"
+  ::= { unboundidDsTrap 24 }
+
+
+dsCannotWriteServerStateFile NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while attempting to write the server state file"
+  ::= { unboundidDsTrap 48 }
+
+
+dsThresholdWarningExit NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a threshold has exited the warning state"
+  ::= { unboundidDsTrap 104 }
+
+
+dsReplicationReplayFailed NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server failed to replay a replication operation due to abnormal circumstances.  Please refer to the Recovering a Replica with Missed Changes section in the Administration Guide on how to resolve this issue"
+  ::= { unboundidDsTrap 82 }
+
+
+dsSyncPipeBacklogAboveThreshold NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a Sync Pipe has a large amount of unretrieved changes"
+  ::= { unboundidDsTrap 95 }
+
+
+dsWorkQueueNoThreadsRemaining NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that all worker threads have been terminated due to errors and the server must shut down"
+  ::= { unboundidDsTrap 43 }
+
+
+dsMonitoringEndpointUnableToConnect NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a monitoring endpoint was unable to connect or write to the configured host and port"
+  ::= { unboundidDsTrap 165 }
+
+
+dsMirroredSubtreeManagerNoMasterFound NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the mirrored subtree manager was unable to determine a suitable server to act as the master of the topology"
+  ::= { unboundidDsTrap 132 }
+
+
+dsCannotCopySchemaFiles NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while attempting to copy schema files during a schema update"
+  ::= { unboundidDsTrap 5 }
+
+
+dsLogFileRotationListenerInvokeError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while attempting to invoke a log file rotation listener for a recently-rotated log file"
+  ::= { unboundidDsTrap 141 }
+
+
+dsSchemaCheckingDisabled NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that schema checking has been disabled in the server, which can lead to degraded performance and unexpected behavior in the server as well as client applications"
+  ::= { unboundidDsTrap 98 }
+
+
+dsCannotDecodeEntry NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while attempting to decode an entry stored in a backend"
+  ::= { unboundidDsTrap 6 }
+
+
+dsUncaughtException NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server has detected an uncaught exception that may have caused a thread to terminate"
+  ::= { unboundidDsTrap 34 }
+
+
+dsCannotRegisterBackend NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while trying to register a backend"
+  ::= { unboundidDsTrap 8 }
+
+
+dsExternalConfigFileEditLost NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server has detected an external edit to the configuration file with the server online and was unable to copy the modifications into a separate file"
+  ::= { unboundidDsTrap 20 }
+
+
+dsFailedToApplyMirroredConfiguration NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that although mirrored configuration was synchronized successfully from the master server, there were errors when applying it to this server. A server restart is recommended in this case"
+  ::= { unboundidDsTrap 137 }
+
+
+dsMirroredSubtreeManagerFailedOutboundConnection NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the mirrored subtree manager failed to establish a connection to a peer server within the configured grace period"
+  ::= { unboundidDsTrap 160 }
+
+
+dsBrokerStoreUnavailable NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the Broker Store cannot be accessed by the server server"
+  ::= { unboundidDsTrap 113 }
+
+
+dsWorkQueueBacklogged NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the work queue has accumulated a significant backlog and that operations are being required to wait for long periods of time for worker threads to process them.  (If the system clock was recently changed, then you can ignore this message if there are no other indications there is a problem)"
+  ::= { unboundidDsTrap 50 }
+
+
+dsThresholdCriticalEntry NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a threshold has entered the critical state"
+  ::= { unboundidDsTrap 105 }
+
+
+dsAccessControlParseFailure NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while attempting to parse an access control rule"
+  ::= { unboundidDsTrap 3 }
+
+
+dsProxyEntryBalancingOperationFailure NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an entry balancing request processor attempted to execute an operation on all configured backend sets, but the operation failed on one or more sets"
+  ::= { unboundidDsTrap 61 }
+
+
+dsUniqueAttributeSyncError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server has encountered an error while attempting to detect unique attribute conflicts via replication"
+  ::= { unboundidDsTrap 36 }
+
+
+dsWorkerThreadCaughtError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a worker thread has caught an unexpected error that has caused it to be terminated"
+  ::= { unboundidDsTrap 41 }
+
+
+dsHealthCheckDegradedToAvailable NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the health of an LDAP external server has been reclassified from DEGRADED to AVAILABLE"
+  ::= { unboundidDsTrap 57 }
+
+
+dsServerStarted NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server has completed the startup process"
+  ::= { unboundidDsTrap 33 }
+
+
+dsCannotWriteConfiguration NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while trying to write the updated server configuration"
+  ::= { unboundidDsTrap 14 }
+
+
+dsSensitiveTraceDataLoggedWarning NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "The Trace Logger may log sensitive data"
+  ::= { unboundidDsTrap 136 }
+
+
+dsHealthCheckAvailableToDegraded NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the health of an LDAP external server has been reclassified from AVAILABLE to DEGRADED"
+  ::= { unboundidDsTrap 55 }
+
+
+dsCannotReleaseSharedBackendLock NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while trying to release a shared backend lock"
+  ::= { unboundidDsTrap 9 }
+
+
+dsDeadlockDetected NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a deadlock has been detected in the JVM in which the server is running"
+  ::= { unboundidDsTrap 49 }
+
+
+dsThreadExitHoldingLock NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a thread has exited while still holding one or more locks"
+  ::= { unboundidDsTrap 51 }
+
+
+dsBackendInitializationFailed NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the attempt to initialize a backend failed"
+  ::= { unboundidDsTrap 78 }
+
+
+dsInvalidPrivilege NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a user has been configured with an invalid privilege"
+  ::= { unboundidDsTrap 21 }
+
+
+dsLowDiskSpaceWarning NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "The amount of usable disk space has dropped below the configured low space warning threshold"
+  ::= { unboundidDsTrap 45 }
+
+
+dsSystemNanotimeStopped NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that Java's System.nanoTime() has stopped returning updated values"
+  ::= { unboundidDsTrap 77 }
+
+
+dsUnrecognizedAlertType NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server encountered an administrative alert type that it did not recognize"
+  ::= { unboundidDsTrap 80 }
+
+
+dsBackupFailed NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while trying to perform a backup"
+  ::= { unboundidDsTrap 100 }
+
+
+dsReplicationMetadataDecodeFailure NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while attempting to decode replication conflict resolution metadata (as contained in the ds-sync-hist attribute) for an entry"
+  ::= { unboundidDsTrap 107 }
+
+
+dsTaskCompleted NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an administrative task has completed successfully"
+  ::= { unboundidDsTrap 152 }
+
+
+dsAccessLogCriteriaMatched NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server has processed an operation which matched the criteria for the admin alert access log publisher"
+  ::= { unboundidDsTrap 64 }
+
+
+dsCannotFindRecurringTask NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the definition for a recurring task could not be found"
+  ::= { unboundidDsTrap 7 }
+
+
+dsJeEnvironmentNotClosedCleanly NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a Berkeley DB JE environment may not have been closed cleanly when it was last open, and that a potentially-expensive recovery process may be required when the environment is opened"
+  ::= { unboundidDsTrap 138 }
+
+
+dsSyncPipeBacklogBelowThreshold NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a Sync Pipe that was backlogged has caught up and the number of unretrieved changes is back below the configured threshold"
+  ::= { unboundidDsTrap 96 }
+
+
+dsHealthCheckDegradedToUnavailable NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the health of an LDAP external server has been reclassified from DEGRADED to UNAVAILABLE"
+  ::= { unboundidDsTrap 58 }
+
+
+dsUniqueAttributeSyncConflict NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server has detected a unique attribute conflict that was introduced from replication"
+  ::= { unboundidDsTrap 35 }
+
+
+dsHealthCheckAvailableToUnavailable NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the health of an LDAP external server has been reclassified from AVAILABLE to UNAVAILABLE"
+  ::= { unboundidDsTrap 56 }
+
+
+dsIndexCorrupt NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an index has been determined to have corrupt keys and needs to be rebuilt in order for those keys to yield correct results. The index will continue to function correctly for other keys"
+  ::= { unboundidDsTrap 110 }
+
+
+dsHealthCheckUnavailableToAvailable NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the health of an LDAP external server has been reclassified from UNAVAILABLE to AVAILABLE"
+  ::= { unboundidDsTrap 59 }
+
+
+dsThresholdWarningEntry NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a threshold has entered the warning state"
+  ::= { unboundidDsTrap 103 }
+
+
+dsMirroredSubtreeManagerOperationError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the mirrored subtree manager encountered an unexpected error while processing an update operation"
+  ::= { unboundidDsTrap 131 }
+
+
+dsJeRecoveryRequired NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a backend using the Berkeley DB Java Edition has encountered a severe error and requires recovery"
+  ::= { unboundidDsTrap 22 }
+
+
+dsIndexRebuildCompleted NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an index rebuild process has completed"
+  ::= { unboundidDsTrap 76 }
+
+
+dsServerShuttingDown NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server has begun the shutdown process"
+  ::= { unboundidDsTrap 32 }
+
+
+dsUserDefinedFatal NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a fatal error alert notification was generated from third-party code"
+  ::= { unboundidDsTrap 38 }
+
+
+dsUserDefinedInfo NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an informational alert notification was generated from third-party code"
+  ::= { unboundidDsTrap 39 }
+
+
+dsJvmMisconfiguration NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that JVM arguments are misconfigured"
+  ::= { unboundidDsTrap 143 }
+
+
+dsDuplicateInfoAlertsSuppressed NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that duplicate info alert notifications have been suppressed"
+  ::= { unboundidDsTrap 93 }
+
+
+dsExplodedIndexBackgroundDeleteCleanupFailed NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while attempting to clean up after a background delete of an exploded index key"
+  ::= { unboundidDsTrap 117 }
+
+
+dsLdapConnectionHandlerUncaughtError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an LDAP connection handler has encountered an uncaught error and will be disabled"
+  ::= { unboundidDsTrap 25 }
+
+
+dsUserDefinedError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error alert notification was generated from third-party code"
+  ::= { unboundidDsTrap 37 }
+
+
+dsServerJvmPaused NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the JVM for the server has paused for some reason possibly due to misconfiguration"
+  ::= { unboundidDsTrap 85 }
+
+
+dsAccessControlChange NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a change has been made to the set of access controls defined in the server"
+  ::= { unboundidDsTrap 73 }
+
+
+dsContinuousGarbageCollectionDetected NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "The JVM configuration and server memory requirements have caused JVM garbage collection to run continuously"
+  ::= { unboundidDsTrap 149 }
+
+
+dsReplicationUnresolvedConflict NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server detected a replication conflict that could not be automatically resolved"
+  ::= { unboundidDsTrap 31 }
+
+
+dsUserDefinedWarning NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a warning alert notification was generated from third-party code"
+  ::= { unboundidDsTrap 40 }
+
+
+dsTaskStarted NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an administrative task has started running"
+  ::= { unboundidDsTrap 151 }
+
+
+dsThirdPartyExtensionException NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a third-party extension has thrown an unexpected exception"
+  ::= { unboundidDsTrap 111 }
+
+
+dsLdapConnectionHandlerCannotListen NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred when the LDAP connection handler tried to start listening for client connections and therefore the connection handler will be disabled"
+  ::= { unboundidDsTrap 23 }
+
+
+dsAlarmWarning NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an alarm condition was observed at warning severity"
+  ::= { unboundidDsTrap 121 }
+
+
+dsReplicationMissingChanges NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that some updates may have been lost"
+  ::= { unboundidDsTrap 52 }
+
+
+dsAlarmCritical NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an alarm condition was observed at critical severity"
+  ::= { unboundidDsTrap 124 }
+
+
+dsIndexRebuildInProgress NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an index is in the process of being rebuilt"
+  ::= { unboundidDsTrap 75 }
+
+
+dsBackendDisabled NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a backend is disabled"
+  ::= { unboundidDsTrap 94 }
+
+
+dsCannotRenameNewTaskFile NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while trying rename the new task backing file"
+  ::= { unboundidDsTrap 11 }
+
+
+dsReplicationUnsentChanges NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that one or more replicas were unable to send all pending update messages to the replication server before completing the shutdown process. These updates will be submitted when the server starts up"
+  ::= { unboundidDsTrap 88 }
+
+
+dsUnindexedInternalSearch NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server is about to process an unindexed internal search operation"
+  ::= { unboundidDsTrap 129 }
+
+
+dsAlarmCleared NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an alarm condition previously observed changed in severity"
+  ::= { unboundidDsTrap 120 }
+
+
+dsGlobalReferentialIntegrityUpdateFailure NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server encountered an error while attempting to update one or more entries during the course of global referential integrity processing"
+  ::= { unboundidDsTrap 109 }
+
+
+dsLdifConnectionHandlerParseError NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an LDIF connection handler encountered an error while parsing an LDIF file"
+  ::= { unboundidDsTrap 27 }
+
+
+dsBrokerStoreVersionIncompatible NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the Broker Store version is incompatible with this version of the server"
+  ::= { unboundidDsTrap 118 }
+
+
+dsBrokerStoreAvailable NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the Broker Store has returned to the available state after previously being unavailable"
+  ::= { unboundidDsTrap 114 }
+
+
+dsOfflineConfigChangeDetected NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a configuration change was made with the server offline"
+  ::= { unboundidDsTrap 97 }
+
+
+dsMirroredSubtreeManagerConnectionAsymmetry NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the mirrored subtree manager has had an unequal number of outbound and inbound connections for more than the configured grace period"
+  ::= { unboundidDsTrap 161 }
+
+
+dsHttpConnectionHandlerDuplicateContextPath NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "More than one HTTP servlet or web application extension is registered to handle the same context path. The extension that handles requests for this context path is indeterminate"
+  ::= { unboundidDsTrap 156 }
+
+
+dsLbaNoAvailableServers NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a load-balancing algorithm instance does not have any available servers"
+  ::= { unboundidDsTrap 67 }
+
+
+dsUnlicensedProduct NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server license key is not set, is invalid, or is expired"
+  ::= { unboundidDsTrap 150 }
+
+
+dsForceGcStarting NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server is going to invoke a synchronous garbage collection"
+  ::= { unboundidDsTrap 68 }
+
+
+dsConfigChange NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a configuration change has been made in the server"
+  ::= { unboundidDsTrap 70 }
+
+
+dsJeCleanerDisabled NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the Berkeley DB JE cleaner has been disabled in a local DB backend and that the on-disk size of the database will be allowed to increase without bound until cleaning is re-enabled"
+  ::= { unboundidDsTrap 130 }
+
+
+dsExplodedIndexBackgroundDeleteFailed NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that an error occurred while attempting to perform a background delete of an exploded index key that is no longer needed"
+  ::= { unboundidDsTrap 116 }
+
+
+dsServerStarting NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that the server has begun the startup process"
+  ::= { unboundidDsTrap 84 }
+
+
+dsSubtreeDeleteInterrupted NOTIFICATION-TYPE
+  OBJECTS {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "Indicates that a subtree delete operation has been interrupted for some reason (e.g., by an abandon or cancel request, a server shutdown, or an internal error) and the target subtree may have only been partially deleted"
+  ::= { unboundidDsTrap 112 }
+
+
+END

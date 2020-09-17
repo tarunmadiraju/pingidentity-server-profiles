@@ -1,0 +1,61 @@
+<com.unboundid.directory.model.metrics.MetricDefinition version="3" complexity="BASIC" collectorGroup="LDAP">
+  <id>
+    <idString>new-connections</idString>
+  </id>
+  <displayName>
+    <MessageDescriptor.Arg0 key="INFO_NEW_CONNECTIONS_NAME" ordinal="-1">
+      <rbBase>messages/ubid_metric</rbBase>
+      <category>UBID_METRIC</category>
+      <severity>INFORMATION</severity>
+    </MessageDescriptor.Arg0>
+    <object-array/>
+  </displayName>
+  <shortDisplayName>
+    <MessageDescriptor.Arg0 key="INFO_NEW_CONNECTIONS_SHORT_NAME" ordinal="-1">
+      <rbBase>messages/ubid_metric</rbBase>
+      <category>UBID_METRIC</category>
+      <severity>INFORMATION</severity>
+    </MessageDescriptor.Arg0>
+    <object-array/>
+  </shortDisplayName>
+  <description>
+    <MessageDescriptor.Arg0 key="INFO_NEW_CONNECTIONS_DESCRIPTION" ordinal="-1">
+      <rbBase>messages/ubid_metric</rbBase>
+      <category>UBID_METRIC</category>
+      <severity>INFORMATION</severity>
+    </MessageDescriptor.Arg0>
+    <object-array/>
+  </description>
+  <group>LDAP</group>
+  <metricType>Count</metricType>
+  <availableStatistics>
+    <com.unboundid.directory.model.metrics.Statistic>COUNT</com.unboundid.directory.model.metrics.Statistic>
+  </availableStatistics>
+  <countUnits>
+    <singularName>
+      <MessageDescriptor.Arg0 key="INFO_NEW_CONNECTION_SINGULAR" ordinal="-1">
+        <rbBase>messages/ubid_metric</rbBase>
+        <category>UBID_METRIC</category>
+        <severity>INFORMATION</severity>
+      </MessageDescriptor.Arg0>
+      <object-array/>
+    </singularName>
+    <pluralName>
+      <MessageDescriptor.Arg0 key="INFO_NEW_CONNECTION_PLURAL" ordinal="-1">
+        <rbBase>messages/ubid_metric</rbBase>
+        <category>UBID_METRIC</category>
+        <severity>INFORMATION</severity>
+      </MessageDescriptor.Arg0>
+      <object-array/>
+    </pluralName>
+    <abbreviatedName>
+      <MessageDescriptor.Arg0 key="INFO_NEW_CONNECTION_ABBREV" ordinal="-1">
+        <rbBase>messages/ubid_metric</rbBase>
+        <category>UBID_METRIC</category>
+        <severity>INFORMATION</severity>
+      </MessageDescriptor.Arg0>
+      <object-array/>
+    </abbreviatedName>
+  </countUnits>
+  <valueUnits/>
+</com.unboundid.directory.model.metrics.MetricDefinition>

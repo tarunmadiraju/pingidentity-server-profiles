@@ -1,0 +1,6 @@
+Sep 04, 2020 5:47:54 PM com.unboundid.directory.server.tools.ToolUtilities initLogger
+INFO: dsjavaproperties was run with the following arguments:  --propertiesFile /opt/out/instance/config/java.properties --destinationFile /opt/out/instance/lib/set-java-home --quiet
+Sep 04, 2020 5:47:54 PM com.unboundid.directory.server.tools.JavaPropertiesTool execute
+INFO: Generating script file /opt/out/instance/lib/set-java-home
+Sep 04, 2020 5:47:54 PM com.unboundid.directory.server.tools.JavaPropertiesTool execute
+INFO: Success

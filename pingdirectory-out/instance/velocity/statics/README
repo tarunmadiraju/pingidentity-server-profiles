@@ -1,0 +1,8 @@
+This directory is intended for custom static content (images, CSS files, HTML
+files etc.) used to implement new pages or override existing stock static
+content files.
+
+To customize the content of the stock pages, copy files from the
+config/velocity/statics directory to the analogous subdirectory here and make
+changes to the copied file.  By default, files here will override those in the
+config directory.

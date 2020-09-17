@@ -1,0 +1,1853 @@
+dn: cn=alerts
+objectClass: top
+objectClass: ds-alert-root
+cn: alerts
+
+dn: ds-alert-id=8dc7877f-af85-4c5b-b489-2c97cd948599,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 8dc7877f-af85-4c5b-b489-2c97cd948599
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200910205013.953Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1647390720, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1647390720, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1647390720, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1647390720, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1647390720, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1647390720, usablePercent:  3)
+
+dn: ds-alert-id=75c17acf-ad04-4965-bf68-d8da67d617ac,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 75c17acf-ad04-4965-bf68-d8da67d617ac
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200910215014.057Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1644109824, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1644109824, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1644109824, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1644109824, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1644109824, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1644109824, usablePercent:  3)
+
+dn: ds-alert-id=aa29c763-07a4-43d3-966a-24c6dc86f4d3,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: aa29c763-07a4-43d3-966a-24c6dc86f4d3
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200910225014.087Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1640218624, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1640218624, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1640218624, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1640218624, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1640218624, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1640218624, usablePercent:  3)
+
+dn: ds-alert-id=dce2f5e4-f424-4eb0-8440-a90838ad0ad6,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: dce2f5e4-f424-4eb0-8440-a90838ad0ad6
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200910235014.126Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1647374336, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1647374336, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1647374336, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1647374336, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1647374336, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1647374336, usablePercent:  3)
+
+dn: ds-alert-id=67204c5b-dce2-4829-ad6c-9c49c4c93df1,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 67204c5b-dce2-4829-ad6c-9c49c4c93df1
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911005014.137Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1644404736, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1644404736, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1644404736, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1644404736, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1644404736, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1644404736, usablePercent:  3)
+
+dn: ds-alert-id=ef0492a8-2ccf-471e-9801-3a64423b0632,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: ef0492a8-2ccf-471e-9801-3a64423b0632
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911015014.212Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1641320448, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1641320448, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1641320448, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1641320448, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1641320448, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1641320448, usablePercent:  3)
+
+dn: ds-alert-id=54643953-e4a2-4296-9363-0cf9ffdb869a,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 54643953-e4a2-4296-9363-0cf9ffdb869a
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911025014.308Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1638395904, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1638395904, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1638395904, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1638395904, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1638395904, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1638395904, usablePercent:  3)
+
+dn: ds-alert-id=efc11502-d863-49ff-87a2-03c1630a56b9,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: efc11502-d863-49ff-87a2-03c1630a56b9
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911035014.329Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1635373056, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1635373056, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1635373056, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1635373056, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1635373056, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1635373056, usablePercent:  3)
+
+dn: ds-alert-id=4cf82cf3-df3e-41b8-b72f-5cf8fa1c1622,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 4cf82cf3-df3e-41b8-b72f-5cf8fa1c1622
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911045014.394Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1632333824, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1632333824, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1632333824, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1632333824, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1632333824, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1632333824, usablePercent:  3)
+
+dn: ds-alert-id=b229c57b-0fc6-45e6-9011-541ac29c39ac,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: b229c57b-0fc6-45e6-9011-541ac29c39ac
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911055014.408Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1629224960, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1629224960, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1629224960, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1629224960, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1629224960, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1629224960, usablePercent:  3)
+
+dn: ds-alert-id=cf4094c5-4999-4f89-9863-d14332321a05,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: cf4094c5-4999-4f89-9863-d14332321a05
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911065014.437Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1626185728, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1626185728, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1626185728, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1626185728, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1626185728, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1626185728, usablePercent:  3)
+
+dn: ds-alert-id=32180d28-f924-410c-b8cc-a4805dc8454a,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 32180d28-f924-410c-b8cc-a4805dc8454a
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911075014.507Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1623089152, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1623089152, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1623089152, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1623089152, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1623089152, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1623089152, usablePercent:  3)
+
+dn: ds-alert-id=ab3dfd10-d927-4ee5-bd1c-4423f63c15d9,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: ab3dfd10-d927-4ee5-bd1c-4423f63c15d9
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911085014.551Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1619927040, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1619927040, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1619927040, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1619927040, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1619927040, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1619927040, usablePercent:  3)
+
+dn: ds-alert-id=6713539a-41cb-4fdc-a1ac-9b1c42eb8469,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 6713539a-41cb-4fdc-a1ac-9b1c42eb8469
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911095014.605Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1616916480, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1616916480, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1616916480, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1616916480, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1616916480, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1616916480, usablePercent:  3)
+
+dn: ds-alert-id=5c39eae0-ee30-446e-86e6-c472975b323a,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 5c39eae0-ee30-446e-86e6-c472975b323a
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911105014.700Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1613799424, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1613799424, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1613799424, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1613799424, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1613799424, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1613799424, usablePercent:  3)
+
+dn: ds-alert-id=34287a51-e4b0-4415-9f23-e1a5a1b2372f,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 34287a51-e4b0-4415-9f23-e1a5a1b2372f
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911115014.767Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1610653696, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1610653696, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1610653696, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1610653696, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1610653696, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1610653696, usablePercent:  3)
+
+dn: ds-alert-id=e5a24016-3a53-4767-952c-89053936a967,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: e5a24016-3a53-4767-952c-89053936a967
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911125014.788Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1658421248, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1658421248, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1658421248, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1658421248, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1658421248, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1658421248, usablePercent:  3)
+
+dn: ds-alert-id=e9f8fdc2-8ece-4eec-8bf5-c4eca892bfc6,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: e9f8fdc2-8ece-4eec-8bf5-c4eca892bfc6
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911135014.891Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1655513088, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1655513088, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1655513088, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1655513088, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1655513088, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1655513088, usablePercent:  3)
+
+dn: ds-alert-id=46c5c733-e680-471f-be6a-a6f17a498a93,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 46c5c733-e680-471f-be6a-a6f17a498a93
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911145014.962Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1652539392, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1652539392, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1652539392, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1652539392, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1652539392, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1652539392, usablePercent:  3)
+
+dn: ds-alert-id=c49afcab-cabc-4d7f-8006-9cd7a54dc638,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: c49afcab-cabc-4d7f-8006-9cd7a54dc638
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911155014.967Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1649606656, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1649606656, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1649606656, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1649606656, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1649606656, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1649606656, usablePercent:  3)
+
+dn: ds-alert-id=bc1302d5-4eab-445e-bae3-fb76bfa076dc,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: bc1302d5-4eab-445e-bae3-fb76bfa076dc
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911165015.060Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1657180160, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1657180160, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1657180160, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1657180160, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1657180160, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1657180160, usablePercent:  3)
+
+dn: ds-alert-id=ecaf016d-b124-4a3a-a198-b7ec665e4cfe,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: ecaf016d-b124-4a3a-a198-b7ec665e4cfe
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911175015.143Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1654222848, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1654222848, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1654222848, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1654222848, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1654222848, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1654222848, usablePercent:  3)
+
+dn: ds-alert-id=50da278c-b4e9-4857-ac26-df6304fac4c6,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 50da278c-b4e9-4857-ac26-df6304fac4c6
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911185015.181Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1651195904, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1651195904, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1651195904, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1651195904, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1651195904, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1651195904, usablePercent:  3)
+
+dn: ds-alert-id=9d46093a-dcd1-497b-b2b5-66b40a80c8cf,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 9d46093a-dcd1-497b-b2b5-66b40a80c8cf
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911195015.208Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1648259072, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1648259072, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1648259072, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1648259072, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1648259072, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1648259072, usablePercent:  3)
+
+dn: ds-alert-id=69b228ad-1518-4ae3-80d1-31fef05a97c9,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 69b228ad-1518-4ae3-80d1-31fef05a97c9
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911205015.249Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1645211648, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1645211648, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1645211648, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1645211648, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1645211648, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1645211648, usablePercent:  3)
+
+dn: ds-alert-id=f4f799c3-a627-4cf5-98b6-8fc7c3c9e139,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: f4f799c3-a627-4cf5-98b6-8fc7c3c9e139
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911215015.342Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1642131456, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1642131456, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1642131456, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1642131456, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1642131456, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1642131456, usablePercent:  3)
+
+dn: ds-alert-id=dc7787b9-df81-4f99-b176-69b83307508d,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: dc7787b9-df81-4f99-b176-69b83307508d
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911225015.370Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1639051264, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1639051264, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1639051264, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1639051264, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1639051264, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1639051264, usablePercent:  3)
+
+dn: ds-alert-id=78961de7-fc1a-443e-ba62-d06877e4416b,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 78961de7-fc1a-443e-ba62-d06877e4416b
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200911235015.468Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1635950592, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1635950592, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1635950592, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1635950592, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1635950592, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1635950592, usablePercent:  3)
+
+dn: ds-alert-id=d5e007db-d7c1-4e6b-9da1-fceef39d1c57,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: d5e007db-d7c1-4e6b-9da1-fceef39d1c57
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912005015.549Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1632882688, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1632882688, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1632882688, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1632882688, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1632882688, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1632882688, usablePercent:  3)
+
+dn: ds-alert-id=2feb1ae2-c7e9-4e42-9b70-c0137f67720b,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 2feb1ae2-c7e9-4e42-9b70-c0137f67720b
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912015015.558Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1629798400, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1629798400, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1629798400, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1629798400, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1629798400, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1629798400, usablePercent:  3)
+
+dn: ds-alert-id=ccd0a4bb-6e26-487e-a774-f85a8bbced49,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: ccd0a4bb-6e26-487e-a774-f85a8bbced49
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912025015.638Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1626648576, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1626648576, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1626648576, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1626648576, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1626648576, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1626648576, usablePercent:  3)
+
+dn: ds-alert-id=3050e518-99c4-4514-8c50-5b0fc6437a40,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 3050e518-99c4-4514-8c50-5b0fc6437a40
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912035015.682Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1623429120, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1623429120, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1623429120, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1623429120, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1623429120, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1623429120, usablePercent:  3)
+
+dn: ds-alert-id=bce29026-b1ac-4425-8c41-8cb2d82db0c3,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: bce29026-b1ac-4425-8c41-8cb2d82db0c3
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912045015.712Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1620303872, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1620303872, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1620303872, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1620303872, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1620303872, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1620303872, usablePercent:  3)
+
+dn: ds-alert-id=1b07fc4c-2f3b-4f98-91ce-83c690b0a184,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 1b07fc4c-2f3b-4f98-91ce-83c690b0a184
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912055015.731Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1617113088, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1617113088, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1617113088, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1617113088, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1617113088, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1617113088, usablePercent:  3)
+
+dn: ds-alert-id=6ab9167b-f53a-45b3-9535-955e8f5536f8,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 6ab9167b-f53a-45b3-9535-955e8f5536f8
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912065015.747Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1615020032, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1615020032, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1615020032, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1615020032, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1615020032, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1615020032, usablePercent:  3)
+
+dn: ds-alert-id=285e0ce5-91cb-46f5-85b3-a24e9f596cb1,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 285e0ce5-91cb-46f5-85b3-a24e9f596cb1
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912075015.832Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1612021760, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1612021760, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1612021760, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1612021760, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1612021760, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1612021760, usablePercent:  3)
+
+dn: ds-alert-id=5d7613e5-9139-4867-a401-5ac68208b21a,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 5d7613e5-9139-4867-a401-5ac68208b21a
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912085015.910Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1609035776, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1609035776, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1609035776, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1609035776, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1609035776, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1609035776, usablePercent:  3)
+
+dn: ds-alert-id=201a4e6e-fe04-4810-a46f-c42c3942517d,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 201a4e6e-fe04-4810-a46f-c42c3942517d
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912095015.948Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1616490496, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1616490496, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1616490496, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1616490496, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1616490496, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1616490496, usablePercent:  3)
+
+dn: ds-alert-id=fc13cb5e-bff7-405b-9295-e5570cb5a9cd,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: fc13cb5e-bff7-405b-9295-e5570cb5a9cd
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912105016.018Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1613438976, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1613438976, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1613438976, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1613438976, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1613438976, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1613438976, usablePercent:  3)
+
+dn: ds-alert-id=a9e006c3-d587-4a96-a8fe-3af122aa7fb2,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: a9e006c3-d587-4a96-a8fe-3af122aa7fb2
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912115016.046Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1610448896, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1610448896, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1610448896, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1610448896, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1610448896, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1610448896, usablePercent:  3)
+
+dn: ds-alert-id=5cc38bb7-7212-4afd-8312-3f6b162b4510,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 5cc38bb7-7212-4afd-8312-3f6b162b4510
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912125016.094Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1607335936, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1607335936, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1607335936, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1607335936, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1607335936, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1607335936, usablePercent:  3)
+
+dn: ds-alert-id=6f320eae-7c24-4ba1-abf3-cd15e688f3bf,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 6f320eae-7c24-4ba1-abf3-cd15e688f3bf
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912135016.197Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1604255744, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1604255744, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1604255744, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1604255744, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1604255744, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1604255744, usablePercent:  3)
+
+dn: ds-alert-id=cd6f967c-b6ed-4a60-9bdf-3e4bb95542d4,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: cd6f967c-b6ed-4a60-9bdf-3e4bb95542d4
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912145016.212Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1601224704, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1601224704, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1601224704, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1601224704, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1601224704, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1601224704, usablePercent:  3)
+
+dn: ds-alert-id=e7a0b318-b213-4c6c-80cd-d1fecac83a13,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: e7a0b318-b213-4c6c-80cd-d1fecac83a13
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912155016.244Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1581363200, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1581363200, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1581363200, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1581363200, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1581363200, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1581363200, usablePercent:  3)
+
+dn: ds-alert-id=6bdeebd0-5cf6-4c31-ae96-2c52365c26eb,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 6bdeebd0-5cf6-4c31-ae96-2c52365c26eb
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912165016.316Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1578246144, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1578246144, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1578246144, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1578246144, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1578246144, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1578246144, usablePercent:  3)
+
+dn: ds-alert-id=6086b5b9-064f-436c-994e-944ad3dd90bd,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 6086b5b9-064f-436c-994e-944ad3dd90bd
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912175016.332Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1575079936, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1575079936, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1575079936, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1575079936, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1575079936, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1575079936, usablePercent:  3)
+
+dn: ds-alert-id=7b2ab0c2-06ee-4b0c-a52c-955a3dd25ff7,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 7b2ab0c2-06ee-4b0c-a52c-955a3dd25ff7
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912185016.435Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1571799040, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1571799040, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1571799040, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1571799040, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1571799040, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1571799040, usablePercent:  3)
+
+dn: ds-alert-id=b3d3d227-7a1b-4aa7-a311-36fc25cb3de0,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: b3d3d227-7a1b-4aa7-a311-36fc25cb3de0
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912195016.530Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1568645120, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1568645120, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1568645120, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1568645120, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1568645120, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1568645120, usablePercent:  3)
+
+dn: ds-alert-id=702f0d23-5f31-48a0-8c02-4a5d9b4153a4,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 702f0d23-5f31-48a0-8c02-4a5d9b4153a4
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912205016.628Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1565478912, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1565478912, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1565478912, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1565478912, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1565478912, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1565478912, usablePercent:  3)
+
+dn: ds-alert-id=b5d8d30c-e06f-40eb-9a28-d93b12ae13ab,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: b5d8d30c-e06f-40eb-9a28-d93b12ae13ab
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912215016.689Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1562374144, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1562374144, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1562374144, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1562374144, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1562374144, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1562374144, usablePercent:  3)
+
+dn: ds-alert-id=af2e5e85-633d-44eb-9f2f-ac7e5d04657f,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: af2e5e85-633d-44eb-9f2f-ac7e5d04657f
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912225016.766Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1559183360, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1559183360, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1559183360, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1559183360, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1559183360, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1559183360, usablePercent:  3)
+
+dn: ds-alert-id=6b4d1a46-4e3d-477c-b304-595a152038d1,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 6b4d1a46-4e3d-477c-b304-595a152038d1
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200912235016.814Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1556320256, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1556320256, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1556320256, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1556320256, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1556320256, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1556320256, usablePercent:  3)
+
+dn: ds-alert-id=8ecd2bb5-de03-42e6-a4d6-a4d994669387,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 8ecd2bb5-de03-42e6-a4d6-a4d994669387
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913005016.874Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1553367040, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1553367040, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1553367040, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1553367040, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1553367040, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1553367040, usablePercent:  3)
+
+dn: ds-alert-id=41952861-f23a-4bab-9984-a609a08f2a03,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 41952861-f23a-4bab-9984-a609a08f2a03
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913015016.880Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1560965120, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1560965120, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1560965120, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1560965120, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1560965120, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1560965120, usablePercent:  3)
+
+dn: ds-alert-id=da2289f5-5f2b-4be4-8cc5-17a1aa14c467,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: da2289f5-5f2b-4be4-8cc5-17a1aa14c467
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913025016.959Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1557987328, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1557987328, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1557987328, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1557987328, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1557987328, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1557987328, usablePercent:  3)
+
+dn: ds-alert-id=2248a13d-781a-4071-9631-367a505452b5,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 2248a13d-781a-4071-9631-367a505452b5
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913035016.977Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1554907136, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1554907136, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1554907136, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1554907136, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1554907136, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1554907136, usablePercent:  3)
+
+dn: ds-alert-id=e5205949-c4c8-425b-bbf6-540405dd5687,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: e5205949-c4c8-425b-bbf6-540405dd5687
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913045017.065Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1551826944, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1551826944, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1551826944, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1551826944, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1551826944, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1551826944, usablePercent:  3)
+
+dn: ds-alert-id=01397a16-2496-4cf5-ae78-951676a6042c,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 01397a16-2496-4cf5-ae78-951676a6042c
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913055017.085Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1548742656, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1548742656, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1548742656, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1548742656, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1548742656, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1548742656, usablePercent:  3)
+
+dn: ds-alert-id=0ad8aa1d-de5e-48f9-bf4b-da254246c244,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 0ad8aa1d-de5e-48f9-bf4b-da254246c244
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913065017.131Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1545637888, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1545637888, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1545637888, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1545637888, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1545637888, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1545637888, usablePercent:  3)
+
+dn: ds-alert-id=3c36a1ee-f188-4345-bc02-69095816864b,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 3c36a1ee-f188-4345-bc02-69095816864b
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913075017.190Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1542615040, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1542615040, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1542615040, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1542615040, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1542615040, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1542615040, usablePercent:  3)
+
+dn: ds-alert-id=4446a159-a685-41e7-b393-8d5c46f0e228,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 4446a159-a685-41e7-b393-8d5c46f0e228
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913085017.280Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1539547136, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1539547136, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1539547136, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1539547136, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1539547136, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1539547136, usablePercent:  3)
+
+dn: ds-alert-id=6dacc232-f761-4375-92af-3eeacd6e3c47,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 6dacc232-f761-4375-92af-3eeacd6e3c47
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913095017.300Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1536385024, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1536385024, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1536385024, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1536385024, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1536385024, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1536385024, usablePercent:  3)
+
+dn: ds-alert-id=86dfc8b0-d311-4b1d-a233-18788619063f,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 86dfc8b0-d311-4b1d-a233-18788619063f
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913105017.382Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1533296640, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1533296640, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1533296640, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1533296640, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1533296640, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1533296640, usablePercent:  3)
+
+dn: ds-alert-id=ed577786-8bdc-40d3-b16c-84d7339bed10,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: ed577786-8bdc-40d3-b16c-84d7339bed10
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913115017.422Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1530118144, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1530118144, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1530118144, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1530118144, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1530118144, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1530118144, usablePercent:  3)
+
+dn: ds-alert-id=def44509-369b-4536-a473-b51ba2509597,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: def44509-369b-4536-a473-b51ba2509597
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913125017.475Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1577721856, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1577721856, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1577721856, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1577721856, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1577721856, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1577721856, usablePercent:  3)
+
+dn: ds-alert-id=fc4e0736-5138-49b0-aa15-76e1e3b51ca7,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: fc4e0736-5138-49b0-aa15-76e1e3b51ca7
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913135017.566Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1574858752, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1574858752, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1574858752, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1574858752, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1574858752, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1574858752, usablePercent:  3)
+
+dn: ds-alert-id=6bef4e98-dfcf-451d-90c3-82a35a4517df,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 6bef4e98-dfcf-451d-90c3-82a35a4517df
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913145017.610Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1571913728, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1571913728, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1571913728, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1571913728, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1571913728, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1571913728, usablePercent:  3)
+
+dn: ds-alert-id=924e73db-e8ce-47bf-89f9-862b0e4e2f4e,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 924e73db-e8ce-47bf-89f9-862b0e4e2f4e
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913155017.643Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1568907264, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1568907264, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1568907264, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1568907264, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1568907264, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1568907264, usablePercent:  3)
+
+dn: ds-alert-id=607464e0-83e1-452b-a0ce-0fa875aefaac,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 607464e0-83e1-452b-a0ce-0fa875aefaac
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913165017.740Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1565974528, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1565974528, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1565974528, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1565974528, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1565974528, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1565974528, usablePercent:  3)
+
+dn: ds-alert-id=0a600675-e2e0-4eb2-8e8f-28741514cc7c,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 0a600675-e2e0-4eb2-8e8f-28741514cc7c
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913175017.799Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1562951680, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1562951680, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1562951680, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1562951680, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1562951680, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1562951680, usablePercent:  3)
+
+dn: ds-alert-id=8abd4021-35c7-43ac-9e34-cc8aac90ca25,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 8abd4021-35c7-43ac-9e34-cc8aac90ca25
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913185017.883Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1570451456, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1570451456, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1570451456, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1570451456, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1570451456, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1570451456, usablePercent:  3)
+
+dn: ds-alert-id=550855ac-dd27-4ff2-b8f3-17ddd5e1ee8e,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 550855ac-dd27-4ff2-b8f3-17ddd5e1ee8e
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913195017.955Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1567444992, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1567444992, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1567444992, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1567444992, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1567444992, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1567444992, usablePercent:  3)
+
+dn: ds-alert-id=a9885b0c-02fc-4161-a7e8-6c790cf111ba,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: a9885b0c-02fc-4161-a7e8-6c790cf111ba
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913205017.958Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1564401664, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1564401664, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1564401664, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1564401664, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1564401664, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1564401664, usablePercent:  3)
+
+dn: ds-alert-id=ac4b7d9e-91ac-41ae-a453-517ddc937f67,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: ac4b7d9e-91ac-41ae-a453-517ddc937f67
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913215018.040Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1561403392, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1561403392, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1561403392, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1561403392, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1561403392, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1561403392, usablePercent:  3)
+
+dn: ds-alert-id=6128fb99-b389-4309-abb0-b8d7f03cf82e,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 6128fb99-b389-4309-abb0-b8d7f03cf82e
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913225018.066Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1558388736, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1558388736, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1558388736, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1558388736, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1558388736, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1558388736, usablePercent:  3)
+
+dn: ds-alert-id=25099fa7-8105-4307-9b86-1d0a8b1bdcef,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 25099fa7-8105-4307-9b86-1d0a8b1bdcef
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200913235018.108Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1555267584, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1555267584, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1555267584, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1555267584, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1555267584, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1555267584, usablePercent:  3)
+
+dn: ds-alert-id=a07b6765-309b-41db-8cb8-5ff6b3997fd7,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: a07b6765-309b-41db-8cb8-5ff6b3997fd7
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914005018.128Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1552138240, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1552138240, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1552138240, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1552138240, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1552138240, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1552138240, usablePercent:  3)
+
+dn: ds-alert-id=1dcafd49-2630-4a51-94ab-4828057929b2,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 1dcafd49-2630-4a51-94ab-4828057929b2
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914015018.221Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1549082624, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1549082624, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1549082624, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1549082624, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1549082624, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1549082624, usablePercent:  3)
+
+dn: ds-alert-id=61ea2eef-a2d7-4d0e-8ef7-eceb41d2efcf,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 61ea2eef-a2d7-4d0e-8ef7-eceb41d2efcf
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914025018.309Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1545875456, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1545875456, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1545875456, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1545875456, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1545875456, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1545875456, usablePercent:  3)
+
+dn: ds-alert-id=285c8038-e5ff-4fc5-8e69-bc11250f4563,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 285c8038-e5ff-4fc5-8e69-bc11250f4563
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914035018.410Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1542713344, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1542713344, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1542713344, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1542713344, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1542713344, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1542713344, usablePercent:  3)
+
+dn: ds-alert-id=3cb4061d-0774-4216-b69b-f39e53990f66,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 3cb4061d-0774-4216-b69b-f39e53990f66
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914045018.457Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1539559424, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1539559424, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1539559424, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1539559424, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1539559424, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1539559424, usablePercent:  3)
+
+dn: ds-alert-id=0e42b47c-5876-445a-832e-3ba092f185d3,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 0e42b47c-5876-445a-832e-3ba092f185d3
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914055018.484Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1536368640, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1536368640, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1536368640, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1536368640, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1536368640, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1536368640, usablePercent:  3)
+
+dn: ds-alert-id=00383dbb-abde-4ab2-9dce-768126baf777,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 00383dbb-abde-4ab2-9dce-768126baf777
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914065018.574Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1534115840, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1534115840, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1534115840, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1534115840, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1534115840, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1534115840, usablePercent:  3)
+
+dn: ds-alert-id=44e91bd6-c038-4981-9061-989e772bf9d4,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 44e91bd6-c038-4981-9061-989e772bf9d4
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914075018.643Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1531109376, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1531109376, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1531109376, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1531109376, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1531109376, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1531109376, usablePercent:  3)
+
+dn: ds-alert-id=19cf0923-bb20-492b-a075-4fabbede8d13,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 19cf0923-bb20-492b-a075-4fabbede8d13
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914085018.676Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1528127488, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1528127488, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1528127488, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1528127488, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1528127488, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1528127488, usablePercent:  3)
+
+dn: ds-alert-id=f6084f2b-00bf-42b0-a2c5-b6fef7511fc7,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: f6084f2b-00bf-42b0-a2c5-b6fef7511fc7
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914095018.751Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1525100544, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1525100544, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1525100544, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1525100544, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1525100544, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1525100544, usablePercent:  3)
+
+dn: ds-alert-id=71e6d031-97ed-40a5-8c9c-d990a08d93cc,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 71e6d031-97ed-40a5-8c9c-d990a08d93cc
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914105018.841Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1522089984, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1522089984, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1522089984, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1522089984, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1522089984, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1522089984, usablePercent:  3)
+
+dn: ds-alert-id=9bbd0683-4bb0-4e06-91a6-9bdead7cade9,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 9bbd0683-4bb0-4e06-91a6-9bdead7cade9
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914115018.938Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1529606144, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1529606144, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1529606144, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1529606144, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1529606144, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1529606144, usablePercent:  3)
+
+dn: ds-alert-id=3ea875b0-dae3-46b5-80e4-9e787c51a398,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 3ea875b0-dae3-46b5-80e4-9e787c51a398
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914125018.999Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1526575104, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1526575104, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1526575104, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1526575104, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1526575104, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1526575104, usablePercent:  3)
+
+dn: ds-alert-id=4eb7beb0-db40-4710-9200-a1d6f2a47cb7,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 4eb7beb0-db40-4710-9200-a1d6f2a47cb7
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914135019.024Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1523580928, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1523580928, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1523580928, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1523580928, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1523580928, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1523580928, usablePercent:  3)
+
+dn: ds-alert-id=09c1c9cd-531c-45a1-bb01-cd99d865a550,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 09c1c9cd-531c-45a1-bb01-cd99d865a550
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914145019.118Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1520439296, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1520439296, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1520439296, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1520439296, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1520439296, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1520439296, usablePercent:  3)
+
+dn: ds-alert-id=180cba70-df2e-46f4-9f26-e13cd2280492,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 180cba70-df2e-46f4-9f26-e13cd2280492
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914155019.176Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1517314048, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1517314048, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1517314048, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1517314048, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1517314048, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1517314048, usablePercent:  3)
+
+dn: ds-alert-id=5483ce29-b68d-41f3-b2e9-3dd4922ca528,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 5483ce29-b68d-41f3-b2e9-3dd4922ca528
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914165019.247Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1514196992, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1514196992, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1514196992, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1514196992, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1514196992, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1514196992, usablePercent:  3)
+
+dn: ds-alert-id=6d416651-7fd9-4ad6-bd4f-c818e02b17cf,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 6d416651-7fd9-4ad6-bd4f-c818e02b17cf
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914175019.274Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1512529920, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1512529920, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1512529920, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1512529920, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1512529920, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1512529920, usablePercent:  3)
+
+dn: ds-alert-id=1a13963e-a368-4bee-8543-528c2cd8faa4,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 1a13963e-a368-4bee-8543-528c2cd8faa4
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914185019.335Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1515548672, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1515548672, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1515548672, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1515548672, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1515548672, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1515548672, usablePercent:  3)
+
+dn: ds-alert-id=77d55938-25cc-47c7-a6ba-01ebb930d931,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 77d55938-25cc-47c7-a6ba-01ebb930d931
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914195019.409Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1609764864, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1609764864, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1609764864, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1609764864, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1609764864, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1609764864, usablePercent:  3)
+
+dn: ds-alert-id=6b627c96-a098-48ee-89bf-e20d36ce8e71,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 6b627c96-a098-48ee-89bf-e20d36ce8e71
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914205019.495Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1604816896, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1604816896, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1604816896, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1604816896, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1604816896, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1604816896, usablePercent:  3)
+
+dn: ds-alert-id=f7464ae9-e8bf-46fc-8261-387feec7e182,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: f7464ae9-e8bf-46fc-8261-387feec7e182
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914215019.581Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1600163840, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1600163840, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1600163840, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1600163840, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1600163840, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1600163840, usablePercent:  3)
+
+dn: ds-alert-id=f3b7b0c3-ea12-4def-8f95-bedaa4b85418,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: f3b7b0c3-ea12-4def-8f95-bedaa4b85418
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914225019.647Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1595498496, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1595498496, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1595498496, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1595498496, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1595498496, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1595498496, usablePercent:  3)
+
+dn: ds-alert-id=0d34cf10-811e-4430-b8f4-5ef8b89c5ccf,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 0d34cf10-811e-4430-b8f4-5ef8b89c5ccf
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200914235019.738Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1591046144, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1591046144, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1591046144, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1591046144, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1591046144, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1591046144, usablePercent:  3)
+
+dn: ds-alert-id=a45aa200-365c-47f5-a5d2-c4ffbc825f12,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: a45aa200-365c-47f5-a5d2-c4ffbc825f12
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915005019.744Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1586614272, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1586614272, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1586614272, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1586614272, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1586614272, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1586614272, usablePercent:  3)
+
+dn: ds-alert-id=788f4cc5-0ad7-42eb-bce3-81ab5219b79d,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 788f4cc5-0ad7-42eb-bce3-81ab5219b79d
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915015019.762Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1582075904, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1582075904, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1582075904, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1582075904, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1582075904, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1582075904, usablePercent:  3)
+
+dn: ds-alert-id=e97ca452-62dd-423a-8643-8ada9782f30d,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: e97ca452-62dd-423a-8643-8ada9782f30d
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915025019.823Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1577598976, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1577598976, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1577598976, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1577598976, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1577598976, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1577598976, usablePercent:  3)
+
+dn: ds-alert-id=d061993d-3630-45a4-bb4b-ad2925463bda,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: d061993d-3630-45a4-bb4b-ad2925463bda
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915035019.904Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1583579136, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1583579136, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1583579136, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1583579136, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1583579136, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1583579136, usablePercent:  3)
+
+dn: ds-alert-id=028d1759-5267-48fc-831b-e75905d8e5ed,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 028d1759-5267-48fc-831b-e75905d8e5ed
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915045019.964Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1578991616, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1578991616, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1578991616, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1578991616, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1578991616, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1578991616, usablePercent:  3)
+
+dn: ds-alert-id=a3e21697-7568-4728-ab12-c7dd2209385d,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: a3e21697-7568-4728-ab12-c7dd2209385d
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915055020.005Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1557602304, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1557602304, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1557602304, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1557602304, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1557602304, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1557602304, usablePercent:  3)
+
+dn: ds-alert-id=27838897-ad4d-4233-8ae3-7166b9f284c9,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 27838897-ad4d-4233-8ae3-7166b9f284c9
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915065020.053Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1553149952, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1553149952, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1553149952, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1553149952, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1553149952, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1553149952, usablePercent:  3)
+
+dn: ds-alert-id=cd9af044-f34a-453d-9545-6958e836435a,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: cd9af044-f34a-453d-9545-6958e836435a
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915075020.134Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1548570624, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1548570624, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1548570624, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1548570624, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1548570624, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1548570624, usablePercent:  3)
+
+dn: ds-alert-id=9660bc71-216e-48dd-b464-6d013a8eeeea,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 9660bc71-216e-48dd-b464-6d013a8eeeea
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915085020.167Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1544019968, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1544019968, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1544019968, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1544019968, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1544019968, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1544019968, usablePercent:  3)
+
+dn: ds-alert-id=adacd192-a273-44ba-be7d-25b3f331fce7,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: adacd192-a273-44ba-be7d-25b3f331fce7
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915095020.267Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1539416064, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1539416064, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1539416064, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1539416064, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1539416064, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1539416064, usablePercent:  3)
+
+dn: ds-alert-id=40244ce9-4f1c-4b54-86f3-e684ab63a489,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 40244ce9-4f1c-4b54-86f3-e684ab63a489
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915105020.334Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1534722048, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1534722048, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1534722048, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1534722048, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1534722048, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1534722048, usablePercent:  3)
+
+dn: ds-alert-id=c2172157-efa9-4228-b4ac-13933eb11301,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: c2172157-efa9-4228-b4ac-13933eb11301
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915115020.341Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1530241024, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1530241024, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1530241024, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1530241024, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1530241024, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1530241024, usablePercent:  3)
+
+dn: ds-alert-id=11a92618-3a77-4996-9cd8-bb2e3ceedc37,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 11a92618-3a77-4996-9cd8-bb2e3ceedc37
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915125020.387Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1576452096, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1576452096, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1576452096, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1576452096, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1576452096, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1576452096, usablePercent:  3)
+
+dn: ds-alert-id=49ad9f96-be62-4aab-bed4-56318f58110c,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 49ad9f96-be62-4aab-bed4-56318f58110c
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915135020.466Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1572065280, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1572065280, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1572065280, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1572065280, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1572065280, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1572065280, usablePercent:  3)
+
+dn: ds-alert-id=c3e9a8d6-4c29-4de8-bae2-ce77ee89f531,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: c3e9a8d6-4c29-4de8-bae2-ce77ee89f531
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915145020.547Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1567580160, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1567580160, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1567580160, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1567580160, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1567580160, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1567580160, usablePercent:  3)
+
+dn: ds-alert-id=0d83ef47-9b54-4222-b786-398fc004af67,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 0d83ef47-9b54-4222-b786-398fc004af67
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915155020.591Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1563168768, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1563168768, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1563168768, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1563168768, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1563168768, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1563168768, usablePercent:  3)
+
+dn: ds-alert-id=41191aef-97f8-4d8e-b85f-bed18d4dcc4d,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 41191aef-97f8-4d8e-b85f-bed18d4dcc4d
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915165020.638Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1558679552, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1558679552, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1558679552, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1558679552, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1558679552, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1558679552, usablePercent:  3)
+
+dn: ds-alert-id=6fc86809-2827-411d-95d1-359fb3856950,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 6fc86809-2827-411d-95d1-359fb3856950
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915175020.646Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1555640320, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1555640320, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1555640320, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1555640320, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1555640320, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1555640320, usablePercent:  3)
+
+dn: ds-alert-id=ecf4ab82-0f81-4973-b9dc-f3c6a5c3fc4e,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: ecf4ab82-0f81-4973-b9dc-f3c6a5c3fc4e
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915185020.712Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1557442560, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1557442560, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1557442560, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1557442560, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1557442560, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1557442560, usablePercent:  3)
+
+dn: ds-alert-id=77c7bd58-859c-4d2a-baec-41d66395df43,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 77c7bd58-859c-4d2a-baec-41d66395df43
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915195020.813Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1552896000, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1552896000, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1552896000, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1552896000, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1552896000, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1552896000, usablePercent:  3)
+
+dn: ds-alert-id=ba3da92e-d5db-4bc1-9d99-d71a203e2289,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: ba3da92e-d5db-4bc1-9d99-d71a203e2289
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915205020.834Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1558888448, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1558888448, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1558888448, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1558888448, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1558888448, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1558888448, usablePercent:  3)
+
+dn: ds-alert-id=ecbe0534-edf0-46f1-9265-514ab8e14357,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: ecbe0534-edf0-46f1-9265-514ab8e14357
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915215020.873Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1554325504, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1554325504, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1554325504, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1554325504, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1554325504, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1554325504, usablePercent:  3)
+
+dn: ds-alert-id=8c7cbba4-7e62-4eae-88b9-c5e995736170,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 8c7cbba4-7e62-4eae-88b9-c5e995736170
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915225020.910Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1549332480, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1549332480, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1549332480, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1549332480, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1549332480, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1549332480, usablePercent:  3)
+
+dn: ds-alert-id=938e3b2c-2c44-405b-8e7c-119dd5dc1a82,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 938e3b2c-2c44-405b-8e7c-119dd5dc1a82
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200915235020.970Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1544749056, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1544749056, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1544749056, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1544749056, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1544749056, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1544749056, usablePercent:  3)
+
+dn: ds-alert-id=957826d6-1376-4380-a0ef-504f1b0abb7b,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 957826d6-1376-4380-a0ef-504f1b0abb7b
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916005021.042Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1539366912, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1539366912, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1539366912, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1539366912, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1539366912, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1539366912, usablePercent:  3)
+
+dn: ds-alert-id=8bee8ef3-2d10-487c-afa2-14d0c6e9755f,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 8bee8ef3-2d10-487c-afa2-14d0c6e9755f
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916015021.124Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1534029824, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1534029824, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1534029824, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1534029824, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1534029824, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1534029824, usablePercent:  3)
+
+dn: ds-alert-id=649f5e29-7c22-4ab5-a645-a3245837532c,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 649f5e29-7c22-4ab5-a645-a3245837532c
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916025021.202Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1529352192, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1529352192, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1529352192, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1529352192, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1529352192, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1529352192, usablePercent:  3)
+
+dn: ds-alert-id=6d85d3e3-e100-46d2-8bd0-f2e41f18d9f1,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 6d85d3e3-e100-46d2-8bd0-f2e41f18d9f1
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916035021.233Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1524670464, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1524670464, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1524670464, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1524670464, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1524670464, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1524670464, usablePercent:  3)
+
+dn: ds-alert-id=d49e99f0-b98a-464b-b0f9-4af8334f8a95,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: d49e99f0-b98a-464b-b0f9-4af8334f8a95
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916045021.265Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1520001024, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1520001024, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1520001024, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1520001024, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1520001024, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1520001024, usablePercent:  3)
+
+dn: ds-alert-id=13eb276d-c475-46fd-a4f8-f80324180885,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 13eb276d-c475-46fd-a4f8-f80324180885
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916055021.320Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1515278336, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1515278336, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1515278336, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1515278336, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1515278336, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1515278336, usablePercent:  3)
+
+dn: ds-alert-id=4abb4234-8105-4607-a624-37fd95855a5f,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 4abb4234-8105-4607-a624-37fd95855a5f
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916065021.418Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1510694912, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1510694912, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1510694912, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1510694912, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1510694912, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1510694912, usablePercent:  3)
+
+dn: ds-alert-id=44497277-1e34-4074-a82d-2d1b5aada553,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 44497277-1e34-4074-a82d-2d1b5aada553
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916075021.518Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1506279424, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1506279424, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1506279424, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1506279424, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1506279424, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1506279424, usablePercent:  3)
+
+dn: ds-alert-id=69d821df-a982-4728-b578-c35178ad0ec2,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 69d821df-a982-4728-b578-c35178ad0ec2
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916085021.544Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1501790208, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1501790208, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1501790208, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1501790208, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1501790208, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1501790208, usablePercent:  3)
+
+dn: ds-alert-id=6f4f03ff-078e-4d61-a037-0f9c615ce17d,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 6f4f03ff-078e-4d61-a037-0f9c615ce17d
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916095021.597Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1497309184, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1497309184, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1497309184, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1497309184, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1497309184, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1497309184, usablePercent:  3)
+
+dn: ds-alert-id=2c7fc2a9-82b9-4b8b-8f86-51de120a8c28,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 2c7fc2a9-82b9-4b8b-8f86-51de120a8c28
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916105021.696Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1492811776, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1492811776, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1492811776, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1492811776, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1492811776, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1492811776, usablePercent:  3)
+
+dn: ds-alert-id=019fe4ea-42cd-46d9-9349-9842b8f07171,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 019fe4ea-42cd-46d9-9349-9842b8f07171
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916115021.742Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1488261120, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1488261120, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1488261120, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1488261120, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1488261120, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1488261120, usablePercent:  3)
+
+dn: ds-alert-id=19a8da20-01dd-4fe9-95da-c943b6c6aa1c,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 19a8da20-01dd-4fe9-95da-c943b6c6aa1c
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916125021.747Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1483771904, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1483771904, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1483771904, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1483771904, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1483771904, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1483771904, usablePercent:  3)
+
+dn: ds-alert-id=70e08a3f-05a0-4fc5-b077-e48db912728b,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 70e08a3f-05a0-4fc5-b077-e48db912728b
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916135021.803Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1489747968, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1489747968, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1489747968, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1489747968, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1489747968, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1489747968, usablePercent:  3)
+
+dn: ds-alert-id=36b28990-7ffa-4f47-8555-8960ce5342cc,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 36b28990-7ffa-4f47-8555-8960ce5342cc
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916145021.855Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1485152256, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1485152256, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1485152256, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1485152256, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1485152256, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1485152256, usablePercent:  3)
+
+dn: ds-alert-id=8b57aebe-f528-490a-8ff4-f8422b540a5b,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 8b57aebe-f528-490a-8ff4-f8422b540a5b
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916155021.961Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1480474624, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1480474624, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1480474624, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1480474624, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1480474624, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1480474624, usablePercent:  3)
+
+dn: ds-alert-id=8d3fc244-2a22-49b7-a1ed-d95cc794098b,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 8d3fc244-2a22-49b7-a1ed-d95cc794098b
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916165021.970Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1199427584, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1199427584, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1199427584, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1199427584, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1199427584, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1199427584, usablePercent:  2)
+
+dn: ds-alert-id=95d86d53-9ef4-48cb-9cd1-2ac889d735bb,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 95d86d53-9ef4-48cb-9cd1-2ac889d735bb
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916175022.020Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1192579072, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1192579072, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1192579072, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1192579072, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1192579072, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1192579072, usablePercent:  2)
+
+dn: ds-alert-id=1147d0b1-df51-468e-a980-b4df3192ddf0,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 1147d0b1-df51-468e-a980-b4df3192ddf0
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916185022.117Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1192886272, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1192886272, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1192886272, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1192886272, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1192886272, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1192886272, usablePercent:  2)
+
+dn: ds-alert-id=95a8bde3-36c6-4b23-8d4f-92346acf3b4d,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 95a8bde3-36c6-4b23-8d4f-92346acf3b4d
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916195022.123Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1172271104, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1172271104, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1172271104, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1172271104, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1172271104, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1172271104, usablePercent:  2)
+
+dn: ds-alert-id=ef4273b2-d6a7-40b0-9283-048628e58e94,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: ef4273b2-d6a7-40b0-9283-048628e58e94
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916205022.192Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1166381056, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1166381056, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1166381056, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1166381056, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1166381056, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1166381056, usablePercent:  2)
+
+dn: ds-alert-id=65b1e089-2cb3-4da0-b3a7-154c247f720b,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 65b1e089-2cb3-4da0-b3a7-154c247f720b
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916215022.219Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1160777728, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1160777728, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1160777728, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1160777728, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1160777728, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1160777728, usablePercent:  2)
+
+dn: ds-alert-id=a6f7bcee-bd44-40aa-8e62-cffeb2a1b1c8,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: a6f7bcee-bd44-40aa-8e62-cffeb2a1b1c8
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916225022.266Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1152569344, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1152569344, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1152569344, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1152569344, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1152569344, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1152569344, usablePercent:  2)
+
+dn: ds-alert-id=2e140b2b-0f8f-451b-918a-e5f2efc88024,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 2e140b2b-0f8f-451b-918a-e5f2efc88024
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200916235022.341Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1147211776, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1147211776, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1147211776, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1147211776, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1147211776, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1147211776, usablePercent:  2)
+
+dn: ds-alert-id=1cb9153b-7d5e-46b3-b7aa-1d74afb2e675,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 1cb9153b-7d5e-46b3-b7aa-1d74afb2e675
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917005022.394Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1141903360, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1141903360, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1141903360, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1141903360, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1141903360, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1141903360, usablePercent:  2)
+
+dn: ds-alert-id=42a3f940-f779-4b6f-9917-21b6ca231d9b,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 42a3f940-f779-4b6f-9917-21b6ca231d9b
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917015022.422Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1136562176, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1136562176, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1136562176, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1136562176, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1136562176, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1136562176, usablePercent:  2)
+
+dn: ds-alert-id=b0e21d75-f5fe-4621-8045-a5adb5357286,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: b0e21d75-f5fe-4621-8045-a5adb5357286
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917025022.471Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1131294720, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1131294720, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1131294720, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1131294720, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1131294720, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1131294720, usablePercent:  2)
+
+dn: ds-alert-id=d358cbe4-dfec-45bd-b9ed-1558c4f72d50,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: d358cbe4-dfec-45bd-b9ed-1558c4f72d50
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917035022.542Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1125965824, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1125965824, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1125965824, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1125965824, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1125965824, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1125965824, usablePercent:  2)
+
+dn: ds-alert-id=0d3e4f36-109a-4289-ba6a-dee74c927f28,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 0d3e4f36-109a-4289-ba6a-dee74c927f28
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917045022.584Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1120571392, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1120571392, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1120571392, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1120571392, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1120571392, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1120571392, usablePercent:  2)
+
+dn: ds-alert-id=79389d03-9918-4f40-8425-d683d5c59c6b,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 79389d03-9918-4f40-8425-d683d5c59c6b
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917055022.630Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1125826560, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1125826560, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1125826560, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1125826560, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1125826560, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1125826560, usablePercent:  2)
+
+dn: ds-alert-id=b157344f-81ce-47e8-9c77-3c74b3d587fd,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: b157344f-81ce-47e8-9c77-3c74b3d587fd
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917065022.711Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1118773248, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1118773248, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1118773248, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1118773248, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1118773248, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1118773248, usablePercent:  2)
+
+dn: ds-alert-id=33293a4b-4ff8-4d7e-b768-dccc90e94da2,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 33293a4b-4ff8-4d7e-b768-dccc90e94da2
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917075022.722Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1113264128, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1113264128, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1113264128, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1113264128, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1113264128, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1113264128, usablePercent:  2)
+
+dn: ds-alert-id=90e1060e-fe94-4c3f-b8ed-7441b20da341,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 90e1060e-fe94-4c3f-b8ed-7441b20da341
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917085022.738Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1107824640, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1107824640, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1107824640, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1107824640, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1107824640, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1107824640, usablePercent:  2)
+
+dn: ds-alert-id=a2ece406-f6ca-4432-9c05-44e6bbb6fd64,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: a2ece406-f6ca-4432-9c05-44e6bbb6fd64
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917095022.797Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1102372864, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1102372864, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1102372864, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1102372864, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1102372864, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1102372864, usablePercent:  2)
+
+dn: ds-alert-id=0d0a5617-9372-425d-826a-ddae1cca776f,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 0d0a5617-9372-425d-826a-ddae1cca776f
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917105022.803Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1096982528, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1096982528, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1096982528, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1096982528, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1096982528, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1096982528, usablePercent:  2)
+
+dn: ds-alert-id=e363bf4a-f540-4de6-afad-40e92ed31507,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: e363bf4a-f540-4de6-afad-40e92ed31507
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917115022.881Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1091588096, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1091588096, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1091588096, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1091588096, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1091588096, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1091588096, usablePercent:  2)
+
+dn: ds-alert-id=28ca8731-5cb3-4ace-82f3-d37f3d0d236c,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 28ca8731-5cb3-4ace-82f3-d37f3d0d236c
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917125022.887Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1086156800, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1086156800, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1086156800, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1086156800, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1086156800, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1086156800, usablePercent:  2)
+
+dn: ds-alert-id=fe0d39e4-788d-4ff9-ac07-f3fd979421f8,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: fe0d39e4-788d-4ff9-ac07-f3fd979421f8
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917135022.972Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1131474944, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1131474944, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1131474944, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1131474944, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1131474944, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1131474944, usablePercent:  2)
+
+dn: ds-alert-id=9a21afad-99d5-45b1-a9ab-e3b15f8b3bd0,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 9a21afad-99d5-45b1-a9ab-e3b15f8b3bd0
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917145023.070Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1126199296, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1126199296, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1126199296, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1126199296, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1126199296, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1126199296, usablePercent:  2)
+
+dn: ds-alert-id=2d058047-509b-41d5-8209-cc2cdbdd9a14,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 2d058047-509b-41d5-8209-cc2cdbdd9a14
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917155023.164Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1120944128, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1120944128, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1120944128, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1120944128, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1120944128, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1120944128, usablePercent:  2)
+
+dn: ds-alert-id=7fd4ce66-e187-42c2-8336-00190d079cf9,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 7fd4ce66-e187-42c2-8336-00190d079cf9
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917165023.177Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1095917568, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1095917568, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1095917568, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1095917568, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1095917568, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1095917568, usablePercent:  2)
+
+dn: ds-alert-id=1ff245d7-60b1-45e4-b27b-7753e6a403e4,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 1ff245d7-60b1-45e4-b27b-7753e6a403e4
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917175023.189Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1091903488, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1091903488, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1091903488, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1091903488, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1091903488, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1091903488, usablePercent:  2)
+
+dn: ds-alert-id=070065ef-2293-4a80-aa01-94cbc3f2fbcd,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 070065ef-2293-4a80-aa01-94cbc3f2fbcd
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917185023.250Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1092825088, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1092825088, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1092825088, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1092825088, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1092825088, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1092825088, usablePercent:  2)
+
+dn: ds-alert-id=e8b2c2eb-ebeb-40f8-a2b7-aa0b99ed700e,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: e8b2c2eb-ebeb-40f8-a2b7-aa0b99ed700e
+ds-alert-type: low-disk-space-warning
+ds-alert-severity: warning
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.45
+ds-alert-time: 20200917195023.332Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1087463424, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1087463424, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1087463424, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1087463424, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1087463424, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1087463424, usablePercent:  2)
+

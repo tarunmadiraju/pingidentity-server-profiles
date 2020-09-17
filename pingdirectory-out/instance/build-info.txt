@@ -1,0 +1,28 @@
+Ping Identity Directory Server 8.1.0.0
+Build ID: 20200615191920Z
+Major Version: 8
+Minor Version: 1
+Point Version: 0
+Patch Version: 0
+Version Qualifier: -GA
+Repository Path: c27eadb0b19c00de1d1e37d46c0acc8511c26dfa
+Revision Number: v8.1.0.0-GA
+Fix IDs: 
+Debug Build: false
+Build OS: Linux 3.10.0-1062.9.1.el7.x86_64 amd64
+Build User: centos
+Build Java Version: 1.8.0_181
+Build Java Vendor: Oracle Corporation
+Build JVM Version: 25.181-b13
+Build JVM Vendor: Oracle Corporation
+Jetty Version: 9.3.25.v20180904
+JZlib Version: 1.1.0
+SNMP4J Version: 1.11.0
+SNMP4J Agent Version: 1.4.0
+SNMP4J AgentX Version: 1.3.0
+SCIM SDK Version: 1.8.23 (20200608163419Z)
+SCIM 2 SDK Version: 2.3.4 r62210826df05593e3c1d3388712d10d782fb9f48 (2020-06-08T16:41:27Z)
+Groovy Scripting Language Version: 2.5.7
+UnboundID LDAP SDK for Java Version: 5.1.0-r89705d759f7c1ab3bccb2870f8c2e7d529ed231b
+UnboundID Server SDK Version: 8.1.0.0-GA (20200615191920Z)
+UnboundID Updater Library: 1.4.27

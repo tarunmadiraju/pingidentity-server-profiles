@@ -1,0 +1,223 @@
+## This template may be used to generate an email message that can be sent to
+## a user (and optionally a predefined set of server administrators) when their
+## account is updated in the server using a modify or modify DN request that
+## matches a defined set of criteria.
+##
+## See the README.txt file in this directory for a thorough description of the
+## template file format and the variables and directives that can be used to
+## customize its content.
+
+
+## Populate the values of any variables that will appear in the body of the
+## email message.
+#getIsAnyAttributeModified($before_entry, $after_entry, "uid", "givenName", "sn", "cn", "mail", "userPassword", "attribute_of_interest_modified")
+#getIsAttributeModified($before_entry, $after_entry, "uid", "username_modified")
+#getIsAttributeModified($before_entry, $after_entry, "givenName", "first_name_modified")
+#getIsAttributeModified($before_entry, $after_entry, "sn", "last_name_modified")
+#getIsAttributeModified($before_entry, $after_entry, "cn", "full_name_modified")
+#getIsAttributeModified($before_entry, $after_entry, "mail", "email_address_modified")
+#getIsAttributeModified($before_entry, $after_entry, "userPassword", "password_modified")
+#getNotificationPropertyValue("new-generated-password", "generated_password")
+#getNotificationPropertyValue("must-change-password", "must_change_password")
+#getNotificationPropertyValue("maximum-password-reset-age", "maximum_password_reset_age")
+
+
+
+----- BEGIN HEADERS -----
+
+## Determine whether any of the attributes we care about have been modified.
+## If not, then mark the template as disabled.  This needs to be done before
+## parsing the common header fields because that will set ENABLED to true for
+## any account that has at least one email address.
+#if($attribute_of_interest_modified == "false")
+ENABLED: false
+#end
+
+## Pull in a template file that will set the value of a number of header fields
+## that will be shared across all types of account status notifications.
+#parse("common-header-fields.vm")
+
+## The subject for the generated email message.
+#set($subject = "Your account has been updated")
+SUBJECT: $subject
+
+
+
+----- BEGIN PLAIN-TEXT BODY -----
+
+## Pull in a template file that can provide text at the top of the plain-text
+## body for all types of account status notifications.
+#parse("common-plain-text-body-header.vm")
+
+Your account has been updated.  Changes include:
+#if($username_modified == "true")
+
+#getModifiedAttributeRemovedValues($before_entry, $after_entry, "uid", "removed_usernames")
+#foreach($removed_username in $removed_usernames)
+* Removed username: $removed_username
+#end
+#getModifiedAttributeAddedValues($before_entry, $after_entry, "uid", "added_usernames")
+#foreach($added_username in $added_usernames)
+* Added username: $added_username
+#end
+#end
+#if($first_name_modified == "true")
+
+#getModifiedAttributeRemovedValues($before_entry, $after_entry, "givenName", "removed_first_names")
+#foreach($removed_first_name in $removed_first_names)
+* Removed first name: $removed_first_name
+#end
+#getModifiedAttributeAddedValues($before_entry, $after_entry, "givenName", "added_first_names")
+#foreach($added_first_name in $added_first_names)
+* Added first name: $added_first_name
+#end
+#end
+#if($last_name_modified == "true")
+
+#getModifiedAttributeRemovedValues($before_entry, $after_entry, "sn", "removed_last_names")
+#foreach($removed_last_name in $removed_last_names)
+* Removed last name: $removed_last_name
+#end
+#getModifiedAttributeAddedValues($before_entry, $after_entry, "sn", "added_last_names")
+#foreach($added_last_name in $added_last_names)
+* Added last name: $added_last_name
+#end
+#end
+#if($full_name_modified == "true")
+
+#getModifiedAttributeRemovedValues($before_entry, $after_entry, "cn", "removed_full_names")
+#foreach($removed_full_name in $removed_full_names)
+* Removed full name: $removed_full_name
+#end
+#getModifiedAttributeAddedValues($before_entry, $after_entry, "cn", "added_full_names")
+#foreach($added_full_name in $added_full_names)
+* Added full name: $added_full_name
+#end
+#end
+#if($email_address_modified == "true")
+
+#getModifiedAttributeRemovedValues($before_entry, $after_entry, "mail", "removed_email_addresses")
+#foreach($removed_email_address in $removed_email_addresses)
+* Removed email address: $removed_email_address
+#end
+#getModifiedAttributeAddedValues($before_entry, $after_entry, "mail", "added_email_addresses")
+#foreach($added_email_address in $added_email_addresses)
+* Added email address: $added_email_address
+#end
+#end
+#if($password_modified == "true")
+
+#if($generated_password)
+* A new password was generated for your account: $generated_password
+#else
+* Your password was changed
+#if($must_change_password == "true")
+
+
+#if($maximum_password_reset_age)
+You will be required to choose a new password the next time you log in. You must do so within the next $maximum_password_reset_age or your account will be locked again.
+#else
+You will be required to choose a new password the next time you log in.
+#end
+#end
+#end
+#end
+
+## Pull in a template file that can provide text at the bottom of the
+## plain-text body for all types of account status notifications.
+#parse("common-plain-text-body-footer.vm")
+
+
+----- BEGIN HTML BODY -----
+
+<html>
+  <head>
+    <title>$subject</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+
+  <body>
+## Pull in a template file that can provide styling and text at the top of the
+## HTML-formatted body for all types of account status notifications.
+#parse("common-html-body-header.vm")
+
+    <p>
+      Your account has been updated. Changes include:
+    </p>
+
+    <ul>
+#if($username_modified == "true")
+#getModifiedAttributeRemovedValues($before_entry, $after_entry, "uid", "removed_usernames")
+#foreach($removed_username in $removed_usernames)
+      <li>Removed username: $removed_username</li>
+#end
+#getModifiedAttributeAddedValues($before_entry, $after_entry, "uid", "added_usernames")
+#foreach($added_username in $added_usernames)
+      <li>Added username: $added_username</li>
+#end
+#end
+#if($first_name_modified == "true")
+#getModifiedAttributeRemovedValues($before_entry, $after_entry, "givenName", "removed_first_names")
+#foreach($removed_first_name in $removed_first_names)
+      <li>Removed first name: $removed_first_name</li>
+#end
+#getModifiedAttributeAddedValues($before_entry, $after_entry, "givenName", "added_first_names")
+#foreach($added_first_name in $added_first_names)
+      <li>Added first name: $added_first_name</li>
+#end
+#end
+#if($last_name_modified == "true")
+#getModifiedAttributeRemovedValues($before_entry, $after_entry, "sn", "removed_last_names")
+#foreach($removed_last_name in $removed_last_names)
+      <li>Removed last name: $removed_last_name</li>
+#end
+#getModifiedAttributeAddedValues($before_entry, $after_entry, "sn", "added_last_names")
+#foreach($added_last_name in $added_last_names)
+      <li>Added last name: $added_last_name</li>
+#end
+#end
+#if($full_name_modified == "true")
+#getModifiedAttributeRemovedValues($before_entry, $after_entry, "cn", "removed_full_names")
+#foreach($removed_full_name in $removed_full_names)
+      <li>Removed full name: $removed_full_name</li>
+#end
+#getModifiedAttributeAddedValues($before_entry, $after_entry, "cn", "added_full_names")
+#foreach($added_full_name in $added_full_names)
+      <li>Added full name: $added_full_name</li>
+#end
+#end
+#if($email_address_modified == "true")
+#getModifiedAttributeRemovedValues($before_entry, $after_entry, "mail", "removed_email_addresses")
+#foreach($removed_email_address in $removed_email_addresses)
+      <li>Removed email address: $removed_email_address</li>
+#end
+#getModifiedAttributeAddedValues($before_entry, $after_entry, "mail", "added_email_addresses")
+#foreach($added_email_address in $added_email_addresses)
+      <li>Added email address: $added_email_address</li>
+#end
+#end
+#if($password_modified == "true")
+#if($generated_password)
+      <li>A new password was generated for your account: $generated_password</li>
+#else
+      <li>Your password was changed</li>
+#if($must_change_password == "true")
+#if($maximum_password_reset_age)
+      <li>You will be required to choose a new password the next time you log in. You must do so within the next $maximum_password_reset_age or your account will be locked again.</li>
+#else
+      <li>You will be required to choose a new password the next time you log in.</li>
+#end
+#end
+#end
+#end
+    </ul>
+
+## Pull in a template file that can provide styling and text at the bottom of
+## the HTML-formatted body for all types of account status notifications.
+#parse("common-html-body-footer.vm")
+  </body>
+</html>
+
+## Pull in a template file that can provide any attachments that be used for
+## all types of account status notifications.
+#parse("common-attachments.vm")

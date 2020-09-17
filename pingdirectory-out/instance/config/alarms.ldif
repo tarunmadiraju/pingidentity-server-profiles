@@ -1,0 +1,92 @@
+dn: cn=alarms
+objectClass: top
+objectClass: ds-alarm-root
+cn: alarms
+
+dn: ds-alarm-id=A Debug Log Publisher is enabled which could cause performance issues if it is configured to log large volumes of data-File-Based Debug Logger-cn=file-based debug logger\,cn=loggers\,cn=config,cn=alarms
+objectClass: top
+objectClass: ds-admin-alarm
+ds-alarm-id: A Debug Log Publisher is enabled which could cause performance issues if it is configured to log large volumes of data-File-Based Debug Logger-cn=file-based debug logger,cn=loggers,cn=config
+ds-alarm-condition: A Debug Log Publisher is enabled which could cause performance issues if it is configured to log large volumes of data
+ds-alarm-specific-resource: File-Based Debug Logger-cn=file-based debug logger,cn=loggers,cn=config
+ds-alarm-severity: WARNING
+ds-alarm-details: A Debug Log Publisher is enabled. When Debug Targets are configured to restrict what is logged, the performance impact is typically negligible. However, it is good practice to disable the Debug Log Publisher once the required information has been collected
+ds-alarm-start-time: 20200904175005.279Z
+ds-alarm-warning-last-time: 20200904175005.279Z
+ds-alarm-warning-total-duration-millis: 0
+
+dn: ds-alarm-id=No Enabled Alert Handlers,cn=alarms
+objectClass: top
+objectClass: ds-admin-alarm
+ds-alarm-id: No Enabled Alert Handlers
+ds-alarm-condition: No Enabled Alert Handlers
+ds-alarm-severity: WARNING
+ds-alarm-details: No alert handlers have been enabled. Alerts will be written to logs/errors, but administrators will not be otherwise notified of current or impending problems. The server uses alerts to self-report many problems or precursors to potential problems. If an administrator does not receive these alerts, then there might be a server outage that was avoidable. In production environments, we strongly recommend enabling the SMTP Alert Handler to send emails, the JMX or SNMP Alert Handler to send notifications to a monitoring application, or creating a custom alert handler. In non-product environments, this alarm can be suppressed by adding 'no-enabled-alert-handlers' to the 'suppressed-alarm' configuration property on the Alarm Manager configuration object
+ds-alarm-start-time: 20200904175005.282Z
+ds-alarm-warning-last-time: 20200904175005.282Z
+ds-alarm-warning-total-duration-millis: 0
+
+dn: ds-alarm-id=Low Disk Space Warning-cn=disk space usage\,cn=monitor providers\,cn=config,cn=alarms
+objectClass: top
+objectClass: ds-admin-alarm
+ds-alarm-id: Low Disk Space Warning-cn=disk space usage,cn=monitor providers,cn=config
+ds-alarm-condition: Low Disk Space Warning
+ds-alarm-specific-resource: cn=disk space usage,cn=monitor providers,cn=config
+ds-alarm-severity: WARNING
+ds-alarm-previous-severity: WARNING
+ds-alarm-details: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1654222848, usablePercent:  3), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1654222848, usablePercent:  3), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1654222848, usablePercent:  3), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1654222848, usablePercent:  3), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1654222848, usablePercent:  3), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1654222848, usablePercent:  3)
+ds-alarm-start-time: 20200904175006.512Z
+ds-alarm-warning-last-time: 20200904175006.512Z
+ds-alarm-warning-total-duration-millis: 0
+
+dn: ds-alarm-id=Replication Purge Delay (Hours),cn=alarms
+objectClass: top
+objectClass: ds-admin-alarm
+ds-alarm-id: Replication Purge Delay (Hours)
+ds-alarm-condition: Replication Purge Delay (Hours)
+ds-alarm-severity: INDETERMINATE
+ds-alarm-previous-severity: INDETERMINATE
+ds-alarm-details: The value of gauge Replication Purge Delay (Hours) could not be determined. The severity is indeterminate, having assumed this severity Fri Sep 11 17:59:00 GMT 2020
+ds-alarm-additional-text: In order to protect against missing changes the effective purge delay should be large enough to accommodate servers that have been offline as well as the need to restore from backups
+ds-alarm-start-time: 20200911175100.000Z
+ds-alarm-indeterminate-last-time: 20200911175100.000Z
+ds-alarm-indeterminate-total-duration-millis: 0
+
+dn: ds-alarm-id=Disk Busy (Percent),cn=alarms
+objectClass: top
+objectClass: ds-admin-alarm
+ds-alarm-id: Disk Busy (Percent)
+ds-alarm-condition: Disk Busy (Percent)
+ds-alarm-severity: INDETERMINATE
+ds-alarm-previous-severity: INDETERMINATE
+ds-alarm-details: The value of gauge Disk Busy (Percent) could not be determined. The severity is indeterminate, having assumed this severity Fri Sep 11 17:59:00 GMT 2020
+ds-alarm-additional-text: High disk usage may be indicative of a Directory Server whose database cache and/or JVM heap size are not large enough to contain the entire data set
+ds-alarm-start-time: 20200911175100.002Z
+ds-alarm-indeterminate-last-time: 20200911175100.002Z
+ds-alarm-indeterminate-total-duration-millis: 0
+
+dn: ds-alarm-id=Changelog Database Target Size (Percent),cn=alarms
+objectClass: top
+objectClass: ds-admin-alarm
+ds-alarm-id: Changelog Database Target Size (Percent)
+ds-alarm-condition: Changelog Database Target Size (Percent)
+ds-alarm-severity: INDETERMINATE
+ds-alarm-previous-severity: INDETERMINATE
+ds-alarm-details: The value of gauge Changelog Database Target Size (Percent) could not be determined. The severity is indeterminate, having assumed this severity Fri Sep 11 17:59:00 GMT 2020
+ds-alarm-additional-text: Monitors the size of a changelog database on disk relative to the configured target-database-size value for the Replication Server changelog and the LDAP Changelog Backend (cn=changelog). The resource identifier indicates the changelog environment that is being monitored. The server aims to keep the disk usage of the changelog to between 95% and 100% of the target-database-size value. The most common reason that the server exceeds this limit is that there are no more changes that are old enough to purge. This is controlled with the replication-purge-delay setting on the Replication Server configuration object and the changelog-maximum-age setting on the 'changelog' Backend configuration object. If this is the case, the effective-purge-delay monitor attribute will match the configured purge delay. To eliminate the alarm in this case reduce the purge delay or increase the target-database-size value. Another reason that the disk usage could exceed this limit is that an export-ldif or online backup of the corresponding backend is running since database files on disk cannot be deleted while this operation is in progress. In practice, this will not occur unless the purge delay and target-database-size setting are configured to very small values and/or the backup is throttled with the --maxMegabytesPerSecond option so that it takes an especially long time to complete. The final reason that the limit could be exceeded is that the target-database-size setting is unreasonably small like less than one gigabyte
+ds-alarm-start-time: 20200911175100.050Z
+ds-alarm-indeterminate-last-time: 20200911175100.050Z
+ds-alarm-indeterminate-total-duration-millis: 0
+
+dn: ds-alarm-id=Strong Encryption Not Available,cn=alarms
+objectClass: top
+objectClass: ds-admin-alarm
+ds-alarm-id: Strong Encryption Not Available
+ds-alarm-condition: Strong Encryption Not Available
+ds-alarm-severity: INDETERMINATE
+ds-alarm-details: The value of gauge Strong Encryption Not Available could not be determined. The severity is indeterminate, having assumed this severity Fri Sep 11 18:00:00 GMT 2020
+ds-alarm-additional-text: The JVM does not appear to support strong encryption algorithms, like 256-bit AES.  The server will fall back to using weaker algorithms, like 128-bit AES.  To enable support for strong encryption, update your JVM to a newer version that supports it by default, or install or enable the unlimited encryption strength jurisdiction policy files in your Java installation.
+ds-alarm-start-time: 20200911180000.006Z
+ds-alarm-indeterminate-last-time: 20200911180000.006Z
+ds-alarm-indeterminate-total-duration-millis: 0
+

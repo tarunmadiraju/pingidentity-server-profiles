@@ -1,0 +1,86 @@
+## This template may be used to generate an email message that can be sent to
+## a user (and optionally a predefined set of server administrators) if their
+## account is administratively re-enabled.
+##
+## See the README.txt file in this directory for a thorough description of the
+## template file format and the variables and directives that can be used to
+## customize its content.
+
+
+## Populate the values of any variables that will appear in the body of the
+## email message.
+#getNotificationPropertyValue("account-is-usable", "account_is_usable")
+#getNotificationPropertyValues("account-usability-errors", "account_usability_errors")
+
+
+----- BEGIN HEADERS -----
+
+## Pull in a template file that will set the value of a number of header fields
+## that will be shared across all types of account status notifications.
+#parse("common-header-fields.vm")
+
+## The subject for the generated email message.
+#set($subject = "Your account has been enabled")
+SUBJECT: $subject
+
+
+
+----- BEGIN PLAIN-TEXT BODY -----
+
+## Pull in a template file that can provide text at the top of the plain-text
+## body for all types of account status notifications.
+#parse("common-plain-text-body-header.vm")
+
+#if($account_is_usable == "true")
+Your account has been re-enabled and is once again available for use.
+#else
+Your account has been re-enabled. However, it is still not available for use for the following reasons:
+#foreach($account_usability_error in $account_usability_errors)
+
+* $account_usability_error
+#end
+#end
+
+## Pull in a template file that can provide text at the bottom of the
+## plain-text body for all types of account status notifications.
+#parse("common-plain-text-body-footer.vm")
+
+
+----- BEGIN HTML BODY -----
+
+<html>
+  <head>
+    <title>$subject</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+
+  <body>
+## Pull in a template file that can provide styling and text at the top of the
+## HTML-formatted body for all types of account status notifications.
+#parse("common-html-body-header.vm")
+
+#if($account_is_usable == "true")
+    <p>
+      Your account has been re-enabled and is once again available for use.
+    </p>
+#else
+    <p>
+      Your account has been re-enabled. However, it is still not available for use for the following reasons:
+    </p>
+
+    <ul>
+#foreach($account_usability_error in $account_usability_errors)
+      <li>$account_usability_error</li>
+#end
+    </ul>
+#end
+
+## Pull in a template file that can provide styling and text at the bottom of
+## the HTML-formatted body for all types of account status notifications.
+#parse("common-html-body-footer.vm")
+  </body>
+</html>
+
+## Pull in a template file that can provide any attachments that be used for
+## all types of account status notifications.
+#parse("common-attachments.vm")

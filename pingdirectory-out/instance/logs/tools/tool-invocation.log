@@ -1,0 +1,292 @@
+# [04/Sep/2020:17:47:31.871 +0000]
+# Command Name: manage-profile
+# Invocation ID: 2d99b5c7-a715-4579-9736-a0044a9541e5
+# System User: root
+manage-profile setup --profile /opt/staging/pd.profile --tempProfileDirectory /tmp --useEnvironmentVariables --doNotStart --rejectFile /tmp/rejects.ldif --addMissingRdnAttributes
+
+# [04/Sep/2020:17:47:32.059 +0000]
+# Command Name: install-ds
+# Invocation ID: 690a93ee-2944-4a61-990b-dafedbc58b0e
+# System User: root
+install-ds --no-prompt --acceptLicense --verbose --baseDN dc=example,dc=com --addBaseEntry --ldapPort 389 --skipPortCheck --rootUserDN cn=administrator --rootUserPasswordFile /opt/staging/pwd --jvmTuningParameter AGGRESSIVE --maxHeapSize 768m --doNotStart --enableStartTLS --ldapsPort 636 --generateSelfSignedCertificate --certNickname server-cert --httpsPort 443 --encryptDataWithPassphraseFromFile '*****REDACTED*****' --instanceName b1e39ef4129d --location Docker
+
+# [04/Sep/2020:17:47:37.942 +0000]
+# Command Name: manage-certificates
+# Invocation ID: 98277bc8-8fb7-4524-9efa-98310f394192
+# System User: root
+manage-certificates generate-self-signed-certificate --keystore /opt/out/instance/config/ads-truststore --keystore-password '*****REDACTED*****' --keystore-type JKS --alias ads-certificate --subject-dn "cn=b1e39ef4129d,O=Ping Identity Certificate" --days-valid 7301 --validity-start-time 20200903174737 --key-algorithm RSA --key-size-bits 2048 --signature-algorithm SHA256withRSA --subject-alternative-name-dns localhost --subject-alternative-name-dns b1e39ef4129d --subject-alternative-name-ip-address 10.10.1.3 --subject-alternative-name-ip-address 0:0:0:0:0:0:0:1 --subject-alternative-name-ip-address 127.0.0.1 --key-usage digitalSignature --key-usage keyEncipherment --extended-key-usage server-auth --extended-key-usage client-auth
+
+# [04/Sep/2020:17:47:38.284 +0000]
+# Command Name: manage-certificates
+# Invocation ID: 98277bc8-8fb7-4524-9efa-98310f394192
+# Exit Code: 0
+# Exit Message: success
+
+# [04/Sep/2020:17:47:54.713 +0000]
+# Command Name: dsjavaproperties
+# Invocation ID: f7db2da1-6144-4042-b638-fbbaaf5942bd
+# System User: root
+dsjavaproperties --quiet --propertiesFile /opt/out/instance/config/java.properties --destinationFile /opt/out/instance/lib/set-java-home
+
+# [04/Sep/2020:17:47:54.731 +0000]
+# Command Name: dsjavaproperties
+# Invocation ID: f7db2da1-6144-4042-b638-fbbaaf5942bd
+# Exit Code: 0
+
+# [04/Sep/2020:17:47:57.513 +0000]
+# Command Name: configure
+# Invocation ID: 843adf88-f336-491b-ab5f-860aa808f4da
+# System User: root
+configure --configFile /opt/out/instance/config/config.ldif --configClass com.unboundid.directory.server.extensions.ConfigFileHandler --ldapPort 389 --ldapsPort 636 --enableStartTLS --httpsPort 443 --keyManagerProviderDN "cn=JKS,cn=Key Manager Providers,cn=config" --trustManagerProviderDN "cn=JKS,cn=Trust Manager Providers,cn=config" --trustManagerPath config/truststore --trustManagerPinFile config/truststore.pin --baseDN dc=example,dc=com --dbCachePercent 36 --rootUserDN cn=administrator --rootPassword '*****REDACTED*****' --serverRoot /opt/out/instance --licenseKeyFile /opt/out/instance/PingDirectory.lic
+
+# [04/Sep/2020:17:47:57.570 +0000]
+# Command Name: configure
+# Invocation ID: 843adf88-f336-491b-ab5f-860aa808f4da
+# Exit Code: 0
+
+# [04/Sep/2020:17:48:00.844 +0000]
+# Command Name: manage-certificates
+# Invocation ID: 9d1dff70-88e8-4d19-89ac-6af676972172
+# System User: root
+manage-certificates generate-self-signed-certificate --keystore /opt/out/instance/config/keystore --keystore-password '*****REDACTED*****' --keystore-type JKS --alias server-cert --subject-dn "cn=b1e39ef4129d,O=Ping Identity Self-Signed Certificate" --days-valid 7301 --validity-start-time 20200903174800 --key-algorithm RSA --key-size-bits 2048 --signature-algorithm SHA256withRSA --subject-alternative-name-dns localhost --subject-alternative-name-dns b1e39ef4129d --subject-alternative-name-ip-address 10.10.1.3 --subject-alternative-name-ip-address 0:0:0:0:0:0:0:1 --subject-alternative-name-ip-address 127.0.0.1 --key-usage digitalSignature --key-usage keyEncipherment --extended-key-usage server-auth --extended-key-usage client-auth
+
+# [04/Sep/2020:17:48:01.009 +0000]
+# Command Name: manage-certificates
+# Invocation ID: 9d1dff70-88e8-4d19-89ac-6af676972172
+# Exit Code: 0
+# Exit Message: success
+
+# [04/Sep/2020:17:48:01.649 +0000]
+# Command Name: manage-certificates
+# Invocation ID: 9826bc04-8c69-49ca-9da2-b3cb1f594e7a
+# System User: root
+manage-certificates import-certificate --keystore /opt/out/instance/config/truststore --keystore-password '*****REDACTED*****' --keystore-type JKS --alias server-cert --certificate-file /opt/out/instance/config/server-cert.txt --no-prompt
+
+# [04/Sep/2020:17:48:01.653 +0000]
+# Command Name: manage-certificates
+# Invocation ID: 9826bc04-8c69-49ca-9da2-b3cb1f594e7a
+# Exit Code: 0
+# Exit Message: success
+
+# [04/Sep/2020:17:48:07.015 +0000]
+# Command Name: import-ldif
+# Invocation ID: c21fd3fb-771e-40e1-929b-6d0b7ada1890
+# System User: root
+import-ldif --quiet --configClass com.unboundid.directory.server.extensions.ConfigFileHandler --configFile /opt/out/instance/config/config.ldif --ldifFile /tmp/unboundid-base-entry1572744501072247639.ldif --backendID userRoot --clearBackend
+
+# [04/Sep/2020:17:48:19.143 +0000]
+# Command Name: import-ldif
+# Invocation ID: c21fd3fb-771e-40e1-929b-6d0b7ada1890
+# Exit Code: 0
+
+# [04/Sep/2020:17:48:19.337 +0000]
+# Command Name: install-ds
+# Invocation ID: 690a93ee-2944-4a61-990b-dafedbc58b0e
+# Exit Code: 0
+
+# [04/Sep/2020:17:48:25.363 +0000]
+# Command Name: manage-extension
+# Invocation ID: 8df29d02-4cbe-4a2f-8cc5-aa1040096480
+# System User: root
+manage-extension --install /tmp/pd.profile-replaced-variables-temp/pd.profile/server-sdk-extensions/extension-1.zip --no-prompt
+
+# [04/Sep/2020:17:48:25.720 +0000]
+# Command Name: manage-extension
+# Invocation ID: 8df29d02-4cbe-4a2f-8cc5-aa1040096480
+# Exit Code: 0
+
+# [04/Sep/2020:17:49:09.210 +0000]
+# Command Name: import-ldif
+# Invocation ID: 10b6c2af-e7ae-43a7-8a2b-a6063972dda8
+# System User: root
+import-ldif --configClass com.unboundid.directory.server.extensions.ConfigFileHandler --configFile /opt/out/instance/config/config.ldif --ldifFile /tmp/pd.profile-replaced-variables-temp/pd.profile/ldif/userRoot/00-structure.ldif --ldifFile /tmp/pd.profile-replaced-variables-temp/pd.profile/ldif/userRoot/10-users.ldif --ldifFile /tmp/pd.profile-replaced-variables-temp/pd.profile/ldif/userRoot/11-autogen-users.ldif --ldifFile /tmp/pd.profile-replaced-variables-temp/pd.profile/ldif/userRoot/12-engineering.ldif --ldifFile /tmp/pd.profile-replaced-variables-temp/pd.profile/ldif/userRoot/20-groups.ldif --ldifFile /tmp/pd.profile-replaced-variables-temp/pd.profile/ldif/userRoot/30-OAuthClients.ldif --backendID userRoot --clearBackend --rejectFile /tmp/rejects.ldif --countRejects --addMissingRdnAttributes --overwriteExistingEntries
+
+# [04/Sep/2020:17:49:24.057 +0000]
+# Command Name: import-ldif
+# Invocation ID: 10b6c2af-e7ae-43a7-8a2b-a6063972dda8
+# Exit Code: 0
+
+# [04/Sep/2020:17:49:45.255 +0000]
+# Command Name: manage-certificates
+# Invocation ID: 17d3a2dc-27f7-4070-8f12-d67cad2a7b2f
+# System User: root
+manage-certificates import-certificate --keystore /opt/out/instance/config/ads-truststore --keystore-password '*****REDACTED*****' --keystore-type JKS --alias 9C4D9DABACFE3D0BD6AE4D83BBD538E3 --certificate-file /opt/out/instance/config/ads-truststore93928767211033578029C4D9DABACFE3D0BD6AE4D83BBD538E3 --no-prompt
+
+# [04/Sep/2020:17:49:45.263 +0000]
+# Command Name: manage-certificates
+# Invocation ID: 17d3a2dc-27f7-4070-8f12-d67cad2a7b2f
+# Exit Code: 0
+# Exit Message: success
+
+# [04/Sep/2020:17:49:48.016 +0000]
+# Command Name: manage-profile
+# Invocation ID: 2d99b5c7-a715-4579-9736-a0044a9541e5
+# Exit Code: 0
+
+# [04/Sep/2020:17:50:14.483 +0000]
+# Command Name: manage-certificates
+# Invocation ID: 6858d5d4-6f21-4541-8fe1-113e4fa4f5cc
+# System User: root
+manage-certificates delete-certificate --keystore /opt/out/instance/config/ads-truststore --keystore-password '*****REDACTED*****' --alias 9C4D9DABACFE3D0BD6AE4D83BBD538E3 --no-prompt
+
+# [04/Sep/2020:17:50:14.496 +0000]
+# Command Name: manage-certificates
+# Invocation ID: 6858d5d4-6f21-4541-8fe1-113e4fa4f5cc
+# Exit Code: 0
+# Exit Message: success
+
+# [04/Sep/2020:17:50:14.514 +0000]
+# Command Name: manage-certificates
+# Invocation ID: 4ee7e6d1-9353-42f7-bce7-d14867541967
+# System User: root
+manage-certificates import-certificate --keystore /opt/out/instance/config/ads-truststore --keystore-password '*****REDACTED*****' --keystore-type JKS --alias 9C4D9DABACFE3D0BD6AE4D83BBD538E3 --certificate-file /opt/out/instance/config/ads-truststore104826198366163052119C4D9DABACFE3D0BD6AE4D83BBD538E3 --no-prompt
+
+# [04/Sep/2020:17:50:14.521 +0000]
+# Command Name: manage-certificates
+# Invocation ID: 4ee7e6d1-9353-42f7-bce7-d14867541967
+# Exit Code: 0
+# Exit Message: success
+
+# [05/Sep/2020:01:05:02.437 +0000]
+# Command Name: export-ldif
+# Invocation ID: 0ad09f89-f525-4e0d-b377-da6008074d91
+# System User: root
+export-ldif --configClass com.unboundid.directory.server.extensions.ConfigFileHandler --configFile /opt/out/instance/config/config.ldif --ldifFile /opt/backup/userRoot-20200905010500.003Z.ldif.gz.encrypted --backendID userRoot --includeBranch dc=example,dc=com --wrapColumn 0 --compress --maxMegabytesPerSecond 10 --encryptLDIF
+
+# [05/Sep/2020:01:05:11.140 +0000]
+# Command Name: export-ldif
+# Invocation ID: 0ad09f89-f525-4e0d-b377-da6008074d91
+# Exit Code: 0
+
+# [06/Sep/2020:01:05:03.047 +0000]
+# Command Name: export-ldif
+# Invocation ID: 1948a109-1922-445a-b6b1-7da613d08573
+# System User: root
+export-ldif --configClass com.unboundid.directory.server.extensions.ConfigFileHandler --configFile /opt/out/instance/config/config.ldif --ldifFile /opt/backup/userRoot-20200906010500.008Z.ldif.gz.encrypted --backendID userRoot --includeBranch dc=example,dc=com --wrapColumn 0 --compress --maxMegabytesPerSecond 10 --encryptLDIF
+
+# [06/Sep/2020:01:05:12.828 +0000]
+# Command Name: export-ldif
+# Invocation ID: 1948a109-1922-445a-b6b1-7da613d08573
+# Exit Code: 0
+
+# [07/Sep/2020:01:05:02.633 +0000]
+# Command Name: export-ldif
+# Invocation ID: 78b491c6-7251-4bd5-8f47-6707ff044b51
+# System User: root
+export-ldif --configClass com.unboundid.directory.server.extensions.ConfigFileHandler --configFile /opt/out/instance/config/config.ldif --ldifFile /opt/backup/userRoot-20200907010500.040Z.ldif.gz.encrypted --backendID userRoot --includeBranch dc=example,dc=com --wrapColumn 0 --compress --maxMegabytesPerSecond 10 --encryptLDIF
+
+# [07/Sep/2020:01:05:11.868 +0000]
+# Command Name: export-ldif
+# Invocation ID: 78b491c6-7251-4bd5-8f47-6707ff044b51
+# Exit Code: 0
+
+# [08/Sep/2020:01:05:02.787 +0000]
+# Command Name: export-ldif
+# Invocation ID: 607fc3aa-be79-43c0-8c6f-5f51a64e9695
+# System User: root
+export-ldif --configClass com.unboundid.directory.server.extensions.ConfigFileHandler --configFile /opt/out/instance/config/config.ldif --ldifFile /opt/backup/userRoot-20200908010500.002Z.ldif.gz.encrypted --backendID userRoot --includeBranch dc=example,dc=com --wrapColumn 0 --compress --maxMegabytesPerSecond 10 --encryptLDIF
+
+# [08/Sep/2020:01:05:11.960 +0000]
+# Command Name: export-ldif
+# Invocation ID: 607fc3aa-be79-43c0-8c6f-5f51a64e9695
+# Exit Code: 0
+
+# [09/Sep/2020:01:05:02.667 +0000]
+# Command Name: export-ldif
+# Invocation ID: 814afaf9-4651-4590-bb2d-13868bb07adf
+# System User: root
+export-ldif --configClass com.unboundid.directory.server.extensions.ConfigFileHandler --configFile /opt/out/instance/config/config.ldif --ldifFile /opt/backup/userRoot-20200909010500.006Z.ldif.gz.encrypted --backendID userRoot --includeBranch dc=example,dc=com --wrapColumn 0 --compress --maxMegabytesPerSecond 10 --encryptLDIF
+
+# [09/Sep/2020:01:05:11.694 +0000]
+# Command Name: export-ldif
+# Invocation ID: 814afaf9-4651-4590-bb2d-13868bb07adf
+# Exit Code: 0
+
+# [10/Sep/2020:01:05:03.056 +0000]
+# Command Name: export-ldif
+# Invocation ID: 58098884-c2cc-44d9-a43f-cc125d1afb7a
+# System User: root
+export-ldif --configClass com.unboundid.directory.server.extensions.ConfigFileHandler --configFile /opt/out/instance/config/config.ldif --ldifFile /opt/backup/userRoot-20200910010500.023Z.ldif.gz.encrypted --backendID userRoot --includeBranch dc=example,dc=com --wrapColumn 0 --compress --maxMegabytesPerSecond 10 --encryptLDIF
+
+# [10/Sep/2020:01:05:12.464 +0000]
+# Command Name: export-ldif
+# Invocation ID: 58098884-c2cc-44d9-a43f-cc125d1afb7a
+# Exit Code: 0
+
+# [11/Sep/2020:01:05:02.409 +0000]
+# Command Name: export-ldif
+# Invocation ID: 4d3b1f0b-2308-408a-8f4f-5268261b56f4
+# System User: root
+export-ldif --configClass com.unboundid.directory.server.extensions.ConfigFileHandler --configFile /opt/out/instance/config/config.ldif --ldifFile /opt/backup/userRoot-20200911010500.002Z.ldif.gz.encrypted --backendID userRoot --includeBranch dc=example,dc=com --wrapColumn 0 --compress --maxMegabytesPerSecond 10 --encryptLDIF
+
+# [11/Sep/2020:01:05:11.445 +0000]
+# Command Name: export-ldif
+# Invocation ID: 4d3b1f0b-2308-408a-8f4f-5268261b56f4
+# Exit Code: 0
+
+# [12/Sep/2020:01:05:02.324 +0000]
+# Command Name: export-ldif
+# Invocation ID: c1b574e8-4c32-411e-bdcb-4a4752a633d7
+# System User: root
+export-ldif --configClass com.unboundid.directory.server.extensions.ConfigFileHandler --configFile /opt/out/instance/config/config.ldif --ldifFile /opt/backup/userRoot-20200912010500.004Z.ldif.gz.encrypted --backendID userRoot --includeBranch dc=example,dc=com --wrapColumn 0 --compress --maxMegabytesPerSecond 10 --encryptLDIF
+
+# [12/Sep/2020:01:05:11.175 +0000]
+# Command Name: export-ldif
+# Invocation ID: c1b574e8-4c32-411e-bdcb-4a4752a633d7
+# Exit Code: 0
+
+# [13/Sep/2020:01:05:02.560 +0000]
+# Command Name: export-ldif
+# Invocation ID: 2bfa12cd-9e79-4124-a076-17bc56d4d6f6
+# System User: root
+export-ldif --configClass com.unboundid.directory.server.extensions.ConfigFileHandler --configFile /opt/out/instance/config/config.ldif --ldifFile /opt/backup/userRoot-20200913010500.002Z.ldif.gz.encrypted --backendID userRoot --includeBranch dc=example,dc=com --wrapColumn 0 --compress --maxMegabytesPerSecond 10 --encryptLDIF
+
+# [13/Sep/2020:01:05:11.500 +0000]
+# Command Name: export-ldif
+# Invocation ID: 2bfa12cd-9e79-4124-a076-17bc56d4d6f6
+# Exit Code: 0
+
+# [14/Sep/2020:01:05:02.495 +0000]
+# Command Name: export-ldif
+# Invocation ID: a6a0e1d3-b3af-470d-9960-bf32e59ed5c6
+# System User: root
+export-ldif --configClass com.unboundid.directory.server.extensions.ConfigFileHandler --configFile /opt/out/instance/config/config.ldif --ldifFile /opt/backup/userRoot-20200914010500.003Z.ldif.gz.encrypted --backendID userRoot --includeBranch dc=example,dc=com --wrapColumn 0 --compress --maxMegabytesPerSecond 10 --encryptLDIF
+
+# [14/Sep/2020:01:05:11.251 +0000]
+# Command Name: export-ldif
+# Invocation ID: a6a0e1d3-b3af-470d-9960-bf32e59ed5c6
+# Exit Code: 0
+
+# [15/Sep/2020:01:05:02.470 +0000]
+# Command Name: export-ldif
+# Invocation ID: 40b702ac-f76e-4267-ab14-e2b7682cc842
+# System User: root
+export-ldif --configClass com.unboundid.directory.server.extensions.ConfigFileHandler --configFile /opt/out/instance/config/config.ldif --ldifFile /opt/backup/userRoot-20200915010500.005Z.ldif.gz.encrypted --backendID userRoot --includeBranch dc=example,dc=com --wrapColumn 0 --compress --maxMegabytesPerSecond 10 --encryptLDIF
+
+# [15/Sep/2020:01:05:10.603 +0000]
+# Command Name: export-ldif
+# Invocation ID: 40b702ac-f76e-4267-ab14-e2b7682cc842
+# Exit Code: 0
+
+# [16/Sep/2020:01:05:02.534 +0000]
+# Command Name: export-ldif
+# Invocation ID: 5eae178a-ecf2-459b-af60-54d05a4eb4cc
+# System User: root
+export-ldif --configClass com.unboundid.directory.server.extensions.ConfigFileHandler --configFile /opt/out/instance/config/config.ldif --ldifFile /opt/backup/userRoot-20200916010500.002Z.ldif.gz.encrypted --backendID userRoot --includeBranch dc=example,dc=com --wrapColumn 0 --compress --maxMegabytesPerSecond 10 --encryptLDIF
+
+# [16/Sep/2020:01:05:11.105 +0000]
+# Command Name: export-ldif
+# Invocation ID: 5eae178a-ecf2-459b-af60-54d05a4eb4cc
+# Exit Code: 0
+
+# [17/Sep/2020:01:05:02.734 +0000]
+# Command Name: export-ldif
+# Invocation ID: baf7d559-2359-46b2-82ab-4bd754e98c94
+# System User: root
+export-ldif --configClass com.unboundid.directory.server.extensions.ConfigFileHandler --configFile /opt/out/instance/config/config.ldif --ldifFile /opt/backup/userRoot-20200917010500.001Z.ldif.gz.encrypted --backendID userRoot --includeBranch dc=example,dc=com --wrapColumn 0 --compress --maxMegabytesPerSecond 10 --encryptLDIF
+
+# [17/Sep/2020:01:05:11.567 +0000]
+# Command Name: export-ldif
+# Invocation ID: baf7d559-2359-46b2-82ab-4bd754e98c94
+# Exit Code: 0
+

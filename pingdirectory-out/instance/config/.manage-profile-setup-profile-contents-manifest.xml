@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><root>
+  <file path="dsconfig/00-debug-logging.dsconfig" type="file" checksum="eda4a38781e5ce9212e0975ae4123f81" length="398" modified="1599241651893"/>
+  <file path="ldif/userRoot/11-autogen-users.template" type="file" checksum="87bade72c82b2382a2ba0b3dc7424894" length="835" modified="1599241651929"/>
+  <file path="server-root/pre-setup/config/schema/89-sessions.ldif" type="file" checksum="e75b0b6adc8a4a54703ae033863b3e3a" length="2984" modified="1599241651905"/>
+  <file path="dsconfig/10-root-dns.dsconfig" type="file" checksum="67f83fdf50d036b65b0c383ab727f2ea" length="1947" modified="1599241651897"/>
+  <file path="dsconfig/01-remove-host-monitor.dsconfig" type="file" checksum="1cb06878efa7bf66c2a58a318f761a3f" length="92" modified="1599241651893"/>
+  <file path="dsconfig/12-index-oauth-grants.dsconfig" type="file" checksum="6945601c1eb237af2abbbc945259cd8b" length="766" modified="1599241651901"/>
+  <file path="dsconfig/13-global-aci-grants.dsconfig_bkp" type="file" checksum="96e1afc4672e74d2cb796532604996cd" length="1972" modified="1599241651893"/>
+  <file path="variables-ignore.txt" type="file" checksum="d430c94060a1b6e677896d626b30aaf6" length="186" modified="1599241651905"/>
+  <file path="" type="directory" length="4096" modified="1599241651937"/>
+  <file path="dsconfig/77-tuning.dsconfig" type="file" checksum="060026282995d111cb02a18d8cd2cd8b" length="120" modified="1599241651897"/>
+  <file path="dsconfig/.13-global-aci-grants.dsconfig.swo" type="file" checksum="9f9cd4b05617b297b64b51abc20dae05" length="12288" modified="1599241651893"/>
+  <file path="server-sdk-extensions" type="directory" length="4096" modified="1599241651901"/>
+  <file path="dsconfig/12-index-local-identity-profile.dsconfig" type="file" checksum="74d287755d0ed683483cd1ebad9296c1" length="183" modified="1599241651897"/>
+  <file path="ldif/userRoot/11-autogen-users.ldif" type="file" checksum="8ac5bab7ac88e98262efb60c422765ef" length="105" modified="1599241651913"/>
+  <file path="ldif" type="directory" length="4096" modified="1599241651909"/>
+  <file path="dsconfig/01-remove-console.dsconfig" type="file" checksum="5bc9329f3e2730060d9b8dd071206d92" length="125" modified="1599241651897"/>
+  <file path="server-root/pre-setup/config/schema" type="directory" length="4096" modified="1599241651909"/>
+  <file path="server-root/pre-setup/config" type="directory" length="4096" modified="1599241651905"/>
+  <file path="ldif/userRoot/10-users.ldif" type="file" checksum="37f4bf36cfaf3f0d6f19a236bbeea6a4" length="3340" modified="1599241651933"/>
+  <file path="setup-arguments.txt" type="file" checksum="9e37817426e9300922b59de2d9445f63" length="567" modified="1599241651905"/>
+  <file path="dsconfig/12-index-oauth-client.dsconfig" type="file" checksum="8e966066d2019850e6d1d75f84e78aaa" length="569" modified="1599241651897"/>
+  <file path="server-root" type="directory" length="4096" modified="1599241651905"/>
+  <file path="dsconfig/20-plugin-purge-sessions.dsconfig" type="file" checksum="bc5258c82f6ecd057dd3240a3a08ab06" length="998" modified="1599241651897"/>
+  <file path="dsconfig/11-changelog.dsconfig" type="file" checksum="b5447dfe6055cc119770ea3acc9287ac" length="173" modified="1599241651893"/>
+  <file path="server-root/pre-setup/config/schema/87-local-identities.ldif" type="file" checksum="7519b19e9af05ef7f02c7dc8d263793f" length="573" modified="1599241651909"/>
+  <file path="ldif/userRoot/20-groups.ldif" type="file" checksum="fddea7caaa51b8048198ae63555de270" length="1500" modified="1599241651909"/>
+  <file path="ldif/userRoot" type="directory" length="4096" modified="1599241651933"/>
+  <file path="ldif/userRoot/12-engineering.ldif" type="file" checksum="c7590e24004d80048e2f4520dc0e82d8" length="1694" modified="1599241651929"/>
+  <file path="misc-files/README" type="file" checksum="fbcd776595176ceb42d1a0fadeba7ad2" length="1558" modified="1599241651937"/>
+  <file path="dsconfig/01-license-gauge.dsconfig" type="file" checksum="5ff352103592f77e1468a607233d3019" length="146" modified="1599241651893"/>
+  <file path="ldif/userRoot/00-structure.ldif" type="file" checksum="e9a1bbe1ac1ef5fec2a9ddb1241bf1fa" length="1948" modified="1599241651929"/>
+  <file path="ldif/userRoot/1" type="file" checksum="fddea7caaa51b8048198ae63555de270" length="1500" modified="1599241651933"/>
+  <file path="dsconfig/10-gauges.dsconfig" type="file" checksum="abcbabf28a3d1016246a859dd7d3f6a6" length="250" modified="1599241651897"/>
+  <file path="dsconfig/10-log-publishers.dsconfig" type="file" checksum="ccc14f05768b86662dcab33a42c9ee1d" length="174" modified="1599241651897"/>
+  <file path="server-sdk-extensions/extension-1.zip" type="file" checksum="07a9dfac4a7d4398aaea3ff0125d9a7e" length="3469957" modified="1599241651905"/>
+  <file path="dsconfig/07-docs-cleanup.dsconfig" type="file" checksum="aea95d5c988054b86784806cb229deb9" length="251" modified="1599241651893"/>
+  <file path="server-root/pre-setup" type="directory" length="4096" modified="1599241651905"/>
+  <file path="dsconfig/13-global-aci-grants.dsconfig" type="file" checksum="020d095bfa2073dab1b28236c521e0e3" length="1774" modified="1599241651893"/>
+  <file path="server-root/pre-setup/config/schema/90-oauth-clients.ldif" type="file" checksum="7dd355bc1543a0eca1bf5b79a00b15ed" length="6671" modified="1599241651909"/>
+  <file path="ldif/userRoot/30-OAuthClients.ldif" type="file" checksum="cbae7dd92771a4c63ea0a35f9b15aa55" length="33833" modified="1599241651917"/>
+  <file path="misc-files" type="directory" length="4096" modified="1599241651937"/>
+  <file path="dsconfig" type="directory" length="4096" modified="1599241651901"/>
+  <file path="dsconfig/30-daily-encrypted-export.dsconfig" type="file" checksum="72ed3f8caa3f0226ccdeac45c2ca7b55" length="641" modified="1599241651889"/>
+  <file path="server-root/pre-setup/config/schema/88-grants.ldif" type="file" checksum="1a1ddb34eef71abe8cda07f5ec617371" length="2008" modified="1599241651909"/>
+</root>

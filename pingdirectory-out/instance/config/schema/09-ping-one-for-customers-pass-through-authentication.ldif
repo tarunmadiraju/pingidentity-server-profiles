@@ -1,0 +1,57 @@
+# Copyright 2019-2020 Ping Identity Corporation
+# All Rights Reserved
+#
+# This file contains schema definitions for the PingOne
+# Pass-Through Authentication Plugin
+dn: cn=schema
+objectClass: top
+objectClass: ldapSubentry
+objectClass: subschema
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2273
+  NAME 'ds-cfg-ignored-password-policy-state-error-condition'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2275
+  NAME 'ds-cfg-user-mapping-local-attribute'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2276
+  NAME 'ds-cfg-user-mapping-remote-json-field'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2277
+  NAME 'ds-cfg-additional-user-mapping-scim-filter'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2388
+  NAME 'ds-cfg-update-local-password-dn'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.842
+  NAME 'ds-cfg-ping-one-for-customers-pass-through-authentication-plugin'
+  SUP ds-cfg-plugin
+  STRUCTURAL
+  MUST ( ds-cfg-api-url $
+         ds-cfg-auth-url $
+         ds-cfg-oauth-client-id $
+         ds-cfg-oauth-client-secret $
+         ds-cfg-environment-id $
+         ds-cfg-user-mapping-local-attribute $
+         ds-cfg-user-mapping-remote-json-field )
+  MAY ( ds-cfg-included-local-entry-base-dn $
+        ds-cfg-connection-criteria $
+        ds-cfg-request-criteria $
+        ds-cfg-try-local-bind $
+        ds-cfg-override-local-password $
+        ds-cfg-update-local-password $
+        ds-cfg-allow-lax-pass-through-authentication-passwords $
+        ds-cfg-ignored-password-policy-state-error-condition $
+        ds-cfg-additional-user-mapping-scim-filter $
+        ds-cfg-update-local-password-dn )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.844
+  NAME 'ds-ping-one-for-customers-pass-through-authentication-plugin-monitor-entry'
+  SUP ds-monitor-entry
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )

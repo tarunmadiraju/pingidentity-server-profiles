@@ -1,0 +1,428 @@
+PING-IDENTITY-LDAP-STATISTICS-MIB DEFINITIONS ::= BEGIN
+
+
+
+IMPORTS
+  Integer32,Counter64,Unsigned32,OBJECT-TYPE,enterprises,MODULE-IDENTITY
+    FROM SNMPv2-SMI
+  OBJECT-GROUP
+    FROM SNMPv2-CONF
+  ;
+
+
+pingIdentityLdapStatisticsModule MODULE-IDENTITY
+  LAST-UPDATED "202006151919Z"
+  ORGANIZATION "Ping Identity"
+  CONTACT-INFO "Ping Identity Corporation
+      www.pingidentity.com"
+  DESCRIPTION
+    "The LDAP Statistics MIB is a collected set of connection-oriented
+      performance data that is aggregated based on a connection handler in
+      the server.  It is typical for a server to contain only one connection
+      handler and therefore to supply only one table entry."
+  ::= { unboundidDsMibMonitor 3 }
+
+unboundid OBJECT IDENTIFIER ::= { enterprises 30221 }
+unboundidDs OBJECT IDENTIFIER ::= { unboundid 2 }
+unboundidDsMib OBJECT IDENTIFIER ::= { unboundidDs 10 }
+unboundidDsMibMonitor OBJECT IDENTIFIER ::= { unboundidDsMib 1 }
+
+ldapStatisticsGroup OBJECT-GROUP
+  OBJECTS {
+    abandonRequests,
+    addRequests,
+    addResponses,
+    bindRequests,
+    bindResponses,
+    bytesRead,
+    bytesWritten,
+    compareRequests,
+    compareResponses,
+    connectionHandlerCount,
+    connectionHandlerID,
+    connectionsClosed,
+    connectionsEstablished,
+    deleteRequests,
+    deleteResponses,
+    extendedRequests,
+    extendedResponses,
+    ldapMessagesRead,
+    ldapMessagesWritten,
+    maxConcurrentCancels,
+    modifyDNRequests,
+    modifyDNResponses,
+    modifyRequests,
+    modifyResponses,
+    operationsAbandoned,
+    operationsCompleted,
+    operationsInitiated,
+    searchRequests,
+    searchResultDones,
+    searchResultEntries,
+    searchResultReferences,
+    unbindRequests
+  }
+  STATUS current
+  DESCRIPTION
+    "Required conformance group definition for the LDAP Statistics MIB."
+  ::= { pingIdentityLdapStatisticsModule 1 }
+
+
+
+ldapStatisticsObjects OBJECT IDENTIFIER
+  ::= { pingIdentityLdapStatisticsModule 2 }
+
+connectionHandlerCount OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of connection handlers in the server."
+  ::= { ldapStatisticsObjects 1 }
+
+ldapStatisticsTable OBJECT-TYPE
+  SYNTAX SEQUENCE OF LDAPStatisticsEntry
+  MAX-ACCESS not-accessible
+  STATUS current
+  DESCRIPTION
+    "The LDAP Statistics table provides statistics for each
+          connection handler in the server."
+  ::= { ldapStatisticsObjects 2 }
+
+ldapStatisticsEntry OBJECT-TYPE
+  SYNTAX LDAPStatisticsEntry
+  MAX-ACCESS not-accessible
+  STATUS current
+  DESCRIPTION
+    "An entry in the LDAP Statistics table provides statistics
+            for a particular connection handler in the server.  It includes
+            information about the LDAP operations processed by the connection
+            handler."
+  INDEX { connectionHandlerIndex }
+  ::= { ldapStatisticsTable 1 }
+
+LDAPStatisticsEntry ::= SEQUENCE {
+  connectionHandlerIndex Unsigned32,
+  connectionHandlerID OCTET STRING,
+  connectionsEstablished Counter64,
+  connectionsClosed Counter64,
+  bytesRead Counter64,
+  bytesWritten Counter64,
+  ldapMessagesRead Counter64,
+  ldapMessagesWritten Counter64,
+  operationsAbandoned Counter64,
+  operationsInitiated Counter64,
+  operationsCompleted Counter64,
+  abandonRequests Counter64,
+  addRequests Counter64,
+  addResponses Counter64,
+  bindRequests Counter64,
+  bindResponses Counter64,
+  compareRequests Counter64,
+  compareResponses Counter64,
+  deleteRequests Counter64,
+  deleteResponses Counter64,
+  extendedRequests Counter64,
+  extendedResponses Counter64,
+  modifyRequests Counter64,
+  modifyResponses Counter64,
+  modifyDNRequests Counter64,
+  modifyDNResponses Counter64,
+  searchRequests Counter64,
+  searchResultEntries Counter64,
+  searchResultReferences Counter64,
+  searchResultDones Counter64,
+  unbindRequests Counter64,
+  maxConcurrentCancels Counter64
+}
+
+connectionHandlerIndex OBJECT-TYPE
+  SYNTAX Unsigned32
+  MAX-ACCESS not-accessible
+  STATUS current
+  DESCRIPTION
+    "A row index used to differentiate between multiple connection
+              handlers in the LDAP Statistics table."
+  ::= { ldapStatisticsEntry 1 }
+
+
+connectionHandlerID OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The connection handler identifier."
+  ::= { ldapStatisticsEntry 2 }
+
+connectionsEstablished OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of connections established since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 3 }
+
+connectionsClosed OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of connections closed since the associated connection
+              handler was started."
+  ::= { ldapStatisticsEntry 4 }
+
+bytesRead OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of bytes read from clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 5 }
+
+bytesWritten OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of bytes written to clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 6 }
+
+ldapMessagesRead OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of LDAP messages read from clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 7 }
+
+ldapMessagesWritten OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of LDAP messages written to clients since the
+              associated connection handler was started."
+  ::= { ldapStatisticsEntry 8 }
+
+operationsAbandoned OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of operations abandoned since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 9 }
+
+operationsInitiated OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of operations initiated since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 10 }
+
+operationsCompleted OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of operations completed since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 11 }
+
+abandonRequests OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of abandon requests from clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 12 }
+
+addRequests OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of add requests from clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 13 }
+
+addResponses OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of add responses to clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 14 }
+
+bindRequests OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of bind requests from clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 15 }
+
+bindResponses OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of bind responses to clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 16 }
+
+compareRequests OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of compare requests from clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 17 }
+
+compareResponses OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of compare responses to clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 18 }
+
+deleteRequests OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of delete requests from clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 19 }
+
+deleteResponses OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of delete responses to clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 20 }
+
+extendedRequests OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of extended requests from clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 21 }
+
+extendedResponses OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of extended responses to clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 22 }
+
+modifyRequests OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of modify requests from clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 23 }
+
+modifyResponses OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of modify responses to clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 24 }
+
+modifyDNRequests OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of modify DN requests from clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 25 }
+
+modifyDNResponses OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of modify DN responses to clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 26 }
+
+searchRequests OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of search requests from clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 27 }
+
+searchResultEntries OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of search result entries sent to clients since the
+              associated connection handler was started."
+  ::= { ldapStatisticsEntry 28 }
+
+searchResultReferences OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of search result references sent to clients since the
+              associated connection handler was started."
+  ::= { ldapStatisticsEntry 29 }
+
+searchResultDones OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of search result done responses to clients since the
+              associated connection handler was started."
+  ::= { ldapStatisticsEntry 30 }
+
+unbindRequests OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of unbind requests from clients since the associated
+              connection handler was started."
+  ::= { ldapStatisticsEntry 31 }
+
+maxConcurrentCancels OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The highest number of concurrent cancel operations being processed
+              at one time on this connection handler."
+  ::= { ldapStatisticsEntry 32 }
+
+
+END

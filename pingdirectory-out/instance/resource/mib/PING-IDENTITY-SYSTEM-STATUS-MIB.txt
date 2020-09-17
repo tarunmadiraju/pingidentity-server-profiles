@@ -1,0 +1,100 @@
+PING-IDENTITY-SYSTEM-STATUS-MIB DEFINITIONS ::= BEGIN
+
+
+
+IMPORTS
+  Counter64,Integer32,Gauge32,OBJECT-TYPE,enterprises,MODULE-IDENTITY
+    FROM SNMPv2-SMI
+  OBJECT-GROUP
+    FROM SNMPv2-CONF
+  ;
+
+
+pingIdentitySystemStatusModule MODULE-IDENTITY
+  LAST-UPDATED "202006151919Z"
+  ORGANIZATION "Ping Identity"
+  CONTACT-INFO "Ping Identity Corporation
+      www.pingidentity.com"
+  DESCRIPTION
+    "The System Status MIB provides critical metrics for determining the
+      status and health of the system specifically around how loaded the
+      system currently is."
+  ::= { unboundidDsMibMonitor 1 }
+
+unboundid OBJECT IDENTIFIER ::= { enterprises 30221 }
+unboundidDs OBJECT IDENTIFIER ::= { unboundid 2 }
+unboundidDsMib OBJECT IDENTIFIER ::= { unboundidDs 10 }
+unboundidDsMibMonitor OBJECT IDENTIFIER ::= { unboundidDsMib 1 }
+
+systemStatusGroup OBJECT-GROUP
+  OBJECTS {
+    averageWorkQueueSize,
+    averageWorkerThreadPercentBusy,
+    currentNumConnections,
+    maxWorkQueueSize,
+    maxWorkerThreadPercentBusy,
+    totalConnections
+  }
+  STATUS current
+  DESCRIPTION
+    "Required conformance group definition for the System Status MIB."
+  ::= { pingIdentitySystemStatusModule 1 }
+
+
+systemStatusScalars OBJECT IDENTIFIER
+  ::= { pingIdentitySystemStatusModule 2 }
+
+totalConnections OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The total number of connections established since startup."
+  ::= { systemStatusScalars 1 }
+
+currentNumConnections OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of connections currently established."
+  ::= { systemStatusScalars 2 }
+
+maxWorkQueueSize OBJECT-TYPE
+  SYNTAX Gauge32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The maximum number of operations observed in the work queue at
+            any given time."
+  ::= { systemStatusScalars 3 }
+
+averageWorkQueueSize OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The average number of operations observed in the work queue."
+  ::= { systemStatusScalars 4 }
+
+maxWorkerThreadPercentBusy OBJECT-TYPE
+  SYNTAX Gauge32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The maximum percentage of the time over any interval that worker
+            threads have spent busy processing operations."
+  ::= { systemStatusScalars 5 }
+
+averageWorkerThreadPercentBusy OBJECT-TYPE
+  SYNTAX Gauge32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The average percentage of the time since startup that worker
+            threads have spent busy processing operations."
+  ::= { systemStatusScalars 6 }
+
+
+
+END

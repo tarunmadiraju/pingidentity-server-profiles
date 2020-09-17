@@ -1,0 +1,47 @@
+#!/bin/sh
+
+# This file configures the umask that will be used to control the default
+# permissions that will be used for newly-created files and directories on
+# UNIX-based systems.
+#
+# Common umask values include:
+#
+# 0077 -- New files will be created with permissions 0600:
+#         * The file's owner will be permitted to read from and write to the
+#           file.
+#         * Members of the file's group (other than the owner) will not be
+#           permitted to read from or write to the file.
+#         * Other users will not be permitted to read from or write to the
+#           file.
+#
+#         New directories will be created with permissions 0700:
+#         * The file's owner will be permitted to access files in the
+#           directory (subject to the permissions assigned to those files), and
+#           will be permitted to create and delete files in the directory.
+#         * Members of the file's group (other than the owner) will not be
+#           permitted any access to files in the directory.
+#         * Other users will not be permitted any access to files in the
+#           directory.
+#
+#
+# 0027 -- New files will be created with permissions 0640:
+#         * The file's owner will be permitted to read from and write to the
+#           file.
+#         * Members of the file's group (other than the owner) will be
+#           permitted to read from the file but not write to it.
+#         * Other users will not be permitted to read from or write to the
+#           file.
+#
+#         New directories will be created with permissions 0750:
+#         * The file's owner will be permitted to access files in the
+#           directory (subject to the permissions assigned to those files), and
+#           will be permitted to create and delete files in the directory.
+#         * Members of the directory's group (other than the owner) will be
+#           permitted to access files in the directory (subject to the
+#           permissions assigned to those files), but will not be permitted to
+#           create or delete files in the directory.
+#         * Other users will not be permitted any access to files in the
+#           directory.
+
+umask 0077
+

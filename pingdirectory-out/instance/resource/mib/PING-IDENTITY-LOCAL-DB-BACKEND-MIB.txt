@@ -1,0 +1,116 @@
+PING-IDENTITY-LOCAL-DB-BACKEND-MIB DEFINITIONS ::= BEGIN
+
+
+
+IMPORTS
+  Integer32,Unsigned32,Gauge32,OBJECT-TYPE,enterprises,MODULE-IDENTITY
+    FROM SNMPv2-SMI
+  OBJECT-GROUP
+    FROM SNMPv2-CONF
+  ;
+
+
+pingIdentityLocalDbBackendModule MODULE-IDENTITY
+  LAST-UPDATED "202006151919Z"
+  ORGANIZATION "Ping Identity"
+  CONTACT-INFO "Ping Identity Corporation
+      www.pingidentity.com"
+  DESCRIPTION
+    "The Local DB Backend MIB provides key metrics related to the state of
+      the local database backends contained in the server."
+  ::= { unboundidDsMibMonitor 5 }
+
+unboundid OBJECT IDENTIFIER ::= { enterprises 30221 }
+unboundidDs OBJECT IDENTIFIER ::= { unboundid 2 }
+unboundidDsMib OBJECT IDENTIFIER ::= { unboundidDs 10 }
+unboundidDsMibMonitor OBJECT IDENTIFIER ::= { unboundidDsMib 1 }
+
+localDBBackendGroup OBJECT-GROUP
+  OBJECTS {
+    backendID,
+    localDBBackendCount,
+    numberOfEntries,
+    percentCacheFull
+  }
+  STATUS current
+  DESCRIPTION
+    "Required conformance group definition for the Local DB Backend MIB."
+  ::= { pingIdentityLocalDbBackendModule 1 }
+
+
+
+localDBBackendObjects OBJECT IDENTIFIER
+  ::= { pingIdentityLocalDbBackendModule 2 }
+
+localDBBackendCount OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of local DB backends contained in the server."
+  ::= { localDBBackendObjects 1 }
+
+localDBBackendTable OBJECT-TYPE
+  SYNTAX SEQUENCE OF LocalDBBackendEntry
+  MAX-ACCESS not-accessible
+  STATUS current
+  DESCRIPTION
+    "The Local DB Backend table provides information about each local
+          DB Backend contained in the server."
+  ::= { localDBBackendObjects 2 }
+
+localDBBackendEntry OBJECT-TYPE
+  SYNTAX LocalDBBackendEntry
+  MAX-ACCESS not-accessible
+  STATUS current
+  DESCRIPTION
+    "An entry in the Local DB Backend table provides information about a
+            particular local DB backend contained in the server."
+  INDEX { backendIndex }
+  ::= { localDBBackendTable 1 }
+
+LocalDBBackendEntry ::= SEQUENCE {
+  backendIndex Unsigned32,
+  backendID OCTET STRING,
+  numberOfEntries OCTET STRING,
+  percentCacheFull Gauge32
+}
+
+backendIndex OBJECT-TYPE
+  SYNTAX Unsigned32
+  MAX-ACCESS not-accessible
+  STATUS current
+  DESCRIPTION
+    "A row index used to differentiate between multiple backends
+              in the Local DB Backend table."
+  ::= { localDBBackendEntry 1 }
+
+
+backendID OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The backend ID of the associated backend."
+  ::= { localDBBackendEntry 2 }
+
+numberOfEntries OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The total number of entries in the associated backend
+              represented as a string."
+  ::= { localDBBackendEntry 3 }
+
+percentCacheFull OBJECT-TYPE
+  SYNTAX Gauge32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The percentage of the maximum database cache size that is
+              currently in use."
+  ::= { localDBBackendEntry 4 }
+
+
+END

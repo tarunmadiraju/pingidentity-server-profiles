@@ -1,0 +1,3 @@
+#This file specifies the name of the system user account which is to be used to run the server, as well as related server utilities like import-ldif, export-ldif, backup, restore, etc.  The server should always be run as the same user to ensure that file permissions and ownership will be set properly.  If the user account used to run the server is to be changed, then you must stop the server and ensure that no other related commands are running, change ownership on all files so that they are owned by the desired new user, and then update the value of the server.user property in this file so that it contains the name of the new user account that will be used to run the server
+#Fri Sep 04 17:47:32 GMT 2020
+server.user=root

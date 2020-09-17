@@ -1,0 +1,69 @@
+## This template may be included by another template to aid in debugging.  Invoking the
+## 'debug' macro will pop up a browser window with a page that displays information about
+## the page's Velocity context.  To use this template, ensure that the ContextTool is
+## available in the Velocity Context (see the VelocityContextToolsProvider in dsconfig)
+## and include parse directive and invoke the macro as follows:
+##
+##   #parse("_debug.vm")
+##   #debug()
+##
+
+##
+## Macro - printRow
+##         This macro is used by #debug to display Velocity debugging information
+##
+#macro (printRow $prefix $name $value)
+        #set ($rowLength = $value.length()/57+1)
+
+        #if ($rowLength > 15)
+                #set ($rowLength = 15)
+        #end
+        #if ($velocityCount)
+                #if (($velocityCount % 2) == 0)
+                        _velocity_console.document.write("<tr bgcolor=#fafafa>");
+                #else
+                        _velocity_console.document.write("<tr bgcolor=#eeeeee>");
+                #end
+        #else
+                _velocity_console.document.write("<tr bgcolor=#eeeeee>");
+        #end
+        _velocity_console.document.write("<td valign=top><tt><font color=maroon>$prefix $" + "$name" + "</font></tt></td>");
+        #if ($rowLength == 1)
+                _velocity_console.document.write("<td><tt><font color=green>$value</font></tt></td></tr>");
+        #else
+                _velocity_console.document.write("<td><tt><font color=green><textarea readonly rows=$rowLength cols=57>");
+                _velocity_console.document.write("$value");
+                _velocity_console.document.write("</textarea></font></tt></td></tr>");
+        #end
+#end
+
+##
+## Macro - showDebugPopup
+##         This macro shows a Velocity debugging popup
+##
+#macro (debug)
+<script language=javascript>
+        _velocity_console = window.open("",true,"width=680,height=600,resizable,scrollbars=yes");
+        _velocity_console.document.write("<html><head><title>Velocity Debugging Console</title></head><body bgcolor=#ffffff>");
+        _velocity_console.document.write("<table border=0 width=100%>");
+        _velocity_console.document.write("<tr bgcolor=#000000><th colspan='2'><b><font color=#FFFFFF>Velocity Debug Console</font></b></td></tr>");
+        _velocity_console.document.write("<tr bgcolor=#cccccc><td colspan='2'><b>Velocity Context Values:</b></td></tr>");
+        #foreach ($name in ${context.getKeys()})
+                #if($context.get($name))
+                        #set($prefix = "")
+                        #set($invalidMsg = "INVALID VTL: ")
+                        #if($name.matches(".*[:|{|}| ].*"))
+                                #set($prefix = $invalidMsg.concat($prefix))
+                        #end
+                        #if($name.matches("[_|0-9].*"))
+                                #set($prefix = $invalidMsg.concat($prefix))
+                        #end
+                        #set($value = $context.get($name).toString().replaceAll("\n", "\\n").replaceAll("\r", ""))
+                        #printRow($prefix $name $value)
+                #end
+        #end
+        _velocity_console.document.write("</table>");
+        _velocity_console.document.write("</body></html>");
+        _velocity_console.document.close();
+</script>
+#end

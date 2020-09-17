@@ -1,0 +1,151 @@
+PING-IDENTITY-TRAP-VARIABLE-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+    OBJECT-GROUP
+      FROM SNMPv2-CONF
+    Integer32,
+    OBJECT-TYPE,
+    enterprises,
+    MODULE-IDENTITY
+      FROM SNMPv2-SMI
+    ;
+
+pingIdentityTrapVariableModule MODULE-IDENTITY
+  LAST-UPDATED "202006151919Z"
+  ORGANIZATION "Ping Identity Corporation"
+  CONTACT-INFO "www.pingidentity.com"
+  DESCRIPTION
+    "A MIB module defining common variable bindings that are included in alert notifications sent by the server"
+  REVISION     "202006151919Z"
+  DESCRIPTION
+    "A MIB module defining common variable bindings that are included in alert notifications sent by the server"
+  ::= { unboundidDsMibTrap 1 }
+
+unboundid OBJECT IDENTIFIER ::= { enterprises 30221 }
+unboundidDs OBJECT IDENTIFIER ::= { unboundid 2 }
+unboundidDsMib OBJECT IDENTIFIER ::= { unboundidDs 10 }
+unboundidDsMibTrap OBJECT IDENTIFIER ::= { unboundidDsMib 2 }
+unboundidDsTrapVariable OBJECT IDENTIFIER ::= { unboundidDsMib 4 }
+
+
+pingIdentityTrapVariableModuleBindings OBJECT-GROUP
+  OBJECTS   {
+    pingIdentityTrapVariableTrapSeverity,
+    pingIdentityTrapVariableTrapSummary,
+    pingIdentityTrapVariableTrapDescription,
+    pingIdentityTrapVariableObjectName,
+    pingIdentityTrapVariableAlarmType,
+    pingIdentityTrapVariableAlarmTime,
+    pingIdentityTrapVariableProbableCause,
+    pingIdentityTrapVariableSpecificProblems,
+    pingIdentityTrapVariablePerceivedSeverity,
+    pingIdentityTrapVariableNotificationIdentifier,
+    pingIdentityTrapVariableAdditionalText
+  }
+  STATUS current
+  DESCRIPTION
+    "A group containing all the variable bindings defined in this MIB"
+  ::= { pingIdentityTrapVariableModule 2 }
+
+
+pingIdentityTrapVariableTrapSeverity OBJECT-TYPE
+  SYNTAX INTEGER { info(0), warning(1), error(2), fatal(3) }
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "An integer representing the severity of the alert"
+  ::= { unboundidDsTrapVariable 1 }
+
+
+pingIdentityTrapVariableTrapSummary OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "A short message summarizing the alert type"
+  ::= { unboundidDsTrapVariable 2 }
+
+
+pingIdentityTrapVariableTrapDescription OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The alert notification message, or the alert type description if there is no message"
+  ::= { unboundidDsTrapVariable 3 }
+
+
+pingIdentityTrapVariableObjectName OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The name of the component that generated the alert. This is a string containing the product name, the server instance name and the name of the Java class that generated the alert"
+  ::= { unboundidDsTrapVariable 4 }
+
+
+pingIdentityTrapVariableAlarmType OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "An integer representing the type of an alarm. By default the value is set to 'processingErrorAlarm'. See http://www.iana.org/assignments/ianaitualarmtc-mib/ianaitualarmtc-mib for defined values and more information"
+  ::= { unboundidDsTrapVariable 5 }
+
+
+pingIdentityTrapVariableAlarmTime OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The time that the alert notification was generated in standard SNMPv2 DateAndTime format"
+  ::= { unboundidDsTrapVariable 6 }
+
+
+pingIdentityTrapVariableProbableCause OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "An integer representing the probable cause of an alarm. By default the value is set to 'thresholdCrossed'. See http://www.iana.org/assignments/ianaitualarmtc-mib/ianaitualarmtc-mib for defined values and more information"
+  ::= { unboundidDsTrapVariable 7 }
+
+
+pingIdentityTrapVariableSpecificProblems OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "A string containing the specific problems identified by an alarm. For Ping Identity products this is the alert type summary"
+  ::= { unboundidDsTrapVariable 8 }
+
+
+pingIdentityTrapVariablePerceivedSeverity OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "An integer representing the perceived severity of an alarm, with defined values being: indeterminate(2), critical(3), major(4), minor(5), warning(6), and cleared(1)"
+  ::= { unboundidDsTrapVariable 9 }
+
+
+pingIdentityTrapVariableNotificationIdentifier OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "A notification identifier for an alarm. For Ping Identity products this is set to a product internal number which is the ordinal of the alert in the alert type enumeration"
+  ::= { unboundidDsTrapVariable 10 }
+
+
+pingIdentityTrapVariableAdditionalText OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "Additional text of an alarm. This contains the alert notification message, or the alert type description if there is no alert message"
+  ::= { unboundidDsTrapVariable 11 }
+
+
+
+END

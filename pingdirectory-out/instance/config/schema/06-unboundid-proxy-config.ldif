@@ -1,0 +1,1044 @@
+# Copyright 2007-2020 Ping Identity Corporation
+# All Rights Reserved
+#
+# This file contains schema definitions for configuration elements used by
+# the UnboundID Proxy Server.
+dn: cn=schema
+objectClass: top
+objectClass: ldapSubentry
+objectClass: subschema
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.23
+  NAME 'ds-cfg-source-dn'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.24
+  NAME 'ds-cfg-target-dn'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.25
+  NAME 'ds-cfg-enable-attribute-mapping'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.26
+  NAME 'ds-cfg-map-attribute'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.27
+  NAME 'ds-cfg-enable-control-mapping'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.28
+  NAME 'ds-cfg-always-map-responses'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.85
+  NAME 'ds-cfg-transformation-type'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.254
+  NAME 'ds-cfg-backend-server'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.262
+  NAME 'ds-cfg-map-control'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.276
+  NAME 'ds-cfg-subordinate-workflow-element'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.277
+  NAME 'ds-cfg-failover-result'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.280
+  NAME 'ds-cfg-use-for-all-servers'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.281
+  NAME 'ds-cfg-maximum-allowed-local-response-time'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.282
+  NAME 'ds-cfg-degraded-response-time-threshold'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.286
+  NAME 'ds-cfg-use-location'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.287
+  NAME 'ds-cfg-prefer-degraded-servers-over-failover'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.294
+  NAME 'ds-cfg-maximum-local-available-response-time'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.295
+  NAME 'ds-cfg-minimum-local-degraded-response-time'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.296
+  NAME 'ds-cfg-maximum-local-degraded-response-time'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.297
+  NAME 'ds-cfg-minimum-local-unavailable-response-time'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.298
+  NAME 'ds-cfg-allow-no-entries-returned'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.299
+  NAME 'ds-cfg-allow-multiple-entries-returned'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.300
+  NAME 'ds-cfg-available-filter'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.301
+  NAME 'ds-cfg-degraded-filter'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.302
+  NAME 'ds-cfg-unavailable-filter'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.304
+  NAME 'ds-cfg-maximum-retry-count'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.306
+  NAME 'ds-cfg-maximum-nonlocal-available-response-time'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.307
+  NAME 'ds-cfg-minimum-nonlocal-degraded-response-time'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.308
+  NAME 'ds-cfg-maximum-nonlocal-degraded-response-time'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.309
+  NAME 'ds-cfg-minimum-nonlocal-unavailable-response-time'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.310
+  NAME 'ds-cfg-maximum-allowed-nonlocal-response-time'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.311
+  NAME 'ds-cfg-entry-balancing-base-dn'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.312
+  NAME 'ds-cfg-enable-dn-mapping'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.313
+  NAME 'ds-cfg-placement-algorithm'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.314
+  NAME 'ds-cfg-global-index-memory-percent'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.316
+  NAME 'ds-cfg-prime-rdn-index'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.318
+  NAME 'ds-cfg-referral-behavior'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.319
+  NAME 'ds-cfg-supported-control'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.320
+  NAME 'ds-cfg-supported-control-oid'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.324
+  NAME 'ds-cfg-monitored-attribute'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.325
+  NAME 'ds-cfg-monitored-entry'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.326
+  NAME 'ds-cfg-placement-criteria'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.327
+  NAME 'ds-cfg-prefer-lowest-value'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.328
+  NAME 'ds-cfg-maximum-available-missing-changes'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.329
+  NAME 'ds-cfg-minimum-degraded-missing-changes'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.330
+  NAME 'ds-cfg-maximum-degraded-missing-changes'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.331
+  NAME 'ds-cfg-minimum-unavailable-missing-changes'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.332
+  NAME 'ds-cfg-maximum-available-missing-change-age'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.333
+  NAME 'ds-cfg-minimum-degraded-missing-change-age'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.334
+  NAME 'ds-cfg-maximum-degraded-missing-change-age'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.335
+  NAME 'ds-cfg-minimum-unavailable-missing-change-age'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.342
+  NAME 'ds-backend-server'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.344
+  NAME 'ds-cfg-guaranteed-unique'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.406
+  NAME 'ds-cfg-server-affinity-provider'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.407
+  NAME 'ds-cfg-affinity-duration'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.408
+  NAME 'ds-cfg-set-affinity-operation'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.409
+  NAME 'ds-cfg-use-affinity-operation'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.414
+  NAME 'ds-cfg-maximum-available-percent-busy'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.415
+  NAME 'ds-cfg-minimum-degraded-percent-busy'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.416
+  NAME 'ds-cfg-maximum-degraded-percent-busy'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.417
+  NAME 'ds-cfg-minimum-unavailable-percent-busy'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.418
+  NAME 'ds-cfg-authz-attribute'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.419
+  NAME 'ds-cfg-authz-dn'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.420
+  NAME 'ds-cfg-reject-request-type'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.428
+  NAME 'ds-cfg-weight'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.429
+  NAME 'ds-cfg-server-set'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.430
+  NAME 'ds-authz-map-to-dn'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.433
+  NAME 'ds-cfg-rdn-index-size'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.434
+  NAME 'ds-cfg-index-size'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.435
+  NAME 'ds-cfg-backend-set-id'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.442
+  NAME 'ds-task-reload-base-dn'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.443
+  NAME 'ds-task-reload-index-name'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.444
+  NAME 'ds-task-reload-background'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.449
+  NAME 'ds-cfg-prime-from-proxy-server'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.489
+  NAME 'ds-cfg-operation-to-retry'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.490
+  NAME 'ds-cfg-maximum-retryable-local-read-response-time'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.491
+  NAME 'ds-cfg-maximum-non-retryable-local-read-response-time'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.492
+  NAME 'ds-cfg-maximum-retryable-local-write-response-time'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.493
+  NAME 'ds-cfg-maximum-non-retryable-local-write-response-time'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.494
+  NAME 'ds-cfg-maximum-retryable-nonlocal-read-response-time'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.495
+  NAME 'ds-cfg-maximum-non-retryable-nonlocal-read-response-time'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.496
+  NAME 'ds-cfg-maximum-retryable-nonlocal-write-response-time'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.497
+  NAME 'ds-cfg-maximum-non-retryable-nonlocal-write-response-time'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.498
+  NAME 'ds-cfg-duplicate-entry-search'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.512
+  NAME 'ds-cfg-prime-index-source'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.513
+  NAME 'ds-cfg-peer-proxy-server'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.514
+  NAME 'ds-cfg-prime-from-proxy-maximum-retry-count'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.567
+  NAME 'ds-cfg-failover-for-search-returning-no-entries'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.568
+  NAME 'ds-cfg-entry-type'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.583
+  NAME 'ds-cfg-process-simple-bind-on-external-failure'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.634
+  NAME 'ds-task-reload-from-ds'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.694
+  NAME 'ds-cfg-broadcast-updates-above-balancing-point'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.708
+  NAME 'ds-cfg-prime-search-entry-per-second'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.709
+  NAME 'ds-task-search-entry-per-second'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.728
+  NAME 'ds-cfg-preferred-failure-result-codes'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.732
+  NAME 'ds-cfg-log-index-duplicates'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.911
+  NAME 'ds-cfg-criteria-based-load-balancing-algorithm'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.972
+  NAME 'ds-cfg-assign-client-connection-policy-from-backend-server'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.994
+  NAME 'ds-cfg-rebalancing-enabled'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.995
+  NAME 'ds-cfg-rebalancing-scope'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.996
+  NAME 'ds-cfg-rebalancing-subtree-size-limit'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.997
+  NAME 'ds-cfg-rebalancing-queue-maximum-size'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.998
+  NAME 'ds-cfg-rebalancing-minimum-percentage'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1236
+  NAME 'ds-cfg-pre-commit-validation'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1237
+  NAME 'ds-cfg-post-commit-validation'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1336
+  NAME 'ds-cfg-global-index-update-method-for-deletes'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1561
+  NAME 'ds-cfg-persist-global-index-frequency'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1562
+  NAME 'ds-cfg-persist-global-index-directory'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1563
+  NAME 'ds-cfg-persist-global-index-at-shutdown'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1565
+  NAME 'ds-cfg-poll-backend-servers-for-global-index-changes'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1713
+  NAME 'ds-cfg-route-to-backend-set-behavior'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1837
+  NAME 'ds-cfg-index-priming-idle-listener-timeout'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2140
+  NAME 'ds-cfg-load-spreading-base-dn'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.12
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.2238
+  NAME 'ds-cfg-balance-requests-across-servers-with-same-operation-count'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.22
+  NAME 'ds-cfg-dn-mapper-plugin'
+  SUP ds-cfg-plugin
+  STRUCTURAL
+  MUST ( ds-cfg-source-dn $
+         ds-cfg-target-dn $
+         ds-cfg-enable-attribute-mapping $
+         ds-cfg-enable-control-mapping $
+         ds-cfg-always-map-responses )
+  MAY ds-cfg-map-attribute
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.23
+  NAME 'ds-cfg-attribute-mapper-plugin'
+  SUP ds-cfg-plugin
+  STRUCTURAL
+  MUST ( ds-cfg-source-attribute $
+         ds-cfg-target-attribute $
+         ds-cfg-enable-control-mapping $
+         ds-cfg-always-map-responses )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.44
+  NAME 'ds-cfg-proxy-workflow-element'
+  SUP ds-cfg-workflow-element
+  STRUCTURAL
+  MUST ds-cfg-load-balancing-algorithm
+  MAY ds-cfg-transformation
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.45
+  NAME 'ds-cfg-load-balancing-algorithm'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $
+         ds-cfg-enabled $
+         ds-cfg-java-class )
+  MAY ( ds-cfg-description $
+        ds-cfg-initial-connections $
+        ds-cfg-max-connections )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.46
+  NAME 'ds-cfg-proxy-transformation'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $
+         ds-cfg-enabled $
+         ds-cfg-java-class )
+  MAY ( ds-cfg-description $
+        ds-cfg-request-criteria )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.89
+  NAME 'ds-cfg-single-server-load-balancing-algorithm'
+  SUP ds-cfg-load-balancing-algorithm
+  STRUCTURAL
+  MUST ds-cfg-backend-server
+  MAY ( ds-cfg-maximum-allowed-local-response-time $
+        ds-cfg-maximum-allowed-nonlocal-response-time )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.90
+  NAME 'ds-cfg-dn-mapping-proxy-transformation'
+  SUP ds-cfg-proxy-transformation
+  STRUCTURAL
+  MUST ( ds-cfg-source-dn $
+         ds-cfg-target-dn $
+         ds-cfg-enable-attribute-mapping $
+         ds-cfg-enable-control-mapping $
+         ds-cfg-map-control )
+  MAY ds-cfg-map-attribute
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.98
+  NAME 'ds-cfg-failover-workflow-element'
+  SUP ds-cfg-workflow-element
+  STRUCTURAL
+  MUST ds-cfg-subordinate-workflow-element
+  MAY ds-cfg-failover-result
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.100
+  NAME 'ds-cfg-ldap-health-check'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $
+         ds-cfg-enabled $
+         ds-cfg-java-class )
+  MAY ( ds-cfg-description $
+        ds-cfg-use-for-all-servers )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.101
+  NAME 'ds-cfg-search-ldap-health-check'
+  SUP ds-cfg-ldap-health-check
+  STRUCTURAL
+  MAY ( ds-cfg-base-dn $
+        ds-cfg-scope $
+        ds-cfg-filter $
+        ds-cfg-maximum-local-available-response-time $
+        ds-cfg-maximum-nonlocal-available-response-time $
+        ds-cfg-minimum-local-degraded-response-time $
+        ds-cfg-minimum-nonlocal-degraded-response-time $
+        ds-cfg-maximum-local-degraded-response-time $
+        ds-cfg-maximum-nonlocal-degraded-response-time $
+        ds-cfg-minimum-local-unavailable-response-time $
+        ds-cfg-minimum-nonlocal-unavailable-response-time $
+        ds-cfg-allow-no-entries-returned $
+        ds-cfg-allow-multiple-entries-returned $
+        ds-cfg-available-filter $
+        ds-cfg-degraded-filter $
+        ds-cfg-unavailable-filter $
+        ds-cfg-use-administrative-operation-control )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.116
+  NAME 'ds-cfg-location-based-load-balancing-algorithm'
+  SUP ds-cfg-load-balancing-algorithm
+  STRUCTURAL
+  MUST ( ds-cfg-maximum-allowed-local-response-time $
+         ds-cfg-maximum-allowed-nonlocal-response-time $
+         ds-cfg-maximum-retry-count )
+  MAY ( ds-cfg-backend-server $
+        ds-cfg-ldap-external-server-template $
+        ds-cfg-use-location $
+        ds-cfg-prefer-degraded-servers-over-failover $
+        ds-cfg-server-affinity-provider $
+        ds-cfg-operation-to-retry $
+        ds-cfg-maximum-retryable-local-read-response-time $
+        ds-cfg-maximum-non-retryable-local-read-response-time $
+        ds-cfg-maximum-retryable-local-write-response-time $
+        ds-cfg-maximum-non-retryable-local-write-response-time $
+        ds-cfg-maximum-retryable-nonlocal-read-response-time $
+        ds-cfg-maximum-non-retryable-nonlocal-read-response-time $
+        ds-cfg-maximum-retryable-nonlocal-write-response-time $
+        ds-cfg-maximum-non-retryable-nonlocal-write-response-time )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.103
+  NAME 'ds-cfg-round-robin-load-balancing-algorithm'
+  SUP ds-cfg-location-based-load-balancing-algorithm
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.106
+  NAME 'ds-cfg-backend-request-processor'
+  SUP ds-cfg-request-processor
+  STRUCTURAL
+  MUST ds-cfg-backend
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.107
+  NAME 'ds-cfg-proxying-request-processor'
+  SUP ds-cfg-request-processor
+  STRUCTURAL
+  MUST ds-cfg-load-balancing-algorithm
+  MAY ( ds-cfg-transformation $
+        ds-cfg-referral-behavior $
+        ds-cfg-supported-control $
+        ds-cfg-supported-control-oid $
+        ds-cfg-criteria-based-load-balancing-algorithm $
+        ds-cfg-assign-client-connection-policy-from-backend-server )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.108
+  NAME 'ds-cfg-failover-request-processor'
+  SUP ds-cfg-request-processor
+  STRUCTURAL
+  MUST ds-cfg-subordinate-request-processor
+  MAY ( ds-cfg-failover-result $
+        ds-cfg-failover-for-search-returning-no-entries )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.109
+  NAME 'ds-cfg-health-weighted-load-balancing-algorithm'
+  SUP ds-cfg-location-based-load-balancing-algorithm
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.110
+  NAME 'ds-cfg-failover-load-balancing-algorithm'
+  SUP ds-cfg-location-based-load-balancing-algorithm
+  STRUCTURAL
+  MAY ds-cfg-load-spreading-base-dn
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.111
+  NAME 'ds-cfg-attribute-mapping-proxy-transformation'
+  SUP ds-cfg-proxy-transformation
+  STRUCTURAL
+  MUST ( ds-cfg-source-attribute $
+         ds-cfg-target-attribute $
+         ds-cfg-enable-dn-mapping $
+         ds-cfg-enable-control-mapping $
+         ds-cfg-map-control )
+  MAY ds-cfg-map-attribute
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.112
+  NAME 'ds-cfg-entry-balancing-request-processor'
+  SUP ds-cfg-intermediate-request-processor
+  STRUCTURAL
+  MUST ( ds-cfg-entry-balancing-base-dn $
+         ds-cfg-global-index-memory-percent $
+         ds-cfg-prime-all-indexes $
+         ds-cfg-prime-rdn-index $
+         ds-cfg-background-prime $
+         ds-cfg-values-per-stream-response )
+  MAY ( ds-cfg-prime-thread-count $
+        ds-cfg-authz-attribute $
+        ds-cfg-authz-dn $
+        ds-cfg-rdn-index-size $
+        ds-cfg-duplicate-entry-search  $
+        ds-cfg-prime-index-source $
+        ds-cfg-peer-proxy-server $
+        ds-cfg-prime-from-proxy-maximum-retry-count $
+        ds-cfg-broadcast-updates-above-balancing-point $
+        ds-cfg-prime-search-entry-per-second $
+        ds-cfg-preferred-failure-result-codes $
+        ds-cfg-log-index-duplicates $
+        ds-cfg-rebalancing-queue-maximum-size $
+        ds-cfg-global-index-update-method-for-deletes $
+        ds-cfg-persist-global-index-frequency $
+        ds-cfg-persist-global-index-directory $
+        ds-cfg-persist-global-index-at-shutdown $
+        ds-cfg-global-index-update-method-for-deletes $
+        ds-cfg-poll-backend-servers-for-global-index-changes $
+        ds-cfg-index-priming-idle-listener-timeout )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.113
+  NAME 'ds-cfg-placement-algorithm'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $
+         ds-cfg-java-class $
+         ds-cfg-enabled )
+  MAY ( ds-cfg-description $
+        ds-cfg-rebalancing-enabled $
+        ds-cfg-rebalancing-scope $
+        ds-cfg-rebalancing-subtree-size-limit )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.114
+  NAME 'ds-cfg-round-robin-placement-algorithm'
+  SUP ds-cfg-placement-algorithm
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.121
+  NAME 'ds-cfg-entry-counter-placement-algorithm'
+  SUP ds-cfg-placement-algorithm
+  STRUCTURAL
+  MAY ( ds-cfg-monitored-attribute $
+        ds-cfg-monitored-entry $
+        ds-cfg-placement-criteria $
+        ds-cfg-poll-interval $
+        ds-cfg-prefer-lowest-value $
+        ds-cfg-rebalancing-minimum-percentage )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.115
+  NAME 'ds-cfg-global-attribute-index'
+  SUP top
+  STRUCTURAL
+  MUST ( ds-cfg-attribute $
+         ds-cfg-prime-index $
+         ds-cfg-guaranteed-unique )
+  MAY ( ds-cfg-index-size )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.117
+  NAME 'ds-ldap-external-server-monitor-entry'
+  SUP ds-monitor-entry
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.118
+  NAME 'ds-entry-balancing-request-processor-monitor-entry'
+  SUP ds-monitor-entry
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.123
+  NAME 'ds-cfg-admin-alert-ldap-health-check'
+  SUP ds-cfg-ldap-health-check
+  STRUCTURAL
+  MAY ( ds-cfg-maximum-allowed-local-response-time $
+        ds-cfg-maximum-allowed-nonlocal-response-time )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.124
+  NAME 'ds-cfg-replication-backlog-ldap-health-check'
+  SUP ds-cfg-ldap-health-check
+  STRUCTURAL
+  MUST ds-cfg-base-dn
+  MAY ( ds-cfg-maximum-available-missing-changes $
+        ds-cfg-minimum-degraded-missing-changes $
+        ds-cfg-maximum-degraded-missing-changes $
+        ds-cfg-minimum-unavailable-missing-changes $
+        ds-cfg-maximum-available-missing-change-age $
+        ds-cfg-minimum-degraded-missing-change-age $
+        ds-cfg-maximum-degraded-missing-change-age $
+        ds-cfg-minimum-unavailable-missing-change-age $
+        ds-cfg-maximum-allowed-local-response-time $
+        ds-cfg-maximum-allowed-nonlocal-response-time )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.139
+  NAME 'ds-cfg-server-affinity-provider'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $
+         ds-cfg-enabled $
+         ds-cfg-java-class $
+         ds-cfg-affinity-duration $
+         ds-cfg-set-affinity-operation $
+         ds-cfg-use-affinity-operation )
+  MAY ds-cfg-description
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.140
+  NAME 'ds-cfg-bind-dn-server-affinity-provider'
+  SUP ds-cfg-server-affinity-provider
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.141
+  NAME 'ds-cfg-client-connection-server-affinity-provider'
+  SUP ds-cfg-server-affinity-provider
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.142
+  NAME 'ds-cfg-client-ip-server-affinity-provider'
+  SUP ds-cfg-server-affinity-provider
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.145
+  NAME 'ds-cfg-work-queue-busyness-ldap-health-check'
+  SUP ds-cfg-ldap-health-check
+  STRUCTURAL
+  MUST ( ds-cfg-maximum-available-percent-busy $
+         ds-cfg-minimum-degraded-percent-busy $
+         ds-cfg-maximum-degraded-percent-busy $
+         ds-cfg-minimum-unavailable-percent-busy $
+         ds-cfg-maximum-allowed-local-response-time $
+         ds-cfg-maximum-allowed-nonlocal-response-time )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.146
+  NAME 'ds-cfg-suppress-attribute-proxy-transformation'
+  SUP ds-cfg-proxy-transformation
+  STRUCTURAL
+  MUST ds-cfg-target-attribute
+  MAY ds-cfg-reject-request-type
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.147
+  NAME 'ds-cfg-suppress-entry-proxy-transformation'
+  SUP ds-cfg-proxy-transformation
+  STRUCTURAL
+  MUST ds-cfg-filter
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.153
+  NAME 'ds-cfg-weighted-server-set'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $
+         ds-cfg-weight $
+         ds-cfg-backend-server )
+  MAY ds-cfg-description
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.154
+  NAME 'ds-cfg-weighted-load-balancing-algorithm'
+  SUP ds-cfg-load-balancing-algorithm
+  STRUCTURAL
+  MUST ( ds-cfg-server-set $
+         ds-cfg-maximum-allowed-local-response-time $
+         ds-cfg-maximum-allowed-nonlocal-response-time $
+         ds-cfg-maximum-retry-count )
+  MAY ( ds-cfg-use-location $
+        ds-cfg-prefer-degraded-servers-over-failover $
+        ds-cfg-server-affinity-provider $
+        ds-cfg-operation-to-retry )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.156
+  NAME 'ds-cfg-single-set-placement-algorithm'
+  SUP ds-cfg-placement-algorithm
+  STRUCTURAL
+  MUST ds-cfg-backend-set-id
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.163
+  NAME 'ds-task-reload-index'
+  SUP ds-task
+  STRUCTURAL
+  MUST ( ds-task-reload-base-dn )
+  MAY ( ds-task-reload-index-name $
+        ds-task-reload-background $
+        ds-task-reload-from-ds $
+        ds-task-search-entry-per-second )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.187
+  NAME 'ds-cfg-hash-dn-placement-algorithm'
+  SUP ds-cfg-placement-algorithm
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.190
+  NAME 'ds-cfg-fewest-operations-load-balancing-algorithm'
+  SUP ds-cfg-location-based-load-balancing-algorithm
+  STRUCTURAL
+  MAY ds-cfg-balance-requests-across-servers-with-same-operation-count
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.191
+  NAME 'ds-cfg-default-value-proxy-transformation'
+  SUP ds-cfg-proxy-transformation
+  STRUCTURAL
+  MUST ( ds-cfg-target-attribute $
+         ds-cfg-value $
+         ds-cfg-entry-type )
+  MAY ( ds-cfg-base-dn $
+        ds-cfg-scope $
+        ds-cfg-filter $
+        ds-cfg-conflict-behavior )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.195
+  NAME 'ds-cfg-simple-to-external-bind-proxy-transformation'
+  SUP ds-cfg-proxy-transformation
+  STRUCTURAL
+  MAY ds-cfg-process-simple-bind-on-external-failure
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.223
+  NAME 'ds-cfg-third-party-ldap-health-check'
+  SUP ds-cfg-ldap-health-check
+  STRUCTURAL
+  MUST ds-cfg-extension-class
+  MAY ds-cfg-extension-argument
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.224
+  NAME 'ds-cfg-third-party-placement-algorithm'
+  SUP ds-cfg-placement-algorithm
+  STRUCTURAL
+  MUST ds-cfg-extension-class
+  MAY ds-cfg-extension-argument
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.225
+  NAME 'ds-cfg-third-party-proxy-transformation'
+  SUP ds-cfg-proxy-transformation
+  STRUCTURAL
+  MUST ds-cfg-extension-class
+  MAY ds-cfg-extension-argument
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.235
+  NAME 'ds-cfg-scripted-ldap-health-check'
+  SUP ds-cfg-ldap-health-check
+  STRUCTURAL
+  MAY ds-cfg-script-argument
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.239
+  NAME 'ds-cfg-scripted-proxy-transformation'
+  SUP ds-cfg-proxy-transformation
+  STRUCTURAL
+  MAY ds-cfg-script-argument
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.248
+  NAME 'ds-cfg-groovy-scripted-ldap-health-check'
+  SUP ds-cfg-scripted-ldap-health-check
+  STRUCTURAL
+  MUST ds-cfg-script-class
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.252
+  NAME 'ds-cfg-groovy-scripted-proxy-transformation'
+  SUP ds-cfg-scripted-proxy-transformation
+  STRUCTURAL
+  MUST ds-cfg-script-class
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.348
+  NAME 'ds-cfg-criteria-based-load-balancing-algorithm'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $
+         ds-cfg-load-balancing-algorithm )
+  MAY ( ds-cfg-description $
+        ds-cfg-connection-criteria $
+        ds-cfg-request-criteria )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.492
+  NAME 'ds-cfg-globally-unique-attribute-plugin'
+  SUP ds-cfg-plugin
+  STRUCTURAL
+  MUST ds-cfg-type
+  MAY ( ds-cfg-subtree-view $
+        ds-cfg-prevent-conflicts-with-soft-deleted-entries $
+        ds-cfg-multiple-attribute-behavior $
+        ds-cfg-pre-commit-validation $
+        ds-cfg-post-commit-validation $
+        ds-cfg-filter )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.494
+  NAME 'ds-cfg-global-referential-integrity-plugin'
+  SUP ds-cfg-plugin
+  STRUCTURAL
+  MUST ( ds-cfg-attribute-type $
+         ds-cfg-subtree-view )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.530
+  NAME 'ds-load-balancing-algorithm-monitor-entry'
+  SUP ds-monitor-entry
+  STRUCTURAL
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.540
+  NAME 'ds-cfg-third-party-proxied-extended-operation-handler'
+  SUP ds-cfg-extended-operation-handler
+  STRUCTURAL
+  MUST ds-cfg-extension-class
+  MAY ( ds-cfg-extension-argument $
+        ds-cfg-route-to-backend-set-behavior )
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.572
+  NAME 'ds-cfg-third-party-server-affinity-provider'
+  SUP ds-cfg-server-affinity-provider
+  STRUCTURAL
+  MUST ds-cfg-extension-class
+  MAY ds-cfg-extension-argument
+  X-ORIGIN 'UnboundID Directory Server' )
+

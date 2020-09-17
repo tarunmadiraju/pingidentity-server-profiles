@@ -1,0 +1,97 @@
+# CDDL HEADER START
+#
+# The contents of this file are subject to the terms of the
+# Common Development and Distribution License, Version 1.0 only
+# (the "License").  You may not use this file except in compliance
+# with the License.
+#
+# You can obtain a copy of the license at
+# trunk/ds/resource/legal-notices/cddl.txt
+# or http://www.opensource.org/licenses/cddl1.php.
+# See the License for the specific language governing permissions
+# and limitations under the License.
+#
+# When distributing Covered Code, include this CDDL HEADER in each
+# file and include the License file at
+# trunk/ds/resource/legal-notices/cddl.txt.  If applicable,
+# add the following below this CDDL HEADER, with the fields enclosed
+# by brackets "[]" replaced with your own identifying information:
+#      Portions Copyright [yyyy] [name of copyright owner]
+#
+# CDDL HEADER END
+#
+#
+#      Portions Copyright 2007-2020 Ping Identity Corporation
+#      Portions Copyright 2006-2008 Sun Microsystems, Inc.
+#
+#
+# This file contains schema definitions for storing HTTP sessions using the
+# LDAP HTTP Session Manager
+dn: cn=schema
+objectClass: top
+objectClass: ldapSubentry
+objectClass: subschema
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1261
+  NAME 'ds-http-session-attributes'
+  DESC 'Session attributes'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.5
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1288
+  NAME 'ds-http-session-id'
+  DESC 'Session ID'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1289
+  NAME 'ds-http-session-context-path'
+  DESC 'Context path'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1290
+  NAME 'ds-http-session-virtual-host'
+  DESC 'Virtual host for context'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1291
+  NAME 'ds-http-session-last-node'
+  DESC 'Unique identifier of the last node to host the session'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1292
+  NAME 'ds-http-session-access-time'
+  DESC 'Time the session is accessed'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1293
+  NAME 'ds-http-session-last-access-time'
+  DESC 'Time the session was last accessed'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+attributeTypes: ( 1.3.6.1.4.1.30221.2.1.1299
+  NAME 'ds-http-session-expiry-time'
+  DESC 'Time the session will expire'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.24
+  SINGLE-VALUE
+  X-ORIGIN 'UnboundID Directory Server' )
+objectClasses: ( 1.3.6.1.4.1.30221.2.2.442
+  NAME 'ds-http-session'
+  DESC 'authentication password mix in class'
+  SUP top
+  STRUCTURAL
+  MUST ( cn $
+         ds-http-session-id $
+         ds-http-session-virtual-host $
+         ds-http-session-access-time $
+         ds-http-session-last-access-time $
+         ds-http-session-expiry-time $
+         ds-http-session-attributes $
+         ds-http-session-context-path )
+  MAY ds-http-session-last-node
+  X-ORIGIN 'UnboundID Directory Server' )
+

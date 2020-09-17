@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+    <head>
+        <title>Generated Documentation for Autoincrement</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="unboundid.css" type="text/css">
+        <link rel="shortcut icon" href="images/favicon.ico">
+    </head>
+
+    <body>
+      <header class="titletable" width="100%">
+          <div class="title" width="50%">
+              <h1>Generated Documentation for Autoincrement</h1>
+          </div>
+          <div class="logo" width="50%">
+              <a href="http://www.unboundid.com" target="_parent">
+                  <img src="images/vendor-name-on-white.png" width="198" height="58" border="0" alt="Ping Identity">
+              </a>
+          </div>
+      </header>
+
+      <section id="content">
+
+        <section id="description">
+                                                    <p>This extension implements an autoincrement mechanism for PingDirectory.</p>
+                                <p>The autoincrement behavior is controlled by creating sequence entries.<br/>These entries serve to: <ul><li>configure the sequence behavior, such as:<ul><li>autoincrementSequenceMin: where the sequence starts</li><li>autoincrementSequenceMax: where the sequence stops before cycling over</li><li>autoincrementSequenceIncrement: the increment value</li><li>autoincrementSequenceCache: the number of increments to do in-memory before persisting the entry to disk.<ul><li>a value of 0 disables caching and persists every change. This is best for low-frequency, high consistency sequences.<li>a value greater than 0 will persist increments less often which allows use cases requiring high-frequency sequences.</li></ul></li></ul></li><li>persist state and observe behavior, such as:<ul><li>autoincrementSequenceValue: current value of the sequence</li><li>autoincrementSequenceCycle: the number of times the sequence hit its configured maximum</li></ul></li></ul><br/>In addition, the autoicrement extension has arguments to curtail the location in the DIT where sequence entries will be actively maintained:<ul><li>base: the base DN under which the autoincrement extension will maintain active sequence entries</li><li>filter: a well-formed LDAP v3 filter that will select sequence entries</li></ul>The defaults should work out of the box for most users. Here is an example of creating an instance of the extension:<pre>dsconfig create-plugin 
+    --plugin-name Autoincrement  
+    --type third-party  
+    --set enabled:false  
+    --set plugin-type:postoperationadd  
+    --set plugin-type:postoperationdelete  
+    --set plugin-type:postoperationmodify  
+    --set plugin-type:postoperationmodifydn  
+    --set plugin-type:preparsesearch  
+    --set extension-class:com.pingidentity.ds.plugin.Autoincrement 
+    --set extension-argument:base=dc=example,dc=com</pre>Here is an example sequence entry:<pre>dn: uid=sequence.0,dc=example,dc=com
+objectClass: autoincrementSequence
+objectClass: uidObject
+uid: sequence.0
+autoincrementSequenceCache: 0
+autoincrementSequenceCycle: 0
+autoincrementSequenceIncrement: 1
+autoincrementSequenceMax: 10000000
+autoincrementSequenceMin: 0
+autoincrementSequenceValue: 0</pre></p>
+                                  </section>
+
+        <section id="arguments">
+                                  <h2>Allowed Arguments</h2>
+                                <p>
+                  <table border="0" width="100%">
+                      <tr width="100%">
+                          <td width="20%"><b>Argument Name:</b></td>
+                          <td width="80%">incrementAttribute</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Description:</b></td>
+                          <td width="80%">Name of the attributeName containing the sequence value. (default:autoincrementSequenceIncrement)</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Data Type:</b></td>
+                          <td width="80%">String</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Is Required:</b></td>
+                          <td width="80%">true</td>
+                      </tr>
+                                          <tr width="100%">
+                          <td width="20%"><b>Maximum Occurrences:</b></td>
+                          <td width="80%"> 1 </td>
+                      </tr>
+                  </table>
+                  </p>
+                                <p>
+                  <table border="0" width="100%">
+                      <tr width="100%">
+                          <td width="20%"><b>Argument Name:</b></td>
+                          <td width="80%">minAttribute</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Description:</b></td>
+                          <td width="80%">Name of the attributeName containing the sequence minimum value. (default:autoincrementSequenceMin)</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Data Type:</b></td>
+                          <td width="80%">String</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Is Required:</b></td>
+                          <td width="80%">true</td>
+                      </tr>
+                                          <tr width="100%">
+                          <td width="20%"><b>Maximum Occurrences:</b></td>
+                          <td width="80%"> 1 </td>
+                      </tr>
+                  </table>
+                  </p>
+                                <p>
+                  <table border="0" width="100%">
+                      <tr width="100%">
+                          <td width="20%"><b>Argument Name:</b></td>
+                          <td width="80%">maxAttribute</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Description:</b></td>
+                          <td width="80%">Name of the attributeName containing the sequence maximum value. (default:autoincrementSequenceMax)</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Data Type:</b></td>
+                          <td width="80%">String</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Is Required:</b></td>
+                          <td width="80%">true</td>
+                      </tr>
+                                          <tr width="100%">
+                          <td width="20%"><b>Maximum Occurrences:</b></td>
+                          <td width="80%"> 1 </td>
+                      </tr>
+                  </table>
+                  </p>
+                                <p>
+                  <table border="0" width="100%">
+                      <tr width="100%">
+                          <td width="20%"><b>Argument Name:</b></td>
+                          <td width="80%">cycleAttribute</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Description:</b></td>
+                          <td width="80%">Name of the attributeName containing the sequence cycle value. (default:autoincrementSequenceCycle)</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Data Type:</b></td>
+                          <td width="80%">String</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Is Required:</b></td>
+                          <td width="80%">true</td>
+                      </tr>
+                                          <tr width="100%">
+                          <td width="20%"><b>Maximum Occurrences:</b></td>
+                          <td width="80%"> 1 </td>
+                      </tr>
+                  </table>
+                  </p>
+                                <p>
+                  <table border="0" width="100%">
+                      <tr width="100%">
+                          <td width="20%"><b>Argument Name:</b></td>
+                          <td width="80%">cacheAttribute</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Description:</b></td>
+                          <td width="80%">Name of the attributeName containing the sequence cache value. (default:autoincrementSequenceCache)</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Data Type:</b></td>
+                          <td width="80%">String</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Is Required:</b></td>
+                          <td width="80%">true</td>
+                      </tr>
+                                          <tr width="100%">
+                          <td width="20%"><b>Maximum Occurrences:</b></td>
+                          <td width="80%"> 1 </td>
+                      </tr>
+                  </table>
+                  </p>
+                                <p>
+                  <table border="0" width="100%">
+                      <tr width="100%">
+                          <td width="20%"><b>Argument Name:</b></td>
+                          <td width="80%">valueAttribute</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Description:</b></td>
+                          <td width="80%">Name of the attributeName containing the sequence value. (default:autoincrementSequenceValue)</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Data Type:</b></td>
+                          <td width="80%">String</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Is Required:</b></td>
+                          <td width="80%">true</td>
+                      </tr>
+                                          <tr width="100%">
+                          <td width="20%"><b>Maximum Occurrences:</b></td>
+                          <td width="80%"> 1 </td>
+                      </tr>
+                  </table>
+                  </p>
+                                <p>
+                  <table border="0" width="100%">
+                      <tr width="100%">
+                          <td width="20%"><b>Argument Name:</b></td>
+                          <td width="80%">base</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Description:</b></td>
+                          <td width="80%">Base DN where sequence entries relevant for this instance of the plugin are stored (default: "")</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Data Type:</b></td>
+                          <td width="80%">LDAP Distinguished Name</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Is Required:</b></td>
+                          <td width="80%">false</td>
+                      </tr>
+                                          <tr width="100%">
+                          <td width="20%"><b>Maximum Occurrences:</b></td>
+                          <td width="80%"> 1 </td>
+                      </tr>
+                  </table>
+                  </p>
+                                <p>
+                  <table border="0" width="100%">
+                      <tr width="100%">
+                          <td width="20%"><b>Argument Name:</b></td>
+                          <td width="80%">filter</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Description:</b></td>
+                          <td width="80%">Filter to narrow down which entries this plugin should search to retrieve and initialize sequences from. (default: (objectClass=autoincrementSequence))</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Data Type:</b></td>
+                          <td width="80%">LDAP Search Filter</td>
+                      </tr>
+                      <tr width="100%">
+                          <td width="20%"><b>Is Required:</b></td>
+                          <td width="80%">false</td>
+                      </tr>
+                                          <tr width="100%">
+                          <td width="20%"><b>Maximum Occurrences:</b></td>
+                          <td width="80%"> 1 </td>
+                      </tr>
+                  </table>
+                  </p>
+                                </section>
+
+        <section id="usages">
+                            </section>
+
+      </section>
+
+      <footer>Copyright &copy; 2010-2016&ndash; UnboundID Corp. &ndash; All rights reserved.</footer>
+    </body>
+</html>

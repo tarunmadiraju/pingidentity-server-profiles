@@ -1,0 +1,5 @@
+dn: o=Change Subscriptions
+objectClass: top
+objectClass: organization
+o: Change Subscriptions
+

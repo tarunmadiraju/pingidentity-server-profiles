@@ -1,0 +1,120 @@
+PING-IDENTITY-REPLICATION-MIB DEFINITIONS ::= BEGIN
+
+
+
+IMPORTS
+  Integer32,Unsigned32,OBJECT-TYPE,enterprises,MODULE-IDENTITY
+    FROM SNMPv2-SMI
+  OBJECT-GROUP
+    FROM SNMPv2-CONF
+  ;
+
+
+pingIdentityReplicationModule MODULE-IDENTITY
+  LAST-UPDATED "202006151919Z"
+  ORGANIZATION "Ping Identity"
+  CONTACT-INFO "Ping Identity Corporation
+      www.pingidentity.com"
+  DESCRIPTION
+    "The Replication MIB provides key metrics related to the current state
+      of replication which can help diagnose how much outstanding work
+      replication may have to do."
+  ::= { unboundidDsMibMonitor 4 }
+
+unboundid OBJECT IDENTIFIER ::= { enterprises 30221 }
+unboundidDs OBJECT IDENTIFIER ::= { unboundid 2 }
+unboundidDsMib OBJECT IDENTIFIER ::= { unboundidDs 10 }
+unboundidDsMibMonitor OBJECT IDENTIFIER ::= { unboundidDsMib 1 }
+
+replicationGroup OBJECT-GROUP
+  OBJECTS {
+    numberOfMissingChanges,
+    oldestMissingChangeDate,
+    replicaCount,
+    replicationDomainID
+  }
+  STATUS current
+  DESCRIPTION
+    "Required conformance group definition for the Replication MIB."
+  ::= { pingIdentityReplicationModule 1 }
+
+
+
+replicationObjects OBJECT IDENTIFIER
+  ::= { pingIdentityReplicationModule 2 }
+
+replicaCount OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The number of replicas contained in the server."
+  ::= { replicationObjects 1 }
+
+replicationTable OBJECT-TYPE
+  SYNTAX SEQUENCE OF ReplicaEntry
+  MAX-ACCESS not-accessible
+  STATUS current
+  DESCRIPTION
+    "The Replication table provides information about each replica
+          contained in the server."
+  ::= { replicationObjects 2 }
+
+replicaEntry OBJECT-TYPE
+  SYNTAX ReplicaEntry
+  MAX-ACCESS not-accessible
+  STATUS current
+  DESCRIPTION
+    "An entry in the Replication table provides information about a
+            particular replica contained in the server."
+  INDEX { replicaIndex }
+  ::= { replicationTable 1 }
+
+ReplicaEntry ::= SEQUENCE {
+  replicaIndex Unsigned32,
+  replicationDomainID OCTET STRING,
+  oldestMissingChangeDate OCTET STRING,
+  numberOfMissingChanges Integer32
+}
+
+replicaIndex OBJECT-TYPE
+  SYNTAX Unsigned32
+  MAX-ACCESS not-accessible
+  STATUS current
+  DESCRIPTION
+    "A row index used to differentiate between multiple replicas
+              in the Replication table."
+  ::= { replicaEntry 1 }
+
+
+replicationDomainID OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The replication domain ID for the replica."
+  ::= { replicaEntry 2 }
+
+oldestMissingChangeDate OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The date of the oldest backlog change for the replica in
+              Generalized Time form (yyyyMMddHHmmss.SSS'Z'), or the empty
+              string if this information is not available or there is no
+              replication backlog, i.e. no updates are pending to be replayed."
+  ::= { replicaEntry 3 }
+
+numberOfMissingChanges OBJECT-TYPE
+  SYNTAX Integer32
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The replication backlog represented as the number of changes
+              pending to be replayed at the replica, or -1 if this information
+              is not available."
+  ::= { replicaEntry 4 }
+
+
+END

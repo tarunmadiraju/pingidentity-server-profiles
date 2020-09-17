@@ -1,0 +1,557 @@
+# Copyright 2012-2020 Ping Identity Corporation
+# All Rights Reserved.
+#
+# This file provides a make-ldif template whose primary purpose is to
+# demonstrate the use of all variations of all supported tags.  It is not
+# intended to result in an LDIF file that should be imported into a directory,
+# since it includes elements that aren't defined in the schema.  Nevertheless,
+# this file may be useful to individuals looking to create their own
+# make-ldif templates or to customize an existing template.
+
+
+# Any global replacement tokens defined at the top of the template file will
+# be replaced with their corresponding value later in the template anywhere
+# the token name appears in square brackets.
+define basedn=dc=example,dc=com
+
+
+# A branch is a special kind of entry with a fixed, non-dynamically generated
+# DN (although the DN may be based partially or entirely on a global
+# replacement token).  Some kinds of tags may be used in branch definitions (as
+# indicated below thorugh the "allowed-in-branch" attribute.  Also, the
+# "subordinateTemplate" element specifies the type and number of entries to
+# create immediately below each branch.
+branch: [basedn]
+subordinateTemplate: attribute-value-tag-with-name:1
+subordinateTemplate: attribute-value-tag-with-name-and-max-length:1
+subordinateTemplate: dn-tag-full:1
+subordinateTemplate: dn-tag-partial:1
+subordinateTemplate: escaped-characters:1
+subordinateTemplate: file-tag-path:1
+subordinateTemplate: file-tag-path-sequential:1
+subordinateTemplate: first-tag:1
+subordinateTemplate: guid-tag:1
+subordinateTemplate: ifabsent-tag-with-name:1
+subordinateTemplate: ifabsent-tag-with-name-and-value:1
+subordinateTemplate: ifpresent-tag-with-name:1
+subordinateTemplate: ifpresent-tag-with-name-and-value:1
+subordinateTemplate: last-tag:1
+subordinateTemplate: list-tag:1
+subordinateTemplate: list-tag-with-weights:1
+subordinateTemplate: local-value-line:1
+subordinateTemplate: multiple-tag-with-fixed-number-of-values:1
+subordinateTemplate: multiple-tag-with-range-of-values:1
+subordinateTemplate: multiple-tag-with-number-of-values-determined-from-attribute:1
+subordinateTemplate: parentdn-tag:1
+subordinateTemplate: presence-tag:1
+subordinateTemplate: rdn-tag:1
+subordinateTemplate: random-tag-alpha-fixed-length:1
+subordinateTemplate: random-tag-alpha-variable-length:1
+subordinateTemplate: random-tag-numeric-fixed-length:1
+subordinateTemplate: random-tag-numeric-range:1
+subordinateTemplate: random-tag-numeric-range-custom-format:1
+subordinateTemplate: random-tag-alphanumeric-fixed-length:1
+subordinateTemplate: random-tag-alphanumeric-variable-length:1
+subordinateTemplate: random-tag-chars-fixed-length:1
+subordinateTemplate: random-tag-chars-variable-length:1
+subordinateTemplate: random-tag-hex-fixed-length:1
+subordinateTemplate: random-tag-hex-variable-length:1
+subordinateTemplate: random-tag-base64-fixed-length:1
+subordinateTemplate: random-tag-base64-variable-length:1
+subordinateTemplate: random-tag-month:1
+subordinateTemplate: random-tag-month-with-max-length:1
+subordinateTemplate: random-tag-telephone:1
+subordinateTemplate: random-tag-timestamp:1
+subordinateTemplate: random-tag-timestamp-range:1
+subordinateTemplate: sequential-tag:1
+subordinateTemplate: sequential-tag-with-starting-point:1
+subordinateTemplate: sequential-tag-with-starting-point-and-reset-below-new-parent:1
+subordinateTemplate: underscore-dn-tag-full:1
+subordinateTemplate: underscore-dn-tag-partial:1
+subordinateTemplate: underscore-parentdn-tag:1
+
+
+# The template definitions come after the branch definitions, and define
+# entries that will be dynamically generated, including their DNs.  Entries
+# generated from a template may be either created directly below a branch, or
+# they may be created below other template-generated entries (i.e., a template
+# may include a "subordinateTemplate" element indicating that one or more
+# entries of a different type should appear below each of the initial template
+# entries.  In this template file, each template below will demonstrate the
+# use of exactly one tag, and exactly one variation of that tag (so tags with
+# multiple variations may be illustrated through multiple templates).
+
+template: attribute-value-tag-with-name
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: attribute value tag with name
+syntax: open-curly-brace attribute-name close-curly-brace
+example: {cn}
+allowed-in-branch: true
+description: This tag will be replaced with the first value of the indicated attribute.  The specified attribute must have already been assigned at least one value earlier in the template.
+
+template: attribute-value-tag-with-name-and-max-length
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: attribute value tag with name and max length
+syntax: open-curly-brace attribute-name colon max-length close-curly-brace
+example: {cn:5}
+allowed-in-branch: true
+description: This tag will be replaced with at most the specified number of characters from the beginning of the first value of the indicated attribute.  The specified attribute must have already been assigned at least one value earlier in the template.
+
+template: dn-tag-full
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: dn tag with full dn
+syntax: less-than "dn" greater-than
+example: <dn>
+allowed-in-branch: true
+description: This tag will be replaced with the full DN of the entry currently being generated.  All RDN attributes must be assigned values earlier in the template.
+
+template: dn-tag-partial
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: dn tag with partial dn
+syntax: less-than "dn" colon num-components greater-than
+example: <dn:1>
+allowed-in-branch: true
+description: This tag will be replaced with at most the specified number of components from the entry currently being generated, as counted from left to right (e.g., a value of 1 will cause only the RDN to be used, a value of 2 will cause both the current entry's RDN and the parent entry's RDN to be used, etc.).  All RDN attributes must be assigned values earlier in the template.
+
+template: escaped-characters
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: An example of escaping special characters
+syntax: backslash-character character-to-escape
+example: \{ "this" : "is JSON" \}
+allowed-in-branch: true
+description: The following characters need to be escaped with a backslash in order to be taken literally by make-ldif: \{ \} \< \> \[ \]
+
+template: file-tag-path
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: file tag with path
+syntax: less-than "file" colon file-path greater-than
+example: <file:cities>
+allowed-in-branch: true
+description: This tag will be replaced with a randomly-selected line from the specified file.  The file may be specified using a full path, but if no path information is provided, then it will be assumed to be in the config/MakeLDIF directory below the server root.
+
+template: file-tag-path-sequential
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: file tag with path and sequential
+syntax: less-than "file" colon file-path colon "sequential" greater-than
+example: <file:cities:sequential>
+allowed-in-branch: true
+description: Each subsequent use of this tag will be replaced with the next line from the specified file.  Once all lines of the file have been used, then subsequent uses will start over from the beginning of the file.
+
+template: first-tag
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: first tag
+syntax: less-than "first" greater-than
+example: <first>
+allowed-in-branch: false
+description: This tag will be replaced with a first name value (taken from the first.names file).  The algorithm that the make-ldif tool uses guarantees that the combination of the first and last name values will always be unique, no matter how many entries are generated (although it may need to append a number to the last name value in LDIF files with extremely large numbers of values).
+
+template: guid-tag
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: GUID tag
+syntax: less-than "guid" greater-than
+example: <guid>
+allowed-in-branch: true
+description: This tag will be replaced with a randomly-generated globally-unique identifier (GUID), also known as a universally-unique identifier (UUID).
+
+template: ifabsent-tag-with-name
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: ifabsent tag with name
+syntax: less-than "ifabsent" colon attribute-name greater-than
+example: <ifabsent:cn>This value will only appear if the resulting entry doesn't have a cn attribute.
+allowed-in-branch: true
+description: This tag is not intended to generate replacement text, and will always be replaced with the empty string.  However, it may cause any in which this tag is used to be completely suppressed from the resulting entry if the specified attribute already exists in the generated entry.  This is primarily useful for attributes whose inclusion in generated entries is not guaranteed (e.g., randomly determined via the presence tag).
+
+template: ifabsent-tag-with-name-and-value
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: ifabsent tag with name
+syntax: less-than "ifabsent" colon attribute-name colon attribute-value greater-than
+example: <ifabsent:cn:value>This value will only appear if the resulting entry doesn't have a cn attribute with a value of "value".
+allowed-in-branch: true
+description: This tag is not intended to generate replacement text, and will always be replaced with the empty string.  However, it may cause any in which this tag is used to be completely suppressed from the resulting entry if the specified attribute value already exists in the generated entry.  This is primarily useful for attributes whose inclusion in generated entries is not guaranteed (e.g., randomly determined via the presence tag).
+
+template: ifpresent-tag-with-name
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: ifpresent tag with name
+syntax: less-than "ifpresent" colon attribute-name greater-than
+example: <ifpresent:cn>This value will only appear if the resulting entry includes a cn attribute.
+allowed-in-branch: true
+description: This tag is not intended to generate replacement text, and will always be replaced with the empty string.  However, it may cause any in which this tag is used to be completely suppressed from the resulting entry if the specified attribute is missing from the generated entry.  This is primarily useful for attributes whose inclusion in generated entries is not guaranteed (e.g., randomly determined via the presence tag).
+
+template: ifpresent-tag-with-name-and-value
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: ifpresent tag with name
+syntax: less-than "ifpresent" colon attribute-name colon attribute-value greater-than
+example: <ifpresent:cn:value>This value will only appear if the resulting entry includes a cn attribute with a value of "value".
+allowed-in-branch: true
+description: This tag is not intended to generate replacement text, and will always be replaced with the empty string.  However, it may cause any in which this tag is used to be completely suppressed from the resulting entry if the specified attribute value is missing from the generated entry.  This is primarily useful for attributes whose inclusion in generated entries is not guaranteed (e.g., randomly determined via the presence tag).
+
+template: last-tag
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: last tag
+syntax: less-than "last" greater-than
+example: <last>
+allowed-in-branch: false
+description: This tag will be replaced with a last name value (taken from the last.names file).  The algorithm that the make-ldif tool uses guarantees that the combination of the first and last name values will always be unique, no matter how many entries are generated (although it may need to append a number to the last name value in LDIF files with extremely large numbers of values).
+
+template: list-tag
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: list tag
+syntax: less-than "list" colon value1 colon value2 ... colon valueN greater-than
+example: <list:first:second:third>
+allowed-in-branch: true
+description: This tag will be replaced with one of the values in the given list.  The value will be selected at random, with each possibility having the same chance of being selected.
+
+template: list-tag-with-weights
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: list tag with weights
+syntax: less-than "list" colon value1 semicolon weight1 colon value2 semicolon weight2 ... colon valueN semicolon weightN greater-than
+example: <list:first;50:second;30:third;20>
+allowed-in-branch: true
+description: This tag will be replaced with one of the values in the given list.  The value will be selected at random, with the relative weight for each value used to determine its likelihood of being selected.  The weight values do not need to add up to 100, but if they do add up to 100 then the weights will be treated as percentages.
+
+template: local-value-line
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: local value definition line
+syntax: local name=tags
+local streetAddress=<random:numeric:5> <file:streets> Street
+local locality=<file:cities>
+local region=<file:states>
+local postalCode=<random:numeric:5>
+examplePostalAddressJSON: \{"formatted":"{streetAddress}, {locality}, {region}, {postalCode}, US","streetAddress":"{streetAddress}","locality":"{locality}","region":"{region}","postalCode":"{postalCode}","country":"US","primary":true,"type":"home"\}
+allowed-in-branch: true
+description: This line will define a local value that can be accessed using \{name\} just like attribute accesses. The local is evaluated strictly on each template entry creation.
+
+template: multiple-tag-with-fixed-number-of-values
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: multiple tag with fixed number of values
+syntax: less-than "multiple" colon num-values greater-than
+example: <multiple:5><random:alpha:10>
+allowed-in-branch: true
+description: This tag will cause make-ldif to attempt to generate the specified number of different values for this attribute.  Any line including this tag must have a value that includes some variable content so that all of the values will be different.
+
+template: multiple-tag-with-range-of-values
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: multiple tag with range of values
+syntax: less-than "multiple" colon min-values colon max-values greater-than
+example: <multiple:1:5><random:alpha:10>
+allowed-in-branch: true
+description: This tag will cause make-ldif to attempt to generate a number of different values for this attribute, with the number of values to generate selected at random between the specified minimum and maximum bounds.  Any line including this tag must have a value that includes some variable content so that all of the values will be different.
+
+template: multiple-tag-with-number-of-values-determined-from-attribute
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: multiple tag with fixed number of values
+syntax: less-than "multiple" colon open-curly-brace attribute-name close-curly-brace greater-than
+random-integer: <random:numeric:1:5>
+example: <multiple:{random-integer}><random:alpha:10>
+allowed-in-branch: true
+description: This tag will cause make-ldif to attempt to generate a number of different values for this attribute, with the number of values to generate determined from another attribute already defined in the entry (which may itself be dynamically-generated).  Any line including this tag must have a value that includes some variable content so that all of the values will be different.
+
+template: parentdn-tag
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: parentdn tag
+syntax: less-than "parentdn" greater-than
+example: <parentdn>
+allowed-in-branch: false
+description: This tag will be replaced with the full DN of the entry immediately superior to the entry being generated.
+
+template: presence-tag
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: presence tag
+syntax: less-than "presence" colon percent greater-than
+example: <presence:50>There is a 50% chance that this value will appear in the generated entry.
+allowed-in-branch: true
+description: This tag is not intended to generate replacement text,a nd will always be replaced with the empty string.  However, it may be used to control whether the entire attribute value will appear in the resulting entry.
+
+template: rdn-tag
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: rdn tag
+syntax: less-than "rdn" greater-than
+example: <rdn>
+allowed-in-branch: true
+description: This tag will be replaced with the RDN of the entry being generated.  All RDN attributes must be assigned values earlier in the template.
+
+template: random-tag-alpha-fixed-length
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: random tag alpha fixed length
+syntax: less-than "random" colon "alpha" colon length greater-than
+example: <random:alpha:5>
+allowed-in-branch: true
+description: This tag will be replaced with a string containing the specified number of randomly-selected lowercase alphabetic characters.
+
+template: random-tag-alpha-variable-length
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: random tag alpha variable length
+syntax: less-than "random" colon "alpha" colon min-length colon max-length greater-than
+example: <random:alpha:5:10>
+allowed-in-branch: true
+description: This tag will be replaced with a string containing a number of randomly-selected lowercase alphabetic characters.  The length of the string will be selected at random between the specified minimum and maximum length.
+
+template: random-tag-numeric-fixed-length
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: random tag numeric fixed length
+syntax: less-than "random" colon "numeric" colon length greater-than
+example: <random:numeric:5>
+allowed-in-branch: true
+description: This tag will be replaced with a string containing the specified number of randomly-selected numeric digits.
+
+template: random-tag-numeric-range
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: random tag numeric range
+syntax: less-than "random" colon "numeric" colon lower-bound colon upper-bound greater-than
+example: <random:numeric:1:10>
+allowed-in-branch: true
+description: This tag will be replaced with a numeric value selected at random between the specified lower and upper bounds.
+
+template: random-tag-numeric-range-custom-format
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: random tag numeric range custom format
+syntax: less-than "random" colon "numeric" colon lower-bound colon upper-bound colon format greater-than
+example: <random:numeric:1:1000:0000>
+allowed-in-branch: true
+description: This tag will be replaced with a numeric value selected at random between the specified lower and upper bounds.  It will use the specified format string (as used by the java.text.DecimalFormat class) to format the value.
+
+template: random-tag-alphanumeric-fixed-length
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: random tag alphanumeric fixed length
+syntax: less-than "random" colon "alphanumeric" colon length greater-than
+example: <random:alphanumeric:5>
+allowed-in-branch: true
+description: This tag will be replaced with a string containing the specified number of randomly-selected lowercase alphabetic characters and numeric digits.
+
+template: random-tag-alphanumeric-variable-length
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: random tag alphanumeric variable length
+syntax: less-than "random" colon "alphanumeric" colon min-length colon max-length greater-than
+example: <random:alphanumeric:5:10>
+allowed-in-branch: true
+description: This tag will be replaced with a string containing a number of randomly-selected lowercase alphabetic characters and numeric digits.  The length of the string will be selected at random between the specified minimum and maximum length.
+
+template: random-tag-chars-fixed-length
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: random tag chars fixed length
+syntax: less-than "random" colon "chars" colon characters colon length greater-than
+example: <random:chars:abcdef:10>
+allowed-in-branch: true
+description: This tag will be replaced with a string containing the specified number of characters selected at random from the provided character set.
+
+template: random-tag-chars-variable-length
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: random tag chars variable length
+syntax: less-than "random" colon "chars" colon characters colon min-length colon max-length greater-than
+example: <random:chars:abcdef:5:10>
+allowed-in-branch: true
+description: This tag will be replaced with a string containing a number of characters selected at random from the provided character set.  The length of the string will be selected at random between the specified minimum and maximum length.
+
+template: random-tag-hex-fixed-length
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: random tag hex fixed length
+syntax: less-than "random" colon "hex" colon length greater-than
+example: <random:hex:10>
+allowed-in-branch: true
+description: This tag will be replaced with a string containing the specified number of randomly-selected hexadecimal digits.
+
+template: random-tag-hex-variable-length
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: random tag hex variable length
+syntax: less-than "random" colon "hex" colon min-length colon max-length greater-than
+example: <random:hex:5:10>
+allowed-in-branch: true
+description: This tag will be replaced with a string containing a number of randomly-selected hexadecimal digits.  The length of the string will be selected at random between the specified minimum and maximum length.
+
+template: random-tag-base64-fixed-length
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: random tag base64 fixed length
+syntax: less-than "random" colon "base64" colon length greater-than
+example: <random:base64:10>
+allowed-in-branch: true
+description: This tag will be replaced with a string containing the specified number of randomly-selected characters from the base64 character set.
+
+template: random-tag-base64-variable-length
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: random tag base64 variable length
+syntax: less-than "random" colon "base64" colon min-length colon max-length greater-than
+example: <random:base64:5:10>
+allowed-in-branch: true
+description: This tag will be replaced with a string containing a number of randomly-selected characters from the base64 character set.  The length of the string will be selected at random between the specified minimum and maximum length.
+
+template: random-tag-month
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: random tag month
+syntax: less-than "random" colon "month" greater-than
+example: <random:month>
+allowed-in-branch: true
+description: This tag will be replaced with a string containing the name of a randomly-selected month of the year.  The American English name of the month will be used, with the first letter capitalized.
+
+template: random-tag-month-with-max-length
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: random tag month with max length
+syntax: less-than "random" colon "month" colon max-length greater-than
+example: <random:month:3>
+allowed-in-branch: true
+description: This tag will be replaced with a string containing at most the specified number of characters from the beginning of the name of a randomly-selected month of the year.  The American English name of the month will be used, with the first letter capitalized.
+
+template: random-tag-telephone
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: random tag telephone
+syntax: less-than "random" colon "telephone" greater-than
+example: <random:telephone>
+allowed-in-branch: true
+description: This tag will be replaced with a string containing a randomly-generated telephone number, using the international representation of a U.S. telephone number in the format "+1 xxx xxx xxxx" (in which each x represents a randomly-selected numeric digit).
+
+template: random-tag-timestamp
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: random tag timestamp
+syntax: less-than "random" colon "timestamp" greater-than
+example: <random:timestamp>
+allowed-in-branch: true
+description: This tag will be replaced with a string containing a generalized time representation of a randomly-selected time within the last ten years.
+
+template: random-tag-timestamp-range
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: random tag timestamp range
+syntax: less-than "random" colon "timestamp" colon min-timestamp colon max-timestamp greater-than
+example: <random:timestamp:20000101000000.000Z:20091231235959.999Z>
+allowed-in-branch: true
+description: This tag will be replaced with a string containing a generalized time representation of a randomly-selected time within the specified time range (in which the minimum and maximum values should also be specified using the generalized time format).
+
+template: sequential-tag
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: sequential tag
+syntax: less-than "sequential" greater-than
+example: <sequential>
+allowed-in-branch: true
+description: This tag will be replaced with a sequentially-incrementing value such that each subsequent entry will have a value that is greater than the one in the entry before it.  The first value generated will be zero.
+
+template: sequential-tag-with-starting-point
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: sequential tag with starting point
+syntax: less-than "sequential" colon initial-value greater-than
+example: <sequential:1>
+allowed-in-branch: true
+description: This tag will be replaced with a sequentially-incrementing value such that each subsequent entry will have a value that is greater than the one in the entry before it.  The first value generated will be the specified initial value.
+
+template: sequential-tag-with-starting-point-and-reset-below-new-parent
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: sequential tag with starting point and reset below new parent
+syntax: less-than "sequential" colon initial-value colon "true" greater-than
+example: <sequential:1:true>
+allowed-in-branch: true
+description: This tag will be replaced with a sequentially-incrementing value such that each subsequent entry will have a value that is greater than the one in the entry before it.  The first value generated will be the specified initial value.  If this template is used below multiple parents, then the counter will be reset to the initial value for the first entry below each new parent.
+
+template: underscore-dn-tag-full
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: underscore dn tag with full dn
+syntax: less-than "_dn" greater-than
+example: <_dn>
+allowed-in-branch: true
+description: This tag will be replaced with the full DN of the entry currently being generated, except with commas replaced with underscores.  All RDN attributes must be assigned values earlier in the template.
+
+template: underscore-dn-tag-partial
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: underscore dn tag with partial dn
+syntax: less-than "_dn" colon num-components greater-than
+example: <_dn:1>
+allowed-in-branch: true
+description: This tag will be replaced with at most the specified number of componenets from the entry currently being generated, as counted from left to right (e.g., a value of 1 will cause only the RDN to be used, a value of 2 will cause both the current entry's RDN and the parent entry's RDN to be used, etc.), except with commas replaced with underscores.  All RDN attributes must be assigned values earlier in the template.
+
+template: underscore-parentdn-tag
+rdnAttr: cn
+objectClass: top
+objectClass: make-ldif-example
+cn: underscore-parentdn tag
+syntax: less-than "_parentdn" greater-than
+example: <_parentdn>
+allowed-in-branch: false
+description: This tag will be replaced with the full DN of the entry immediately superior to the entry being generated, except with commas replaced with underscores.

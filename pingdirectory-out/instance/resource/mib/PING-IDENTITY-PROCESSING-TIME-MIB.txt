@@ -1,0 +1,283 @@
+PING-IDENTITY-PROCESSING-TIME-MIB DEFINITIONS ::= BEGIN
+
+
+
+IMPORTS
+  Counter64,OBJECT-TYPE,enterprises,MODULE-IDENTITY
+    FROM SNMPv2-SMI
+  OBJECT-GROUP
+    FROM SNMPv2-CONF
+  ;
+
+
+pingIdentityProcessingTimeModule MODULE-IDENTITY
+  LAST-UPDATED "202006151919Z"
+  ORGANIZATION "Ping Identity"
+  CONTACT-INFO "Ping Identity Corporation
+      www.pingidentity.com"
+  DESCRIPTION
+    "The Processing Time MIB is a collection of key performance data related
+      to the processing time of operations broken down by several criteria
+      but reported as one aggregate data set."
+  ::= { unboundidDsMibMonitor 2 }
+
+unboundid OBJECT IDENTIFIER ::= { enterprises 30221 }
+unboundidDs OBJECT IDENTIFIER ::= { unboundid 2 }
+unboundidDsMib OBJECT IDENTIFIER ::= { unboundidDs 10 }
+unboundidDsMibMonitor OBJECT IDENTIFIER ::= { unboundidDsMib 1 }
+
+processingTimeGroup OBJECT-GROUP
+  OBJECTS {
+    addAverageResponseTime,
+    addCompletedOps,
+    addTotalOpTime,
+    allAverageResponseTime,
+    allCompletedOps,
+    allTotalOpTime,
+    bindAverageResponseTime,
+    bindCompletedOps,
+    bindTotalOpTime,
+    compareAverageResponseTime,
+    compareCompletedOps,
+    compareTotalOpTime,
+    deleteAverageResponseTime,
+    deleteCompletedOps,
+    deleteTotalOpTime,
+    modifyAverageResponseTime,
+    modifyCompletedOps,
+    modifyDNAverageResponseTime,
+    modifyDNCompletedOps,
+    modifyDNTotalOpTime,
+    modifyTotalOpTime,
+    searchAverageResponseTime,
+    searchCompletedOps,
+    searchTotalOpTime
+  }
+  STATUS current
+  DESCRIPTION
+    "Required conformance group definition for the Processing Time MIB."
+  ::= { pingIdentityProcessingTimeModule 1 }
+
+
+processingTimeScalars OBJECT IDENTIFIER
+  ::= { pingIdentityProcessingTimeModule 2 }
+
+allCompletedOps OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The total number of operations that have been performed in the
+            server."
+  ::= { processingTimeScalars 1 }
+
+allTotalOpTime OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The total number of milliseconds spent processing operations of any
+            type in the server."
+  ::= { processingTimeScalars 2 }
+
+allAverageResponseTime OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The average response time in milliseconds of operations of all
+            types performed in the server."
+  ::= { processingTimeScalars 3 }
+
+searchCompletedOps OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The total number of search operations that have been performed in
+            the server."
+  ::= { processingTimeScalars 4 }
+
+searchTotalOpTime OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The total number of milliseconds spent processing search operations
+            in the server."
+  ::= { processingTimeScalars 5 }
+
+searchAverageResponseTime OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The average response time in milliseconds of search operations
+            that have been performed in the server."
+  ::= { processingTimeScalars 6 }
+
+modifyCompletedOps OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The total number of modify operations that have been performed in
+            the server."
+  ::= { processingTimeScalars 7 }
+
+modifyTotalOpTime OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The total number of milliseconds spent processing modify operations
+            in the server."
+  ::= { processingTimeScalars 8 }
+
+modifyAverageResponseTime OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The average response time in milliseconds of modify operations
+            that have been performed in the server."
+  ::= { processingTimeScalars 9 }
+
+addCompletedOps OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The total number of add operations that have been performed in
+            the server."
+  ::= { processingTimeScalars 10 }
+
+addTotalOpTime OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The total number of milliseconds spent processing add operations
+            in the server."
+  ::= { processingTimeScalars 11 }
+
+addAverageResponseTime OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The average response time in milliseconds of add operations
+            that have been performed in the server."
+  ::= { processingTimeScalars 12 }
+
+deleteCompletedOps OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The total number of delete operations that have been performed in
+            the server."
+  ::= { processingTimeScalars 13 }
+
+deleteTotalOpTime OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The total number of milliseconds spent processing delete operations
+            in the server."
+  ::= { processingTimeScalars 14 }
+
+deleteAverageResponseTime OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The average response time in milliseconds of delete operations
+            that have been performed in the server."
+  ::= { processingTimeScalars 15 }
+
+modifyDNCompletedOps OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The total number of modify DN operations that have been performed in
+            the server."
+  ::= { processingTimeScalars 16 }
+
+modifyDNTotalOpTime OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The total number of milliseconds spent processing modify DN
+            operations in the server."
+  ::= { processingTimeScalars 17 }
+
+modifyDNAverageResponseTime OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The average response time in milliseconds of modify DN operations
+            that have been performed in the server."
+  ::= { processingTimeScalars 18 }
+
+bindCompletedOps OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The total number of bind operations that have been performed in
+            the server."
+  ::= { processingTimeScalars 19 }
+
+bindTotalOpTime OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The total number of milliseconds spent processing bind operations
+            in the server."
+  ::= { processingTimeScalars 20 }
+
+bindAverageResponseTime OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The average response time in milliseconds of bind operations
+            that have been performed in the server."
+  ::= { processingTimeScalars 21 }
+
+compareCompletedOps OBJECT-TYPE
+  SYNTAX Counter64
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The total number of compare operations that have been performed in
+            the server."
+  ::= { processingTimeScalars 22 }
+
+compareTotalOpTime OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The total number of milliseconds spent processing compare operations
+            in the server."
+  ::= { processingTimeScalars 23 }
+
+compareAverageResponseTime OBJECT-TYPE
+  SYNTAX OCTET STRING
+  MAX-ACCESS read-only
+  STATUS current
+  DESCRIPTION
+    "The average response time in milliseconds of compare operations
+            that have been performed in the server."
+  ::= { processingTimeScalars 24 }
+
+
+
+END

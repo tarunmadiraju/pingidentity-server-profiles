@@ -9,6 +9,10 @@ services:
       - PING_IDENTITY_ACCEPT_EULA=YES
       - PING_IDENTITY_DEVOPS_USER=tarunmadiraju@pingidentity.com
       - PING_IDENTITY_DEVOPS_KEY=3a6cdf55-89d7-4cd2-9ece-c8c0131957b1
+
+    volumes:
+      - ./pingdirectory-out:/opt/out
+
     ports:
       - 1636:636
       - 1443:443
@@ -32,6 +36,7 @@ services:
       - PING_IDENTITY_ACCEPT_EULA=YES
       - PING_IDENTITY_DEVOPS_USER=tarunmadiraju@pingidentity.com
       - PING_IDENTITY_DEVOPS_KEY=3a6cdf55-89d7-4cd2-9ece-c8c0131957b1
+
     extra_hosts:
       - "EC2AMAZ-2MNFVU0.tarun.lab:10.101.19.236"
 

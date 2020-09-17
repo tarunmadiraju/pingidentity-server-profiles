@@ -1,0 +1,5 @@
+Do not modify these files as they will be updated when the server is updated.
+To customize the content of these pages, copy files to the analogous
+subdirectory of the <root>/velocity directory and make changes to the copied
+file.  By default, files of the same name in that directory will override those
+in this directory.

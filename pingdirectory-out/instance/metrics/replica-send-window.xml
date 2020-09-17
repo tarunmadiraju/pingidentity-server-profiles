@@ -1,0 +1,68 @@
+<com.unboundid.directory.model.metrics.MetricDefinition version="3" complexity="ADVANCED" collectorGroup="REPLICATION">
+  <id>
+    <idString>replica-send-window</idString>
+  </id>
+  <displayName>
+    <MessageDescriptor.Arg0 key="INFO_REPLICA_SEND_WINDOW_NAME" ordinal="-1">
+      <rbBase>messages/ubid_metric</rbBase>
+      <category>UBID_METRIC</category>
+      <severity>INFORMATION</severity>
+    </MessageDescriptor.Arg0>
+    <object-array/>
+  </displayName>
+  <shortDisplayName>
+    <MessageDescriptor.Arg0 key="INFO_REPLICA_SEND_WINDOW_SHORT_NAME" ordinal="-1">
+      <rbBase>messages/ubid_metric</rbBase>
+      <category>UBID_METRIC</category>
+      <severity>INFORMATION</severity>
+    </MessageDescriptor.Arg0>
+    <object-array/>
+  </shortDisplayName>
+  <description>
+    <MessageDescriptor.Arg0 key="INFO_REPLICA_SEND_WINDOW_DESCRIPTION" ordinal="-1">
+      <rbBase>messages/ubid_metric</rbBase>
+      <category>UBID_METRIC</category>
+      <severity>INFORMATION</severity>
+    </MessageDescriptor.Arg0>
+    <object-array/>
+  </description>
+  <group>REPLICATION</group>
+  <metricType>ContinuousValued</metricType>
+  <availableStatistics>
+    <com.unboundid.directory.model.metrics.Statistic>AVERAGE</com.unboundid.directory.model.metrics.Statistic>
+  </availableStatistics>
+  <countUnits/>
+  <valueUnits>
+    <singularName>
+      <MessageDescriptor.Arg0 key="INFO_CHANGES_BEFORE_ACK_SINGULAR" ordinal="-1">
+        <rbBase>messages/ubid_metric</rbBase>
+        <category>UBID_METRIC</category>
+        <severity>INFORMATION</severity>
+      </MessageDescriptor.Arg0>
+      <object-array/>
+    </singularName>
+    <pluralName>
+      <MessageDescriptor.Arg0 key="INFO_CHANGES_BEFORE_ACK_PLURAL" ordinal="-1">
+        <rbBase>messages/ubid_metric</rbBase>
+        <category>UBID_METRIC</category>
+        <severity>INFORMATION</severity>
+      </MessageDescriptor.Arg0>
+      <object-array/>
+    </pluralName>
+    <abbreviatedName>
+      <MessageDescriptor.Arg0 key="INFO_CHANGES_BEFORE_ACK_ABBREV" ordinal="-1">
+        <rbBase>messages/ubid_metric</rbBase>
+        <category>UBID_METRIC</category>
+        <severity>INFORMATION</severity>
+      </MessageDescriptor.Arg0>
+      <object-array/>
+    </abbreviatedName>
+  </valueUnits>
+  <dimensions>
+    <com.unboundid.directory.model.metrics.Dimension>
+      <id>
+        <idString>replica</idString>
+      </id>
+    </com.unboundid.directory.model.metrics.Dimension>
+  </dimensions>
+</com.unboundid.directory.model.metrics.MetricDefinition>

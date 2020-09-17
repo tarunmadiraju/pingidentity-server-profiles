@@ -1,0 +1,54 @@
+##
+## determine which layout to use
+##
+#if ($useFluidLayout)
+  #set ($containerClass = "container-fluid")
+#else
+  #set ($containerClass = "container")
+#end
+<nav class="navbar navbar-static-top navbar-idb" role="navigation">
+  <div class="$containerClass">
+    <div class="navbar-header"> <a class="navbar-toggle" data-toggle="collapse" data-target="#idb-navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+      <div class="navbar-brand">
+        <div class="ubid-icon">
+          <img src="/view/statics/img/unboundid-white38.png" alt="${ubid_server.shortVendorName} Logo" width="150" height="38">
+        </div>
+        <span class="divider-vertical"></span>
+        <span class="ubid-app-name">$ubid_server.basicProductName</span>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse" id="idb-navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-question-sign"></span>
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+          #if($ubid_server.basicProductName.equals("Data Metrics Server"))
+            <li><a href="/view/index">Home</a></li>
+            <li><a href="/docs/index.html" target="_blank">Metrics Documentation</a></li>
+          #end
+            <li><a data-toggle="modal" href="#splashscreen">About $ubid_server.basicProductName</a></li>
+          </ul>
+        </li>
+      </ul>
+      #if ( $principal )
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-user"></span>
+            <span>$principal.username</span>
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#" onclick="document.getElementById('signoutForm').submit();return false;">Sign Out</a></li>
+          </ul>
+        </li>
+      </ul>
+      #set( $requestUrl = $requestContext.getRequestUri() + "?" + $!requestContext.getQueryString() )
+      <form id="signoutForm" method="post" action="/logout.do?post_logout_redirect_uri=$esc.url($requestUrl)" style="display:none"></form>
+      #end
+    </div>
+  </div>
+</nav>

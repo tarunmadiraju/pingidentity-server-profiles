@@ -1,0 +1,31 @@
+Sep 04, 2020 5:48:25 PM com.unboundid.directory.server.tools.ToolUtilities initLogger
+INFO: manage-extension was run with the following arguments:  -i /tmp/pd.profile-replaced-variables-temp/pd.profile/server-sdk-extensions/extension-1.zip -n
+Sep 04, 2020 5:48:25 PM com.unboundid.directory.server.tools.manageextension.ManageExtension checkUser
+INFO: Current user is root
+Sep 04, 2020 5:48:25 PM com.unboundid.directory.server.tools.manageextension.ManageExtension checkUser
+INFO: Server user is root
+Sep 04, 2020 5:48:25 PM com.unboundid.directory.server.tools.manageextension.ManageExtension unzipBundle
+INFO: unzipping bundle zip /tmp/pd.profile-replaced-variables-temp/pd.profile/server-sdk-extensions/extension-1.zip to /opt/out/instance/tmp/manage-extension
+Sep 04, 2020 5:48:25 PM com.unboundid.directory.server.tools.manageextension.ManageExtension unzipBundle
+INFO: parent directory in zip is /opt/out/instance/tmp/manage-extension/com.pingidentity.ds-plugin-autoincrement-0.0.8
+Sep 04, 2020 5:48:25 PM com.unboundid.directory.server.tools.manageextension.ManageExtension install
+INFO: loading classes in extension jars
+Sep 04, 2020 5:48:25 PM com.unboundid.directory.server.tools.manageextension.ManageExtension install
+WARNING: cannot instantiate extension class com.pingidentity.ds.plugin.AutoincrementMonitorProvider
+java.lang.NoSuchMethodException: com.pingidentity.ds.plugin.AutoincrementMonitorProvider.<init>()
+	at java.base/java.lang.Class.getConstructor0(Class.java:3349)
+	at java.base/java.lang.Class.getConstructor(Class.java:2151)
+	at com.unboundid.directory.server.tools.manageextension.ManageExtension.install(ManageExtension.java:357)
+	at com.unboundid.directory.server.tools.manageextension.ManageExtension.executeTool(ManageExtension.java:214)
+	at com.unboundid.directory.server.api.CommandLineTool.runTool(CommandLineTool.java:254)
+	at com.unboundid.directory.server.tools.manageextension.ManageExtension.doMain(ManageExtension.java:136)
+	at com.unboundid.directory.server.tools.manageprofile.SetupSubCommand.installExtension(SetupSubCommand.java:1250)
+	at com.unboundid.directory.server.tools.manageprofile.SetupSubCommand.installAllExtensions(SetupSubCommand.java:1222)
+	at com.unboundid.directory.server.tools.manageprofile.SetupSubCommand.execute(SetupSubCommand.java:426)
+	at com.unboundid.directory.server.tools.manageprofile.ManageProfileTool.executeTool(ManageProfileTool.java:138)
+	at com.unboundid.directory.server.util.cli.ConsoleTool.runTool(ConsoleTool.java:256)
+	at com.unboundid.directory.server.tools.manageprofile.ManageProfileTool.main(ManageProfileTool.java:99)
+	at com.unboundid.directory.server.tools.manageprofile.ManageProfileTool.main(ManageProfileTool.java:75)
+
+Sep 04, 2020 5:48:25 PM com.unboundid.directory.server.tools.manageextension.ManageExtension install
+INFO: copying files in bundle
