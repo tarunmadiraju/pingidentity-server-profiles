@@ -74,3 +74,6 @@
 2020-09-17 00:00:05.185 UTC INFO [/opt/out/instance/db/changelog] End verify of data files
 2020-09-17 00:00:05.185 UTC INFO [/opt/out/instance/db/changelog] Start verify all databases
 2020-09-17 00:00:05.186 UTC INFO [/opt/out/instance/db/changelog] End verify all databases
+2020-09-17 20:36:33.784 UTC CONFIG [/opt/out/instance/db/changelog] Checkpoint 13: source=api success=true nFullINFlushThisRun=3 nDeltaINFlushThisRun=1
+2020-09-17 20:36:34.160 UTC CONFIG [/opt/out/instance/db/changelog] Checkpoint 14: source=api success=true nFullINFlushThisRun=1 nDeltaINFlushThisRun=1
+2020-09-17 20:36:34.364 UTC CONFIG [/opt/out/instance/db/changelog] Checkpoint 15: source=close success=true nFullINFlushThisRun=3 nDeltaINFlushThisRun=1

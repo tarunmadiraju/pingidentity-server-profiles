@@ -1,5 +1,5 @@
-# Log format for <historical-dsstats.csv> as of 05/Sep/2020:17:55:00 +0000
-Date, Time, Num Critical Concerns, Num Concerns, Num Unvailable Alert Types, Num Degraded Alert Types, Is In Lockdown Mode, Critical Alarms, Warning Alarms, Critical Gauges, Warning Gauges, Num Ops in Progress (Avg), Num Ops in Progress (Max), All Ops, All Avg Time (ms), All Ops/sec, Search Ops, Search Avg Time (ms), Search Ops/sec, Modify Ops, Modify Avg Time (ms), Modify Ops/sec, Add Ops, Add Avg Time (ms), Add Ops/sec, Delete Ops, Delete Avg Time (ms), Delete Ops/sec, ModifyDN Ops, ModifyDN Avg Time (ms), ModifyDN Ops/sec, Bind Ops, Bind Avg Time (ms), Bind Ops/sec, Compare Ops, Compare Avg Time (ms), Compare Ops/sec, Extended Ops, Extended Avg Time (ms), Extended Ops/sec, Num Current Conn, Num New Conn, Backend userRoot Entry Count, Backend userRoot DB Cache % Full, Backend userRoot Size on Disk (GB), Backend userRoot Active Cleaner Threads (Avg), Backend userRoot Cleaner Backlog (Avg), Backend userRoot Cleaner Backlog (Min), Backend userRoot Cleaner Backlog (Max), Backend userRoot Nodes Evicted, Backend userRoot Checkpoints, Backend userRoot Average Checkpoint Duration, Backend userRoot Time Since Last Checkpoint (sec), Backend userRoot New DB Logs, Backend userRoot Random Reads, Backend userRoot Random Writes, Backend userRoot Sequential Reads, Backend userRoot Sequential Writes, Entry Cache Frequently Accessed Entry Cache Is Full, Entry Cache Frequently Accessed Entry Cache Hit Ratio %, Entry Cache Frequently Accessed Entry Cache Hits, Entry Cache Frequently Accessed Entry Cache Tries, Entry Cache Frequently Accessed Entry Cache Added Or Updated, Entry Cache Frequently Accessed Entry Cache Entry Count, Entry Cache Frequently Accessed Entry Cache Entry % Full, Entry Cache Frequently Accessed Entry Cache Remaining JVM Memory %, LDAP Changelog Num Entries, LDAP Changelog Changes Written, LDAP Changelog Changes Purged, LDAP Changelog Write Queue Capacity (Avg), LDAP Changelog Write Queue Capacity (Min), LDAP Changelog Write Queue Size (Avg), LDAP Changelog Write Queue Size (Max), LDAP Changelog GCB Requests, LDAP Changelog GCB Request Avg Duration Millis, LDAP Changelog GCB Requests Resumed From Foreign Token, LDAP Changelog GCB Canceled Requests, LDAP Changelog GCB Entries Returned, LDAP Changelog GCB Entries Examined, LDAP Changelog GCB Request Avg Duration Per Entry Returned Millis, LDAP Changelog GCB Request Avg Duration Per Entry Examined Millis, LDAP Changelog Entries Returned Per GCB Request, LDAP Changelog Entries Examined Per GCB Request, LDAP Changelog Estimated Changes Remaining Per GCB Request (Avg), LDAP Changelog Entries Examined Per Returned Entry (GCB Request), LDAP Changelog Entries Partially Examined Per GCB Request, LDAP Changelog Entries Partially Examined Per Returned Entry (GCB Request), LDAP Changelog Fully Indexed GCB Requests, LDAP Changelog Fully Indexed GCB Request Returned Entries, LDAP Changelog Not Fully Indexed GCB Requests, LDAP Changelog Partially Indexed GCB Requests, LDAP Changelog Low-Density GCB Requests, LDAP Changelog Active GCB Requests (Avg), LDAP Changelog GCB Processor % Busy (Avg), Backend changelog DB Cache % Full, Backend changelog Size on Disk (GB), Backend changelog Active Cleaner Threads (Avg), Backend changelog Cleaner Backlog (Avg), Backend changelog Cleaner Backlog (Min), Backend changelog Cleaner Backlog (Max), Backend changelog Nodes Evicted, Backend changelog Checkpoints, Backend changelog Average Checkpoint Duration, Backend changelog Time Since Last Checkpoint (sec), Backend changelog New DB Logs, Backend changelog Random Reads, Backend changelog Random Writes, Backend changelog Sequential Reads, Backend changelog Sequential Writes, Worker Thread % Busy (Avg), Worker Thread % Busy (Max), Queue Size (Avg), Queue Size (Max), LDAP Connection Handler 0.0.0.0 port 389 Statistics Bytes Read, LDAP Connection Handler 0.0.0.0 port 389 Statistics Bytes Written, LDAP Connection Handler 0.0.0.0 port 389 Statistics Messages Read, LDAP Connection Handler 0.0.0.0 port 389 Statistics Messages Written, LDAP Connection Handler 0.0.0.0 port 389 Statistics Search Requests, LDAP Connection Handler 0.0.0.0 port 389 Statistics Search Entries Returned, LDAP Connection Handler 0.0.0.0 port 636 Statistics Bytes Read, LDAP Connection Handler 0.0.0.0 port 636 Statistics Bytes Written, LDAP Connection Handler 0.0.0.0 port 636 Statistics Messages Read, LDAP Connection Handler 0.0.0.0 port 636 Statistics Messages Written, LDAP Connection Handler 0.0.0.0 port 636 Statistics Search Requests, LDAP Connection Handler 0.0.0.0 port 636 Statistics Search Entries Returned, JVM Memory Used GB, JVM Memory Percent Full, Memory Consumer Total GB, Memory Consumer Percentage of Total Memory, g1-young-generation minor-collection g1-evacuation-pause Count, g1-young-generation minor-collection g1-evacuation-pause Duration (ms), g1-eden-space Live Bytes, g1-survivor-space Live Bytes, g1-old-gen Live Bytes, g1-young-generation minor-collection gclocker-initiated-gc Count, g1-young-generation minor-collection gclocker-initiated-gc Duration (ms), g1-young-generation minor-collection metadata-gc-threshold Count, g1-young-generation minor-collection metadata-gc-threshold Duration (ms), Add Ops 0-1 ms, Add Ops 1-2 ms, Add Ops 2-3 ms, Add Ops 3-5 ms, Add Ops 5-10 ms, Add Ops 10-20 ms, Add Ops 20-30 ms, Add Ops 30-50 ms, Add Ops 50-100 ms, Add Ops 100-1000 ms, Add Ops > 1000 ms, All Ops 0-1 ms, All Ops 1-2 ms, All Ops 2-3 ms, All Ops 3-5 ms, All Ops 5-10 ms, All Ops 10-20 ms, All Ops 20-30 ms, All Ops 30-50 ms, All Ops 50-100 ms, All Ops 100-1000 ms, All Ops > 1000 ms, Bind Ops 0-1 ms, Bind Ops 1-2 ms, Bind Ops 2-3 ms, Bind Ops 3-5 ms, Bind Ops 5-10 ms, Bind Ops 10-20 ms, Bind Ops 20-30 ms, Bind Ops 30-50 ms, Bind Ops 50-100 ms, Bind Ops 100-1000 ms, Bind Ops > 1000 ms, Compare Ops 0-1 ms, Compare Ops 1-2 ms, Compare Ops 2-3 ms, Compare Ops 3-5 ms, Compare Ops 5-10 ms, Compare Ops 10-20 ms, Compare Ops 20-30 ms, Compare Ops 30-50 ms, Compare Ops 50-100 ms, Compare Ops 100-1000 ms, Compare Ops > 1000 ms, Delete Ops 0-1 ms, Delete Ops 1-2 ms, Delete Ops 2-3 ms, Delete Ops 3-5 ms, Delete Ops 5-10 ms, Delete Ops 10-20 ms, Delete Ops 20-30 ms, Delete Ops 30-50 ms, Delete Ops 50-100 ms, Delete Ops 100-1000 ms, Delete Ops > 1000 ms, Extended Ops 0-1 ms, Extended Ops 1-2 ms, Extended Ops 2-3 ms, Extended Ops 3-5 ms, Extended Ops 5-10 ms, Extended Ops 10-20 ms, Extended Ops 20-30 ms, Extended Ops 30-50 ms, Extended Ops 50-100 ms, Extended Ops 100-1000 ms, Extended Ops > 1000 ms, Modify Ops 0-1 ms, Modify Ops 1-2 ms, Modify Ops 2-3 ms, Modify Ops 3-5 ms, Modify Ops 5-10 ms, Modify Ops 10-20 ms, Modify Ops 20-30 ms, Modify Ops 30-50 ms, Modify Ops 50-100 ms, Modify Ops 100-1000 ms, Modify Ops > 1000 ms, ModifyDN Ops 0-1 ms, ModifyDN Ops 1-2 ms, ModifyDN Ops 2-3 ms, ModifyDN Ops 3-5 ms, ModifyDN Ops 5-10 ms, ModifyDN Ops 10-20 ms, ModifyDN Ops 20-30 ms, ModifyDN Ops 30-50 ms, ModifyDN Ops 50-100 ms, ModifyDN Ops 100-1000 ms, ModifyDN Ops > 1000 ms, Search Ops 0-1 ms, Search Ops 1-2 ms, Search Ops 2-3 ms, Search Ops 3-5 ms, Search Ops 5-10 ms, Search Ops 10-20 ms, Search Ops 20-30 ms, Search Ops 30-50 ms, Search Ops 50-100 ms, Search Ops 100-1000 ms, Search Ops > 1000 ms, Gauge Active Cleaner Threads (Percent) for Backend changelog Severity, Gauge Active Cleaner Threads (Percent) for Backend changelog Value, Gauge Active Cleaner Threads (Percent) for Backend userRoot Severity, Gauge Active Cleaner Threads (Percent) for Backend userRoot Value, Gauge Certificate Expiration (Days) for Certificate Certificate CN_b1e39ef4129d_O_Ping_Identity_Certificate 107317865941406425994369449973218805502 in Backend ads-truststore Severity, Gauge Certificate Expiration (Days) for Certificate Certificate CN_b1e39ef4129d_O_Ping_Identity_Certificate 107317865941406425994369449973218805502 in Backend ads-truststore Value, Gauge Certificate Expiration (Days) for Certificate Certificate CN_b1e39ef4129d_O_Ping_Identity_Certificate 107317865941406425994369449973218805502 in Server Instance b1e39ef4129d Severity, Gauge Certificate Expiration (Days) for Certificate Certificate CN_b1e39ef4129d_O_Ping_Identity_Certificate 107317865941406425994369449973218805502 in Server Instance b1e39ef4129d Value, Gauge Certificate Expiration (Days) for Certificate Certificate CN_b1e39ef4129d_O_Ping_Identity_Self_Signed_Certificate 27575695299139978964665380059755377577 in Key Manager Provider JKS Severity, Gauge Certificate Expiration (Days) for Certificate Certificate CN_b1e39ef4129d_O_Ping_Identity_Self_Signed_Certificate 27575695299139978964665380059755377577 in Key Manager Provider JKS Value, Gauge Changelog Database Target Size (Percent) Severity, Gauge Changelog Database Target Size (Percent) Value, Gauge Cleaner Backlog (Number Of Files) for Backend changelog Severity, Gauge Cleaner Backlog (Number Of Files) for Backend changelog Value, Gauge Cleaner Backlog (Number Of Files) for Backend userRoot Severity, Gauge Cleaner Backlog (Number Of Files) for Backend userRoot Value, Gauge Database Cache Full (Percent) for Backend userRoot Severity, Gauge Database Cache Full (Percent) for Backend userRoot Value, Gauge Disk Busy (Percent) Severity, Gauge Disk Busy (Percent) Value, Gauge HTTP Processing (Percent) for HTTPS Connection Handler Severity, Gauge HTTP Processing (Percent) for HTTPS Connection Handler Value, Gauge JVM Memory Usage (Percent) for JVM Memory Usage Severity, Gauge JVM Memory Usage (Percent) for JVM Memory Usage Value, Gauge Purge Expired Data Backlog (Number of Entries) for Purge Expired Data Plugin ExpiredSessionAutoPurge Severity, Gauge Purge Expired Data Backlog (Number of Entries) for Purge Expired Data Plugin ExpiredSessionAutoPurge Value, Gauge Purge Expired Data Backlog (Number of Entries) for Purge Expired Data Plugin IdleSessionAutoPurge Severity, Gauge Purge Expired Data Backlog (Number of Entries) for Purge Expired Data Plugin IdleSessionAutoPurge Value, Gauge Recent Changes Database-to-JVM Heap Size Ratio (Percent) for dc_example_dc_com_changes Severity, Gauge Recent Changes Database-to-JVM Heap Size Ratio (Percent) for dc_example_dc_com_changes Value, Gauge Replication Purge Delay (Hours) Severity, Gauge Replication Purge Delay (Hours) Value, Gauge Strong Encryption Not Available Severity, Gauge Strong Encryption Not Available Value, Gauge Undeletable Database Files (Percent) for Backend changelog Severity, Gauge Undeletable Database Files (Percent) for Backend changelog Value, Gauge Undeletable Database Files (Percent) for Backend userRoot Severity, Gauge Undeletable Database Files (Percent) for Backend userRoot Value, Gauge Work Queue Size (Number Of Requests) for Work Queue Severity, Gauge Work Queue Size (Number Of Requests) for Work Queue Value
+# Log format for <historical-dsstats.csv> as of 17/Sep/2020:20:36:33 +0000
+Date, Time, Num Critical Concerns, Num Concerns, Num Unvailable Alert Types, Num Degraded Alert Types, Is In Lockdown Mode, Critical Alarms, Warning Alarms, Critical Gauges, Warning Gauges, Num Ops in Progress (Avg), Num Ops in Progress (Max), All Ops, All Avg Time (ms), All Ops/sec, Search Ops, Search Avg Time (ms), Search Ops/sec, Modify Ops, Modify Avg Time (ms), Modify Ops/sec, Add Ops, Add Avg Time (ms), Add Ops/sec, Delete Ops, Delete Avg Time (ms), Delete Ops/sec, ModifyDN Ops, ModifyDN Avg Time (ms), ModifyDN Ops/sec, Bind Ops, Bind Avg Time (ms), Bind Ops/sec, Compare Ops, Compare Avg Time (ms), Compare Ops/sec, Extended Ops, Extended Avg Time (ms), Extended Ops/sec, Num Current Conn, Num New Conn, Backend userRoot Entry Count, Backend userRoot DB Cache % Full, Backend userRoot Size on Disk (GB), Backend userRoot Active Cleaner Threads (Avg), Backend userRoot Cleaner Backlog (Avg), Backend userRoot Cleaner Backlog (Min), Backend userRoot Cleaner Backlog (Max), Backend userRoot Nodes Evicted, Backend userRoot Checkpoints, Backend userRoot Average Checkpoint Duration, Backend userRoot Time Since Last Checkpoint (sec), Backend userRoot New DB Logs, Backend userRoot Random Reads, Backend userRoot Random Writes, Backend userRoot Sequential Reads, Backend userRoot Sequential Writes, Entry Cache Frequently Accessed Entry Cache Is Full, Entry Cache Frequently Accessed Entry Cache Hit Ratio %, Entry Cache Frequently Accessed Entry Cache Hits, Entry Cache Frequently Accessed Entry Cache Tries, Entry Cache Frequently Accessed Entry Cache Added Or Updated, Entry Cache Frequently Accessed Entry Cache Entry Count, Entry Cache Frequently Accessed Entry Cache Entry % Full, Entry Cache Frequently Accessed Entry Cache Remaining JVM Memory %, LDAP Changelog Num Entries, LDAP Changelog Changes Written, LDAP Changelog Changes Purged, LDAP Changelog Write Queue Capacity (Avg), LDAP Changelog Write Queue Capacity (Min), LDAP Changelog Write Queue Size (Avg), LDAP Changelog Write Queue Size (Max), LDAP Changelog GCB Requests, LDAP Changelog GCB Request Avg Duration Millis, LDAP Changelog GCB Requests Resumed From Foreign Token, LDAP Changelog GCB Canceled Requests, LDAP Changelog GCB Entries Returned, LDAP Changelog GCB Entries Examined, LDAP Changelog GCB Request Avg Duration Per Entry Returned Millis, LDAP Changelog GCB Request Avg Duration Per Entry Examined Millis, LDAP Changelog Entries Returned Per GCB Request, LDAP Changelog Entries Examined Per GCB Request, LDAP Changelog Estimated Changes Remaining Per GCB Request (Avg), LDAP Changelog Entries Examined Per Returned Entry (GCB Request), LDAP Changelog Entries Partially Examined Per GCB Request, LDAP Changelog Entries Partially Examined Per Returned Entry (GCB Request), LDAP Changelog Fully Indexed GCB Requests, LDAP Changelog Fully Indexed GCB Request Returned Entries, LDAP Changelog Not Fully Indexed GCB Requests, LDAP Changelog Partially Indexed GCB Requests, LDAP Changelog Low-Density GCB Requests, LDAP Changelog Active GCB Requests (Avg), LDAP Changelog GCB Processor % Busy (Avg), Backend changelog DB Cache % Full, Backend changelog Size on Disk (GB), Backend changelog Active Cleaner Threads (Avg), Backend changelog Cleaner Backlog (Avg), Backend changelog Cleaner Backlog (Min), Backend changelog Cleaner Backlog (Max), Backend changelog Nodes Evicted, Backend changelog Checkpoints, Backend changelog Average Checkpoint Duration, Backend changelog Time Since Last Checkpoint (sec), Backend changelog New DB Logs, Backend changelog Random Reads, Backend changelog Random Writes, Backend changelog Sequential Reads, Backend changelog Sequential Writes, LDAP Connection Handler 0.0.0.0 port 389 Statistics Bytes Read, LDAP Connection Handler 0.0.0.0 port 389 Statistics Bytes Written, LDAP Connection Handler 0.0.0.0 port 389 Statistics Messages Read, LDAP Connection Handler 0.0.0.0 port 389 Statistics Messages Written, LDAP Connection Handler 0.0.0.0 port 389 Statistics Search Requests, LDAP Connection Handler 0.0.0.0 port 389 Statistics Search Entries Returned, LDAP Connection Handler 0.0.0.0 port 636 Statistics Bytes Read, LDAP Connection Handler 0.0.0.0 port 636 Statistics Bytes Written, LDAP Connection Handler 0.0.0.0 port 636 Statistics Messages Read, LDAP Connection Handler 0.0.0.0 port 636 Statistics Messages Written, LDAP Connection Handler 0.0.0.0 port 636 Statistics Search Requests, LDAP Connection Handler 0.0.0.0 port 636 Statistics Search Entries Returned, JVM Memory Used GB, JVM Memory Percent Full, Memory Consumer Total GB, Memory Consumer Percentage of Total Memory, g1-young-generation minor-collection g1-evacuation-pause Count, g1-young-generation minor-collection g1-evacuation-pause Duration (ms), g1-eden-space Live Bytes, g1-survivor-space Live Bytes, g1-old-gen Live Bytes, g1-young-generation minor-collection gclocker-initiated-gc Count, g1-young-generation minor-collection gclocker-initiated-gc Duration (ms), g1-young-generation minor-collection metadata-gc-threshold Count, g1-young-generation minor-collection metadata-gc-threshold Duration (ms), Add Ops 0-1 ms, Add Ops 1-2 ms, Add Ops 2-3 ms, Add Ops 3-5 ms, Add Ops 5-10 ms, Add Ops 10-20 ms, Add Ops 20-30 ms, Add Ops 30-50 ms, Add Ops 50-100 ms, Add Ops 100-1000 ms, Add Ops > 1000 ms, All Ops 0-1 ms, All Ops 1-2 ms, All Ops 2-3 ms, All Ops 3-5 ms, All Ops 5-10 ms, All Ops 10-20 ms, All Ops 20-30 ms, All Ops 30-50 ms, All Ops 50-100 ms, All Ops 100-1000 ms, All Ops > 1000 ms, Bind Ops 0-1 ms, Bind Ops 1-2 ms, Bind Ops 2-3 ms, Bind Ops 3-5 ms, Bind Ops 5-10 ms, Bind Ops 10-20 ms, Bind Ops 20-30 ms, Bind Ops 30-50 ms, Bind Ops 50-100 ms, Bind Ops 100-1000 ms, Bind Ops > 1000 ms, Compare Ops 0-1 ms, Compare Ops 1-2 ms, Compare Ops 2-3 ms, Compare Ops 3-5 ms, Compare Ops 5-10 ms, Compare Ops 10-20 ms, Compare Ops 20-30 ms, Compare Ops 30-50 ms, Compare Ops 50-100 ms, Compare Ops 100-1000 ms, Compare Ops > 1000 ms, Delete Ops 0-1 ms, Delete Ops 1-2 ms, Delete Ops 2-3 ms, Delete Ops 3-5 ms, Delete Ops 5-10 ms, Delete Ops 10-20 ms, Delete Ops 20-30 ms, Delete Ops 30-50 ms, Delete Ops 50-100 ms, Delete Ops 100-1000 ms, Delete Ops > 1000 ms, Extended Ops 0-1 ms, Extended Ops 1-2 ms, Extended Ops 2-3 ms, Extended Ops 3-5 ms, Extended Ops 5-10 ms, Extended Ops 10-20 ms, Extended Ops 20-30 ms, Extended Ops 30-50 ms, Extended Ops 50-100 ms, Extended Ops 100-1000 ms, Extended Ops > 1000 ms, Modify Ops 0-1 ms, Modify Ops 1-2 ms, Modify Ops 2-3 ms, Modify Ops 3-5 ms, Modify Ops 5-10 ms, Modify Ops 10-20 ms, Modify Ops 20-30 ms, Modify Ops 30-50 ms, Modify Ops 50-100 ms, Modify Ops 100-1000 ms, Modify Ops > 1000 ms, ModifyDN Ops 0-1 ms, ModifyDN Ops 1-2 ms, ModifyDN Ops 2-3 ms, ModifyDN Ops 3-5 ms, ModifyDN Ops 5-10 ms, ModifyDN Ops 10-20 ms, ModifyDN Ops 20-30 ms, ModifyDN Ops 30-50 ms, ModifyDN Ops 50-100 ms, ModifyDN Ops 100-1000 ms, ModifyDN Ops > 1000 ms, Search Ops 0-1 ms, Search Ops 1-2 ms, Search Ops 2-3 ms, Search Ops 3-5 ms, Search Ops 5-10 ms, Search Ops 10-20 ms, Search Ops 20-30 ms, Search Ops 30-50 ms, Search Ops 50-100 ms, Search Ops 100-1000 ms, Search Ops > 1000 ms
 1: Date
 2: Time
 3: Num Critical Concerns
@@ -109,171 +109,127 @@ Date, Time, Num Critical Concerns, Num Concerns, Num Unvailable Alert Types, Num
 107: Backend changelog Random Writes
 108: Backend changelog Sequential Reads
 109: Backend changelog Sequential Writes
-110: Worker Thread % Busy (Avg)
-111: Worker Thread % Busy (Max)
-112: Queue Size (Avg)
-113: Queue Size (Max)
-114: LDAP Connection Handler 0.0.0.0 port 389 Statistics Bytes Read
-115: LDAP Connection Handler 0.0.0.0 port 389 Statistics Bytes Written
-116: LDAP Connection Handler 0.0.0.0 port 389 Statistics Messages Read
-117: LDAP Connection Handler 0.0.0.0 port 389 Statistics Messages Written
-118: LDAP Connection Handler 0.0.0.0 port 389 Statistics Search Requests
-119: LDAP Connection Handler 0.0.0.0 port 389 Statistics Search Entries Returned
-120: LDAP Connection Handler 0.0.0.0 port 636 Statistics Bytes Read
-121: LDAP Connection Handler 0.0.0.0 port 636 Statistics Bytes Written
-122: LDAP Connection Handler 0.0.0.0 port 636 Statistics Messages Read
-123: LDAP Connection Handler 0.0.0.0 port 636 Statistics Messages Written
-124: LDAP Connection Handler 0.0.0.0 port 636 Statistics Search Requests
-125: LDAP Connection Handler 0.0.0.0 port 636 Statistics Search Entries Returned
-126: JVM Memory Used GB
-127: JVM Memory Percent Full
-128: Memory Consumer Total GB
-129: Memory Consumer Percentage of Total Memory
-130: g1-young-generation minor-collection g1-evacuation-pause Count
-131: g1-young-generation minor-collection g1-evacuation-pause Duration (ms)
-132: g1-eden-space Live Bytes
-133: g1-survivor-space Live Bytes
-134: g1-old-gen Live Bytes
-135: g1-young-generation minor-collection gclocker-initiated-gc Count
-136: g1-young-generation minor-collection gclocker-initiated-gc Duration (ms)
-137: g1-young-generation minor-collection metadata-gc-threshold Count
-138: g1-young-generation minor-collection metadata-gc-threshold Duration (ms)
-139: Add Ops 0-1 ms
-140: Add Ops 1-2 ms
-141: Add Ops 2-3 ms
-142: Add Ops 3-5 ms
-143: Add Ops 5-10 ms
-144: Add Ops 10-20 ms
-145: Add Ops 20-30 ms
-146: Add Ops 30-50 ms
-147: Add Ops 50-100 ms
-148: Add Ops 100-1000 ms
-149: Add Ops > 1000 ms
-150: All Ops 0-1 ms
-151: All Ops 1-2 ms
-152: All Ops 2-3 ms
-153: All Ops 3-5 ms
-154: All Ops 5-10 ms
-155: All Ops 10-20 ms
-156: All Ops 20-30 ms
-157: All Ops 30-50 ms
-158: All Ops 50-100 ms
-159: All Ops 100-1000 ms
-160: All Ops > 1000 ms
-161: Bind Ops 0-1 ms
-162: Bind Ops 1-2 ms
-163: Bind Ops 2-3 ms
-164: Bind Ops 3-5 ms
-165: Bind Ops 5-10 ms
-166: Bind Ops 10-20 ms
-167: Bind Ops 20-30 ms
-168: Bind Ops 30-50 ms
-169: Bind Ops 50-100 ms
-170: Bind Ops 100-1000 ms
-171: Bind Ops > 1000 ms
-172: Compare Ops 0-1 ms
-173: Compare Ops 1-2 ms
-174: Compare Ops 2-3 ms
-175: Compare Ops 3-5 ms
-176: Compare Ops 5-10 ms
-177: Compare Ops 10-20 ms
-178: Compare Ops 20-30 ms
-179: Compare Ops 30-50 ms
-180: Compare Ops 50-100 ms
-181: Compare Ops 100-1000 ms
-182: Compare Ops > 1000 ms
-183: Delete Ops 0-1 ms
-184: Delete Ops 1-2 ms
-185: Delete Ops 2-3 ms
-186: Delete Ops 3-5 ms
-187: Delete Ops 5-10 ms
-188: Delete Ops 10-20 ms
-189: Delete Ops 20-30 ms
-190: Delete Ops 30-50 ms
-191: Delete Ops 50-100 ms
-192: Delete Ops 100-1000 ms
-193: Delete Ops > 1000 ms
-194: Extended Ops 0-1 ms
-195: Extended Ops 1-2 ms
-196: Extended Ops 2-3 ms
-197: Extended Ops 3-5 ms
-198: Extended Ops 5-10 ms
-199: Extended Ops 10-20 ms
-200: Extended Ops 20-30 ms
-201: Extended Ops 30-50 ms
-202: Extended Ops 50-100 ms
-203: Extended Ops 100-1000 ms
-204: Extended Ops > 1000 ms
-205: Modify Ops 0-1 ms
-206: Modify Ops 1-2 ms
-207: Modify Ops 2-3 ms
-208: Modify Ops 3-5 ms
-209: Modify Ops 5-10 ms
-210: Modify Ops 10-20 ms
-211: Modify Ops 20-30 ms
-212: Modify Ops 30-50 ms
-213: Modify Ops 50-100 ms
-214: Modify Ops 100-1000 ms
-215: Modify Ops > 1000 ms
-216: ModifyDN Ops 0-1 ms
-217: ModifyDN Ops 1-2 ms
-218: ModifyDN Ops 2-3 ms
-219: ModifyDN Ops 3-5 ms
-220: ModifyDN Ops 5-10 ms
-221: ModifyDN Ops 10-20 ms
-222: ModifyDN Ops 20-30 ms
-223: ModifyDN Ops 30-50 ms
-224: ModifyDN Ops 50-100 ms
-225: ModifyDN Ops 100-1000 ms
-226: ModifyDN Ops > 1000 ms
-227: Search Ops 0-1 ms
-228: Search Ops 1-2 ms
-229: Search Ops 2-3 ms
-230: Search Ops 3-5 ms
-231: Search Ops 5-10 ms
-232: Search Ops 10-20 ms
-233: Search Ops 20-30 ms
-234: Search Ops 30-50 ms
-235: Search Ops 50-100 ms
-236: Search Ops 100-1000 ms
-237: Search Ops > 1000 ms
-238: Gauge Active Cleaner Threads (Percent) for Backend changelog Severity
-239: Gauge Active Cleaner Threads (Percent) for Backend changelog Value
-240: Gauge Active Cleaner Threads (Percent) for Backend userRoot Severity
-241: Gauge Active Cleaner Threads (Percent) for Backend userRoot Value
-242: Gauge Certificate Expiration (Days) for Certificate Certificate CN_b1e39ef4129d_O_Ping_Identity_Certificate 107317865941406425994369449973218805502 in Backend ads-truststore Severity
-243: Gauge Certificate Expiration (Days) for Certificate Certificate CN_b1e39ef4129d_O_Ping_Identity_Certificate 107317865941406425994369449973218805502 in Backend ads-truststore Value
-244: Gauge Certificate Expiration (Days) for Certificate Certificate CN_b1e39ef4129d_O_Ping_Identity_Certificate 107317865941406425994369449973218805502 in Server Instance b1e39ef4129d Severity
-245: Gauge Certificate Expiration (Days) for Certificate Certificate CN_b1e39ef4129d_O_Ping_Identity_Certificate 107317865941406425994369449973218805502 in Server Instance b1e39ef4129d Value
-246: Gauge Certificate Expiration (Days) for Certificate Certificate CN_b1e39ef4129d_O_Ping_Identity_Self_Signed_Certificate 27575695299139978964665380059755377577 in Key Manager Provider JKS Severity
-247: Gauge Certificate Expiration (Days) for Certificate Certificate CN_b1e39ef4129d_O_Ping_Identity_Self_Signed_Certificate 27575695299139978964665380059755377577 in Key Manager Provider JKS Value
-248: Gauge Changelog Database Target Size (Percent) Severity
-249: Gauge Changelog Database Target Size (Percent) Value
-250: Gauge Cleaner Backlog (Number Of Files) for Backend changelog Severity
-251: Gauge Cleaner Backlog (Number Of Files) for Backend changelog Value
-252: Gauge Cleaner Backlog (Number Of Files) for Backend userRoot Severity
-253: Gauge Cleaner Backlog (Number Of Files) for Backend userRoot Value
-254: Gauge Database Cache Full (Percent) for Backend userRoot Severity
-255: Gauge Database Cache Full (Percent) for Backend userRoot Value
-256: Gauge Disk Busy (Percent) Severity
-257: Gauge Disk Busy (Percent) Value
-258: Gauge HTTP Processing (Percent) for HTTPS Connection Handler Severity
-259: Gauge HTTP Processing (Percent) for HTTPS Connection Handler Value
-260: Gauge JVM Memory Usage (Percent) for JVM Memory Usage Severity
-261: Gauge JVM Memory Usage (Percent) for JVM Memory Usage Value
-262: Gauge Purge Expired Data Backlog (Number of Entries) for Purge Expired Data Plugin ExpiredSessionAutoPurge Severity
-263: Gauge Purge Expired Data Backlog (Number of Entries) for Purge Expired Data Plugin ExpiredSessionAutoPurge Value
-264: Gauge Purge Expired Data Backlog (Number of Entries) for Purge Expired Data Plugin IdleSessionAutoPurge Severity
-265: Gauge Purge Expired Data Backlog (Number of Entries) for Purge Expired Data Plugin IdleSessionAutoPurge Value
-266: Gauge Recent Changes Database-to-JVM Heap Size Ratio (Percent) for dc_example_dc_com_changes Severity
-267: Gauge Recent Changes Database-to-JVM Heap Size Ratio (Percent) for dc_example_dc_com_changes Value
-268: Gauge Replication Purge Delay (Hours) Severity
-269: Gauge Replication Purge Delay (Hours) Value
-270: Gauge Strong Encryption Not Available Severity
-271: Gauge Strong Encryption Not Available Value
-272: Gauge Undeletable Database Files (Percent) for Backend changelog Severity
-273: Gauge Undeletable Database Files (Percent) for Backend changelog Value
-274: Gauge Undeletable Database Files (Percent) for Backend userRoot Severity
-275: Gauge Undeletable Database Files (Percent) for Backend userRoot Value
-276: Gauge Work Queue Size (Number Of Requests) for Work Queue Severity
-277: Gauge Work Queue Size (Number Of Requests) for Work Queue Value
+110: LDAP Connection Handler 0.0.0.0 port 389 Statistics Bytes Read
+111: LDAP Connection Handler 0.0.0.0 port 389 Statistics Bytes Written
+112: LDAP Connection Handler 0.0.0.0 port 389 Statistics Messages Read
+113: LDAP Connection Handler 0.0.0.0 port 389 Statistics Messages Written
+114: LDAP Connection Handler 0.0.0.0 port 389 Statistics Search Requests
+115: LDAP Connection Handler 0.0.0.0 port 389 Statistics Search Entries Returned
+116: LDAP Connection Handler 0.0.0.0 port 636 Statistics Bytes Read
+117: LDAP Connection Handler 0.0.0.0 port 636 Statistics Bytes Written
+118: LDAP Connection Handler 0.0.0.0 port 636 Statistics Messages Read
+119: LDAP Connection Handler 0.0.0.0 port 636 Statistics Messages Written
+120: LDAP Connection Handler 0.0.0.0 port 636 Statistics Search Requests
+121: LDAP Connection Handler 0.0.0.0 port 636 Statistics Search Entries Returned
+122: JVM Memory Used GB
+123: JVM Memory Percent Full
+124: Memory Consumer Total GB
+125: Memory Consumer Percentage of Total Memory
+126: g1-young-generation minor-collection g1-evacuation-pause Count
+127: g1-young-generation minor-collection g1-evacuation-pause Duration (ms)
+128: g1-eden-space Live Bytes
+129: g1-survivor-space Live Bytes
+130: g1-old-gen Live Bytes
+131: g1-young-generation minor-collection gclocker-initiated-gc Count
+132: g1-young-generation minor-collection gclocker-initiated-gc Duration (ms)
+133: g1-young-generation minor-collection metadata-gc-threshold Count
+134: g1-young-generation minor-collection metadata-gc-threshold Duration (ms)
+135: Add Ops 0-1 ms
+136: Add Ops 1-2 ms
+137: Add Ops 2-3 ms
+138: Add Ops 3-5 ms
+139: Add Ops 5-10 ms
+140: Add Ops 10-20 ms
+141: Add Ops 20-30 ms
+142: Add Ops 30-50 ms
+143: Add Ops 50-100 ms
+144: Add Ops 100-1000 ms
+145: Add Ops > 1000 ms
+146: All Ops 0-1 ms
+147: All Ops 1-2 ms
+148: All Ops 2-3 ms
+149: All Ops 3-5 ms
+150: All Ops 5-10 ms
+151: All Ops 10-20 ms
+152: All Ops 20-30 ms
+153: All Ops 30-50 ms
+154: All Ops 50-100 ms
+155: All Ops 100-1000 ms
+156: All Ops > 1000 ms
+157: Bind Ops 0-1 ms
+158: Bind Ops 1-2 ms
+159: Bind Ops 2-3 ms
+160: Bind Ops 3-5 ms
+161: Bind Ops 5-10 ms
+162: Bind Ops 10-20 ms
+163: Bind Ops 20-30 ms
+164: Bind Ops 30-50 ms
+165: Bind Ops 50-100 ms
+166: Bind Ops 100-1000 ms
+167: Bind Ops > 1000 ms
+168: Compare Ops 0-1 ms
+169: Compare Ops 1-2 ms
+170: Compare Ops 2-3 ms
+171: Compare Ops 3-5 ms
+172: Compare Ops 5-10 ms
+173: Compare Ops 10-20 ms
+174: Compare Ops 20-30 ms
+175: Compare Ops 30-50 ms
+176: Compare Ops 50-100 ms
+177: Compare Ops 100-1000 ms
+178: Compare Ops > 1000 ms
+179: Delete Ops 0-1 ms
+180: Delete Ops 1-2 ms
+181: Delete Ops 2-3 ms
+182: Delete Ops 3-5 ms
+183: Delete Ops 5-10 ms
+184: Delete Ops 10-20 ms
+185: Delete Ops 20-30 ms
+186: Delete Ops 30-50 ms
+187: Delete Ops 50-100 ms
+188: Delete Ops 100-1000 ms
+189: Delete Ops > 1000 ms
+190: Extended Ops 0-1 ms
+191: Extended Ops 1-2 ms
+192: Extended Ops 2-3 ms
+193: Extended Ops 3-5 ms
+194: Extended Ops 5-10 ms
+195: Extended Ops 10-20 ms
+196: Extended Ops 20-30 ms
+197: Extended Ops 30-50 ms
+198: Extended Ops 50-100 ms
+199: Extended Ops 100-1000 ms
+200: Extended Ops > 1000 ms
+201: Modify Ops 0-1 ms
+202: Modify Ops 1-2 ms
+203: Modify Ops 2-3 ms
+204: Modify Ops 3-5 ms
+205: Modify Ops 5-10 ms
+206: Modify Ops 10-20 ms
+207: Modify Ops 20-30 ms
+208: Modify Ops 30-50 ms
+209: Modify Ops 50-100 ms
+210: Modify Ops 100-1000 ms
+211: Modify Ops > 1000 ms
+212: ModifyDN Ops 0-1 ms
+213: ModifyDN Ops 1-2 ms
+214: ModifyDN Ops 2-3 ms
+215: ModifyDN Ops 3-5 ms
+216: ModifyDN Ops 5-10 ms
+217: ModifyDN Ops 10-20 ms
+218: ModifyDN Ops 20-30 ms
+219: ModifyDN Ops 30-50 ms
+220: ModifyDN Ops 50-100 ms
+221: ModifyDN Ops 100-1000 ms
+222: ModifyDN Ops > 1000 ms
+223: Search Ops 0-1 ms
+224: Search Ops 1-2 ms
+225: Search Ops 2-3 ms
+226: Search Ops 3-5 ms
+227: Search Ops 5-10 ms
+228: Search Ops 10-20 ms
+229: Search Ops 20-30 ms
+230: Search Ops 30-50 ms
+231: Search Ops 50-100 ms
+232: Search Ops 100-1000 ms
+233: Search Ops > 1000 ms

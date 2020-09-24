@@ -1,0 +1,2871 @@
+# Search results from shutdown plugin cn=Dump Monitor Entries on Shutdown,cn=Plugins,cn=config
+# Invoked Fri Sep 04 17:49:45 GMT 2020
+# Base DN:  cn=monitor
+# Scope:  SUB
+# Filter:  (objectClass=*)
+
+dn: cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-general-monitor-entry
+objectClass: extensibleObject
+cn: monitor
+productName: Ping Identity Directory Server
+productVendor: Ping Identity Corporation
+productVersion: Ping Identity Directory Server 8.1.0.0
+locationName: Docker
+locationDN: cn=Docker,cn=Locations,cn=config
+instanceName: b1e39ef4129d
+clusterName: Directory Server
+serverUUID: b48ff2cf-408c-39cb-9967-38f87beae3fa
+startupID: X1J+Kg==
+startupUUID: f7b44923-b8b5-415a-a887-5f8077aaeda1
+startTime: 20200904174945Z
+currentTime: 20200904174945Z
+upTime: 0 days 0 hours 0 minutes 0 seconds
+currentConnections: 0
+maxConnections: 0
+totalConnections: 0
+degraded-alert-type: low-disk-space-warning
+unavailable-alert-type: server-shutting-down
+
+dn: cn=Active Operations,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-active-operations-monitor-entry
+objectClass: extensibleObject
+cn: Active Operations
+num-operations-in-progress: 0
+num-persistent-searches-in-progress: 0
+
+dn: cn=ads-truststore Backend,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-backend-monitor-entry
+objectClass: extensibleObject
+cn: ads-truststore Backend
+ds-backend-id: ads-truststore
+ds-backend-base-dn: cn=ads-truststore
+ds-backend-is-private: TRUE
+ds-backend-supports-binary-copy: FALSE
+ds-backend-entry-count: 3
+ds-base-dn-entry-count: 3 cn=ads-truststore
+ds-backend-writability-mode: enabled
+
+dn: cn=alarms Backend,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-backend-monitor-entry
+objectClass: extensibleObject
+cn: alarms Backend
+ds-backend-id: alarms
+ds-backend-base-dn: cn=alarms
+ds-backend-is-private: TRUE
+ds-backend-supports-binary-copy: FALSE
+ds-backend-entry-count: 3
+ds-base-dn-entry-count: 3 cn=alarms
+ds-backend-writability-mode: enabled
+
+dn: cn=alerts Backend,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-backend-monitor-entry
+objectClass: extensibleObject
+cn: alerts Backend
+ds-backend-id: alerts
+ds-backend-base-dn: cn=alerts
+ds-backend-is-private: TRUE
+ds-backend-supports-binary-copy: FALSE
+ds-backend-entry-count: 6
+ds-base-dn-entry-count: 6 cn=alerts
+ds-backend-writability-mode: enabled
+
+dn: cn=backup Backend,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-backend-monitor-entry
+objectClass: extensibleObject
+cn: backup Backend
+ds-backend-id: backup
+ds-backend-base-dn: cn=backups
+ds-backend-is-private: TRUE
+ds-backend-supports-binary-copy: FALSE
+ds-backend-entry-count: 1
+ds-base-dn-entry-count: 1 cn=backups
+ds-backend-writability-mode: disabled
+
+dn: cn=Certificate CN_b1e39ef4129d_O_Ping_Identity_Certificate 107317865941406425994369449973218805502 in Backend ads-truststore,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-x509-certificate-monitor-entry
+objectClass: extensibleObject
+cn: Certificate CN_b1e39ef4129d_O_Ping_Identity_Certificate 107317865941406425994369449973218805502 in Backend ads-truststore
+subject: CN=b1e39ef4129d,O=Ping Identity Certificate
+issuer: CN=b1e39ef4129d,O=Ping Identity Certificate
+serial-number: 107317865941406425994369449973218805502
+not-valid-before: 20200903174737.000Z
+not-valid-after: 20400830174737.000Z
+expires: 20 years
+expires-seconds: 630719872
+currently-valid: true
+component-name: ads-truststore
+component-type: Backend
+context-type: provider
+keystore-type: JKS
+keystore-file: config/ads-truststore
+alias: ads-certificate
+
+dn: cn=Certificate CN_b1e39ef4129d_O_Ping_Identity_Certificate 107317865941406425994369449973218805502 in Server Instance b1e39ef4129d,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-x509-certificate-monitor-entry
+objectClass: extensibleObject
+cn: Certificate CN_b1e39ef4129d_O_Ping_Identity_Certificate 107317865941406425994369449973218805502 in Server Instance b1e39ef4129d
+subject: CN=b1e39ef4129d,O=Ping Identity Certificate
+issuer: CN=b1e39ef4129d,O=Ping Identity Certificate
+serial-number: 107317865941406425994369449973218805502
+not-valid-before: 20200903174737.000Z
+not-valid-after: 20400830174737.000Z
+expires: 20 years
+expires-seconds: 630719872
+currently-valid: true
+component-name: b1e39ef4129d
+component-type: Server Instance
+context-type: configuration
+property: inter-server-certificate
+
+dn: cn=changelog Backend,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-backend-monitor-entry
+objectClass: extensibleObject
+cn: changelog Backend
+ds-backend-id: changelog
+ds-backend-base-dn: cn=changelog
+ds-backend-is-private: TRUE
+ds-backend-supports-binary-copy: FALSE
+ds-backend-entry-count: 0
+ds-base-dn-entry-count: 0 cn=changelog
+ds-backend-writability-mode: disabled
+
+dn: cn=Client Connections,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-client-connection-monitor-entry
+objectClass: extensibleObject
+cn: Client Connections
+established-connection-count: 0
+max-concurrent-connection-count: 0
+total-connection-count-since-startup: 0
+
+dn: cn=config Backend,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-backend-monitor-entry
+objectClass: extensibleObject
+cn: config Backend
+ds-backend-id: config
+ds-backend-base-dn: cn=config
+ds-backend-is-private: TRUE
+ds-backend-supports-binary-copy: FALSE
+ds-backend-entry-count: 567
+ds-base-dn-entry-count: 567 cn=config
+ds-backend-writability-mode: enabled
+
+dn: cn=dc_example_dc_com_changes monitor,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-recent-changes-db-monitor-entry
+objectClass: extensibleObject
+cn: dc_example_dc_com_changes monitor
+description: The recent changes database records updates to entries that will be replicated to other servers in case of an unexpected server failure. This monitor entry is used to determine if a large number of changes are being retained and whether the size of the changes are large.
+database-name: dc_example_dc_com_changes
+backend-id: userRoot
+record-count: 0
+changed-entry-count-since-open: 0
+changed-entry-byte-count-since-open: 0
+changed-entry-size-average-since-open: 0
+add-entry-count-since-open: 0
+add-entry-byte-count-since-open: 0
+modify-entry-count-since-open: 0
+modify-entry-byte-count-since-open: 0
+rename-entry-count-since-open: 0
+rename-entry-byte-count-since-open: 0
+delete-entry-count-since-open: 0
+delete-entry-byte-count-since-open: 0
+database-open-time: 20200904174939.071Z
+database-open-record-count: 0
+database-open-missing-csn-count: 0
+database-open-decode-failure-count: 0
+entries-total-byte-count: 0
+min-entry-size-bytes: 0
+average-entry-size-bytes: 0
+max-entry-size-bytes: 0
+database-size-as-percentage-of-jvm-heap: 0
+
+dn: cn=Disk Space Usage,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-disk-space-usage-monitor-entry
+objectClass: extensibleObject
+cn: Disk Space Usage
+current-disk-space-state: low space warning
+disk-space-consumer-name-1: Config Handler
+disk-space-consumer-path-1: /opt/out/instance/config
+disk-space-consumer-total-bytes-1: 51976810496
+disk-space-consumer-usable-bytes-1: 2276773888
+disk-space-consumer-usable-percent-1: 4
+disk-space-consumer-name-2: Expensive Write Operations Access Logger
+disk-space-consumer-path-2: /opt/out/instance/logs
+disk-space-consumer-total-bytes-2: 51976810496
+disk-space-consumer-usable-bytes-2: 2276773888
+disk-space-consumer-usable-percent-2: 4
+disk-space-consumer-name-3: Failed Operations Access Logger
+disk-space-consumer-path-3: /opt/out/instance/logs
+disk-space-consumer-total-bytes-3: 51976810496
+disk-space-consumer-usable-bytes-3: 2276773888
+disk-space-consumer-usable-percent-3: 4
+disk-space-consumer-name-4: File-Based Access Logger
+disk-space-consumer-path-4: /opt/out/instance/logs
+disk-space-consumer-total-bytes-4: 51976810496
+disk-space-consumer-usable-bytes-4: 2276773888
+disk-space-consumer-usable-percent-4: 4
+disk-space-consumer-name-5: File-Based Error Logger
+disk-space-consumer-path-5: /opt/out/instance/logs
+disk-space-consumer-total-bytes-5: 51976810496
+disk-space-consumer-usable-bytes-5: 2276773888
+disk-space-consumer-usable-percent-5: 4
+disk-space-consumer-name-6: Replication Repair Logger
+disk-space-consumer-path-6: /opt/out/instance/logs
+disk-space-consumer-total-bytes-6: 51976810496
+disk-space-consumer-usable-bytes-6: 2276773888
+disk-space-consumer-usable-percent-6: 4
+disk-space-consumer-name-7: LDIF Export Recurring Task Export All Non-Administrative Backends
+disk-space-consumer-path-7: /opt/backup
+disk-space-consumer-total-bytes-7: 51976810496
+disk-space-consumer-usable-bytes-7: 2276773888
+disk-space-consumer-usable-percent-7: 4
+disk-space-consumer-name-8: userRoot JE Backend
+disk-space-consumer-path-8: /opt/out/instance/db/userRoot
+disk-space-consumer-total-bytes-8: 51976810496
+disk-space-consumer-usable-bytes-8: 2276773888
+disk-space-consumer-usable-percent-8: 4
+disk-space-consumer-name-9: Ping Identity Directory Server
+disk-space-consumer-path-9: /opt/out/instance
+disk-space-consumer-total-bytes-9: 51976810496
+disk-space-consumer-usable-bytes-9: 2276773888
+disk-space-consumer-usable-percent-9: 4
+
+dn: cn=DNS Resolution,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-dns-lookup-monitor-entry
+objectClass: extensibleObject
+cn: DNS Resolution
+dns-lookup-count: 9
+dns-lookup-total-millis: 2
+dns-lookup-average-duration-millis: 0.267
+dns-lookup-maximum-duration-millis: 1.798
+dns-lookup-duration-histogram-counts: { "0.01 ms to 0.02 ms":2, "0.02 ms to 0.05 ms":4, "0.05 ms to 0.1 ms":0, "0.1 ms to 0.2 ms":1, "0.2 ms to 0.5 ms":1, "0.5 ms to 1 ms":0, "1 ms to 2 ms":1 }
+dns-lookup-duration-histogram-percentages: { "0.01 ms to 0.02 ms":"22.222%", "0.02 ms to 0.05 ms":"44.444%", "0.05 ms to 0.1 ms":"0.000%", "0.1 ms to 0.2 ms":"11.111%", "0.2 ms to 0.5 ms":"11.111%", "0.5 ms to 1 ms":"0.000%", "1 ms to 2 ms":"11.111%" }
+failed-dns-resolution-count: 0
+successful-cached-lookup-count: 0
+reverse-dns-lookup-count: 3
+reverse-dns-lookup-total-millis: 0
+reverse-dns-lookup-average-duration-millis: 0.116
+reverse-dns-lookup-maximum-duration-millis: 0.277
+reverse-dns-lookup-duration-histogram-counts: { "0.02 ms to 0.05 ms":2, "0.05 ms to 0.1 ms":0, "0.1 ms to 0.2 ms":0, "0.2 ms to 0.5 ms":1 }
+reverse-dns-lookup-duration-histogram-percentages: { "0.02 ms to 0.05 ms":"66.667%", "0.05 ms to 0.1 ms":"0.000%", "0.1 ms to 0.2 ms":"0.000%", "0.2 ms to 0.5 ms":"33.333%" }
+failed-reverse-dns-resolution-count: 0
+successful-reverse-cached-lookup-count: 0
+
+dn: cn=encryption-settings Backend,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-backend-monitor-entry
+objectClass: extensibleObject
+cn: encryption-settings Backend
+ds-backend-id: encryption-settings
+ds-backend-base-dn: cn=encryption settings
+ds-backend-is-private: TRUE
+ds-backend-supports-binary-copy: FALSE
+ds-backend-entry-count: 2
+ds-base-dn-entry-count: 2 cn=encryption settings
+ds-backend-writability-mode: disabled
+
+dn: cn=File Descriptors,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-file-descriptors-monitor-entry
+objectClass: extensibleObject
+cn: File Descriptors
+max-file-descriptors: 65535
+open-file-descriptors: 152
+available-file-descriptors: 65383
+
+dn: cn=Frequently Accessed Entry Cache Monitor,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-fifo-entry-cache-monitor-entry
+objectClass: extensibleObject
+cn: Frequently Accessed Entry Cache Monitor
+cacheName: Frequently Accessed Entry Cache
+entryCacheHits: 0
+entryCacheTries: 0
+entryCacheHitRatio: 0
+maxEntryCacheSize: 40265315
+currentEntryCacheCount: 0
+maxEntryCacheCount: 1000
+entriesAddedOrUpdated: 0
+evictionsDueToMaxMemory: 0
+evictionsDueToMaxEntries: 0
+entriesNotAddedAlreadyPresent: 0
+entriesNotAddedDueToMaxMemory: 0
+entriesNotAddedDueToFilter: 0
+entriesNotAddedDueToEntrySmallness: 0
+entriesNotAddedDueToInfrequency: 0
+lowMemoryOccurrences: 0
+memoryMaxPercentOfHeap: 5
+memoryCurrentPercentFull: 0
+percentFullMaxEntries: 0
+isFull: false
+
+dn: cn=General Monitor Entry,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-general-monitor-entry
+objectClass: extensibleObject
+cn: General Monitor Entry
+productName: Ping Identity Directory Server
+productVendor: Ping Identity Corporation
+productVersion: Ping Identity Directory Server 8.1.0.0
+locationName: Docker
+locationDN: cn=Docker,cn=Locations,cn=config
+instanceName: b1e39ef4129d
+clusterName: Directory Server
+serverUUID: b48ff2cf-408c-39cb-9967-38f87beae3fa
+startupID: X1J+Kg==
+startupUUID: f7b44923-b8b5-415a-a887-5f8077aaeda1
+startTime: 20200904174945Z
+currentTime: 20200904174945Z
+upTime: 0 days 0 hours 0 minutes 0 seconds
+currentConnections: 0
+maxConnections: 0
+totalConnections: 0
+degraded-alert-type: low-disk-space-warning
+unavailable-alert-type: server-shutting-down
+
+dn: cn=HTTP Servlet Configuration,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-http-servlet-config-monitor-entry
+objectClass: extensibleObject
+cn: HTTP Servlet Configuration
+
+dn: cn=Index dc_example_dc_com_accessGrantClientId.equality,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_accessGrantClientId.equality
+ds-index-name: dc_example_dc_com_accessGrantClientId.equality
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: accessGrantClientId
+ds-index-type: equality
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_accessGrantExpires.ordering,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_accessGrantExpires.ordering
+ds-index-name: dc_example_dc_com_accessGrantExpires.ordering
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: accessGrantExpires
+ds-index-type: ordering
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_accessGrantGuid.equality,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_accessGrantGuid.equality
+ds-index-name: dc_example_dc_com_accessGrantGuid.equality
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: accessGrantGuid
+ds-index-type: equality
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_accessGrantHashedRefreshTokenValue.equality,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_accessGrantHashedRefreshTokenValue.equality
+ds-index-name: dc_example_dc_com_accessGrantHashedRefreshTokenValue.equality
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: accessGrantHashedRefreshTokenValue
+ds-index-type: equality
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_accessGrantUniqueUserIdentifier.equality,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_accessGrantUniqueUserIdentifier.equality
+ds-index-name: dc_example_dc_com_accessGrantUniqueUserIdentifier.equality
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: accessGrantUniqueUserIdentifier
+ds-index-type: equality
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_aci.presence,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_aci.presence
+ds-index-name: dc_example_dc_com_aci.presence
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: aci
+ds-index-type: presence
+ds-index-trusted: true
+ds-index-entry-limit: 1000000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 1
+ds-index-read-for-search-count-since-db-open: 1
+ds-index-open-cursor-count-since-db-open: 1
+
+dn: cn=Index dc_example_dc_com_changes,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_changes
+ds-index-name: dc_example_dc_com_changes
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_cn.equality,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_cn.equality
+ds-index-name: dc_example_dc_com_cn.equality
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: cn
+ds-index-type: equality
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_cn.substring,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_cn.substring
+ds-index-name: dc_example_dc_com_cn.substring
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: cn
+ds-index-type: substring
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_compact_dn2id,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_compact_dn2id
+ds-index-name: dc_example_dc_com_compact_dn2id
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 10
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 10
+
+dn: cn=Index dc_example_dc_com_ds-entry-unique-id.equality,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_ds-entry-unique-id.equality
+ds-index-name: dc_example_dc_com_ds-entry-unique-id.equality
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: entryUUID
+ds-index-type: equality
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_ds-soft-delete-from-dn.equality,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_ds-soft-delete-from-dn.equality
+ds-index-name: dc_example_dc_com_ds-soft-delete-from-dn.equality
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: ds-soft-delete-from-dn
+ds-index-type: equality
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_ds-soft-delete-timestamp.ordering,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_ds-soft-delete-timestamp.ordering
+ds-index-name: dc_example_dc_com_ds-soft-delete-timestamp.ordering
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: ds-soft-delete-timestamp
+ds-index-type: ordering
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_givenName.equality,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_givenName.equality
+ds-index-name: dc_example_dc_com_givenName.equality
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: givenName
+ds-index-type: equality
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_givenName.substring,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_givenName.substring
+ds-index-name: dc_example_dc_com_givenName.substring
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: givenName
+ds-index-type: substring
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_id2children,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_id2children
+ds-index-name: dc_example_dc_com_id2children
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: true
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_id2entry,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_id2entry
+ds-index-name: dc_example_dc_com_id2entry
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 103
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 103
+highest-entry-id: 43
+
+dn: cn=Index dc_example_dc_com_id2subtree,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_id2subtree
+ds-index-name: dc_example_dc_com_id2subtree
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: true
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 7
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 7
+
+dn: cn=Index dc_example_dc_com_mail.equality,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_mail.equality
+ds-index-name: dc_example_dc_com_mail.equality
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: mail
+ds-index-type: equality
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_member.equality,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_member.equality
+ds-index-name: dc_example_dc_com_member.equality
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: member
+ds-index-type: equality
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_objectClass.equality,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_objectClass.equality
+ds-index-name: dc_example_dc_com_objectClass.equality
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: objectClass
+ds-index-type: equality
+ds-index-trusted: true
+ds-index-entry-limit: 100000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_pf-connected-identity.equality,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_pf-connected-identity.equality
+ds-index-name: dc_example_dc_com_pf-connected-identity.equality
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: pf-connected-identity
+ds-index-type: equality
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_pf-oauth-client-id.equality,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_pf-oauth-client-id.equality
+ds-index-name: dc_example_dc_com_pf-oauth-client-id.equality
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: pf-oauth-client-id
+ds-index-type: equality
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_pf-oauth-client-id.ordering,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_pf-oauth-client-id.ordering
+ds-index-name: dc_example_dc_com_pf-oauth-client-id.ordering
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: pf-oauth-client-id
+ds-index-type: ordering
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_pf-oauth-client-id.substring,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_pf-oauth-client-id.substring
+ds-index-name: dc_example_dc_com_pf-oauth-client-id.substring
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: pf-oauth-client-id
+ds-index-type: substring
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_pf-oauth-client-last-modified.ordering,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_pf-oauth-client-last-modified.ordering
+ds-index-name: dc_example_dc_com_pf-oauth-client-last-modified.ordering
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: pf-oauth-client-last-modified
+ds-index-type: ordering
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_pf-oauth-client-name.equality,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_pf-oauth-client-name.equality
+ds-index-name: dc_example_dc_com_pf-oauth-client-name.equality
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: pf-oauth-client-name
+ds-index-type: equality
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_pf-oauth-client-name.ordering,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_pf-oauth-client-name.ordering
+ds-index-name: dc_example_dc_com_pf-oauth-client-name.ordering
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: pf-oauth-client-name
+ds-index-type: ordering
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_pf-oauth-client-name.substring,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_pf-oauth-client-name.substring
+ds-index-name: dc_example_dc_com_pf-oauth-client-name.substring
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: pf-oauth-client-name
+ds-index-type: substring
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_referral,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_referral
+ds-index-name: dc_example_dc_com_referral
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_sn.equality,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_sn.equality
+ds-index-name: dc_example_dc_com_sn.equality
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: sn
+ds-index-type: equality
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_sn.substring,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_sn.substring
+ds-index-name: dc_example_dc_com_sn.substring
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: sn
+ds-index-type: substring
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_state,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_state
+ds-index-name: dc_example_dc_com_state
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 95
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 95
+
+dn: cn=Index dc_example_dc_com_telephoneNumber.equality,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_telephoneNumber.equality
+ds-index-name: dc_example_dc_com_telephoneNumber.equality
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: telephoneNumber
+ds-index-type: equality
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_ubidEmailJSON.json.value,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_ubidEmailJSON.json.value
+ds-index-name: dc_example_dc_com_ubidEmailJSON.json.value
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_ubidPhoneNumberJSON.json.value,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_ubidPhoneNumberJSON.json.value
+ds-index-name: dc_example_dc_com_ubidPhoneNumberJSON.json.value
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_uid.equality,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_uid.equality
+ds-index-name: dc_example_dc_com_uid.equality
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: uid
+ds-index-type: equality
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index dc_example_dc_com_uncached-id2entry,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_uncached-id2entry
+ds-index-name: dc_example_dc_com_uncached-id2entry
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 1
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 1
+
+dn: cn=Index dc_example_dc_com_uniqueMember.equality,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index dc_example_dc_com_uniqueMember.equality
+ds-index-name: dc_example_dc_com_uniqueMember.equality
+ds-index-backend-id: userRoot
+ds-index-backend-base-dn: dc=example,dc=com
+ds-index-attribute-type: uniqueMember
+ds-index-type: equality
+ds-index-trusted: true
+ds-index-entry-limit: 4000
+ds-index-exceeded-entry-limit-count-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-search-since-db-open: 0
+ds-index-unique-keys-near-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-unique-keys-exceeding-entry-limit-accessed-by-write-since-db-open: 0
+ds-index-maintain-count: false
+ds-index-entryidlist-db-updates-average-write-count-since-db-open: 0
+ds-index-entryidlist-db-updates-average-write-size-since-db-open: 0
+ds-index-phantom-retry-count: 0
+ds-index-prevented-premature-exploded-key-delete-count: 0
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 0
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 0
+
+dn: cn=Index metadata,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-index-monitor-entry
+objectClass: extensibleObject
+cn: Index metadata
+ds-index-name: metadata
+ds-index-backend-id: userRoot
+ds-index-fully-primed-at-backend-open: false
+ds-index-num-primed-keys-at-backend-open: 0
+ds-index-num-preloaded-embedded-keys-at-backend-open: 0
+ds-index-write-count-since-db-open: 0
+ds-index-remove-count-since-db-open: 0
+ds-index-read-count-since-db-open: 115
+ds-index-read-for-search-count-since-db-open: 0
+ds-index-open-cursor-count-since-db-open: 115
+
+dn: cn=JVM Memory Usage,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-memory-usage-monitor-entry
+objectClass: extensibleObject
+cn: JVM Memory Usage
+maxReservableMemoryMB: 768
+currentReservedMemoryMB: 768
+usedReservedMemoryMB: 283
+freeReservedMemoryMB: 485
+reservedMemoryPercentFull: 37
+g1-young-generation-total-collection-count: 45
+g1-young-generation-total-collection-duration-millis: 605
+g1-young-generation-average-collection-duration-millis: 13
+g1-young-generation-recent-collection-duration-millis: 34
+g1-old-generation-total-collection-count: 0
+g1-old-generation-total-collection-duration-millis: 0
+g1-old-generation-average-collection-duration-millis: 0
+g1-old-generation-recent-collection-duration-millis: 0
+gc-info-g1-young-generation--minor-collection--gclocker-initiated-gc-total-count: 2
+gc-info-g1-young-generation--minor-collection--g1-evacuation-pause-total-count: 10
+gc-info-g1-young-generation--minor-collection--gclocker-initiated-gc-total-duration-millis: 49
+gc-info-g1-young-generation--minor-collection--g1-evacuation-pause-total-duration-millis: 304
+mem-pool-g1-eden-space-total-collection-count: 12
+mem-pool-g1-survivor-space-total-collection-count: 5
+mem-pool-g1-old-gen-total-collection-count: 1
+mem-pool-g1-eden-space-total-live-mb: 0
+mem-pool-g1-survivor-space-total-live-mb: 19
+mem-pool-g1-old-gen-total-live-mb: 236.52
+gc-info-g1-young-generation--minor-collection--gclocker-initiated-gc-collection-duration-histo-summary: Less than 2ms: 0
+gc-info-g1-young-generation--minor-collection--gclocker-initiated-gc-collection-duration-histo-summary: Between 2ms and 5ms: 0
+gc-info-g1-young-generation--minor-collection--gclocker-initiated-gc-collection-duration-histo-summary: Between 5ms and 10ms: 0
+gc-info-g1-young-generation--minor-collection--gclocker-initiated-gc-collection-duration-histo-summary: Between 10ms and 20ms: 1
+gc-info-g1-young-generation--minor-collection--gclocker-initiated-gc-collection-duration-histo-summary: Between 20ms and 30ms: 0
+gc-info-g1-young-generation--minor-collection--gclocker-initiated-gc-collection-duration-histo-summary: Between 30ms and 50ms: 1
+gc-info-g1-young-generation--minor-collection--gclocker-initiated-gc-collection-duration-histo-summary: Between 50ms and 100ms: 0
+gc-info-g1-young-generation--minor-collection--gclocker-initiated-gc-collection-duration-histo-summary: Between 100ms and 200ms: 0
+gc-info-g1-young-generation--minor-collection--gclocker-initiated-gc-collection-duration-histo-summary: Between 200ms and 300ms: 0
+gc-info-g1-young-generation--minor-collection--gclocker-initiated-gc-collection-duration-histo-summary: Between 300ms and 500ms: 0
+gc-info-g1-young-generation--minor-collection--gclocker-initiated-gc-collection-duration-histo-summary: Between 500ms and 1000ms: 0
+gc-info-g1-young-generation--minor-collection--gclocker-initiated-gc-collection-duration-histo-summary: Between 1000ms and 10000ms: 0
+gc-info-g1-young-generation--minor-collection--gclocker-initiated-gc-collection-duration-histo-summary: Between 10000ms and 30000ms: 0
+gc-info-g1-young-generation--minor-collection--gclocker-initiated-gc-collection-duration-histo-summary: Between 30000ms and 60000ms: 0
+gc-info-g1-young-generation--minor-collection--gclocker-initiated-gc-collection-duration-histo-summary: At least 60000ms: 0
+gc-info-g1-young-generation--minor-collection--gclocker-initiated-gc-collection-duration-histo-counts: 0,0,0,1,0,1,0,0,0,0,0,0,0,0,0
+gc-info-g1-young-generation--minor-collection--g1-evacuation-pause-collection-duration-histo-summary: Less than 2ms: 0
+gc-info-g1-young-generation--minor-collection--g1-evacuation-pause-collection-duration-histo-summary: Between 2ms and 5ms: 1
+gc-info-g1-young-generation--minor-collection--g1-evacuation-pause-collection-duration-histo-summary: Between 5ms and 10ms: 0
+gc-info-g1-young-generation--minor-collection--g1-evacuation-pause-collection-duration-histo-summary: Between 10ms and 20ms: 2
+gc-info-g1-young-generation--minor-collection--g1-evacuation-pause-collection-duration-histo-summary: Between 20ms and 30ms: 2
+gc-info-g1-young-generation--minor-collection--g1-evacuation-pause-collection-duration-histo-summary: Between 30ms and 50ms: 3
+gc-info-g1-young-generation--minor-collection--g1-evacuation-pause-collection-duration-histo-summary: Between 50ms and 100ms: 2
+gc-info-g1-young-generation--minor-collection--g1-evacuation-pause-collection-duration-histo-summary: Between 100ms and 200ms: 0
+gc-info-g1-young-generation--minor-collection--g1-evacuation-pause-collection-duration-histo-summary: Between 200ms and 300ms: 0
+gc-info-g1-young-generation--minor-collection--g1-evacuation-pause-collection-duration-histo-summary: Between 300ms and 500ms: 0
+gc-info-g1-young-generation--minor-collection--g1-evacuation-pause-collection-duration-histo-summary: Between 500ms and 1000ms: 0
+gc-info-g1-young-generation--minor-collection--g1-evacuation-pause-collection-duration-histo-summary: Between 1000ms and 10000ms: 0
+gc-info-g1-young-generation--minor-collection--g1-evacuation-pause-collection-duration-histo-summary: Between 10000ms and 30000ms: 0
+gc-info-g1-young-generation--minor-collection--g1-evacuation-pause-collection-duration-histo-summary: Between 30000ms and 60000ms: 0
+gc-info-g1-young-generation--minor-collection--g1-evacuation-pause-collection-duration-histo-summary: At least 60000ms: 0
+gc-info-g1-young-generation--minor-collection--g1-evacuation-pause-collection-duration-histo-counts: 0,1,0,2,2,3,2,0,0,0,0,0,0,0,0
+gc-info-collection-duration-histo-boundaries: 2,5,10,20,30,50,100,200,300,500,1000,10000,30000,60000
+code-heap-non-nmethods-current-bytes-used: 1321600
+code-heap-non-nmethods-bytes-used-after-last-collection: 0
+metaspace-current-bytes-used: 80765480
+metaspace-bytes-used-after-last-collection: 0
+code-heap-profiled-nmethods-current-bytes-used: 12994944
+code-heap-profiled-nmethods-bytes-used-after-last-collection: 0
+compressed-class-space-current-bytes-used: 7838424
+compressed-class-space-bytes-used-after-last-collection: 0
+g1-eden-space-current-bytes-used: 45088768
+g1-eden-space-bytes-used-after-last-collection: 0
+g1-old-gen-current-bytes-used: 248011808
+g1-old-gen-bytes-used-after-last-collection: 0
+g1-survivor-space-current-bytes-used: 2097152
+g1-survivor-space-bytes-used-after-last-collection: 2097152
+code-heap-non-profiled-nmethods-current-bytes-used: 4203392
+code-heap-non-profiled-nmethods-bytes-used-after-last-collection: 0
+non-heap-memory-bytes-used: 107123840
+gc-duration-precision: milliseconds
+memory-consumer: 'userRoot local DB backend' consumes 0.003GB (0.4% of total memory) and can grow to a maximum of 0.27GB (36.0% of total memory) as configured by db-cache-percent=36
+memory-consumer: 'Frequently Accessed Entry Cache FIFO Entry Cache' consumes 0.0GB (0.0% of total memory) and can grow to a maximum of 0.037GB (5.0% of total memory) as configured by max-memory-percent=5
+memory-consumer: 'User Data Password Policy Cache' consumes 0.0GB (0.0% of total memory) and can grow to a maximum of an unknown number of as configured by maximum-user-data-password-policies-to-cache=500
+max-detected-pause-time-millis: 0
+pooled-buffers-constructed: 2
+pooled-buffer-resized: 4
+pooled-buffer-shared-queue-size: 0
+pooled-buffer-retained-threshold-bytes: 20000
+
+dn: cn=JVM Stack Trace,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-stack-trace-monitor-entry
+objectClass: extensibleObject
+cn: JVM Stack Trace
+jvmThread: id=1 ---------- main state=RUNNABLE ----------
+jvmThread: id=1 frame[0]=java.lang.Thread.dumpThreads(Thread.java:native)
+jvmThread: id=1 frame[1]=java.lang.Thread.getAllStackTraces(Thread.java:1658)
+jvmThread: id=1 frame[2]=com.unboundid.directory.server.monitors.StackTraceMonitorProvider.getMonitorData(StackTraceMonitorProvider.java:152)
+jvmThread: id=1 frame[3]=com.unboundid.directory.server.monitors.StackTraceMonitorProvider.getMonitorData(StackTraceMonitorProvider.java:58)
+jvmThread: id=1 frame[4]=com.unboundid.directory.server.api.MonitorProvider.getMonitorAttributes(MonitorProvider.java:273)
+jvmThread: id=1 frame[5]=com.unboundid.directory.server.backends.MonitorBackend.getMonitorEntry(MonitorBackend.java:729)
+jvmThread: id=1 frame[6]=com.unboundid.directory.server.backends.MonitorBackend.search(MonitorBackend.java:1088)
+jvmThread: id=1 frame[7]=com.unboundid.directory.server.backends.processor.BackendSearchOperation.processOperation(BackendSearchOperation.java:343)
+jvmThread: id=1 frame[8]=com.unboundid.directory.server.backends.processor.BackendRequestProcessor.process(BackendRequestProcessor.java:377)
+jvmThread: id=1 frame[9]=com.unboundid.directory.server.core.SubtreeView.processSearch(SubtreeView.java:585)
+jvmThread: id=1 frame[10]=com.unboundid.directory.server.core.SubtreeView.process(SubtreeView.java:258)
+jvmThread: id=1 frame[11]=com.unboundid.directory.server.core.SearchOperationBasis.run(SearchOperationBasis.java:2058)
+jvmThread: id=1 frame[12]=com.unboundid.directory.server.protocols.internal.InternalClientConnection.runOperation(InternalClientConnection.java:3506)
+jvmThread: id=1 frame[13]=com.unboundid.directory.server.protocols.internal.InternalClientConnection.processSearch(InternalClientConnection.java:3090)
+jvmThread: id=1 frame[14]=com.unboundid.directory.server.protocols.internal.InternalClientConnection.processSearch(InternalClientConnection.java:3035)
+jvmThread: id=1 frame[15]=com.unboundid.directory.server.plugins.SearchShutdownPlugin.doShutdown(SearchShutdownPlugin.java:238)
+jvmThread: id=1 frame[16]=com.unboundid.directory.server.core.PluginConfigManager.invokeShutdownPlugins(PluginConfigManager.java:1654)
+jvmThread: id=1 frame[17]=com.unboundid.directory.server.core.DirectoryServer.shutDown(DirectoryServer.java:15667)
+jvmThread: id=1 frame[18]=com.unboundid.directory.server.core.DirectoryServer.shutDownInForeground(DirectoryServer.java:15399)
+jvmThread: id=1 frame[19]=com.unboundid.directory.server.core.DirectoryServer.main(DirectoryServer.java:18248)
+jvmThread: id=1 frame[20]=com.unboundid.directory.server.core.DirectoryServer.main(DirectoryServer.java:17763)
+jvmThread: id=2 ---------- Reference Handler state=RUNNABLE ----------
+jvmThread: id=2 frame[0]=java.lang.ref.Reference.waitForReferencePendingList(Reference.java:native)
+jvmThread: id=2 frame[1]=java.lang.ref.Reference.processPendingReferences(Reference.java:241)
+jvmThread: id=2 frame[2]=java.lang.ref.Reference$ReferenceHandler.run(Reference.java:213)
+jvmThread: id=3 ---------- Finalizer state=WAITING ----------
+jvmThread: id=3 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=3 frame[1]=java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+jvmThread: id=3 frame[2]=java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+jvmThread: id=3 frame[3]=java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:170)
+jvmThread: id=4 ---------- Signal Dispatcher state=RUNNABLE ----------
+jvmThread: id=9 ---------- Common-Cleaner state=TIMED_WAITING ----------
+jvmThread: id=9 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=9 frame[1]=java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+jvmThread: id=9 frame[2]=jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:148)
+jvmThread: id=9 frame[3]=java.lang.Thread.run(Thread.java:834)
+jvmThread: id=9 frame[4]=jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:134)
+jvmThread: id=15 ---------- Time Thread (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=3 state=TIMED_WAITING ----------
+jvmThread: id=15 frame[0]=java.lang.Thread.sleep(Thread.java:native)
+jvmThread: id=15 frame[1]=com.unboundid.directory.server.util.TimeThread.runThread(TimeThread.java:463)
+jvmThread: id=15 frame[2]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=18 ---------- Directory Server Timer Task Thread state=TIMED_WAITING ----------
+jvmThread: id=18 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=18 frame[1]=java.util.TimerThread.mainLoop(Timer.java:553)
+jvmThread: id=18 frame[2]=java.util.TimerThread.run(Timer.java:506)
+jvmThread: id=19 ---------- Duplicate Log/Alert Message Handler state=TIMED_WAITING ----------
+jvmThread: id=19 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=19 frame[1]=java.util.TimerThread.mainLoop(Timer.java:553)
+jvmThread: id=19 frame[2]=java.util.TimerThread.run(Timer.java:506)
+jvmThread: id=20 ---------- Duplicate Log/Alert Message Handler state=TIMED_WAITING ----------
+jvmThread: id=20 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=20 frame[1]=java.util.TimerThread.mainLoop(Timer.java:553)
+jvmThread: id=20 frame[2]=java.util.TimerThread.run(Timer.java:506)
+jvmThread: id=21 ---------- Encryption Settings Refresh Thread (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=6 state=TIMED_WAITING ----------
+jvmThread: id=21 frame[0]=jdk.internal.misc.Unsafe.park(Unsafe.java:native)
+jvmThread: id=21 frame[1]=java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+jvmThread: id=21 frame[2]=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+jvmThread: id=21 frame[3]=java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:458)
+jvmThread: id=21 frame[4]=com.unboundid.directory.server.crypto.EncryptionSettingsRefreshThread.runThread(EncryptionSettingsRefreshThread.java:98)
+jvmThread: id=21 frame[5]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=49 ---------- Multifile Text Writer for cn=file-based debug logger,cn=loggers,cn=config (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=32 state=TIMED_WAITING ----------
+jvmThread: id=49 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=49 frame[1]=com.unboundid.util.WakeableSleeper.sleep(WakeableSleeper.java:135)
+jvmThread: id=49 frame[2]=com.unboundid.directory.server.loggers.MultifileTextWriter$RotaterThread.runThread(MultifileTextWriter.java:724)
+jvmThread: id=49 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=50 ---------- Operation Timing Access Log Publisher Expensive Write Operations Access Logger (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=33 state=TIMED_WAITING ----------
+jvmThread: id=50 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=50 frame[1]=com.unboundid.util.WakeableSleeper.sleep(WakeableSleeper.java:135)
+jvmThread: id=50 frame[2]=com.unboundid.directory.server.loggers.MultifileTextWriter$RotaterThread.runThread(MultifileTextWriter.java:724)
+jvmThread: id=50 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=51 ---------- Asynchronous Text Writer for cn=expensive write operations access logger,cn=loggers,cn=config (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=34 state=TIMED_WAITING ----------
+jvmThread: id=51 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=51 frame[1]=com.unboundid.util.WakeableSleeper.sleep(WakeableSleeper.java:135)
+jvmThread: id=51 frame[2]=com.unboundid.directory.server.loggers.AsynchronousTextWriter$WriterThread.runThread(AsynchronousTextWriter.java:166)
+jvmThread: id=51 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=52 ---------- Multi-file Text Writer for cn=failed operations access logger,cn=loggers,cn=config (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=35 state=TIMED_WAITING ----------
+jvmThread: id=52 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=52 frame[1]=com.unboundid.util.WakeableSleeper.sleep(WakeableSleeper.java:135)
+jvmThread: id=52 frame[2]=com.unboundid.directory.server.loggers.MultifileTextWriter$RotaterThread.runThread(MultifileTextWriter.java:724)
+jvmThread: id=52 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=53 ---------- Asynchronous Text Writer for cn=failed operations access logger,cn=loggers,cn=config (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=36 state=TIMED_WAITING ----------
+jvmThread: id=53 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=53 frame[1]=com.unboundid.util.WakeableSleeper.sleep(WakeableSleeper.java:135)
+jvmThread: id=53 frame[2]=com.unboundid.directory.server.loggers.AsynchronousTextWriter$WriterThread.runThread(AsynchronousTextWriter.java:166)
+jvmThread: id=53 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=54 ---------- Multi-file Text Writer for cn=file-based access logger,cn=loggers,cn=config (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=37 state=TIMED_WAITING ----------
+jvmThread: id=54 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=54 frame[1]=com.unboundid.util.WakeableSleeper.sleep(WakeableSleeper.java:135)
+jvmThread: id=54 frame[2]=com.unboundid.directory.server.loggers.MultifileTextWriter$RotaterThread.runThread(MultifileTextWriter.java:724)
+jvmThread: id=54 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=55 ---------- Asynchronous Text Writer for cn=file-based access logger,cn=loggers,cn=config (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=38 state=TIMED_WAITING ----------
+jvmThread: id=55 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=55 frame[1]=com.unboundid.util.WakeableSleeper.sleep(WakeableSleeper.java:135)
+jvmThread: id=55 frame[2]=com.unboundid.directory.server.loggers.AsynchronousTextWriter$WriterThread.runThread(AsynchronousTextWriter.java:166)
+jvmThread: id=55 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=56 ---------- Multifile Text Writer for cn=file-based error logger,cn=loggers,cn=config (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=39 state=TIMED_WAITING ----------
+jvmThread: id=56 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=56 frame[1]=com.unboundid.util.WakeableSleeper.sleep(WakeableSleeper.java:135)
+jvmThread: id=56 frame[2]=com.unboundid.directory.server.loggers.MultifileTextWriter$RotaterThread.runThread(MultifileTextWriter.java:724)
+jvmThread: id=56 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=57 ---------- Multifile Text Writer for cn=replication repair logger,cn=loggers,cn=config (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=40 state=TIMED_WAITING ----------
+jvmThread: id=57 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=57 frame[1]=com.unboundid.util.WakeableSleeper.sleep(WakeableSleeper.java:135)
+jvmThread: id=57 frame[2]=com.unboundid.directory.server.loggers.MultifileTextWriter$RotaterThread.runThread(MultifileTextWriter.java:724)
+jvmThread: id=57 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=59 ---------- Multi-File Text Writer for cn=LDAP SDK Debug Logger,cn=config (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=42 state=TIMED_WAITING ----------
+jvmThread: id=59 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=59 frame[1]=com.unboundid.util.WakeableSleeper.sleep(WakeableSleeper.java:135)
+jvmThread: id=59 frame[2]=com.unboundid.directory.server.loggers.MultifileTextWriter$RotaterThread.runThread(MultifileTextWriter.java:724)
+jvmThread: id=59 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=78 ---------- CollectorStorage.b1e39ef4129d state=TIMED_WAITING ----------
+jvmThread: id=78 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=78 frame[1]=com.unboundid.directory.collector.StorageManager.run(StorageManager.java:263)
+jvmThread: id=78 frame[2]=java.lang.Thread.run(Thread.java:834)
+jvmThread: id=79 ---------- Collector.b1e39ef4129d state=TIMED_WAITING ----------
+jvmThread: id=79 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=79 frame[1]=com.unboundid.directory.collector.Collector$PollManager.run(Collector.java:472)
+jvmThread: id=79 frame[2]=java.lang.Thread.run(Thread.java:834)
+jvmThread: id=85 ---------- Task Scheduler Thread (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=60 state=TIMED_WAITING ----------
+jvmThread: id=85 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=85 frame[1]=com.unboundid.util.WakeableSleeper.sleep(WakeableSleeper.java:135)
+jvmThread: id=85 frame[2]=com.unboundid.directory.server.backends.task.TaskScheduler.runThread(TaskScheduler.java:948)
+jvmThread: id=85 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=88 ---------- FileSystemWatchService state=RUNNABLE ----------
+jvmThread: id=88 frame[0]=sun.nio.fs.LinuxWatchService.poll(LinuxWatchService.java:native)
+jvmThread: id=88 frame[1]=sun.nio.fs.LinuxWatchService$Poller.run(LinuxWatchService.java:316)
+jvmThread: id=88 frame[2]=java.lang.Thread.run(Thread.java:834)
+jvmThread: id=89 ---------- FileDeletionDetector state=TIMED_WAITING ----------
+jvmThread: id=89 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=89 frame[1]=java.util.TimerThread.mainLoop(Timer.java:553)
+jvmThread: id=89 frame[2]=java.util.TimerThread.run(Timer.java:506)
+jvmThread: id=90 ---------- LogFlusher state=WAITING ----------
+jvmThread: id=90 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=90 frame[1]=java.lang.Object.wait(Object.java:328)
+jvmThread: id=90 frame[2]=java.util.TimerThread.mainLoop(Timer.java:527)
+jvmThread: id=90 frame[3]=java.util.TimerThread.run(Timer.java:506)
+jvmThread: id=91 ---------- DataCorruptionVerifier state=WAITING ----------
+jvmThread: id=91 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=91 frame[1]=java.lang.Object.wait(Object.java:328)
+jvmThread: id=91 frame[2]=java.util.TimerThread.mainLoop(Timer.java:527)
+jvmThread: id=91 frame[3]=java.util.TimerThread.run(Timer.java:506)
+jvmThread: id=148 ---------- Disk Space Usage Monitor Provider threadID=111 state=TIMED_WAITING ----------
+jvmThread: id=148 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=148 frame[1]=com.unboundid.util.WakeableSleeper.sleep(WakeableSleeper.java:135)
+jvmThread: id=148 frame[2]=com.unboundid.directory.server.api.MonitorProvider.runThread(MonitorProvider.java:345)
+jvmThread: id=148 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=151 ---------- JVM Memory Usage Monitor Provider threadID=114 state=TIMED_WAITING ----------
+jvmThread: id=151 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=151 frame[1]=com.unboundid.util.WakeableSleeper.sleep(WakeableSleeper.java:135)
+jvmThread: id=151 frame[2]=com.unboundid.directory.server.api.MonitorProvider.runThread(MonitorProvider.java:345)
+jvmThread: id=151 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=160 ---------- Background Purge Thread for ExpiredSessionAutoPurge (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=123 state=TIMED_WAITING ----------
+jvmThread: id=160 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=160 frame[1]=com.unboundid.util.WakeableSleeper.sleep(WakeableSleeper.java:135)
+jvmThread: id=160 frame[2]=com.unboundid.directory.server.plugins.PurgeExpiredDataPlugin.purgeData(PurgeExpiredDataPlugin.java:777)
+jvmThread: id=160 frame[3]=com.unboundid.directory.server.plugins.PurgeExpiredDataPlugin.access$200(PurgeExpiredDataPlugin.java:109)
+jvmThread: id=160 frame[4]=com.unboundid.directory.server.plugins.PurgeExpiredDataPlugin$PurgeThread.runThread(PurgeExpiredDataPlugin.java:1114)
+jvmThread: id=160 frame[5]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=162 ---------- Multi-file Text Writer for cn=historical stats logger,cn=plugins,cn=config (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=125 state=TIMED_WAITING ----------
+jvmThread: id=162 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=162 frame[1]=com.unboundid.util.WakeableSleeper.sleep(WakeableSleeper.java:135)
+jvmThread: id=162 frame[2]=com.unboundid.directory.server.loggers.MultifileTextWriter$RotaterThread.runThread(MultifileTextWriter.java:724)
+jvmThread: id=162 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=163 ---------- Periodic Log Stats Thread (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=126 state=TIMED_WAITING ----------
+jvmThread: id=163 frame[0]=java.lang.Thread.sleep(Thread.java:native)
+jvmThread: id=163 frame[1]=com.unboundid.directory.sync.core.PeriodicThread.waitForNextIteration(PeriodicThread.java:556)
+jvmThread: id=163 frame[2]=com.unboundid.directory.sync.core.PeriodicThread.runThread(PeriodicThread.java:333)
+jvmThread: id=163 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=164 ---------- Update Log Stats Thread (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=127 state=TIMED_WAITING ----------
+jvmThread: id=164 frame[0]=java.lang.Thread.sleep(Thread.java:native)
+jvmThread: id=164 frame[1]=com.unboundid.directory.sync.core.PeriodicThread.waitForNextIteration(PeriodicThread.java:556)
+jvmThread: id=164 frame[2]=com.unboundid.directory.sync.core.PeriodicThread.runThread(PeriodicThread.java:333)
+jvmThread: id=164 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=165 ---------- Background Purge Thread for IdleSessionAutoPurge (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=128 state=TIMED_WAITING ----------
+jvmThread: id=165 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=165 frame[1]=com.unboundid.util.WakeableSleeper.sleep(WakeableSleeper.java:135)
+jvmThread: id=165 frame[2]=com.unboundid.directory.server.plugins.PurgeExpiredDataPlugin.purgeData(PurgeExpiredDataPlugin.java:777)
+jvmThread: id=165 frame[3]=com.unboundid.directory.server.plugins.PurgeExpiredDataPlugin.access$200(PurgeExpiredDataPlugin.java:109)
+jvmThread: id=165 frame[4]=com.unboundid.directory.server.plugins.PurgeExpiredDataPlugin$PurgeThread.runThread(PurgeExpiredDataPlugin.java:1114)
+jvmThread: id=165 frame[5]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=168 ---------- Multi-file Text Writer for cn=monitor history,cn=plugins,cn=config (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=131 state=TIMED_WAITING ----------
+jvmThread: id=168 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=168 frame[1]=com.unboundid.util.WakeableSleeper.sleep(WakeableSleeper.java:135)
+jvmThread: id=168 frame[2]=com.unboundid.directory.server.loggers.MultifileTextWriter$RotaterThread.runThread(MultifileTextWriter.java:724)
+jvmThread: id=168 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=169 ---------- Monitor History Thread (8.1.0.0-20200615190254.000Z-c27eadb0) threadID=132 state=TIMED_WAITING ----------
+jvmThread: id=169 frame[0]=java.lang.Thread.sleep(Thread.java:native)
+jvmThread: id=169 frame[1]=com.unboundid.directory.sync.core.PeriodicThread.waitForNextIteration(PeriodicThread.java:556)
+jvmThread: id=169 frame[2]=com.unboundid.directory.sync.core.PeriodicThread.runThread(PeriodicThread.java:333)
+jvmThread: id=169 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=173 ---------- Peer server setter for topology registry 1 threadID=136 state=WAITING ----------
+jvmThread: id=173 frame[0]=jdk.internal.misc.Unsafe.park(Unsafe.java:native)
+jvmThread: id=173 frame[1]=java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+jvmThread: id=173 frame[2]=java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+jvmThread: id=173 frame[3]=java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+jvmThread: id=173 frame[4]=java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+jvmThread: id=173 frame[5]=java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+jvmThread: id=173 frame[6]=java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+jvmThread: id=173 frame[7]=com.unboundid.directory.server.util.RunnableDirectoryThread.runThread(RunnableDirectoryThread.java:72)
+jvmThread: id=173 frame[8]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=177 ---------- Status Health Summary Monitor Provider threadID=139 state=TIMED_WAITING ----------
+jvmThread: id=177 frame[0]=java.lang.Object.wait(Object.java:native)
+jvmThread: id=177 frame[1]=com.unboundid.util.WakeableSleeper.sleep(WakeableSleeper.java:135)
+jvmThread: id=177 frame[2]=com.unboundid.directory.server.api.MonitorProvider.runThread(MonitorProvider.java:338)
+jvmThread: id=177 frame[3]=com.unboundid.directory.server.api.DirectoryThread.run(DirectoryThread.java:352)
+jvmThread: id=178 ---------- Directory Server Shutdown Monitor state=TIMED_WAITING ----------
+jvmThread: id=178 frame[0]=java.lang.Thread.sleep(Thread.java:native)
+jvmThread: id=178 frame[1]=com.unboundid.directory.server.core.ServerShutdownMonitor.run(ServerShutdownMonitor.java:196)
+creationStackTrace: threadID=3 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 TimeThread.java:179 TimeThread.java:85 TextErrorLogPublisher.java:587 ErrorLogger.java:640 ErrorLogger.java:578 ErrorLogger.java:555 DirectoryServer.java:2661 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=6 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 EncryptionSettingsRefreshThread.java:77 DirectoryServer.java:2784 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=32 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 MultifileTextWriter.java:708 MultifileTextWriter.java:277 MultifileTextWriter.java:199 TextDebugLogPublisher.java:206 NativeMethodAccessorImpl.java:-2 NativeMethodAccessorImpl.java:62 DelegatingMethodAccessorImpl.java:43 Method.java:566 DebugLogger.java:437 DebugLogger.java:180 LoggerConfigManager.java:164 DirectoryServer.java:2830 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=33 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 MultifileTextWriter.java:708 MultifileTextWriter.java:277 MultifileTextWriter.java:199 OperationTimingAccessLogPublisher.java:195 NativeMethodAccessorImpl.java:-2 NativeMethodAccessorImpl.java:62 DelegatingMethodAccessorImpl.java:43 Method.java:566 AccessLogger.java:500 AccessLogger.java:441 AccessLogger.java:190 LoggerConfigManager.java:165 DirectoryServer.java:2830 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=34 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 AsynchronousTextWriter.java:130 AsynchronousTextWriter.java:111 OperationTimingAccessLogPublisher.java:216 NativeMethodAccessorImpl.java:-2 NativeMethodAccessorImpl.java:62 DelegatingMethodAccessorImpl.java:43 Method.java:566 AccessLogger.java:500 AccessLogger.java:441 AccessLogger.java:190 LoggerConfigManager.java:165 DirectoryServer.java:2830 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=35 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 MultifileTextWriter.java:708 MultifileTextWriter.java:277 MultifileTextWriter.java:199 TextAccessLogPublisher.java:149 TextAccessLogPublisher.java:64 WriterBasedAccessLogPublisher.java:1451 NativeMethodAccessorImpl.java:-2 NativeMethodAccessorImpl.java:62 DelegatingMethodAccessorImpl.java:43 Method.java:566 AccessLogger.java:500 AccessLogger.java:441 AccessLogger.java:190 LoggerConfigManager.java:165 DirectoryServer.java:2830 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=36 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 AsynchronousTextWriter.java:130 AsynchronousTextWriter.java:111 TextAccessLogPublisher.java:171 TextAccessLogPublisher.java:64 WriterBasedAccessLogPublisher.java:1451 NativeMethodAccessorImpl.java:-2 NativeMethodAccessorImpl.java:62 DelegatingMethodAccessorImpl.java:43 Method.java:566 AccessLogger.java:500 AccessLogger.java:441 AccessLogger.java:190 LoggerConfigManager.java:165 DirectoryServer.java:2830 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=37 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 MultifileTextWriter.java:708 MultifileTextWriter.java:277 MultifileTextWriter.java:199 TextAccessLogPublisher.java:149 TextAccessLogPublisher.java:64 WriterBasedAccessLogPublisher.java:1451 NativeMethodAccessorImpl.java:-2 NativeMethodAccessorImpl.java:62 DelegatingMethodAccessorImpl.java:43 Method.java:566 AccessLogger.java:500 AccessLogger.java:441 AccessLogger.java:190 LoggerConfigManager.java:165 DirectoryServer.java:2830 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=38 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 AsynchronousTextWriter.java:130 AsynchronousTextWriter.java:111 TextAccessLogPublisher.java:171 TextAccessLogPublisher.java:64 WriterBasedAccessLogPublisher.java:1451 NativeMethodAccessorImpl.java:-2 NativeMethodAccessorImpl.java:62 DelegatingMethodAccessorImpl.java:43 Method.java:566 AccessLogger.java:500 AccessLogger.java:441 AccessLogger.java:190 LoggerConfigManager.java:165 DirectoryServer.java:2830 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=39 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 MultifileTextWriter.java:708 MultifileTextWriter.java:277 MultifileTextWriter.java:199 TextErrorLogPublisher.java:237 NativeMethodAccessorImpl.java:-2 NativeMethodAccessorImpl.java:62 DelegatingMethodAccessorImpl.java:43 Method.java:566 ErrorLogger.java:492 ErrorLogger.java:439 ErrorLogger.java:200 LoggerConfigManager.java:166 DirectoryServer.java:2830 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=40 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 MultifileTextWriter.java:708 MultifileTextWriter.java:277 MultifileTextWriter.java:199 TextErrorLogPublisher.java:237 NativeMethodAccessorImpl.java:-2 NativeMethodAccessorImpl.java:62 DelegatingMethodAccessorImpl.java:43 Method.java:566 ErrorLogger.java:492 ErrorLogger.java:439 ErrorLogger.java:200 LoggerConfigManager.java:166 DirectoryServer.java:2830 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=42 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 MultifileTextWriter.java:708 MultifileTextWriter.java:277 MultifileTextWriter.java:199 LDAPSDKDebugLogger.java:339 LDAPSDKDebugLogger.java:114 DirectoryServer.java:2836 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=60 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 TaskScheduler.java:192 TaskBackend.java:278 BackendConfigManager.java:1556 BackendConfigManager.java:363 DirectoryServer.java:5483 DirectoryServer.java:2942 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=111 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 MonitorProvider.java:109 DiskSpaceUsageMonitorProvider.java:152 NativeConstructorAccessorImpl.java:-2 NativeConstructorAccessorImpl.java:62 DelegatingConstructorAccessorImpl.java:45 Constructor.java:490 MonitorConfigManager.java:474 MonitorConfigManager.java:121 DirectoryServer.java:3107 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=114 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 MonitorProvider.java:109 MemoryUsageMonitorProvider.java:309 NativeConstructorAccessorImpl.java:-2 NativeConstructorAccessorImpl.java:62 DelegatingConstructorAccessorImpl.java:45 Constructor.java:490 MonitorConfigManager.java:474 MonitorConfigManager.java:121 DirectoryServer.java:3107 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=123 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 PurgeExpiredDataPlugin.java:1104 PurgeExpiredDataPlugin.java:1100 PurgeExpiredDataPlugin.java:352 PurgeExpiredDataPlugin.java:337 PurgeExpiredDataPlugin.java:301 PurgeExpiredDataPlugin.java:109 PluginConfigManager.java:423 DirectoryServer.java:3145 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=125 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 MultifileTextWriter.java:708 MultifileTextWriter.java:277 MultifileTextWriter.java:199 PeriodicStatsLoggerPlugin.java:673 PeriodicStatsLoggerPlugin.java:357 PeriodicStatsLoggerPlugin.java:187 PeriodicStatsLoggerPlugin.java:102 PluginConfigManager.java:423 DirectoryServer.java:3145 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=126 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 PeriodicThread.java:77 PeriodicStatsLoggerPlugin.java:1062 PeriodicStatsLoggerPlugin.java:360 PeriodicStatsLoggerPlugin.java:187 PeriodicStatsLoggerPlugin.java:102 PluginConfigManager.java:423 DirectoryServer.java:3145 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=127 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 PeriodicThread.java:77 PeriodicStatsLoggerPlugin.java:1082 PeriodicStatsLoggerPlugin.java:367 PeriodicStatsLoggerPlugin.java:187 PeriodicStatsLoggerPlugin.java:102 PluginConfigManager.java:423 DirectoryServer.java:3145 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=128 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 PurgeExpiredDataPlugin.java:1104 PurgeExpiredDataPlugin.java:1100 PurgeExpiredDataPlugin.java:352 PurgeExpiredDataPlugin.java:337 PurgeExpiredDataPlugin.java:301 PurgeExpiredDataPlugin.java:109 PluginConfigManager.java:423 DirectoryServer.java:3145 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=131 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 MultifileTextWriter.java:708 MultifileTextWriter.java:277 MultifileTextWriter.java:199 MonitorHistoryPlugin.java:435 MonitorHistoryPlugin.java:300 MonitorHistoryPlugin.java:138 MonitorHistoryPlugin.java:67 PluginConfigManager.java:423 DirectoryServer.java:3145 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=132 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 PeriodicThread.java:77 MonitorHistoryPlugin.java:510 MonitorHistoryPlugin.java:305 MonitorHistoryPlugin.java:138 MonitorHistoryPlugin.java:67 PluginConfigManager.java:423 DirectoryServer.java:3145 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=136 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:227 RunnableDirectoryThread.java:59 DirectoryThreadFactory.java:96 DirectoryThreadFactory.java:21 ThreadPoolExecutor.java:623 ThreadPoolExecutor.java:912 ThreadPoolExecutor.java:1343 Executors.java:687 ConfigFileHandler.java:2914 ConfigFileHandler.java:2882 ServerInstanceConfigManager.java:559 ServerInstanceConfigManager.java:96 ServerInstanceConfigManager.java:846 ServerInstanceConfigManager.java:718 ServerManagedObjectChangeListenerAdaptor.java:73 ConfigChangeListenerAdaptor.java:448 ConfigFileHandler.java:3832 BackendModifyOperation.java:947 BackendRequestProcessor.java:395 SubtreeView.java:262 ModifyOperationBasis.java:693 InternalClientConnection.java:3506 InternalClientConnection.java:2154 InternalClientConnection.java:2097 InternalLDAPConnection.java:1127 TopologyRegistryUtilities.java:1555 TopologyRegistryUtilities.java:1419 TopologyRegistryUtilities.java:1375 TopologyRegistryUtilities.java:219 CryptoManagerImpl.java:1230 CryptoManagerSync.java:154 DirectoryServer.java:3218 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+creationStackTrace: threadID=139 Thread.java:1607 DirectoryThread.java:238 DirectoryThread.java:205 MonitorProvider.java:109 StatusSummaryMonitorProvider.java:130 DirectoryServer.java:3372 DirectoryServer.java:18212 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0)
+
+dn: cn=LDAP Result Codes,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-ldap-result-codes-monitor-entry
+objectClass: extensibleObject
+cn: LDAP Result Codes
+all-ops-total-count: 0
+all-ops-failed-count: 0
+all-ops-failed-percent: 0.000
+add-op-total-count: 0
+add-op-failed-count: 0
+add-op-failed-percent: 0.000
+bind-op-total-count: 0
+bind-op-failed-count: 0
+bind-op-failed-percent: 0.000
+compare-op-total-count: 0
+compare-op-failed-count: 0
+compare-op-failed-percent: 0.000
+delete-op-total-count: 0
+delete-op-failed-count: 0
+delete-op-failed-percent: 0.000
+extended-op-total-count: 0
+extended-op-failed-count: 0
+extended-op-failed-percent: 0.000
+modify-op-total-count: 0
+modify-op-failed-count: 0
+modify-op-failed-percent: 0.000
+modifydn-op-total-count: 0
+modifydn-op-failed-count: 0
+modifydn-op-failed-percent: 0.000
+search-op-total-count: 0
+search-op-failed-count: 0
+search-op-failed-percent: 0.000
+
+dn: cn=License,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-license-monitor-entry
+objectClass: extensibleObject
+cn: License
+status: valid
+id: 00076000
+organization: Ping Identity Corporation
+product: PingDirectory
+version: 8.1
+issue-date: 20200827000000.000Z
+expiration-date: 20200926000000.000Z
+expires: 21 days, 6 hours, 10 minutes, 15 seconds
+expires-seconds: 1836615
+
+dn: cn=Lock Manager,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-lock-manager-monitor-entry
+objectClass: extensibleObject
+cn: Lock Manager
+lock-table-size: 0
+reentrant-size: 19
+reentrant-read-write-size: 11
+reentrant-combined-size: 30
+
+dn: cn=metrics Backend,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-backend-monitor-entry
+objectClass: extensibleObject
+cn: metrics Backend
+ds-backend-id: metrics
+ds-backend-base-dn: cn=metrics
+ds-backend-is-private: TRUE
+ds-backend-supports-binary-copy: FALSE
+ds-backend-entry-count: 128
+ds-base-dn-entry-count: 128 cn=metrics
+ds-backend-writability-mode: disabled
+
+dn: cn=Mirrored subtree manager for base DN cn_Cluster_cn_config,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-mirrored-subtree-monitor-entry
+objectClass: extensibleObject
+cn: Mirrored subtree manager for base DN cn_Cluster_cn_config
+
+dn: cn=Mirrored subtree manager for base DN cn_Topology_cn_config,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-mirrored-subtree-monitor-entry
+objectClass: extensibleObject
+cn: Mirrored subtree manager for base DN cn_Topology_cn_config
+
+dn: cn=monitor Backend,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-backend-monitor-entry
+objectClass: extensibleObject
+cn: monitor Backend
+ds-backend-id: monitor
+ds-backend-base-dn: cn=monitor
+ds-backend-is-private: TRUE
+ds-backend-supports-binary-copy: FALSE
+ds-backend-entry-count: 84
+ds-base-dn-entry-count: 84 cn=monitor
+ds-backend-writability-mode: disabled
+
+dn: cn=Processing Time Histogram,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-processing-time-histogram-monitor-entry
+objectClass: extensibleObject
+cn: Processing Time Histogram
+allOpsTotalCount: 0
+allOpsAverageResponseTimeMillis: 0.000
+allOpsTotalResponseTimeMillis: 0.000
+allOpsCount: Less than 1ms: 0
+allOpsCount: Between 1ms and 2ms: 0
+allOpsCount: Between 2ms and 3ms: 0
+allOpsCount: Between 3ms and 5ms: 0
+allOpsCount: Between 5ms and 10ms: 0
+allOpsCount: Between 10ms and 20ms: 0
+allOpsCount: Between 20ms and 30ms: 0
+allOpsCount: Between 30ms and 50ms: 0
+allOpsCount: Between 50ms and 100ms: 0
+allOpsCount: Between 100ms and 1000ms: 0
+allOpsCount: At least 1000ms: 0
+allOpsPercent: Less than 1ms: 0.000%
+allOpsPercent: Between 1ms and 2ms: 0.000%
+allOpsPercent: Between 2ms and 3ms: 0.000%
+allOpsPercent: Between 3ms and 5ms: 0.000%
+allOpsPercent: Between 5ms and 10ms: 0.000%
+allOpsPercent: Between 10ms and 20ms: 0.000%
+allOpsPercent: Between 20ms and 30ms: 0.000%
+allOpsPercent: Between 30ms and 50ms: 0.000%
+allOpsPercent: Between 50ms and 100ms: 0.000%
+allOpsPercent: Between 100ms and 1000ms: 0.000%
+allOpsPercent: At least 1000ms: 0.000%
+allOpsAggregatePercent: Less than 1ms: 0.0000%
+allOpsAggregatePercent: Less than 2ms: 0.0000%
+allOpsAggregatePercent: Less than 3ms: 0.0000%
+allOpsAggregatePercent: Less than 5ms: 0.0000%
+allOpsAggregatePercent: Less than 10ms: 0.0000%
+allOpsAggregatePercent: Less than 20ms: 0.0000%
+allOpsAggregatePercent: Less than 30ms: 0.0000%
+allOpsAggregatePercent: Less than 50ms: 0.0000%
+allOpsAggregatePercent: Less than 100ms: 0.0000%
+allOpsAggregatePercent: Less than 1000ms: 0.0000%
+addOpsTotalCount: 0
+addOpsAverageResponseTimeMillis: 0.000
+addOpsTotalResponseTimeMillis: 0.000
+addOpsCount: Less than 1ms: 0
+addOpsCount: Between 1ms and 2ms: 0
+addOpsCount: Between 2ms and 3ms: 0
+addOpsCount: Between 3ms and 5ms: 0
+addOpsCount: Between 5ms and 10ms: 0
+addOpsCount: Between 10ms and 20ms: 0
+addOpsCount: Between 20ms and 30ms: 0
+addOpsCount: Between 30ms and 50ms: 0
+addOpsCount: Between 50ms and 100ms: 0
+addOpsCount: Between 100ms and 1000ms: 0
+addOpsCount: At least 1000ms: 0
+addOpsPercent: Less than 1ms: 0.0000%
+addOpsPercent: Between 1ms and 2ms: 0.0000%
+addOpsPercent: Between 2ms and 3ms: 0.0000%
+addOpsPercent: Between 3ms and 5ms: 0.0000%
+addOpsPercent: Between 5ms and 10ms: 0.0000%
+addOpsPercent: Between 10ms and 20ms: 0.0000%
+addOpsPercent: Between 20ms and 30ms: 0.0000%
+addOpsPercent: Between 30ms and 50ms: 0.0000%
+addOpsPercent: Between 50ms and 100ms: 0.0000%
+addOpsPercent: Between 100ms and 1000ms: 0.0000%
+addOpsPercent: At least 1000ms: 0.0000%
+addOpsAggregatePercent: Less than 1ms: 0.0000%
+addOpsAggregatePercent: Less than 2ms: 0.0000%
+addOpsAggregatePercent: Less than 3ms: 0.0000%
+addOpsAggregatePercent: Less than 5ms: 0.0000%
+addOpsAggregatePercent: Less than 10ms: 0.0000%
+addOpsAggregatePercent: Less than 20ms: 0.0000%
+addOpsAggregatePercent: Less than 30ms: 0.0000%
+addOpsAggregatePercent: Less than 50ms: 0.0000%
+addOpsAggregatePercent: Less than 100ms: 0.0000%
+addOpsAggregatePercent: Less than 1000ms: 0.0000%
+bindOpsTotalCount: 0
+bindOpsAverageResponseTimeMillis: 0.000
+bindOpsTotalResponseTimeMillis: 0.000
+bindOpsCount: Less than 1ms: 0
+bindOpsCount: Between 1ms and 2ms: 0
+bindOpsCount: Between 2ms and 3ms: 0
+bindOpsCount: Between 3ms and 5ms: 0
+bindOpsCount: Between 5ms and 10ms: 0
+bindOpsCount: Between 10ms and 20ms: 0
+bindOpsCount: Between 20ms and 30ms: 0
+bindOpsCount: Between 30ms and 50ms: 0
+bindOpsCount: Between 50ms and 100ms: 0
+bindOpsCount: Between 100ms and 1000ms: 0
+bindOpsCount: At least 1000ms: 0
+bindOpsPercent: Less than 1ms: 0.0000%
+bindOpsPercent: Between 1ms and 2ms: 0.0000%
+bindOpsPercent: Between 2ms and 3ms: 0.0000%
+bindOpsPercent: Between 3ms and 5ms: 0.0000%
+bindOpsPercent: Between 5ms and 10ms: 0.0000%
+bindOpsPercent: Between 10ms and 20ms: 0.0000%
+bindOpsPercent: Between 20ms and 30ms: 0.0000%
+bindOpsPercent: Between 30ms and 50ms: 0.0000%
+bindOpsPercent: Between 50ms and 100ms: 0.0000%
+bindOpsPercent: Between 100ms and 1000ms: 0.0000%
+bindOpsPercent: At least 1000ms: 0.0000%
+bindOpsAggregatePercent: Less than 1ms: 0.0000%
+bindOpsAggregatePercent: Less than 2ms: 0.0000%
+bindOpsAggregatePercent: Less than 3ms: 0.0000%
+bindOpsAggregatePercent: Less than 5ms: 0.0000%
+bindOpsAggregatePercent: Less than 10ms: 0.0000%
+bindOpsAggregatePercent: Less than 20ms: 0.0000%
+bindOpsAggregatePercent: Less than 30ms: 0.0000%
+bindOpsAggregatePercent: Less than 50ms: 0.0000%
+bindOpsAggregatePercent: Less than 100ms: 0.0000%
+bindOpsAggregatePercent: Less than 1000ms: 0.0000%
+compareOpsTotalCount: 0
+compareOpsAverageResponseTimeMillis: 0.000
+compareOpsTotalResponseTimeMillis: 0.000
+compareOpsCount: Less than 1ms: 0
+compareOpsCount: Between 1ms and 2ms: 0
+compareOpsCount: Between 2ms and 3ms: 0
+compareOpsCount: Between 3ms and 5ms: 0
+compareOpsCount: Between 5ms and 10ms: 0
+compareOpsCount: Between 10ms and 20ms: 0
+compareOpsCount: Between 20ms and 30ms: 0
+compareOpsCount: Between 30ms and 50ms: 0
+compareOpsCount: Between 50ms and 100ms: 0
+compareOpsCount: Between 100ms and 1000ms: 0
+compareOpsCount: At least 1000ms: 0
+compareOpsPercent: Less than 1ms: 0.0000%
+compareOpsPercent: Between 1ms and 2ms: 0.0000%
+compareOpsPercent: Between 2ms and 3ms: 0.0000%
+compareOpsPercent: Between 3ms and 5ms: 0.0000%
+compareOpsPercent: Between 5ms and 10ms: 0.0000%
+compareOpsPercent: Between 10ms and 20ms: 0.0000%
+compareOpsPercent: Between 20ms and 30ms: 0.0000%
+compareOpsPercent: Between 30ms and 50ms: 0.0000%
+compareOpsPercent: Between 50ms and 100ms: 0.0000%
+compareOpsPercent: Between 100ms and 1000ms: 0.0000%
+compareOpsPercent: At least 1000ms: 0.0000%
+compareOpsAggregatePercent: Less than 1ms: 0.0000%
+compareOpsAggregatePercent: Less than 2ms: 0.0000%
+compareOpsAggregatePercent: Less than 3ms: 0.0000%
+compareOpsAggregatePercent: Less than 5ms: 0.0000%
+compareOpsAggregatePercent: Less than 10ms: 0.0000%
+compareOpsAggregatePercent: Less than 20ms: 0.0000%
+compareOpsAggregatePercent: Less than 30ms: 0.0000%
+compareOpsAggregatePercent: Less than 50ms: 0.0000%
+compareOpsAggregatePercent: Less than 100ms: 0.0000%
+compareOpsAggregatePercent: Less than 1000ms: 0.0000%
+deleteOpsTotalCount: 0
+deleteOpsAverageResponseTimeMillis: 0.000
+deleteOpsTotalResponseTimeMillis: 0.000
+deleteOpsCount: Less than 1ms: 0
+deleteOpsCount: Between 1ms and 2ms: 0
+deleteOpsCount: Between 2ms and 3ms: 0
+deleteOpsCount: Between 3ms and 5ms: 0
+deleteOpsCount: Between 5ms and 10ms: 0
+deleteOpsCount: Between 10ms and 20ms: 0
+deleteOpsCount: Between 20ms and 30ms: 0
+deleteOpsCount: Between 30ms and 50ms: 0
+deleteOpsCount: Between 50ms and 100ms: 0
+deleteOpsCount: Between 100ms and 1000ms: 0
+deleteOpsCount: At least 1000ms: 0
+deleteOpsPercent: Less than 1ms: 0.0000%
+deleteOpsPercent: Between 1ms and 2ms: 0.0000%
+deleteOpsPercent: Between 2ms and 3ms: 0.0000%
+deleteOpsPercent: Between 3ms and 5ms: 0.0000%
+deleteOpsPercent: Between 5ms and 10ms: 0.0000%
+deleteOpsPercent: Between 10ms and 20ms: 0.0000%
+deleteOpsPercent: Between 20ms and 30ms: 0.0000%
+deleteOpsPercent: Between 30ms and 50ms: 0.0000%
+deleteOpsPercent: Between 50ms and 100ms: 0.0000%
+deleteOpsPercent: Between 100ms and 1000ms: 0.0000%
+deleteOpsPercent: At least 1000ms: 0.0000%
+deleteOpsAggregatePercent: Less than 1ms: 0.0000%
+deleteOpsAggregatePercent: Less than 2ms: 0.0000%
+deleteOpsAggregatePercent: Less than 3ms: 0.0000%
+deleteOpsAggregatePercent: Less than 5ms: 0.0000%
+deleteOpsAggregatePercent: Less than 10ms: 0.0000%
+deleteOpsAggregatePercent: Less than 20ms: 0.0000%
+deleteOpsAggregatePercent: Less than 30ms: 0.0000%
+deleteOpsAggregatePercent: Less than 50ms: 0.0000%
+deleteOpsAggregatePercent: Less than 100ms: 0.0000%
+deleteOpsAggregatePercent: Less than 1000ms: 0.0000%
+extendedOpsTotalCount: 0
+extendedOpsAverageResponseTimeMillis: 0.000
+extendedOpsTotalResponseTimeMillis: 0.000
+extendedOpsCount: Less than 1ms: 0
+extendedOpsCount: Between 1ms and 2ms: 0
+extendedOpsCount: Between 2ms and 3ms: 0
+extendedOpsCount: Between 3ms and 5ms: 0
+extendedOpsCount: Between 5ms and 10ms: 0
+extendedOpsCount: Between 10ms and 20ms: 0
+extendedOpsCount: Between 20ms and 30ms: 0
+extendedOpsCount: Between 30ms and 50ms: 0
+extendedOpsCount: Between 50ms and 100ms: 0
+extendedOpsCount: Between 100ms and 1000ms: 0
+extendedOpsCount: At least 1000ms: 0
+extendedOpsPercent: Less than 1ms: 0.0000%
+extendedOpsPercent: Between 1ms and 2ms: 0.0000%
+extendedOpsPercent: Between 2ms and 3ms: 0.0000%
+extendedOpsPercent: Between 3ms and 5ms: 0.0000%
+extendedOpsPercent: Between 5ms and 10ms: 0.0000%
+extendedOpsPercent: Between 10ms and 20ms: 0.0000%
+extendedOpsPercent: Between 20ms and 30ms: 0.0000%
+extendedOpsPercent: Between 30ms and 50ms: 0.0000%
+extendedOpsPercent: Between 50ms and 100ms: 0.0000%
+extendedOpsPercent: Between 100ms and 1000ms: 0.0000%
+extendedOpsPercent: At least 1000ms: 0.0000%
+extendedOpsAggregatePercent: Less than 1ms: 0.0000%
+extendedOpsAggregatePercent: Less than 2ms: 0.0000%
+extendedOpsAggregatePercent: Less than 3ms: 0.0000%
+extendedOpsAggregatePercent: Less than 5ms: 0.0000%
+extendedOpsAggregatePercent: Less than 10ms: 0.0000%
+extendedOpsAggregatePercent: Less than 20ms: 0.0000%
+extendedOpsAggregatePercent: Less than 30ms: 0.0000%
+extendedOpsAggregatePercent: Less than 50ms: 0.0000%
+extendedOpsAggregatePercent: Less than 100ms: 0.0000%
+extendedOpsAggregatePercent: Less than 1000ms: 0.0000%
+modifyOpsTotalCount: 0
+modifyOpsAverageResponseTimeMillis: 0.000
+modifyOpsTotalResponseTimeMillis: 0.000
+modifyOpsCount: Less than 1ms: 0
+modifyOpsCount: Between 1ms and 2ms: 0
+modifyOpsCount: Between 2ms and 3ms: 0
+modifyOpsCount: Between 3ms and 5ms: 0
+modifyOpsCount: Between 5ms and 10ms: 0
+modifyOpsCount: Between 10ms and 20ms: 0
+modifyOpsCount: Between 20ms and 30ms: 0
+modifyOpsCount: Between 30ms and 50ms: 0
+modifyOpsCount: Between 50ms and 100ms: 0
+modifyOpsCount: Between 100ms and 1000ms: 0
+modifyOpsCount: At least 1000ms: 0
+modifyOpsPercent: Less than 1ms: 0.0000%
+modifyOpsPercent: Between 1ms and 2ms: 0.0000%
+modifyOpsPercent: Between 2ms and 3ms: 0.0000%
+modifyOpsPercent: Between 3ms and 5ms: 0.0000%
+modifyOpsPercent: Between 5ms and 10ms: 0.0000%
+modifyOpsPercent: Between 10ms and 20ms: 0.0000%
+modifyOpsPercent: Between 20ms and 30ms: 0.0000%
+modifyOpsPercent: Between 30ms and 50ms: 0.0000%
+modifyOpsPercent: Between 50ms and 100ms: 0.0000%
+modifyOpsPercent: Between 100ms and 1000ms: 0.0000%
+modifyOpsPercent: At least 1000ms: 0.0000%
+modifyOpsAggregatePercent: Less than 1ms: 0.0000%
+modifyOpsAggregatePercent: Less than 2ms: 0.0000%
+modifyOpsAggregatePercent: Less than 3ms: 0.0000%
+modifyOpsAggregatePercent: Less than 5ms: 0.0000%
+modifyOpsAggregatePercent: Less than 10ms: 0.0000%
+modifyOpsAggregatePercent: Less than 20ms: 0.0000%
+modifyOpsAggregatePercent: Less than 30ms: 0.0000%
+modifyOpsAggregatePercent: Less than 50ms: 0.0000%
+modifyOpsAggregatePercent: Less than 100ms: 0.0000%
+modifyOpsAggregatePercent: Less than 1000ms: 0.0000%
+modifyDNOpsTotalCount: 0
+modifyDNOpsAverageResponseTimeMillis: 0.000
+modifyDNOpsTotalResponseTimeMillis: 0.000
+modifyDNOpsCount: Less than 1ms: 0
+modifyDNOpsCount: Between 1ms and 2ms: 0
+modifyDNOpsCount: Between 2ms and 3ms: 0
+modifyDNOpsCount: Between 3ms and 5ms: 0
+modifyDNOpsCount: Between 5ms and 10ms: 0
+modifyDNOpsCount: Between 10ms and 20ms: 0
+modifyDNOpsCount: Between 20ms and 30ms: 0
+modifyDNOpsCount: Between 30ms and 50ms: 0
+modifyDNOpsCount: Between 50ms and 100ms: 0
+modifyDNOpsCount: Between 100ms and 1000ms: 0
+modifyDNOpsCount: At least 1000ms: 0
+modifyDNOpsPercent: Less than 1ms: 0.0000%
+modifyDNOpsPercent: Between 1ms and 2ms: 0.0000%
+modifyDNOpsPercent: Between 2ms and 3ms: 0.0000%
+modifyDNOpsPercent: Between 3ms and 5ms: 0.0000%
+modifyDNOpsPercent: Between 5ms and 10ms: 0.0000%
+modifyDNOpsPercent: Between 10ms and 20ms: 0.0000%
+modifyDNOpsPercent: Between 20ms and 30ms: 0.0000%
+modifyDNOpsPercent: Between 30ms and 50ms: 0.0000%
+modifyDNOpsPercent: Between 50ms and 100ms: 0.0000%
+modifyDNOpsPercent: Between 100ms and 1000ms: 0.0000%
+modifyDNOpsPercent: At least 1000ms: 0.0000%
+modifyDNOpsAggregatePercent: Less than 1ms: 0.0000%
+modifyDNOpsAggregatePercent: Less than 2ms: 0.0000%
+modifyDNOpsAggregatePercent: Less than 3ms: 0.0000%
+modifyDNOpsAggregatePercent: Less than 5ms: 0.0000%
+modifyDNOpsAggregatePercent: Less than 10ms: 0.0000%
+modifyDNOpsAggregatePercent: Less than 20ms: 0.0000%
+modifyDNOpsAggregatePercent: Less than 30ms: 0.0000%
+modifyDNOpsAggregatePercent: Less than 50ms: 0.0000%
+modifyDNOpsAggregatePercent: Less than 100ms: 0.0000%
+modifyDNOpsAggregatePercent: Less than 1000ms: 0.0000%
+searchOpsTotalCount: 0
+searchOpsAverageResponseTimeMillis: 0.000
+searchOpsTotalResponseTimeMillis: 0.000
+searchOpsCount: Less than 1ms: 0
+searchOpsCount: Between 1ms and 2ms: 0
+searchOpsCount: Between 2ms and 3ms: 0
+searchOpsCount: Between 3ms and 5ms: 0
+searchOpsCount: Between 5ms and 10ms: 0
+searchOpsCount: Between 10ms and 20ms: 0
+searchOpsCount: Between 20ms and 30ms: 0
+searchOpsCount: Between 30ms and 50ms: 0
+searchOpsCount: Between 50ms and 100ms: 0
+searchOpsCount: Between 100ms and 1000ms: 0
+searchOpsCount: At least 1000ms: 0
+searchOpsPercent: Less than 1ms: 0.0000%
+searchOpsPercent: Between 1ms and 2ms: 0.0000%
+searchOpsPercent: Between 2ms and 3ms: 0.0000%
+searchOpsPercent: Between 3ms and 5ms: 0.0000%
+searchOpsPercent: Between 5ms and 10ms: 0.0000%
+searchOpsPercent: Between 10ms and 20ms: 0.0000%
+searchOpsPercent: Between 20ms and 30ms: 0.0000%
+searchOpsPercent: Between 30ms and 50ms: 0.0000%
+searchOpsPercent: Between 50ms and 100ms: 0.0000%
+searchOpsPercent: Between 100ms and 1000ms: 0.0000%
+searchOpsPercent: At least 1000ms: 0.0000%
+searchOpsAggregatePercent: Less than 1ms: 0.0000%
+searchOpsAggregatePercent: Less than 2ms: 0.0000%
+searchOpsAggregatePercent: Less than 3ms: 0.0000%
+searchOpsAggregatePercent: Less than 5ms: 0.0000%
+searchOpsAggregatePercent: Less than 10ms: 0.0000%
+searchOpsAggregatePercent: Less than 20ms: 0.0000%
+searchOpsAggregatePercent: Less than 30ms: 0.0000%
+searchOpsAggregatePercent: Less than 50ms: 0.0000%
+searchOpsAggregatePercent: Less than 100ms: 0.0000%
+searchOpsAggregatePercent: Less than 1000ms: 0.0000%
+
+dn: cn=Purge Expired Data Plugin: ExpiredSessionAutoPurge,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-purge-expired-data-plugin-monitor-entry
+objectClass: extensibleObject
+cn: Purge Expired Data Plugin: ExpiredSessionAutoPurge
+status: More data will be available after the first iteration completes.
+
+dn: cn=Purge Expired Data Plugin: IdleSessionAutoPurge,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-purge-expired-data-plugin-monitor-entry
+objectClass: extensibleObject
+cn: Purge Expired Data Plugin: IdleSessionAutoPurge
+status: More data will be available after the first iteration completes.
+
+dn: cn=replicationChanges Backend,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-backend-monitor-entry
+objectClass: extensibleObject
+cn: replicationChanges Backend
+ds-backend-id: replicationChanges
+ds-backend-base-dn: dc=replicationChanges
+ds-backend-is-private: TRUE
+ds-backend-supports-binary-copy: FALSE
+ds-backend-entry-count: 0
+ds-base-dn-entry-count: 0 dc=replicationChanges
+ds-backend-writability-mode: disabled
+
+dn: cn=schema Backend,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-backend-monitor-entry
+objectClass: extensibleObject
+cn: schema Backend
+ds-backend-id: schema
+ds-backend-base-dn: cn=schema
+ds-backend-is-private: TRUE
+ds-backend-supports-binary-copy: FALSE
+ds-backend-entry-count: 1
+ds-base-dn-entry-count: 1 cn=schema
+ds-backend-writability-mode: enabled
+
+dn: cn=Server Status Timeline,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-server-status-timeline-monitor-entry
+objectClass: extensibleObject
+cn: Server Status Timeline
+ds-server-status-changed: 04/Sep/2020:17:49:39 +0000 - DEGRADED - Low Disk Space Warning
+ds-server-status-changed: 04/Sep/2020:17:49:45 +0000 - UNAVAILABLE - Shutdown Begun
+
+dn: cn=SSL Context,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-ssl-context-monitor-entry
+objectClass: extensibleObject
+cn: SSL Context
+jvm-supported-cipher-suite: TLS_AES_256_GCM_SHA384
+jvm-supported-cipher-suite: TLS_AES_128_GCM_SHA256
+jvm-supported-cipher-suite: TLS_CHACHA20_POLY1305_SHA256
+jvm-supported-cipher-suite: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+jvm-supported-cipher-suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+jvm-supported-cipher-suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+jvm-supported-cipher-suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+jvm-supported-cipher-suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+jvm-supported-cipher-suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+jvm-supported-cipher-suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+jvm-supported-cipher-suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+jvm-supported-cipher-suite: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+jvm-supported-cipher-suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+jvm-supported-cipher-suite: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+jvm-supported-cipher-suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+jvm-supported-cipher-suite: TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+jvm-supported-cipher-suite: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+jvm-supported-cipher-suite: TLS_DHE_DSS_WITH_AES_256_GCM_SHA384
+jvm-supported-cipher-suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+jvm-supported-cipher-suite: TLS_DHE_DSS_WITH_AES_128_GCM_SHA256
+jvm-supported-cipher-suite: TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+jvm-supported-cipher-suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA256
+jvm-supported-cipher-suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+jvm-supported-cipher-suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA
+jvm-supported-cipher-suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+jvm-supported-cipher-suite: TLS_DHE_DSS_WITH_AES_128_CBC_SHA256
+jvm-supported-cipher-suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+jvm-supported-cipher-suite: TLS_DHE_DSS_WITH_AES_128_CBC_SHA
+jvm-supported-cipher-suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+jvm-supported-cipher-suite: TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+jvm-supported-cipher-suite: TLS_RSA_WITH_AES_256_GCM_SHA384
+jvm-supported-cipher-suite: TLS_RSA_WITH_AES_128_GCM_SHA256
+jvm-supported-cipher-suite: TLS_RSA_WITH_AES_256_CBC_SHA256
+jvm-supported-cipher-suite: TLS_RSA_WITH_AES_256_CBC_SHA
+jvm-supported-cipher-suite: TLS_RSA_WITH_AES_128_CBC_SHA256
+jvm-supported-cipher-suite: TLS_RSA_WITH_AES_128_CBC_SHA
+jvm-supported-cipher-suite: TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384
+jvm-supported-cipher-suite: TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384
+jvm-supported-cipher-suite: TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256
+jvm-supported-cipher-suite: TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256
+jvm-supported-cipher-suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384
+jvm-supported-cipher-suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384
+jvm-supported-cipher-suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA
+jvm-supported-cipher-suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA
+jvm-supported-cipher-suite: TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256
+jvm-supported-cipher-suite: TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256
+jvm-supported-cipher-suite: TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA
+jvm-supported-cipher-suite: TLS_ECDH_RSA_WITH_AES_128_CBC_SHA
+jvm-supported-cipher-suite: TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+jvm-default-enabled-cipher-suite: TLS_AES_256_GCM_SHA384
+jvm-default-enabled-cipher-suite: TLS_AES_128_GCM_SHA256
+jvm-default-enabled-cipher-suite: TLS_CHACHA20_POLY1305_SHA256
+jvm-default-enabled-cipher-suite: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+jvm-default-enabled-cipher-suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+jvm-default-enabled-cipher-suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+jvm-default-enabled-cipher-suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+jvm-default-enabled-cipher-suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+jvm-default-enabled-cipher-suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+jvm-default-enabled-cipher-suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+jvm-default-enabled-cipher-suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+jvm-default-enabled-cipher-suite: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+jvm-default-enabled-cipher-suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+jvm-default-enabled-cipher-suite: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+jvm-default-enabled-cipher-suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+jvm-default-enabled-cipher-suite: TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+jvm-default-enabled-cipher-suite: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+jvm-default-enabled-cipher-suite: TLS_DHE_DSS_WITH_AES_256_GCM_SHA384
+jvm-default-enabled-cipher-suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+jvm-default-enabled-cipher-suite: TLS_DHE_DSS_WITH_AES_128_GCM_SHA256
+jvm-default-enabled-cipher-suite: TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+jvm-default-enabled-cipher-suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA256
+jvm-default-enabled-cipher-suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+jvm-default-enabled-cipher-suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA
+jvm-default-enabled-cipher-suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+jvm-default-enabled-cipher-suite: TLS_DHE_DSS_WITH_AES_128_CBC_SHA256
+jvm-default-enabled-cipher-suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+jvm-default-enabled-cipher-suite: TLS_DHE_DSS_WITH_AES_128_CBC_SHA
+jvm-default-enabled-cipher-suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+jvm-default-enabled-cipher-suite: TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+jvm-default-enabled-cipher-suite: TLS_RSA_WITH_AES_256_GCM_SHA384
+jvm-default-enabled-cipher-suite: TLS_RSA_WITH_AES_128_GCM_SHA256
+jvm-default-enabled-cipher-suite: TLS_RSA_WITH_AES_256_CBC_SHA256
+jvm-default-enabled-cipher-suite: TLS_RSA_WITH_AES_256_CBC_SHA
+jvm-default-enabled-cipher-suite: TLS_RSA_WITH_AES_128_CBC_SHA256
+jvm-default-enabled-cipher-suite: TLS_RSA_WITH_AES_128_CBC_SHA
+jvm-default-enabled-cipher-suite: TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384
+jvm-default-enabled-cipher-suite: TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384
+jvm-default-enabled-cipher-suite: TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256
+jvm-default-enabled-cipher-suite: TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256
+jvm-default-enabled-cipher-suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384
+jvm-default-enabled-cipher-suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384
+jvm-default-enabled-cipher-suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA
+jvm-default-enabled-cipher-suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA
+jvm-default-enabled-cipher-suite: TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256
+jvm-default-enabled-cipher-suite: TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256
+jvm-default-enabled-cipher-suite: TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA
+jvm-default-enabled-cipher-suite: TLS_ECDH_RSA_WITH_AES_128_CBC_SHA
+jvm-default-enabled-cipher-suite: TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+recommended-cipher-suite: TLS_AES_256_GCM_SHA384
+recommended-cipher-suite: TLS_AES_128_GCM_SHA256
+recommended-cipher-suite: TLS_CHACHA20_POLY1305_SHA256
+recommended-cipher-suite: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+recommended-cipher-suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+recommended-cipher-suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+recommended-cipher-suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+recommended-cipher-suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+recommended-cipher-suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+recommended-cipher-suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+recommended-cipher-suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+recommended-cipher-suite: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+recommended-cipher-suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+recommended-cipher-suite: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+recommended-cipher-suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+recommended-cipher-suite: TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+recommended-cipher-suite: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+recommended-cipher-suite: TLS_DHE_DSS_WITH_AES_256_GCM_SHA384
+recommended-cipher-suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+recommended-cipher-suite: TLS_DHE_DSS_WITH_AES_128_GCM_SHA256
+recommended-cipher-suite: TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+recommended-cipher-suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA256
+recommended-cipher-suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+recommended-cipher-suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA
+recommended-cipher-suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+recommended-cipher-suite: TLS_DHE_DSS_WITH_AES_128_CBC_SHA256
+recommended-cipher-suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+recommended-cipher-suite: TLS_DHE_DSS_WITH_AES_128_CBC_SHA
+recommended-cipher-suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+recommended-cipher-suite: TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+recommended-cipher-suite: TLS_RSA_WITH_AES_256_GCM_SHA384
+recommended-cipher-suite: TLS_RSA_WITH_AES_128_GCM_SHA256
+recommended-cipher-suite: TLS_RSA_WITH_AES_256_CBC_SHA256
+recommended-cipher-suite: TLS_RSA_WITH_AES_256_CBC_SHA
+recommended-cipher-suite: TLS_RSA_WITH_AES_128_CBC_SHA256
+recommended-cipher-suite: TLS_RSA_WITH_AES_128_CBC_SHA
+recommended-cipher-suite: TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+omitted-cipher-suite-detail: TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384 - The cipher suite uses the non-recommended ECDH key exchange algorithm.
+omitted-cipher-suite-detail: TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384 - The cipher suite uses the non-recommended ECDH key exchange algorithm.
+omitted-cipher-suite-detail: TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256 - The cipher suite uses the non-recommended ECDH key exchange algorithm.
+omitted-cipher-suite-detail: TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256 - The cipher suite uses the non-recommended ECDH key exchange algorithm.
+omitted-cipher-suite-detail: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384 - The cipher suite uses the non-recommended ECDH key exchange algorithm.
+omitted-cipher-suite-detail: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384 - The cipher suite uses the non-recommended ECDH key exchange algorithm.
+omitted-cipher-suite-detail: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA - The cipher suite uses the non-recommended ECDH key exchange algorithm.
+omitted-cipher-suite-detail: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA - The cipher suite uses the non-recommended ECDH key exchange algorithm.
+omitted-cipher-suite-detail: TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256 - The cipher suite uses the non-recommended ECDH key exchange algorithm.
+omitted-cipher-suite-detail: TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256 - The cipher suite uses the non-recommended ECDH key exchange algorithm.
+omitted-cipher-suite-detail: TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA - The cipher suite uses the non-recommended ECDH key exchange algorithm.
+omitted-cipher-suite-detail: TLS_ECDH_RSA_WITH_AES_128_CBC_SHA - The cipher suite uses the non-recommended ECDH key exchange algorithm.
+jvm-supported-ssl-protocol: TLSv1.3
+jvm-supported-ssl-protocol: TLSv1.2
+jvm-supported-ssl-protocol: TLSv1.1
+jvm-supported-ssl-protocol: TLSv1
+jvm-supported-ssl-protocol: SSLv3
+jvm-supported-ssl-protocol: SSLv2Hello
+
+dn: cn=Startup Phase Times,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-startup-phase-times-monitor-entry
+objectClass: extensibleObject
+cn: Startup Phase Times
+startup-phase-timing: 1.207 seconds: Initializing Schema
+startup-phase-timing: 1.398 seconds: Initializing Key Manager Providers
+startup-phase-timing: 3.277 seconds: Initializing Password Policy
+startup-phase-timing: 1.238 seconds: Initializing Crypto Manager Synchronization
+
+dn: cn=Status Health Summary,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-status-health-summary-monitor
+objectClass: extensibleObject
+cn: Status Health Summary
+has-active-critical-concerns: true
+num-active-critical-concerns: 1
+current-duration-with-critical-concerns-seconds: 0
+start-of-active-critical-concerns: 20200904174945.384Z
+has-active-concerns: true
+num-active-concerns: 5
+current-duration-with-concerns-seconds: 0
+start-of-active-concerns: 20200904174945.384Z
+is-in-lockdown-mode: false
+current-duration-in-lockdown-mode-seconds: 0
+num-unavailable-alert-types: 1
+has-unavailable-alert-types: true
+num-degraded-alert-types: 1
+has-degraded-alert-types: true
+current-duration-unavailable-seconds: 0
+start-of-unavailable: 20200904174945.376Z
+current-duration-degraded-seconds: 0
+start-of-degraded: 20200904174945.376Z
+num-critical-alarms: 0
+num-major-error-alarms: 0
+num-minor-error-alarms: 0
+num-warning-alarms: 3
+num-indeterminate-alarms: 0
+num-major-error-and-above-alarms: 0
+num-minor-error-and-above-alarms: 0
+num-warning-and-above-alarms: 3
+num-gauges-at-critical-severity: 0
+num-gauges-at-major-error-severity: 0
+num-gauges-at-minor-error-severity: 0
+num-gauges-at-warning-severity: 0
+num-gauges-at-normal-severity: 0
+num-gauges-at-indeterminate-severity: 0
+num-gauges-at-major-error-and-above-severity: 0
+num-gauges-at-minor-error-and-above-severity: 0
+num-gauges-at-warning-and-above-severity: 0
+current-calculation-time-millis: 2
+average-calculation-time-millis: 8
+max-calculation-time-millis: 14
+
+dn: cn=Sub-Operation Timing Monitor Provider,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-sub-operation-timing-monitor-entry
+objectClass: extensibleObject
+cn: Sub-Operation Timing Monitor Provider
+num-top-expensive-phases-shown: 10
+
+dn: cn=System Information,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-system-info-monitor-entry
+objectClass: extensibleObject
+cn: System Information
+javaVersion: 11.0.8
+javaVendor: Azul Systems, Inc.
+jvmVersion: 11.0.8+10-LTS
+jvmVendor: Azul Systems, Inc.
+javaHome: /opt/java
+classPath: /opt/out/instance/classes:/opt/out/instance/lib/PingDirectory.jar:/opt/out/instance/lib/activation-1.1.1.jar:/opt/out/instance/lib/apache-el-8.0.33.jar:/opt/out/instance/lib/apache-jsp-8.0.33.jar:/opt/out/instance/lib/apache-jsp-9.3.25.v20180904.jar:/opt/out/instance/lib/asm-6.0.jar:/opt/out/instance/lib/asm-commons-5.0.1.jar:/opt/out/instance/lib/asm-tree-5.0.1.jar:/opt/out/instance/lib/asm-util-5.0.1.jar:/opt/out/instance/lib/aws-java-sdk-core-1.11.511.jar:/opt/out/instance/lib/aws-java-sdk-kms-1.11.511.jar:/opt/out/instance/lib/checker-qual-2.10.0.jar:/opt/out/instance/lib/common-1.3.22.jar:/opt/out/instance/lib/commons-beanutils-1.9.4.jar:/opt/out/instance/lib/commons-codec-1.9.jar:/opt/out/instance/lib/commons-collections-3.2.2.jar:/opt/out/instance/lib/commons-io-2.5.jar:/opt/out/instance/lib/commons-lang-2.6.jar:/opt/out/instance/lib/commons-lang3-3.8.1.jar:/opt/out/instance/lib/commons-logging-1.1.1.jar:/opt/out/instance/lib/commons-text-1.6.jar:/opt/out/instance/lib/config-framework-core-3.14.jar:/opt/out/instance/lib/ecj-4.4.2.jar:/opt/out/instance/lib/error_prone_annotations-2.3.4.jar:/opt/out/instance/lib/failureaccess-1.0.1.jar:/opt/out/instance/lib/groovy-2.5.7.jar:/opt/out/instance/lib/groovy-json-2.5.7.jar:/opt/out/instance/lib/guava-28.2-jre.jar:/opt/out/instance/lib/hk2-api-2.4.0-b10.jar:/opt/out/instance/lib/hk2-locator-2.4.0-b10.jar:/opt/out/instance/lib/hk2-utils-2.4.0-b10.jar:/opt/out/instance/lib/httpclient-4.5.jar:/opt/out/instance/lib/httpcore-4.4.1.jar:/opt/out/instance/lib/ion-java-1.0.2.jar:/opt/out/instance/lib/j2objc-annotations-1.3.jar:/opt/out/instance/lib/jackson-annotations-2.10.2.jar:/opt/out/instance/lib/jackson-core-2.10.2.jar:/opt/out/instance/lib/jackson-databind-2.10.2.jar:/opt/out/instance/lib/jackson-dataformat-cbor-2.10.2.jar:/opt/out/instance/lib/jackson-dataformat-yaml-2.10.2.jar:/opt/out/instance/lib/jackson-datatype-guava-2.10.2.jar:/opt/out/instance/lib/jackson-datatype-jdk8-2.10.2.jar:/opt/out/instance/lib/jackson-datatype-jsr310-2.10.2.jar:/opt/out/instance/lib/jackson-jaxrs-base-2.10.2.jar:/opt/out/instance/lib/jackson-jaxrs-json-provider-2.10.2.jar:/opt/out/instance/lib/jackson-module-jaxb-annotations-2.10.2.jar:/opt/out/instance/lib/javassist-3.22.0-GA.jar:/opt/out/instance/lib/javax.annotation-api-1.2.jar:/opt/out/instance/lib/javax.inject-2.4.0-b10.jar:/opt/out/instance/lib/javax.mail-1.6.1.jar:/opt/out/instance/lib/javax.servlet-api-3.1.0.jar:/opt/out/instance/lib/javax.ws.rs-api-2.0.1.jar:/opt/out/instance/lib/jaxb-api-2.3.1.jar:/opt/out/instance/lib/jaxb-core-2.3.0.1.jar:/opt/out/instance/lib/jaxb-impl-2.3.1.jar:/opt/out/instance/lib/jaxb-xjc-2.3.1.jar:/opt/out/instance/lib/jaxb2-basics-runtime-1.11.1.jar:/opt/out/instance/lib/je.jar:/opt/out/instance/lib/jersey-apache-connector-2.17.jar:/opt/out/instance/lib/jersey-client-2.17.jar:/opt/out/instance/lib/jersey-common-2.17.jar:/opt/out/instance/lib/jersey-container-servlet-core-2.17.jar:/opt/out/instance/lib/jersey-entity-filtering-2.17.jar:/opt/out/instance/lib/jersey-guava-2.17.jar:/opt/out/instance/lib/jersey-media-jaxb-2.17.jar:/opt/out/instance/lib/jersey-media-json-jackson-2.17.jar:/opt/out/instance/lib/jersey-media-multipart-2.17.jar:/opt/out/instance/lib/jersey-mvc-2.17.jar:/opt/out/instance/lib/jersey-server-2.17.jar:/opt/out/instance/lib/jetty-annotations-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-continuation-9.4.15.v20190215.jar:/opt/out/instance/lib/jetty-http-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-io-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-jndi-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-plus-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-schemas-3.1.jar:/opt/out/instance/lib/jetty-security-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-server-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-servlet-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-servlets-9.4.15.v20190215.jar:/opt/out/instance/lib/jetty-util-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-webapp-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-xml-9.3.25.v20180904.jar:/opt/out/instance/lib/jmespath-java-1.11.511.jar:/opt/out/instance/lib/joda-time-2.8.1.jar:/opt/out/instance/lib/jose4j-0.6.3.jar:/opt/out/instance/lib/json-1.0.0.jar:/opt/out/instance/lib/jsr305-3.0.2.jar:/opt/out/instance/lib/jzlib-1.1.3.jar:/opt/out/instance/lib/license4j-runtime-library-1.3.jar:/opt/out/instance/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/opt/out/instance/lib/messages-1.0.30.jar:/opt/out/instance/lib/opencsv-2.3.jar:/opt/out/instance/lib/org.apache.servicemix.bundles.oro-2.0.8_6.jar:/opt/out/instance/lib/scim-ldap-1.8.23.jar:/opt/out/instance/lib/scim-sdk-1.8.23.jar:/opt/out/instance/lib/scim2-sdk-client-2.3.4.jar:/opt/out/instance/lib/scim2-sdk-common-2.3.4.jar:/opt/out/instance/lib/scim2-sdk-server-2.3.4.jar:/opt/out/instance/lib/scim2-ubid-extensions-2.3.4.jar:/opt/out/instance/lib/slf4j-api-1.6.1.jar:/opt/out/instance/lib/snmp4j-1.11.jar:/opt/out/instance/lib/snmp4j-agent-1.4.jar:/opt/out/instance/lib/snmp4j-agentx-1.3.jar:/opt/out/instance/lib/spring-web-4.3.25.RELEASE.jar:/opt/out/instance/lib/unboundid-ldapsdk-ce.jar:/opt/out/instance/lib/validation-api-1.1.0.Final.jar:/opt/out/instance/lib/velocity-1.7.jar:/opt/out/instance/lib/velocity-tools-2.0.jar
+workingDirectory: /opt/out/instance/bin
+instanceRoot: /opt/out/instance
+jvmPID: 1566
+userName: root
+operatingSystem: Linux 5.3.0-1033-aws amd64
+jvmArchitecture: 64-bit
+systemName: b1e39ef4129d
+strongEncryptionAvailable: true
+sslContextProtocol: TLSv1.3
+availableCPUs: 4
+maxMemory: 805306368
+usedMemory: 805306368
+freeUsedMemory: 507485152
+jvmArguments: "-Xmx768m" "-Xms768m" "-XX:MaxNewSize=64m" "-XX:NewSize=64m" "-XX:+PrintCommandLineFlags" "-XX:+UseBiasedLocking" "-XX:-OmitStackTraceInFastThrow" "-XX:RefDiscoveryPolicy=1" "-XX:MaxTenuringThreshold=2" "-XX:+HeapDumpOnOutOfMemoryError" "-XX:+UseG1GC" "-XX:InitiatingHeapOccupancyPercent=80" "-XX:ConcGCThreads=1" "--add-opens=java.base/java.io=ALL-UNNAMED" "--add-opens=java.base/java.lang=ALL-UNNAMED" "--add-opens=java.base/java.lang.invoke=ALL-UNNAMED" "--add-opens=java.base/java.lang.reflect=ALL-UNNAMED" "--add-opens=java.base/java.security=ALL-UNNAMED" "--add-opens=java.base/java.text=ALL-UNNAMED" "--add-opens=java.base/java.util=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED" "--add-opens=java.desktop/java.awt.font=ALL-UNNAMED" "-Xlog:gc*:file=/opt/out/instance/logs/jvm/gc.log:time,uptime,level,tags:filecount=3,filesize=100m" "-Dcom.unboundid.directory.server.scriptName=start-server"
+systemProperty: admin.instanceRoot='/opt/out/instance'
+systemProperty: awt.toolkit='sun.awt.X11.XToolkit'
+systemProperty: com.unboundid.directory.core.DisableGauges='true'
+systemProperty: com.unboundid.directory.server.NoCheckpointAndCleaning='true'
+systemProperty: com.unboundid.directory.server.SkipExternalServerConnect='true'
+systemProperty: com.unboundid.directory.server.SkipPrimeAlways='true'
+systemProperty: com.unboundid.directory.server.SkipRecentChangeRecovery='true'
+systemProperty: com.unboundid.directory.server.StartCheckOnly='true'
+systemProperty: com.unboundid.directory.server.scriptName='start-server'
+systemProperty: com.unboundid.directory.server.skipMinHeapCheck='true'
+systemProperty: file.encoding='UTF-8'
+systemProperty: file.separator='/'
+systemProperty: java.awt.graphicsenv='sun.awt.X11GraphicsEnvironment'
+systemProperty: java.awt.printerjob='sun.print.PSPrinterJob'
+systemProperty: java.class.path='/opt/out/instance/classes:/opt/out/instance/lib/PingDirectory.jar:/opt/out/instance/lib/activation-1.1.1.jar:/opt/out/instance/lib/apache-el-8.0.33.jar:/opt/out/instance/lib/apache-jsp-8.0.33.jar:/opt/out/instance/lib/apache-jsp-9.3.25.v20180904.jar:/opt/out/instance/lib/asm-6.0.jar:/opt/out/instance/lib/asm-commons-5.0.1.jar:/opt/out/instance/lib/asm-tree-5.0.1.jar:/opt/out/instance/lib/asm-util-5.0.1.jar:/opt/out/instance/lib/aws-java-sdk-core-1.11.511.jar:/opt/out/instance/lib/aws-java-sdk-kms-1.11.511.jar:/opt/out/instance/lib/checker-qual-2.10.0.jar:/opt/out/instance/lib/common-1.3.22.jar:/opt/out/instance/lib/commons-beanutils-1.9.4.jar:/opt/out/instance/lib/commons-codec-1.9.jar:/opt/out/instance/lib/commons-collections-3.2.2.jar:/opt/out/instance/lib/commons-io-2.5.jar:/opt/out/instance/lib/commons-lang-2.6.jar:/opt/out/instance/lib/commons-lang3-3.8.1.jar:/opt/out/instance/lib/commons-logging-1.1.1.jar:/opt/out/instance/lib/commons-text-1.6.jar:/opt/out/instance/lib/config-framework-core-3.14.jar:/opt/out/instance/lib/ecj-4.4.2.jar:/opt/out/instance/lib/error_prone_annotations-2.3.4.jar:/opt/out/instance/lib/failureaccess-1.0.1.jar:/opt/out/instance/lib/groovy-2.5.7.jar:/opt/out/instance/lib/groovy-json-2.5.7.jar:/opt/out/instance/lib/guava-28.2-jre.jar:/opt/out/instance/lib/hk2-api-2.4.0-b10.jar:/opt/out/instance/lib/hk2-locator-2.4.0-b10.jar:/opt/out/instance/lib/hk2-utils-2.4.0-b10.jar:/opt/out/instance/lib/httpclient-4.5.jar:/opt/out/instance/lib/httpcore-4.4.1.jar:/opt/out/instance/lib/ion-java-1.0.2.jar:/opt/out/instance/lib/j2objc-annotations-1.3.jar:/opt/out/instance/lib/jackson-annotations-2.10.2.jar:/opt/out/instance/lib/jackson-core-2.10.2.jar:/opt/out/instance/lib/jackson-databind-2.10.2.jar:/opt/out/instance/lib/jackson-dataformat-cbor-2.10.2.jar:/opt/out/instance/lib/jackson-dataformat-yaml-2.10.2.jar:/opt/out/instance/lib/jackson-datatype-guava-2.10.2.jar:/opt/out/instance/lib/jackson-datatype-jdk8-2.10.2.jar:/opt/out/instance/lib/jackson-datatype-jsr310-2.10.2.jar:/opt/out/instance/lib/jackson-jaxrs-base-2.10.2.jar:/opt/out/instance/lib/jackson-jaxrs-json-provider-2.10.2.jar:/opt/out/instance/lib/jackson-module-jaxb-annotations-2.10.2.jar:/opt/out/instance/lib/javassist-3.22.0-GA.jar:/opt/out/instance/lib/javax.annotation-api-1.2.jar:/opt/out/instance/lib/javax.inject-2.4.0-b10.jar:/opt/out/instance/lib/javax.mail-1.6.1.jar:/opt/out/instance/lib/javax.servlet-api-3.1.0.jar:/opt/out/instance/lib/javax.ws.rs-api-2.0.1.jar:/opt/out/instance/lib/jaxb-api-2.3.1.jar:/opt/out/instance/lib/jaxb-core-2.3.0.1.jar:/opt/out/instance/lib/jaxb-impl-2.3.1.jar:/opt/out/instance/lib/jaxb-xjc-2.3.1.jar:/opt/out/instance/lib/jaxb2-basics-runtime-1.11.1.jar:/opt/out/instance/lib/je.jar:/opt/out/instance/lib/jersey-apache-connector-2.17.jar:/opt/out/instance/lib/jersey-client-2.17.jar:/opt/out/instance/lib/jersey-common-2.17.jar:/opt/out/instance/lib/jersey-container-servlet-core-2.17.jar:/opt/out/instance/lib/jersey-entity-filtering-2.17.jar:/opt/out/instance/lib/jersey-guava-2.17.jar:/opt/out/instance/lib/jersey-media-jaxb-2.17.jar:/opt/out/instance/lib/jersey-media-json-jackson-2.17.jar:/opt/out/instance/lib/jersey-media-multipart-2.17.jar:/opt/out/instance/lib/jersey-mvc-2.17.jar:/opt/out/instance/lib/jersey-server-2.17.jar:/opt/out/instance/lib/jetty-annotations-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-continuation-9.4.15.v20190215.jar:/opt/out/instance/lib/jetty-http-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-io-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-jndi-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-plus-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-schemas-3.1.jar:/opt/out/instance/lib/jetty-security-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-server-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-servlet-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-servlets-9.4.15.v20190215.jar:/opt/out/instance/lib/jetty-util-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-webapp-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-xml-9.3.25.v20180904.jar:/opt/out/instance/lib/jmespath-java-1.11.511.jar:/opt/out/instance/lib/joda-time-2.8.1.jar:/opt/out/instance/lib/jose4j-0.6.3.jar:/opt/out/instance/lib/json-1.0.0.jar:/opt/out/instance/lib/jsr305-3.0.2.jar:/opt/out/instance/lib/jzlib-1.1.3.jar:/opt/out/instance/lib/license4j-runtime-library-1.3.jar:/opt/out/instance/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/opt/out/instance/lib/messages-1.0.30.jar:/opt/out/instance/lib/opencsv-2.3.jar:/opt/out/instance/lib/org.apache.servicemix.bundles.oro-2.0.8_6.jar:/opt/out/instance/lib/scim-ldap-1.8.23.jar:/opt/out/instance/lib/scim-sdk-1.8.23.jar:/opt/out/instance/lib/scim2-sdk-client-2.3.4.jar:/opt/out/instance/lib/scim2-sdk-common-2.3.4.jar:/opt/out/instance/lib/scim2-sdk-server-2.3.4.jar:/opt/out/instance/lib/scim2-ubid-extensions-2.3.4.jar:/opt/out/instance/lib/slf4j-api-1.6.1.jar:/opt/out/instance/lib/snmp4j-1.11.jar:/opt/out/instance/lib/snmp4j-agent-1.4.jar:/opt/out/instance/lib/snmp4j-agentx-1.3.jar:/opt/out/instance/lib/spring-web-4.3.25.RELEASE.jar:/opt/out/instance/lib/unboundid-ldapsdk-ce.jar:/opt/out/instance/lib/validation-api-1.1.0.Final.jar:/opt/out/instance/lib/velocity-1.7.jar:/opt/out/instance/lib/velocity-tools-2.0.jar'
+systemProperty: java.class.version='55.0'
+systemProperty: java.home='/opt/java'
+systemProperty: java.io.tmpdir='/tmp'
+systemProperty: java.library.path='/opt/java/lib/server:/opt/java/lib:/opt/java/../lib::/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib'
+systemProperty: java.runtime.name='OpenJDK Runtime Environment'
+systemProperty: java.runtime.version='11.0.8+10-LTS'
+systemProperty: java.specification.name='Java Platform API Specification'
+systemProperty: java.specification.vendor='Oracle Corporation'
+systemProperty: java.specification.version='11'
+systemProperty: java.vendor='Azul Systems, Inc.'
+systemProperty: java.vendor.url='http://www.azulsystems.com/'
+systemProperty: java.vendor.url.bug='http://www.azulsystems.com/support/'
+systemProperty: java.vendor.version='Zulu11.41+23-CA'
+systemProperty: java.version='11.0.8'
+systemProperty: java.version.date='2020-07-14'
+systemProperty: java.vm.compressedOopsMode='32-bit'
+systemProperty: java.vm.info='mixed mode'
+systemProperty: java.vm.name='OpenJDK 64-Bit Server VM'
+systemProperty: java.vm.specification.name='Java Virtual Machine Specification'
+systemProperty: java.vm.specification.vendor='Oracle Corporation'
+systemProperty: java.vm.specification.version='11'
+systemProperty: java.vm.vendor='Azul Systems, Inc.'
+systemProperty: java.vm.version='11.0.8+10-LTS'
+systemProperty: jdk.debug='release'
+systemProperty: jdk.vendor.version='Zulu11.41+23-CA'
+systemProperty:: bGluZS5zZXBhcmF0b3I9Jwon
+systemProperty: networkaddress.cache.ttl='3600'
+systemProperty: os.arch='amd64'
+systemProperty: os.name='Linux'
+systemProperty: os.version='5.3.0-1033-aws'
+systemProperty: path.separator=':'
+systemProperty: sun.arch.data.model='64'
+systemProperty: sun.boot.library.path='/opt/java/lib'
+systemProperty: sun.cpu.endian='little'
+systemProperty: sun.cpu.isalist=''
+systemProperty: sun.io.unicode.encoding='UnicodeLittle'
+systemProperty: sun.java.command='com.unboundid.directory.server.core.DirectoryServer --configClass com.unboundid.directory.server.extensions.ConfigFileHandler --configFile /opt/out/instance/config/config.ldif --startcheck'
+systemProperty: sun.java.launcher='SUN_STANDARD'
+systemProperty: sun.jnu.encoding='UTF-8'
+systemProperty: sun.management.compiler='HotSpot 64-Bit Tiered Compilers'
+systemProperty: sun.os.patch.level='unknown'
+systemProperty: sun.rmi.dgc.client.gcInterval='315360000000'
+systemProperty: sun.rmi.dgc.server.gcInterval='315360000000'
+systemProperty: user.country='US'
+systemProperty: user.dir='/opt/out/instance/bin'
+systemProperty: user.home='/root'
+systemProperty: user.language='en'
+systemProperty: user.name='root'
+systemProperty: user.timezone='GMT'
+environmentVariable: ADDITIONAL_SETUP_ARGS=''
+environmentVariable: ADMIN_USER_NAME='admin'
+environmentVariable: ADMIN_USER_PASSWORD_FILE='/opt/staging/pwd'
+environmentVariable: BAK_DIR='/opt/backup'
+environmentVariable: BASE='/opt'
+environmentVariable: BASE_ATTRIBUTE='dc'
+environmentVariable: BASE_CLASS='domain'
+environmentVariable: BASE_VALUE='example'
+environmentVariable: CLASSPATH='/opt/out/instance/classes:/opt/out/instance/lib/PingDirectory.jar:/opt/out/instance/lib/activation-1.1.1.jar:/opt/out/instance/lib/apache-el-8.0.33.jar:/opt/out/instance/lib/apache-jsp-8.0.33.jar:/opt/out/instance/lib/apache-jsp-9.3.25.v20180904.jar:/opt/out/instance/lib/asm-6.0.jar:/opt/out/instance/lib/asm-commons-5.0.1.jar:/opt/out/instance/lib/asm-tree-5.0.1.jar:/opt/out/instance/lib/asm-util-5.0.1.jar:/opt/out/instance/lib/aws-java-sdk-core-1.11.511.jar:/opt/out/instance/lib/aws-java-sdk-kms-1.11.511.jar:/opt/out/instance/lib/checker-qual-2.10.0.jar:/opt/out/instance/lib/common-1.3.22.jar:/opt/out/instance/lib/commons-beanutils-1.9.4.jar:/opt/out/instance/lib/commons-codec-1.9.jar:/opt/out/instance/lib/commons-collections-3.2.2.jar:/opt/out/instance/lib/commons-io-2.5.jar:/opt/out/instance/lib/commons-lang-2.6.jar:/opt/out/instance/lib/commons-lang3-3.8.1.jar:/opt/out/instance/lib/commons-logging-1.1.1.jar:/opt/out/instance/lib/commons-text-1.6.jar:/opt/out/instance/lib/config-framework-core-3.14.jar:/opt/out/instance/lib/ecj-4.4.2.jar:/opt/out/instance/lib/error_prone_annotations-2.3.4.jar:/opt/out/instance/lib/failureaccess-1.0.1.jar:/opt/out/instance/lib/groovy-2.5.7.jar:/opt/out/instance/lib/groovy-json-2.5.7.jar:/opt/out/instance/lib/guava-28.2-jre.jar:/opt/out/instance/lib/hk2-api-2.4.0-b10.jar:/opt/out/instance/lib/hk2-locator-2.4.0-b10.jar:/opt/out/instance/lib/hk2-utils-2.4.0-b10.jar:/opt/out/instance/lib/httpclient-4.5.jar:/opt/out/instance/lib/httpcore-4.4.1.jar:/opt/out/instance/lib/ion-java-1.0.2.jar:/opt/out/instance/lib/j2objc-annotations-1.3.jar:/opt/out/instance/lib/jackson-annotations-2.10.2.jar:/opt/out/instance/lib/jackson-core-2.10.2.jar:/opt/out/instance/lib/jackson-databind-2.10.2.jar:/opt/out/instance/lib/jackson-dataformat-cbor-2.10.2.jar:/opt/out/instance/lib/jackson-dataformat-yaml-2.10.2.jar:/opt/out/instance/lib/jackson-datatype-guava-2.10.2.jar:/opt/out/instance/lib/jackson-datatype-jdk8-2.10.2.jar:/opt/out/instance/lib/jackson-datatype-jsr310-2.10.2.jar:/opt/out/instance/lib/jackson-jaxrs-base-2.10.2.jar:/opt/out/instance/lib/jackson-jaxrs-json-provider-2.10.2.jar:/opt/out/instance/lib/jackson-module-jaxb-annotations-2.10.2.jar:/opt/out/instance/lib/javassist-3.22.0-GA.jar:/opt/out/instance/lib/javax.annotation-api-1.2.jar:/opt/out/instance/lib/javax.inject-2.4.0-b10.jar:/opt/out/instance/lib/javax.mail-1.6.1.jar:/opt/out/instance/lib/javax.servlet-api-3.1.0.jar:/opt/out/instance/lib/javax.ws.rs-api-2.0.1.jar:/opt/out/instance/lib/jaxb-api-2.3.1.jar:/opt/out/instance/lib/jaxb-core-2.3.0.1.jar:/opt/out/instance/lib/jaxb-impl-2.3.1.jar:/opt/out/instance/lib/jaxb-xjc-2.3.1.jar:/opt/out/instance/lib/jaxb2-basics-runtime-1.11.1.jar:/opt/out/instance/lib/je.jar:/opt/out/instance/lib/jersey-apache-connector-2.17.jar:/opt/out/instance/lib/jersey-client-2.17.jar:/opt/out/instance/lib/jersey-common-2.17.jar:/opt/out/instance/lib/jersey-container-servlet-core-2.17.jar:/opt/out/instance/lib/jersey-entity-filtering-2.17.jar:/opt/out/instance/lib/jersey-guava-2.17.jar:/opt/out/instance/lib/jersey-media-jaxb-2.17.jar:/opt/out/instance/lib/jersey-media-json-jackson-2.17.jar:/opt/out/instance/lib/jersey-media-multipart-2.17.jar:/opt/out/instance/lib/jersey-mvc-2.17.jar:/opt/out/instance/lib/jersey-server-2.17.jar:/opt/out/instance/lib/jetty-annotations-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-continuation-9.4.15.v20190215.jar:/opt/out/instance/lib/jetty-http-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-io-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-jndi-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-plus-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-schemas-3.1.jar:/opt/out/instance/lib/jetty-security-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-server-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-servlet-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-servlets-9.4.15.v20190215.jar:/opt/out/instance/lib/jetty-util-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-webapp-9.3.25.v20180904.jar:/opt/out/instance/lib/jetty-xml-9.3.25.v20180904.jar:/opt/out/instance/lib/jmespath-java-1.11.511.jar:/opt/out/instance/lib/joda-time-2.8.1.jar:/opt/out/instance/lib/jose4j-0.6.3.jar:/opt/out/instance/lib/json-1.0.0.jar:/opt/out/instance/lib/jsr305-3.0.2.jar:/opt/out/instance/lib/jzlib-1.1.3.jar:/opt/out/instance/lib/license4j-runtime-library-1.3.jar:/opt/out/instance/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/opt/out/instance/lib/messages-1.0.30.jar:/opt/out/instance/lib/opencsv-2.3.jar:/opt/out/instance/lib/org.apache.servicemix.bundles.oro-2.0.8_6.jar:/opt/out/instance/lib/scim-ldap-1.8.23.jar:/opt/out/instance/lib/scim-sdk-1.8.23.jar:/opt/out/instance/lib/scim2-sdk-client-2.3.4.jar:/opt/out/instance/lib/scim2-sdk-common-2.3.4.jar:/opt/out/instance/lib/scim2-sdk-server-2.3.4.jar:/opt/out/instance/lib/scim2-ubid-extensions-2.3.4.jar:/opt/out/instance/lib/slf4j-api-1.6.1.jar:/opt/out/instance/lib/snmp4j-1.11.jar:/opt/out/instance/lib/snmp4j-agent-1.4.jar:/opt/out/instance/lib/snmp4j-agentx-1.3.jar:/opt/out/instance/lib/spring-web-4.3.25.RELEASE.jar:/opt/out/instance/lib/unboundid-ldapsdk-ce.jar:/opt/out/instance/lib/validation-api-1.1.0.Final.jar:/opt/out/instance/lib/velocity-1.7.jar:/opt/out/instance/lib/velocity-tools-2.0.jar'
+environmentVariable: COLORIZE_LOGS='true'
+environmentVariable: CONTAINER_ENV='/opt/staging/.env'
+environmentVariable: DISABLE_SCHEMA_REPLICATION='false'
+environmentVariable: DOLLAR='$'
+environmentVariable: DOMAINNAME=''
+environmentVariable: ENCRYPTION_PASSWORD_FILE='/opt/staging/pwd'
+environmentVariable: ENV='/opt/.profile'
+environmentVariable: HOME='/root'
+environmentVariable: HOOKS_DIR='/opt/staging/hooks'
+environmentVariable: HOSTNAME='b1e39ef4129d'
+environmentVariable: HTTPS_PORT='443'
+environmentVariable: IBM_JAVACOREDIR='/opt/out/instance/bin'
+environmentVariable: IMAGE_GIT_REV='b6673a03c40ab29e8f1517501ae7322427809182'
+environmentVariable: IMAGE_VERSION='pingdirectory-alpine-az11-8.1.0.0-200804-b6673'
+environmentVariable: INSTANCE_NAME='b1e39ef4129d'
+environmentVariable: INSTANCE_ROOT='/opt/out/instance'
+environmentVariable: IN_DIR='/opt/in'
+environmentVariable: JAVA_HOME='/opt/java'
+environmentVariable: JMX_PORT='689'
+environmentVariable: JVM_TUNING='AGGRESSIVE'
+environmentVariable: LDAPS_PORT='636'
+environmentVariable: LDAP_PORT='389'
+environmentVariable: LD_LIBRARY_PATH='/opt/java/lib/server:/opt/java/lib:/opt/java/../lib:'
+environmentVariable: LD_LIBRARY_PATH_32=''
+environmentVariable: LD_LIBRARY_PATH_64=''
+environmentVariable: LD_PRELOAD=''
+environmentVariable: LD_PRELOAD_32=''
+environmentVariable: LICENSE_DIR='/opt/out/instance'
+environmentVariable: LICENSE_FILE_NAME='PingDirectory.lic'
+environmentVariable: LICENSE_SHORT_NAME='PD'
+environmentVariable: LICENSE_VERSION='8.1'
+environmentVariable: LOCATION='Docker'
+environmentVariable: LOCATION_VALIDATION='true|Any string denoting a logical/physical location|Must be a string'
+environmentVariable: LOGS_DIR='/opt/logs'
+environmentVariable: MAKELDIF_USERS='0'
+environmentVariable: MAX_HEAP_SIZE='384m'
+environmentVariable: MISSING_JE='0'
+environmentVariable: MOTD_URL='https://raw.githubusercontent.com/pingidentity/pingidentity-devops-getting-started/master/motd/motd.json'
+environmentVariable: OLDPWD='/opt/out/instance'
+environmentVariable: ORCHESTRATION_TYPE=''
+environmentVariable: OUT_DIR='/opt/out'
+environmentVariable: PATH='/bin:/usr/bin'
+environmentVariable: PA_ADMIN_PRIVATE_HOSTNAME='pingaccess-admin'
+environmentVariable: PA_ADMIN_PUBLIC_HOSTNAME='localhost'
+environmentVariable: PA_ENGINE_PRIVATE_HOSTNAME='pingaccess'
+environmentVariable: PA_ENGINE_PUBLIC_HOSTNAME='localhost'
+environmentVariable: PDGP_ENGINE_PRIVATE_HOSTNAME='pingdatagovernancepap'
+environmentVariable: PDGP_ENGINE_PUBLIC_HOSTNAME='localhost'
+environmentVariable: PDG_ENGINE_PRIVATE_HOSTNAME='pingdatagovernance'
+environmentVariable: PDG_ENGINE_PUBLIC_HOSTNAME='localhost'
+environmentVariable: PDP_ENGINE_PRIVATE_HOSTNAME='pingdirectoryproxy'
+environmentVariable: PDP_ENGINE_PUBLIC_HOSTNAME='localhost'
+environmentVariable: PDS_ENGINE_PRIVATE_HOSTNAME='pingdatasync'
+environmentVariable: PDS_ENGINE_PUBLIC_HOSTNAME='localhost'
+environmentVariable: PD_DELEGATOR_PUBLIC_HOSTNAME='localhost'
+environmentVariable: PD_ENGINE_PRIVATE_HOSTNAME='pingdirectory'
+environmentVariable: PD_ENGINE_PUBLIC_HOSTNAME='localhost'
+environmentVariable: PD_PROFILE='/opt/staging/pd.profile'
+environmentVariable: PD_REBUILD_ON_RESTART='false'
+environmentVariable: PD_STATE='GENESIS'
+environmentVariable: PF_ADMIN_PRIVATE_HOSTNAME='pingfederate-admin'
+environmentVariable: PF_ADMIN_PUBLIC_HOSTNAME='localhost'
+environmentVariable: PF_ENGINE_PRIVATE_HOSTNAME='pingfederate'
+environmentVariable: PF_ENGINE_PUBLIC_HOSTNAME='localhost'
+environmentVariable: PG_BIN_DIR=''
+environmentVariable: PG_DB_CTRL=''
+environmentVariable: PING_CONTAINER_GID='9999'
+environmentVariable: PING_CONTAINER_GNAME='identity'
+environmentVariable: PING_CONTAINER_PRIVILEGED='true'
+environmentVariable: PING_CONTAINER_UID='9031'
+environmentVariable: PING_CONTAINER_UNAME='ping'
+environmentVariable: PING_DEBUG='false'
+environmentVariable: PING_IDENTITY_ACCEPT_EULA='YES'
+environmentVariable: PING_IDENTITY_DEVOPS_FILE='devops-secret'
+environmentVariable: PING_IDENTITY_DEVOPS_KEY='3a6cdf55-89d7-4cd2-9ece-c8c0131957b1'
+environmentVariable: PING_IDENTITY_DEVOPS_KEY_REDACT='true'
+environmentVariable: PING_IDENTITY_DEVOPS_USER='tarunmadiraju@pingidentity.com'
+environmentVariable: PING_PRODUCT='PingDirectory'
+environmentVariable: PING_PRODUCT_VALIDATION='true|i.e. PingFederate,PingDirectory|Must be a valid Ping prouduct type'
+environmentVariable: PRIVATE_UNBOUNDID_COMMON_JAVA_ARGS='--add-opens java.base/java.io=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.lang.invoke=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens java.base/java.security=ALL-UNNAMED --add-opens java.base/java.text=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens java.desktop/java.awt.font=ALL-UNNAMED'
+environmentVariable: PRIVATE_UNBOUNDID_JAVA_ARGS='-server -Xmx768m -Xms768m -XX:MaxNewSize=64m -XX:NewSize=64m -XX:+PrintCommandLineFlags -XX:+UseBiasedLocking -XX:-OmitStackTraceInFastThrow -XX:RefDiscoveryPolicy=1 -XX:MaxTenuringThreshold=2 -XX:+HeapDumpOnOutOfMemoryError -XX:+UseG1GC -XX:InitiatingHeapOccupancyPercent=80 -XX:ConcGCThreads=1 --add-opens java.base/java.io=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.lang.invoke=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens java.base/java.security=ALL-UNNAMED --add-opens java.base/java.text=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens java.desktop/java.awt.font=ALL-UNNAMED'
+environmentVariable: PRIVATE_UNBOUNDID_JAVA_BIN='/opt/java/bin/java'
+environmentVariable: PRIVATE_UNBOUNDID_JAVA_HOME='/opt/java'
+environmentVariable: PRIVATE_UNBOUNDID_LOGGC_ARG='-Xlog:gc*:file=/opt/out/instance/logs/jvm/gc.log:time,uptime,level,tags:filecount=3,filesize=100m'
+environmentVariable: PROPERTIES_FILE_MD5='XziyKC90/8PSqs17o7EIFQ=='
+environmentVariable: PS1='${PING_PRODUCT}:\h:\w\n> '
+environmentVariable: PWD='/opt/out/instance/bin'
+environmentVariable: REPLICATION_PORT='8989'
+environmentVariable: RETRY_TIMEOUT_SECONDS='180'
+environmentVariable: ROOT_USER='administrator'
+environmentVariable: ROOT_USER_DN='cn=administrator'
+environmentVariable: ROOT_USER_PASSWORD_FILE='/opt/staging/pwd'
+environmentVariable: RUN_PLAN='START'
+environmentVariable: SCRIPT_NAME='start-server'
+environmentVariable: SCRIPT_NAME_ARG='-Dcom.unboundid.directory.server.scriptName=start-server'
+environmentVariable: SCRIPT_ORIGIN='start-server'
+environmentVariable: SCRIPT_UTIL_CMD='set-full-environment-and-test-java'
+environmentVariable: SECRETS_DIR='/opt/staging/.sec'
+environmentVariable: SECURITY_CHECKS_FILENAME='*.jwk *.pin'
+environmentVariable: SECURITY_CHECKS_STRICT='false'
+environmentVariable: SERVER_BITS_DIR='/opt/server'
+environmentVariable: SERVER_PROFILE_BRANCH=''
+environmentVariable: SERVER_PROFILE_DIR='/tmp/server-profile'
+environmentVariable: SERVER_PROFILE_PATH='baseline/pingdirectory'
+environmentVariable: SERVER_PROFILE_UPDATE='false'
+environmentVariable: SERVER_PROFILE_URL='https://github.com/tarunmadiraju/pingidentity-server-profiles.git'
+environmentVariable: SERVER_PROFILE_URL_REDACT='true'
+environmentVariable: SERVER_ROOT_DIR='/opt/out/instance'
+environmentVariable: SHLVL='8'
+environmentVariable: STAGING_DIR='/opt/staging'
+environmentVariable: STARTUP_BACKGROUND_OPTS=''
+environmentVariable: STARTUP_COMMAND='/opt/out/instance/bin/start-server'
+environmentVariable: STARTUP_FOREGROUND_OPTS='--nodetach'
+environmentVariable: TAIL_LOG_FILES='/opt/out/instance/logs/access     /opt/out/instance/logs/errors     /opt/out/instance/logs/failed-ops     /opt/out/instance/logs/config-audit.log     /opt/out/instance/logs/tools/*.log*     /opt/server/logs/tools/*.log*'
+environmentVariable: TAIL_LOG_PARALLEL=''
+environmentVariable: TOPOLOGY_FILE='/opt/staging/topology.json'
+environmentVariable: UNBOUNDID_ENV_VARS_SET='1'
+environmentVariable: UNBOUNDID_INVOKE_CLASS='com.unboundid.directory.server.core.DirectoryServer'
+environmentVariable: UNBOUNDID_JAVA_HOME='/opt/java'
+environmentVariable: UNBOUNDID_NO_PAUSE='true'
+environmentVariable: UNBOUNDID_TOOL_PROPERTIES_FILE_PATH='/opt/out/instance/config/tools.properties'
+environmentVariable: USER_BASE_DN='dc=example,dc=com'
+environmentVariable: VERBOSE='false'
+environmentVariable: _podHostname='b1e39ef4129d'
+environmentVariable: _podInstanceName='b1e39ef4129d'
+environmentVariable: _podLdapsPort='636'
+environmentVariable: _podLocation='Docker'
+environmentVariable: _podReplicationPort='8989'
+environmentVariable: _seedHostname=''
+environmentVariable: _seedInstanceName=''
+environmentVariable: _seedLdapsPort=''
+environmentVariable: _seedLocation=''
+environmentVariable: _seedReplicationPort=''
+isAWS: false
+
+dn: cn=tasks Backend,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-backend-monitor-entry
+objectClass: extensibleObject
+cn: tasks Backend
+ds-backend-id: tasks
+ds-backend-base-dn: cn=tasks
+ds-backend-is-private: TRUE
+ds-backend-supports-binary-copy: FALSE
+ds-backend-entry-count: 4
+ds-base-dn-entry-count: 4 cn=tasks
+ds-backend-writability-mode: enabled
+
+dn: cn=User Data Password Policy Cache,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-user-data-password-policy-cache-monitor-entry
+objectClass: extensibleObject
+cn: User Data Password Policy Cache
+max-count: 500
+current-count: 0
+current-bytes-estimate: 0
+num-requests: 0
+num-hits: 0
+num-misses: 0
+hit-ratio: NaN
+num-requests-for-nonexistent-policy: 0
+num-adds: 0
+num-removals-due-to-policy-entry-update: 0
+num-removals-due-to-cache-full: 0
+num-clears: 0
+
+dn: cn=userRoot Backend,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-backend-monitor-entry
+objectClass: extensibleObject
+cn: userRoot Backend
+ds-backend-id: userRoot
+ds-backend-base-dn: dc=example,dc=com
+ds-backend-is-private: FALSE
+ds-backend-supports-binary-copy: TRUE
+ds-backend-entry-count: 43
+ds-backend-soft-deleted-entry-count: 0
+ds-soft-delete-operations-count: 0
+ds-undelete-operations-count: 0
+ds-auto-purged-soft-deleted-entry-count: 0
+ds-base-dn-entry-count: 43 dc=example,dc=com
+ds-backend-writability-mode: enabled
+
+dn: cn=userRoot Database Environment,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-local-backend-db-env-monitor-entry
+objectClass: ds-je-environment-monitor-entry
+objectClass: extensibleObject
+cn: userRoot Database Environment
+exception-in-getMonitorData: NullPointerException (RootContainer.java:3254 DatabaseEnvironmentMonitor.java:227 DatabaseEnvironmentMonitor.java:62 MonitorProvider.java:273 MonitorBackend.java:729 MonitorBackend.java:1088 BackendSearchOperation.java:343 BackendRequestProcessor.java:377 SubtreeView.java:585 SubtreeView.java:258 SearchOperationBasis.java:2058 InternalClientConnection.java:3506 InternalClientConnection.java:3090 InternalClientConnection.java:3035 SearchShutdownPlugin.java:238 PluginConfigManager.java:1654 DirectoryServer.java:15667 DirectoryServer.java:15399 DirectoryServer.java:18248 DirectoryServer.java:17763 (8.1.0.0-20200615190254.000Z-c27eadb0))
+
+dn: cn=Version,cn=monitor
+objectClass: top
+objectClass: ds-monitor-entry
+objectClass: ds-version-monitor-entry
+objectClass: extensibleObject
+cn: Version
+productName: Ping Identity Directory Server
+shortName: PingDirectory
+majorVersion: 8
+minorVersion: 1
+pointVersion: 0
+patchVersion: 0
+versionQualifier: -GA
+revisionNumber: v8.1.0.0-GA
+revisionID: v8.1.0.0-GA
+buildID: 20200615191920Z
+compactVersion: PingDirectory-8.1.0.0
+fullVersion: Ping Identity Directory Server 8.1.0.0
+ldapSDKVersion: 5.1.0-r89705d759f7c1ab3bccb2870f8c2e7d529ed231b
+serverSDKVersion: 8.1.0.0-GA (20200615191920Z)
+groovyVersion: 2.5.7
+jeVersion: 7.5.12
+jettyVersion: 9.3.25.v20180904
+jzlibVersion: 1.1.0
+snmp4jVersion: 1.11.0
+snmp4jAgentVersion: 1.4.0
+snmp4jAgentXVersion: 1.3.0
+
+
+# Search processing completed
+# Search operation result code:  0 (Success)
+# Search operation returned 84 entries

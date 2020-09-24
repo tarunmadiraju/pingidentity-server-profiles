@@ -1851,3 +1851,102 @@ ds-alert-time: 20200917195023.332Z
 ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
 ds-alert-message: The Directory Server has detected that the amount of usable disk space is below the configured low disk space warning threshold for the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  1087463424, usablePercent:  2), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  1087463424, usablePercent:  2), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  1087463424, usablePercent:  2), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  1087463424, usablePercent:  2), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  1087463424, usablePercent:  2), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  1087463424, usablePercent:  2)
 
+dn: ds-alert-id=8ac64eac-c18e-463d-bb34-afc273d115fc,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 8ac64eac-c18e-463d-bb34-afc273d115fc
+ds-alert-type: out-of-disk-space-error
+ds-alert-severity: fatal
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.47
+ds-alert-time: 20200917203633.013Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is critically low for components using the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  770232320, usablePercent:  1), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  770199552, usablePercent:  1), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  770355200, usablePercent:  1), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  770252800, usablePercent:  1), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  770215936, usablePercent:  1), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  770265088, usablePercent:  1).  The Directory Server will now shut itself down to avoid problems which may result from complete exhaustion of usable space
+
+dn: ds-alert-id=3b1a2d29-30e2-4ad1-9cad-c3e5e794c359,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 3b1a2d29-30e2-4ad1-9cad-c3e5e794c359
+ds-alert-type: server-shutting-down
+ds-alert-severity: info
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.32
+ds-alert-time: 20200917203633.098Z
+ds-alert-generator: com.unboundid.directory.server.core.DirectoryServer
+ds-alert-message: The Directory Server has started the shutdown process. The shutdown was initiated by an instance of class com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider and the reason provided for the shutdown was The Directory Server has detected that the amount of usable disk space is critically low for components using the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  770232320, usablePercent:  1), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  770199552, usablePercent:  1), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  770355200, usablePercent:  1), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  770252800, usablePercent:  1), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  770215936, usablePercent:  1), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  770265088, usablePercent:  1).  The Directory Server will now shut itself down to avoid problems which may result from complete exhaustion of usable space
+
+dn: ds-alert-id=28bd6903-fe80-4e47-8229-bbf7e949248f,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 28bd6903-fe80-4e47-8229-bbf7e949248f
+ds-alert-type: out-of-disk-space-error
+ds-alert-severity: fatal
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.47
+ds-alert-time: 20200917203633.112Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is critically low for components using the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  752607232, usablePercent:  1), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  752607232, usablePercent:  1), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  752607232, usablePercent:  1), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  752607232, usablePercent:  1), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  752607232, usablePercent:  1), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  752607232, usablePercent:  1).  The Directory Server will now shut itself down to avoid problems which may result from complete exhaustion of usable space
+
+dn: ds-alert-id=edbf4723-3c63-4726-ab7e-479e1b54451d,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: edbf4723-3c63-4726-ab7e-479e1b54451d
+ds-alert-type: out-of-disk-space-error
+ds-alert-severity: fatal
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.47
+ds-alert-time: 20200917203633.213Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is critically low for components using the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  752603136, usablePercent:  1), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  752603136, usablePercent:  1), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  752603136, usablePercent:  1), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  752603136, usablePercent:  1), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  752603136, usablePercent:  1), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  752603136, usablePercent:  1).  The Directory Server will now shut itself down to avoid problems which may result from complete exhaustion of usable space
+
+dn: ds-alert-id=a6c7169f-6098-4304-ae92-ec9af85af31b,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: a6c7169f-6098-4304-ae92-ec9af85af31b
+ds-alert-type: out-of-disk-space-error
+ds-alert-severity: fatal
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.47
+ds-alert-time: 20200917203633.312Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is critically low for components using the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  752594944, usablePercent:  1), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  752594944, usablePercent:  1), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  752594944, usablePercent:  1), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  752594944, usablePercent:  1), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  752594944, usablePercent:  1), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  752594944, usablePercent:  1).  The Directory Server will now shut itself down to avoid problems which may result from complete exhaustion of usable space
+
+dn: ds-alert-id=e32cd554-8aa8-4e24-8688-1e332032f5fd,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: e32cd554-8aa8-4e24-8688-1e332032f5fd
+ds-alert-type: out-of-disk-space-error
+ds-alert-severity: fatal
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.47
+ds-alert-time: 20200917203633.412Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is critically low for components using the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  688594944, usablePercent:  1), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  688582656, usablePercent:  1), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  688648192, usablePercent:  1), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  688615424, usablePercent:  1), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  688582656, usablePercent:  1), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  688635904, usablePercent:  1).  The Directory Server will now shut itself down to avoid problems which may result from complete exhaustion of usable space
+
+dn: ds-alert-id=0a6a6737-f455-4afd-8821-ca4520828681,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 0a6a6737-f455-4afd-8821-ca4520828681
+ds-alert-type: out-of-disk-space-error
+ds-alert-severity: fatal
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.47
+ds-alert-time: 20200917203633.512Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is critically low for components using the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  635056128, usablePercent:  1), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  635056128, usablePercent:  1), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  635056128, usablePercent:  1), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  635056128, usablePercent:  1), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  635056128, usablePercent:  1), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  635056128, usablePercent:  1).  The Directory Server will now shut itself down to avoid problems which may result from complete exhaustion of usable space
+
+dn: ds-alert-id=7f62d861-0e62-46aa-8a86-056c107c7a01,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: 7f62d861-0e62-46aa-8a86-056c107c7a01
+ds-alert-type: out-of-disk-space-error
+ds-alert-severity: fatal
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.47
+ds-alert-time: 20200917203633.612Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is critically low for components using the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  635056128, usablePercent:  1), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  635056128, usablePercent:  1), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  635056128, usablePercent:  1), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  635056128, usablePercent:  1), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  635056128, usablePercent:  1), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  635056128, usablePercent:  1).  The Directory Server will now shut itself down to avoid problems which may result from complete exhaustion of usable space
+
+dn: ds-alert-id=fbcddcc1-00d9-4b95-a619-a6e5e38a5633,cn=alerts
+objectClass: top
+objectClass: ds-admin-alert
+ds-alert-id: fbcddcc1-00d9-4b95-a619-a6e5e38a5633
+ds-alert-type: out-of-disk-space-error
+ds-alert-severity: fatal
+ds-alert-type-oid: 1.3.6.1.4.1.30221.2.10.3.47
+ds-alert-time: 20200917203633.714Z
+ds-alert-generator: com.unboundid.directory.server.monitors.DiskSpaceUsageMonitorProvider
+ds-alert-message: The Directory Server has detected that the amount of usable disk space is critically low for components using the following path(s):  '/opt/backup' (totalBytes:  51976810496, usableBytes:  644444160, usablePercent:  1), '/opt/out/instance' (totalBytes:  51976810496, usableBytes:  644444160, usablePercent:  1), '/opt/out/instance/config' (totalBytes:  51976810496, usableBytes:  644444160, usablePercent:  1), '/opt/out/instance/db/changelog' (totalBytes:  51976810496, usableBytes:  644444160, usablePercent:  1), '/opt/out/instance/db/userRoot' (totalBytes:  51976810496, usableBytes:  644444160, usablePercent:  1), '/opt/out/instance/logs' (totalBytes:  51976810496, usableBytes:  644444160, usablePercent:  1).  The Directory Server will now shut itself down to avoid problems which may result from complete exhaustion of usable space
+
