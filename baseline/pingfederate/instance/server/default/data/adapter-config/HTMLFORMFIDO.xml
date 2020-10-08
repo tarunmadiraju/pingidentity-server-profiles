@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:AdapterConfiguration authnCtxClassRef="" isInheritAttributeSettings="false" isInheritAttributeMapping="false" maskOgnlValues="false" isInheritExtendedContractAttributes="false" name="HTMLFORMAD" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+<urn:AdapterConfiguration authnCtxClassRef="" isInheritAttributeSettings="false" isInheritAttributeMapping="false" maskOgnlValues="false" isInheritExtendedContractAttributes="false" name="HTMLFORMFIDO" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
     <urn:Fields>
         <urn:Field name="Challenge Retries">3</urn:Field>
-        <urn:Field name="Session State">Globally</urn:Field>
+        <urn:Field name="Session State">None</urn:Field>
         <urn:Field name="Session Timeout">60</urn:Field>
         <urn:Field name="Session Max Timeout">480</urn:Field>
-        <urn:Field name="Allow Password Changes">true</urn:Field>
+        <urn:Field name="Allow Password Changes">false</urn:Field>
         <urn:Field name="Password Management System"/>
         <urn:Field name="Enable 'Remember My Username'">false</urn:Field>
         <urn:Field name="Enable 'This is My Device'">false</urn:Field>
         <urn:Field name="Change Password Email Notification">false</urn:Field>
-        <urn:Field name="Show Password Expiring Warning">true</urn:Field>
-        <urn:Field name="Password Reset Type">PingID</urn:Field>
+        <urn:Field name="Show Password Expiring Warning">false</urn:Field>
+        <urn:Field name="Password Reset Type">NONE</urn:Field>
         <urn:Field name="Password Reset Policy Contract"/>
         <urn:Field name="Account Unlock">false</urn:Field>
-        <urn:Field name="Local Identity Profile"/>
+        <urn:Field name="Local Identity Profile">cyDXfnHwhnmHlZoJ</urn:Field>
         <urn:Field name="Notification Publisher">mailtrap</urn:Field>
         <urn:Field name="Enable Username Recovery">false</urn:Field>
-        <urn:Field name="Login Template">html.formad.login.template.html</urn:Field>
+        <urn:Field name="Login Template">html.form.login.template.html</urn:Field>
         <urn:Field name="Logout Path"/>
         <urn:Field name="Logout Redirect"/>
         <urn:Field name="Logout Template">idp.logout.success.page.template.html</urn:Field>
@@ -42,7 +42,7 @@
         <urn:Field name="Account Unlock Template">account-unlock.html</urn:Field>
         <urn:Field name="OTP Length">8</urn:Field>
         <urn:Field name="OTP Time to Live">10</urn:Field>
-        <urn:Field name="PingID Properties">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUiLCJ6aXAiOiJERUYifQ..Dfys-70_T8y92XpOVnu9wQ.NZ7id8MJyj_QFfDwrsV8eoC2La724Z3bKMAzt7AUuKTZHnIuWOtPqv5GMVMGClPf-all-1l1INSrKpqzidXZ8EK_WR1hwd1hwFpI0KQb7aqaUeJ84wq1fo_9z9TNOfaA-2sT_2dZ1wOkPTeD39QtpaGSBfDhfPyK8m3rzcikDl5sac9en6dYxkSEfSXQUZ5_2gPyK1XaNuEAugPj97IH47T77p7Hrs6mIHzYp_-YFZD2JiENphuLKcViIFN_dPAP_YbZIAnd-hju8d_SHVG8UUzAU6WGMqrIITsYe_xpBwHt-2uley5ifRWBWnu0MkVIwsL3aFtqlIhevxqKnVCrxPWjAcCeTiVurvuLC9AWhC7eYz7K6VZcC8O5EsjvEv3yFBb18ZEblGp3_X2zZWDlFednd8JqZ70eT5iRTtArTWk.CzfZMcc3M-9DkZoYl1iFrA</urn:Field>
+        <urn:Field name="PingID Properties"/>
         <urn:Field name="Require Verified Email">false</urn:Field>
         <urn:Field name="Username Recovery Template">username.recovery.template.html</urn:Field>
         <urn:Field name="Username Recovery Info Template">username.recovery.info.template.html</urn:Field>
@@ -53,7 +53,7 @@
         <urn:Field name="CAPTCHA for Username recovery">false</urn:Field>
     </urn:Fields>
     <urn:AdvancedFields>
-        <urn:Field name="Login Template">html.formad.login.template.html</urn:Field>
+        <urn:Field name="Login Template">html.form.login.template.html</urn:Field>
         <urn:Field name="Logout Path"/>
         <urn:Field name="Logout Redirect"/>
         <urn:Field name="Logout Template">idp.logout.success.page.template.html</urn:Field>
@@ -78,7 +78,7 @@
         <urn:Field name="Account Unlock Template">account-unlock.html</urn:Field>
         <urn:Field name="OTP Length">8</urn:Field>
         <urn:Field name="OTP Time to Live">10</urn:Field>
-        <urn:Field name="PingID Properties">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUiLCJ6aXAiOiJERUYifQ..Dfys-70_T8y92XpOVnu9wQ.NZ7id8MJyj_QFfDwrsV8eoC2La724Z3bKMAzt7AUuKTZHnIuWOtPqv5GMVMGClPf-all-1l1INSrKpqzidXZ8EK_WR1hwd1hwFpI0KQb7aqaUeJ84wq1fo_9z9TNOfaA-2sT_2dZ1wOkPTeD39QtpaGSBfDhfPyK8m3rzcikDl5sac9en6dYxkSEfSXQUZ5_2gPyK1XaNuEAugPj97IH47T77p7Hrs6mIHzYp_-YFZD2JiENphuLKcViIFN_dPAP_YbZIAnd-hju8d_SHVG8UUzAU6WGMqrIITsYe_xpBwHt-2uley5ifRWBWnu0MkVIwsL3aFtqlIhevxqKnVCrxPWjAcCeTiVurvuLC9AWhC7eYz7K6VZcC8O5EsjvEv3yFBb18ZEblGp3_X2zZWDlFednd8JqZ70eT5iRTtArTWk.CzfZMcc3M-9DkZoYl1iFrA</urn:Field>
+        <urn:Field name="PingID Properties"/>
         <urn:Field name="Require Verified Email">false</urn:Field>
         <urn:Field name="Username Recovery Template">username.recovery.template.html</urn:Field>
         <urn:Field name="Username Recovery Info Template">username.recovery.info.template.html</urn:Field>
@@ -95,20 +95,11 @@
             </urn:Row>
         </urn:Table>
     </urn:Tables>
-    <urn:ExtendedContractAttributes>
-        <urn:AttributeName>memberof</urn:AttributeName>
-    </urn:ExtendedContractAttributes>
+    <urn:ExtendedContractAttributes/>
     <urn:UniqueKeyField>username</urn:UniqueKeyField>
     <urn:AttributeMapping>
         <urn1:AttributeMap Name="policy.action" Type="Adapter" Value="policy.action" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-        <urn1:AttributeMap Name="memberof" Type="Adapter" Value="memberof" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="username" Type="Adapter" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-        <urn1:AttributeSource Id="ActiveDirectory" Description="ActiveDirectory" Type="LDAP" DataSourceId="LDAP-8E9E4C77F6E71F317BD8865F133F3A22EC47AE3B" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
-            <urn1:Parameter Name="filter" Value="samaccountname=${username}"/>
-            <urn1:Parameter Name="search_base" Value="CN=Users,DC=tarun,DC=lab"/>
-            <urn1:Parameter Name="search_scope" Value="SUBTREE_SCOPE"/>
-            <urn1:Parameter Name="memberof_nested_group" Value="false"/>
-        </urn1:AttributeSource>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:AttributeMapping>
 </urn:AdapterConfiguration>

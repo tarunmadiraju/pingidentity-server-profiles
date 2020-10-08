@@ -12,4 +12,12 @@
     <con:item name="1680675:WARN">2020-06-03</con:item>
     <con:item name="1682371:WARN">2020-06-12</con:item>
     <con:item name="00073334:WARN">2020-07-27</con:item>
+    <con:item name="00077811:WARN">2020-10-08</con:item>
+    <con:item name="5dbbcc2fe03e3fedbfe80ebe0c228c7b:PingOne:EXPIRED">5dbbcc2fe03e3fedbfe80ebe0c228c7b:PingOne:EXPIRED</con:item>
+    <con:item name="5dbbcc2fe03e3fedbfe80ebe0c228c7b:PingOne:FINAL_WARN">5dbbcc2fe03e3fedbfe80ebe0c228c7b:PingOne:FINAL_WARN</con:item>
+    <con:item name="5dbbcc2fe03e3fedbfe80ebe0c228c7b:PingOne:INITIAL_WARN">5dbbcc2fe03e3fedbfe80ebe0c228c7b:PingOne:INITIAL_WARN</con:item>
+    <con:item name="5dbbcc2fe03e3fedbfe80ebe0c228c7b:PingOne/bkp:EXPIRED">5dbbcc2fe03e3fedbfe80ebe0c228c7b:PingOne/bkp:EXPIRED</con:item>
+    <con:item name="5dbbcc2fe03e3fedbfe80ebe0c228c7b:PingOne/bkp:FINAL_WARN">5dbbcc2fe03e3fedbfe80ebe0c228c7b:PingOne/bkp:FINAL_WARN</con:item>
+    <con:item name="5dbbcc2fe03e3fedbfe80ebe0c228c7b:PingOne/bkp:INITIAL_WARN">5dbbcc2fe03e3fedbfe80ebe0c228c7b:PingOne/bkp:INITIAL_WARN</con:item>
+    <con:item name="00080225:WARN">2020-10-15</con:item>
 </con:config>

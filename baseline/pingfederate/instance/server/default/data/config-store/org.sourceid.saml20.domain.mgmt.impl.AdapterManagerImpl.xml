@@ -12,6 +12,8 @@
         <con:item name="x509">com.pingidentity.adapters.idp.clientcert.ClientCertIdpAuthnAdapter</con:item>
         <con:item name="HTMLFORMfaspozad">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
         <con:item name="HTMLFORMPINGID">com.pingidentity.pf.adapters.composite.CompositeAdapter</con:item>
+        <con:item name="HTMLFORMFIDO">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
+        <con:item name="P1MFAV2">com.pingidentity.adapters.pingone.mfa.PingOneMfaIdpAdapter</con:item>
     </con:map>
     <con:map name="IdpAdapterInstanceParents"/>
     <con:map name="SpAuthnAdapterInstances">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <md:EntityDescriptor entityID="https://httpbin.org" urn:name="Dummy SP Connection" ID="gpFvXmhDHSRUSHWLZLZ_XBIU_YK" urn:LogLevel="STANDARD" urn:isActive="true" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2">
     <md:Extensions>
-        <urn:EntityExtension PFVersion="10.0.0.15" LicenseGroup="">
+        <urn:EntityExtension PFVersion="10.1.0.8" LicenseGroup="">
             <urn:DigitialSignatureAliases SigningKeyAlias="v8m5h9qrw85dgmndgv47k76xz" includeX509inXmlSig="false" includeRawKeyInXmlSig="false" SigningAlgorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
             <urn:Encryption>
                 <urn:EncryptionPolicy EncryptionAlgorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc" KeyTransportAlgorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p" EncryptAssertion="false" EncryptSubjectNameID="false" SLOEncryptSubjectNameID="false"/>
@@ -15,15 +15,16 @@
                 <urn:AllowAllEntities>false</urn:AllowAllEntities>
                 <urn:AdditionalAllowedEntities/>
             </urn:AdditionalAllowedEntitiesConfiguration>
+            <urn:ExtendedProperties name="passwordless" value="formad"/>
         </urn:EntityExtension>
     </md:Extensions>
     <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" AuthnRequestsSigned="false" WantAssertionsSigned="false" SignResponseAsRequired="true">
         <md:Extensions>
-            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2020-05-12T18:43:40.010Z">
+            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2020-10-07T18:11:56.980Z">
                 <urn:IncomingBindings Artifact="true" POST="true" Redirect="true" SOAP="true"/>
                 <urn:EnabledProfiles IDPInitiatedSSO="true" IDPInitiatedSLO="false" SPInitiatedSSO="false" SPInitiatedSLO="false"/>
                 <urn:SP AssertionValidityAfterMinutes="5" AssertionValidityBeforeMinutes="5" ConnectionTargetType="Standard" EnableCDCDuringSSO="false">
-                    <urn:C2cContractToAssertionMapping AbortIfNotFoundInAnyDataSources="false" RestrictVirtualServerIds="false" C2cContractId="QuHcnHbtwj8WxJlX" C2cContractName="userregistration">
+                    <urn:C2cContractToAssertionMapping AbortIfNotFoundInAnyDataSources="false" RestrictVirtualServerIds="false" C2cContractId="51jU77l0f0fte53t" C2cContractName="Passwordless">
                         <urn:DefaultAttributeMapping>
                             <urn:AttributeMap Name="SAML_SUBJECT" Type="Authentication Policy Contract" Value="subject"/>
                             <urn:TokenAuthorizationIssuanceCriteria/>

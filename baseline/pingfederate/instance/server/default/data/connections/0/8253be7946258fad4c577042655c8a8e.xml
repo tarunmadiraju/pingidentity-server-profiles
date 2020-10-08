@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <md:EntityDescriptor entityID="http://pingone.com/e8935338-340d-4c0a-89e4-639ab4be15da" urn:name="PingOne" ID="iPaTYRBMZz39KUg0w3Lh3.HHIk8" urn:baseUrl="https://sso.connect.pingidentity.com" urn:LogLevel="STANDARD" urn:isActive="true" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2">
     <md:Extensions>
-        <urn:EntityExtension PFVersion="10.0.0.15" LicenseGroup="">
+        <urn:EntityExtension PFVersion="10.1.0.8" LicenseGroup="">
             <urn:VirtualIdentity EntityID="urn:saml2:oHUZ5NLy5xStyZV:tarunmadirajupingidentitycom"/>
             <urn:DefaultVirtualIdentity EntityID="urn:saml2:oHUZ5NLy5xStyZV:tarunmadirajupingidentitycom"/>
             <urn:DigitialSignatureAliases SigningKeyAlias="v8m5h9qrw85dgmndgv47k76xz" includeX509inXmlSig="false" includeRawKeyInXmlSig="false" SigningAlgorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256">
@@ -25,7 +25,7 @@
     </md:Extensions>
     <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" AuthnRequestsSigned="false" WantAssertionsSigned="false" SignResponseAsRequired="true">
         <md:Extensions>
-            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2020-07-20T23:13:11.209Z">
+            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2020-10-06T00:30:31.489Z">
                 <urn:IncomingBindings Artifact="false" POST="true" Redirect="false" SOAP="false"/>
                 <urn:EnabledProfiles IDPInitiatedSSO="true" IDPInitiatedSLO="false" SPInitiatedSSO="true" SPInitiatedSLO="true"/>
                 <urn:SP AssertionValidityAfterMinutes="5" AssertionValidityBeforeMinutes="5" ConnectionTargetType="PingOneSCIM11" EnableCDCDuringSSO="false">

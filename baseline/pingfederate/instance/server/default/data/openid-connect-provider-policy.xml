@@ -72,7 +72,7 @@
         <urn:scopeAttributesMap>
             <urn:item>
                 <urn:key>openid</urn:key>
-                <urn:value>Last_name email given_name</urn:value>
+                <urn:value>email given_name Last_name</urn:value>
             </urn:item>
         </urn:scopeAttributesMap>
         <urn:attributeContractInclusionMap>

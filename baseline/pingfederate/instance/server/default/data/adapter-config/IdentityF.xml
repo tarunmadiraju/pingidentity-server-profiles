@@ -20,7 +20,7 @@
     <urn:AttributeMapping>
         <urn1:AttributeMap Name="uid" Type="Adapter" Value="uid" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="mail" Type="Adapter" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-        <urn1:AttributeMap Name="subject" Type="Expression" Value="#value = #this.get(&quot;subject&quot;).toString(), #result = #value.substring(0, #value.indexOf(&quot;@&quot;))" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="subject" Type="Adapter" Value="subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="domain" Type="Adapter" Value="domain" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:AttributeMapping>

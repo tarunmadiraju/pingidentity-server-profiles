@@ -4,6 +4,6 @@
     <globalPolicy enableSessions="false" idleTimeoutDisplayUnit="MINUTES" idleTimeoutMins="60" maxTimeoutDisplayUnit="MINUTES" maxTimeoutMins="480" persistentSessions="false"/>
     <sourcePolicies>
         <policy authnContextSensitive="false" authnSourceId="HTMLFormPD" authnSourceType="ADAPTER" enableSessions="true" id="hqQLAXjVUr1hJgfOhsdgc7Lne" idleTimeoutMins="3" maxTimeoutMins="3" persistent="false" timeoutDisplayUnit="MINUTES"/>
-        <policy authnContextSensitive="false" authnSourceId="IdentityF" authnSourceType="ADAPTER" enableSessions="true" id="F74jCCdHVV1Fsn16Eabv4eRDb" idleTimeoutMins="3" maxTimeoutMins="3" persistent="false" timeoutDisplayUnit="MINUTES"/>
+        <policy authnContextSensitive="false" authnSourceId="IdentityF" authnSourceType="ADAPTER" enableSessions="true" id="F74jCCdHVV1Fsn16Eabv4eRDb" idleTimeoutMins="30" maxTimeoutMins="30" persistent="false" timeoutDisplayUnit="MINUTES"/>
     </sourcePolicies>
 </authnSessionPolicies>
