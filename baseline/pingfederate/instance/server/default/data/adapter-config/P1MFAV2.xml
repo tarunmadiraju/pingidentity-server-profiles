@@ -3,15 +3,15 @@
     <urn:Fields>
         <urn:Field name="Environment ID">13f48a3a-6ed9-4d67-9b65-c2256df981d9</urn:Field>
         <urn:Field name="Application Client ID">8014832d-ea9c-4a06-8155-d0f7c3f20de3</urn:Field>
-        <urn:Field name="Application Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..mwVJ_6hDHncoEVSGJG6dZg.jLl8DSfvgf3wUQ1cesL7_2c93wu3tg7KDiva2IYvZ4Gw-sR4BbpA8NyWV6aDFw4rVeMp_OkY5RdoYeWcfcU2SEdiWRcG83oswqoHGXDynqc.BZ7Qs4JGIHgPm1f1mTgiUw</urn:Field>
+        <urn:Field name="Application Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..luWmf4Dm9JRmvCnPaZuGFA.EVvvTJFEmco64P9cL9Sr84E38az0SDzUybTog9Zl407JhtLtlEayb38-bSJyh4Bam_3ybpqNyFKnIwJxpS9tO9XFjqnw2hdiFx01pg-7Ij0.MzXCm7fe_qxVQjE1cMiRcg</urn:Field>
         <urn:Field name="PingFederate Connection Client ID">f114ff6a-1609-4886-ab40-ac92cb01370d</urn:Field>
-        <urn:Field name="PingFederate Connection Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..lGKJWIKzBbs20ssZUkS_VQ.41J9kRumhhkTgDWj9Gyx7U9A83keyerBm2qV9nkK91bv17jzZXk3gXbc8flzP3-a8n6xai59jVXspgBLYE4Oqkm1bMLsW4GUH_rCl0WpheQ.4zHCw_eIAsT8O5_5wRdGKQ</urn:Field>
+        <urn:Field name="PingFederate Connection Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..jWbcoIx93zBqRNHIfBo2Mg.dxc3RMJ6mjkVHbrJPwAz8a7ZSX_NGmGncw_zcV6_58BMwvspxgoJHso4O-GZmgmQnsY8KVZIZApDXFbLUGs3zLqbrM7Asqrn1F-0fDWYM88.xpFWoxgXnY8V2ZydtSgXTg</urn:Field>
         <urn:Field name="PingOne Authentication Policy">PFMFA</urn:Field>
         <urn:Field name="Test Username">adriver</urn:Field>
         <urn:Field name="HTML Template Prefix">pingone-mfa</urn:Field>
         <urn:Field name="Messages Files">pingone-mfa-messages</urn:Field>
-        <urn:Field name="User Not Found Failure Mode">Bypass authentication</urn:Field>
-        <urn:Field name="Service Unavailable Failure Mode">Bypass authentication</urn:Field>
+        <urn:Field name="User Not Found Failure Mode">Block user</urn:Field>
+        <urn:Field name="Service Unavailable Failure Mode">Block user</urn:Field>
         <urn:Field name="Change Device">Allow</urn:Field>
         <urn:Field name="Show Success Screens">true</urn:Field>
         <urn:Field name="Show Error Screens">true</urn:Field>
@@ -27,8 +27,8 @@
         <urn:Field name="Test Username">adriver</urn:Field>
         <urn:Field name="HTML Template Prefix">pingone-mfa</urn:Field>
         <urn:Field name="Messages Files">pingone-mfa-messages</urn:Field>
-        <urn:Field name="User Not Found Failure Mode">Bypass authentication</urn:Field>
-        <urn:Field name="Service Unavailable Failure Mode">Bypass authentication</urn:Field>
+        <urn:Field name="User Not Found Failure Mode">Block user</urn:Field>
+        <urn:Field name="Service Unavailable Failure Mode">Block user</urn:Field>
         <urn:Field name="Change Device">Allow</urn:Field>
         <urn:Field name="Show Success Screens">true</urn:Field>
         <urn:Field name="Show Error Screens">true</urn:Field>

@@ -6,7 +6,7 @@
         <ldap:use-ssl>false</ldap:use-ssl>
         <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
         <ldap:ad-referral>false</ldap:ad-referral>
-        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..K51Q-EdwYYRL2qPEZWRgZw.JuHjh__7B791Oygew1_tTQ.i1hJg0AfkLklnA0YPCjL3A</ldap:credentials>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..1Tm_2FDDgwPUZRFWeycoRQ.c2NYmPayBFDxmrstP_GaqQ.LQ-EnyRjMLK3gen-dtXm7w</ldap:credentials>
         <ldap:authenticationMeth>simple</ldap:authenticationMeth>
         <ldap:description>pingdirectory</ldap:description>
         <ldap:name>pingdirectory</ldap:name>
@@ -21,7 +21,7 @@
         <ldap:use-ssl>true</ldap:use-ssl>
         <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
         <ldap:ad-referral>false</ldap:ad-referral>
-        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..ZMVHir1Cs3tvAY5zJXOgpA.Bvn3TXRNQjmjMdiijZHICQ.lUyJRXMYNkMU8mg3PsCylQ</ldap:credentials>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..aD3AWlEwsU8gMqnt7N1B2Q.uPEz1Th6X3Nh2KLbquvzQg.iHux2xnbb7Jp8NOaYDVwOg</ldap:credentials>
         <ldap:authenticationMeth>simple</ldap:authenticationMeth>
         <ldap:description>AD</ldap:description>
         <ldap:name>AD</ldap:name>
@@ -36,7 +36,7 @@
         <ldap:use-ssl>false</ldap:use-ssl>
         <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
         <ldap:ad-referral>false</ldap:ad-referral>
-        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..7Khw8OJuc2TiV9IX-r46wg.BnJ8JgKkKH-dvNArGV2BiQ.DHI_pnDWbH3r-AiedEq_Uw</ldap:credentials>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..XRm0aj5rFc_32YQvt-7TWA.ZkXqH6J0n7L8IBKQ6Fc9SA.nHImbrISmA9P1pQh9cX-Xw</ldap:credentials>
         <ldap:authenticationMeth>simple</ldap:authenticationMeth>
         <ldap:description>faspozAD</ldap:description>
         <ldap:name>faspozAD</ldap:name>
@@ -51,7 +51,7 @@
         <ldap:use-ssl>false</ldap:use-ssl>
         <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
         <ldap:ad-referral>false</ldap:ad-referral>
-        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..gUnU81G9nG_FzbHpgLNsAQ.oGt3T2UBPUgTULFrsOmV6g.GURt7VvH1tE_n_J9IA8jkw</ldap:credentials>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..UHN-9MyBThK5uRXPzTmKQQ.7DKm89_y1gHkP_kL9AYPaw.lFdeR1h-3pcNYuUXK3MFww</ldap:credentials>
         <ldap:authenticationMeth>simple</ldap:authenticationMeth>
         <ldap:description>jumpcloud</ldap:description>
         <ldap:name>jumpcloud</ldap:name>

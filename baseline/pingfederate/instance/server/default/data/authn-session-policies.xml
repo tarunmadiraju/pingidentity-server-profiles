@@ -5,5 +5,7 @@
     <sourcePolicies>
         <policy authnContextSensitive="false" authnSourceId="HTMLFormPD" authnSourceType="ADAPTER" enableSessions="true" id="hqQLAXjVUr1hJgfOhsdgc7Lne" idleTimeoutMins="3" maxTimeoutMins="3" persistent="false" timeoutDisplayUnit="MINUTES"/>
         <policy authnContextSensitive="false" authnSourceId="IdentityF" authnSourceType="ADAPTER" enableSessions="true" id="F74jCCdHVV1Fsn16Eabv4eRDb" idleTimeoutMins="30" maxTimeoutMins="30" persistent="false" timeoutDisplayUnit="MINUTES"/>
+        <policy authnContextSensitive="false" authnSourceId="HTMLFORMPINGID" authnSourceType="ADAPTER" enableSessions="true" id="04cvbO9RLkBTn5TCPIOh0SKcH" idleTimeoutMins="120" maxTimeoutMins="120" persistent="false" timeoutDisplayUnit="MINUTES"/>
+        <policy authnContextSensitive="false" authnSourceId="IFPINGID" authnSourceType="ADAPTER" enableSessions="true" id="NYUaHIZTpJkpJjQIuZeoMByA9" idleTimeoutMins="120" maxTimeoutMins="120" persistent="false" timeoutDisplayUnit="MINUTES"/>
     </sourcePolicies>
 </authnSessionPolicies>

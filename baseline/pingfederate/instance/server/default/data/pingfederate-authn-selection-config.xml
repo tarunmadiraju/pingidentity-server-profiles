@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:AuthnSelectionConfig lastModifiedMillis="1601507064087" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
+<urn:AuthnSelectionConfig lastModifiedMillis="1605219496087" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
     <urn:AuthnSelectionTrees>
         <urn:AuthnSelectionTree treeName="Social-login-oidc" disabled="false" authnApiApp="">
             <urn:AstRoot context="">
@@ -156,7 +156,7 @@
                 </urn:AstChild>
                 <urn:AstChild context="nomfa">
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                        <urn:AuthnSourceKey type="ADAPTER">HTMLFormPD</urn:AuthnSourceKey>
+                        <urn:AuthnSourceKey type="ADAPTER">HTMLFORMAD</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
@@ -166,13 +166,13 @@
                         <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <urn:AuthnSourceKey type="ADAPTER">P1MFAV2</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
-                            <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFormPD" Value="username"/>
+                            <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFORMAD" Value="username"/>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                         </urn:AstChild>
                         <urn:AstChild context="Success">
-                            <urn:AstAction apcId="H1yG0ZQsd6wdLehS" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <urn:AstAction apcId="pdv62pGP9i0yAnhM" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                                 <urn:AttributeMapping>
                                     <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="P1MFAV2" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                     <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
@@ -222,7 +222,7 @@
                 </urn:AstChild>
                 <urn:AstChild context="No Match">
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                        <urn:AuthnSourceKey type="ADAPTER">HTMLFormPD</urn:AuthnSourceKey>
+                        <urn:AuthnSourceKey type="ADAPTER">HTMLFORMPINGID</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
@@ -231,7 +231,7 @@
                     <urn:AstChild context="Success">
                         <urn:AstAction apcId="smHHo4nmBNUncT5e" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <urn:AttributeMapping>
-                                <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="HTMLFormPD" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="HTMLFORMPINGID" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                 <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             </urn:AttributeMapping>
                         </urn:AstAction>
@@ -536,6 +536,33 @@
                                 <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             </urn:AttributeMapping>
                         </urn:AstAction>
+                    </urn:AstChild>
+                </urn:AstChild>
+                <urn:AstChild context="formad+p1mfa">
+                    <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <urn:AuthnSourceKey type="ADAPTER">HTMLFORMAD</urn:AuthnSourceKey>
+                        <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                    </urn:AstAction>
+                    <urn:AstChild context="Fail">
+                        <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                    </urn:AstChild>
+                    <urn:AstChild context="Success">
+                        <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <urn:AuthnSourceKey type="ADAPTER">P1MFAV2</urn:AuthnSourceKey>
+                            <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                            <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFORMAD" Value="username"/>
+                        </urn:AstAction>
+                        <urn:AstChild context="Fail">
+                            <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </urn:AstChild>
+                        <urn:AstChild context="Success">
+                            <urn:AstAction apcId="51jU77l0f0fte53t" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                <urn:AttributeMapping>
+                                    <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="P1MFAV2" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                </urn:AttributeMapping>
+                            </urn:AstAction>
+                        </urn:AstChild>
                     </urn:AstChild>
                 </urn:AstChild>
                 <urn:AstChild context="if">

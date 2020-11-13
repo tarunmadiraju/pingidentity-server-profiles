@@ -7,11 +7,29 @@
         <connection-url>jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false</connection-url>
         <driver-class>org.hsqldb.jdbcDriver</driver-class>
         <user-name>sa</user-name>
-        <password>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4wLjAuMTUifQ..9JshPheObQIqtnsyRoe1bw.TChapHR_8Poruxm3qdt7bQ.8WdqoX0xY5TkrBb-MQ4vtQ</password>
+        <password>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..iwMBqh7DuJNUXIlaWTBn6g.JUgawib_H97rwcBbxhVuQg.uBKF4Jc2janqbP4ga2ygwQ</password>
         <ping-db-type>Custom</ping-db-type>
         <allow-multi-value-attributes>false</allow-multi-value-attributes>
         <connectionTagList>
             <tagEntry connection-url="jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false" tags=""/>
+        </connectionTagList>
+    </local-tx-datasource>
+    <local-tx-datasource maskAttributeValues="false">
+        <description>JDBC-LAB</description>
+        <name>JDBC-LAB</name>
+        <jndi-name>JDBC-6EA174A16E315DEBA3109947EC466C52F1625163</jndi-name>
+        <connection-url>jdbc:sqlserver://10.101.49.229</connection-url>
+        <driver-class>com.microsoft.sqlserver.jdbc.SQLServerDriver</driver-class>
+        <user-name>Admin</user-name>
+        <password>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..ufe2n51JcUZ65z1qWPDYlA.MLOufQeql8KqCMKNOjXfZg.UaqOH2bgEUfbWCmXHsNwIA</password>
+        <min-pool-size>10</min-pool-size>
+        <max-pool-size>100</max-pool-size>
+        <blocking-timeout-millis>5000</blocking-timeout-millis>
+        <idle-timeout-minutes>5</idle-timeout-minutes>
+        <ping-db-type>Custom</ping-db-type>
+        <allow-multi-value-attributes>true</allow-multi-value-attributes>
+        <connectionTagList>
+            <tagEntry connection-url="jdbc:sqlserver://10.101.49.229" tags=""/>
         </connectionTagList>
     </local-tx-datasource>
 </datasources>

@@ -13,4 +13,5 @@
     <con:map name="FED-HUB-PFAS-SP"/>
     <con:map name="https://auth.pingone.com/13f48a3a-6ed9-4d67-9b65-c2256df981d9"/>
     <con:map name="http://pingone.com/e8935338-340d-4c0a-89e4-639ab4be15da/bkp"/>
+    <con:map name="PingOne Connector"/>
 </con:config>

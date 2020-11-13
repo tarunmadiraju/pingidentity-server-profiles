@@ -51,6 +51,21 @@
         <urn1:AttributeMap Name="Last_name" Type="Password Credential Validator" Value="pcv.mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:UserKeyToAccessTokenMapping>
+    <urn:UserKeyToAccessTokenMapping contextId="authz_req|apc.pdv62pGP9i0yAnhM" tokenManagerId="OIDCAD">
+        <urn1:AttributeMap Name="Role" Type="Text" Value="Administrator" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="sub" Type="LDAP" AttributeSourceId="AD" Value="givenName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="First_name" Type="LDAP" AttributeSourceId="AD" Value="givenName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="mail" Type="LDAP" AttributeSourceId="AD" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="Username" Type="LDAP" AttributeSourceId="AD" Value="givenName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="Last_name" Type="LDAP" AttributeSourceId="AD" Value="sn" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeSource Id="AD" Description="AD" Type="LDAP" DataSourceId="LDAP-8E9E4C77F6E71F317BD8865F133F3A22EC47AE3B" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+            <urn1:Parameter Name="filter" Value="samaccountname=${apc.subject}"/>
+            <urn1:Parameter Name="search_base" Value="CN=Users,DC=tarun,DC=lab"/>
+            <urn1:Parameter Name="search_scope" Value="SUBTREE_SCOPE"/>
+            <urn1:Parameter Name="memberof_nested_group" Value="false"/>
+        </urn1:AttributeSource>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:UserKeyToAccessTokenMapping>
     <urn:UserKeyToAccessTokenMapping contextId="authz_req|apc.H1yG0ZQsd6wdLehS" tokenManagerId="jwt">
         <urn1:AttributeMap Name="Role" Type="Text" Value="Administratorz" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="First_name" Type="LDAP" AttributeSourceId="PD" Value="givenName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
@@ -67,6 +82,7 @@
     </urn:UserKeyToAccessTokenMapping>
     <urn:UserKeyToAccessTokenMapping contextId="urn:ietf:params:oauth:grant-type:token-exchange|testtokenexchange" tokenManagerId="jwt">
         <urn1:AttributeMap Name="Role" Type="Text" Value="Administrator" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="sub" Type="Text" Value="test" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="First_name" Type="Processor Policy" Value="tepp.subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="mail" Type="Processor Policy" Value="tepp.subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="Username" Type="Processor Policy" Value="tepp.subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
@@ -114,6 +130,11 @@
             <urn1:Parameter Name="search_scope" Value="SUBTREE_SCOPE"/>
             <urn1:Parameter Name="memberof_nested_group" Value="false"/>
         </urn1:AttributeSource>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:ApcToUserKeyMapping>
+    <urn:ApcToUserKeyMapping sourcePluginId="pdv62pGP9i0yAnhM">
+        <urn1:AttributeMap Name="USER_NAME" Type="Authentication Policy Contract" Value="subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="USER_KEY" Type="Authentication Policy Contract" Value="subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:ApcToUserKeyMapping>
     <urn:ReuseExistingPersistentGrantForGrant>implicit</urn:ReuseExistingPersistentGrantForGrant>
