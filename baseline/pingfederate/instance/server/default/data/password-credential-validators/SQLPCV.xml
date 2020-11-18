@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:PluginConfiguration isInheritExtendedContractAttributes="false" name="SQLPCV" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="JDBC Datasource">JDBC-6EA174A16E315DEBA3109947EC466C52F1625163</urn:Field>
+        <urn:Field name="Statement Processing Type">Regular</urn:Field>
+        <urn:Field name="Hash Algorithm">None</urn:Field>
+        <urn:Field name="Hash Algorithm Method">None</urn:Field>
+        <urn:Field name="Binary Encoding">None</urn:Field>
+        <urn:Field name="Input Charset">UTF-8</urn:Field>
+        <urn:Field name="Output Charset">UTF-8</urn:Field>
+        <urn:Field name="Salt Query"/>
+        <urn:Field name="User Query">select * from dbo.users where lower(username) = ? and password = ?</urn:Field>
+        <urn:Field name="Password Update Statement"/>
+        <urn:Field name="Number of Password Attempts Allowed">1000</urn:Field>
+        <urn:Field name="Bad Attempts Query"/>
+        <urn:Field name="Update Bad Login Attempts Statement"/>
+        <urn:Field name="Reset Bad Login Attempts Statement"/>
+    </urn:Fields>
+    <urn:AdvancedFields/>
+    <urn:Tables/>
+</urn:PluginConfiguration>
