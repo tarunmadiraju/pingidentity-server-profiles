@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<md:EntityDescriptor entityID="PingOne Connector" urn:name="PingOne Connector" ID="P7UsxgrAaJjdx2Q62.DfV9wodTd" urn:baseUrl="https://api.pingone.com/v1" urn:LogLevel="ENHANCED" urn:isActive="true" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2">
+<md:EntityDescriptor entityID="PingOne Connector" urn:name="PingOne Connector" ID="P7UsxgrAaJjdx2Q62.DfV9wodTd" urn:baseUrl="https://api.pingone.com/v1" urn:LogLevel="ENHANCED" urn:isActive="false" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2">
     <md:Extensions>
         <urn:EntityExtension PFVersion="10.1.0.8" LicenseGroup="">
             <urn:DigitialSignatureAliases/>
@@ -19,7 +19,7 @@
     </md:Extensions>
     <md:RoleDescriptor protocolSupportEnumeration="pingfederate:protocol:noop" xsi:type="urn:PFNoopRoleDescriptorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <md:Extensions>
-            <urn:RoleExtension LastModified="2020-11-11T21:18:35.953Z"/>
+            <urn:RoleExtension LastModified="2020-11-19T00:26:56.234Z"/>
         </md:Extensions>
     </md:RoleDescriptor>
     <md:RoleDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" xsi:type="urn:PFAvailableCertsRoleDescriptorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>

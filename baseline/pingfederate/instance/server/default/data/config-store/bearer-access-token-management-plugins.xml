@@ -5,6 +5,7 @@
         <con:item name="OIDCTEST">com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin</con:item>
         <con:item name="PINGACCESS">com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin</con:item>
         <con:item name="OIDCAD">com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin</con:item>
+        <con:item name="PC">org.sourceid.oauth20.token.plugin.impl.ReferenceBearerAccessTokenManagementPlugin</con:item>
     </con:map>
     <con:item name="bearer-access-token-management-plugins-default">jwt</con:item>
     <con:map name="bearer-access-token-management-plugins-parents">
@@ -17,5 +18,6 @@
         <con:item name="OIDCTEST">944795</con:item>
         <con:item name="PINGACCESS">1646095</con:item>
         <con:item name="OIDCAD">64106</con:item>
+        <con:item name="PC">1320969</con:item>
     </con:map>
 </con:config>

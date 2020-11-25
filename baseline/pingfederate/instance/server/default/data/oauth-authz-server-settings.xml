@@ -16,7 +16,8 @@
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:UserKeyToAccessTokenMapping>
     <urn:UserKeyToAccessTokenMapping contextId="authz_req|apc.smHHo4nmBNUncT5e" tokenManagerId="jwt">
-        <urn1:AttributeMap Name="Role" Type="Text" Value="Administratorz" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="Role" Type="LDAP" AttributeSourceId="PD" Value="employeeType" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="sub" Type="Authentication Policy Contract" Value="apc.subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="First_name" Type="LDAP" AttributeSourceId="PD" Value="givenName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="mail" Type="LDAP" AttributeSourceId="PD" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="Username" Type="Authentication Policy Contract" Value="apc.subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
@@ -30,7 +31,7 @@
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:UserKeyToAccessTokenMapping>
     <urn:UserKeyToAccessTokenMapping contextId="authz_req|apc.smHHo4nmBNUncT5e" tokenManagerId="PINGACCESS">
-        <urn1:AttributeMap Name="Role" Type="Text" Value="Administratorz" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="Role" Type="LDAP" AttributeSourceId="PD" Value="employeeType" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="First_name" Type="LDAP" AttributeSourceId="PD" Value="givenName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="mail" Type="LDAP" AttributeSourceId="PD" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="Username" Type="Authentication Policy Contract" Value="apc.subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
@@ -137,5 +138,9 @@
         <urn1:AttributeMap Name="USER_KEY" Type="Authentication Policy Contract" Value="subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:ApcToUserKeyMapping>
+    <urn:ClientCredentialsToAccessTokenMapping contextId="client_credentials" tokenManagerId="PC">
+        <urn1:AttributeMap Name="sub" Type="Text" Value="Tarun" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:ClientCredentialsToAccessTokenMapping>
     <urn:ReuseExistingPersistentGrantForGrant>implicit</urn:ReuseExistingPersistentGrantForGrant>
 </urn:OAuthConfig>

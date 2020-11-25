@@ -4,7 +4,7 @@
     <target id="PingOne">
       <parameter name="ENVIRONMENT_ID" value="13f48a3a-6ed9-4d67-9b65-c2256df981d9"/>
       <parameter name="CLIENT_ID" value="f114ff6a-1609-4886-ab40-ac92cb01370d"/>
-      <parameter name="CLIENT_SECRET" value="OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..Hg4kWEaH2qMDP9krN9n42g.lXSSgMgzN31N-piAzLe4VUZWs7MqF3aFX6lGRrM_jWHrY21_n7outQwSMDf02n9-X9IIt8ZaArPFvroAmWpoMpOTzEfZJlCbOnm-Vt-jWNg.-Bc-6tCpjEihQt6_Uz430w"/>
+      <parameter name="CLIENT_SECRET" value="OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..9lapbTQoZra1-TBejijOqQ.fgmKe5Vvc92RL-Z_wMKIZRZLjxflUIrt4t0GNdjYgREQX3bCdzPzxTmR-6b86I7oY5B2RyvI1Tv2tLVMdNxv97ERicFdHcLiXYrdoDzvmRE.DhVelAl0pHd9G7ukWnEQ5A"/>
       <parameter name="Provisioning Options" value=""/>
       <parameter name="CREATE_USERS_PROV_OPT" value="true"/>
       <parameter name="UPDATE_USERS_PROV_OPT" value="true"/>

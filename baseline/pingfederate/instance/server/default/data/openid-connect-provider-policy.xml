@@ -34,7 +34,7 @@
     </urn:ProviderPolicyGroup>
     <urn:ProviderPolicyGroup policyId="pingaccess" idTokenLife="5" includeSriInIdToken="true" includeUserInfoInIdToken="true" includeSHashInIdToken="false" returnIdTokenOnRefreshGrant="false" policyName="pingaccess" accessTokenManagerId="jwt">
         <urn:UserInfoMapping>
-            <urn1:AttributeMap Name="Role" Type="Text" Value="Administrator" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="Role" Type="Token" Value="Role" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:AttributeMap Name="sub" Type="Token" Value="Username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:AttributeMap Name="First_name" Type="LDAP" AttributeSourceId="PD" Value="givenName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:AttributeMap Name="mail" Type="LDAP" AttributeSourceId="PD" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
