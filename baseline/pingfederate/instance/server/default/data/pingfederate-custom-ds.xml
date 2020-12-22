@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cus:custom-sources xmlns:cus="http://pingidentity.com/2006/03/custom-ds">
     <cus:custom-source id="Other-81A4A1A366699C13CC4D490483E7556E3055F045" description="P1DS" driverClassName="com.pingidentity.plugins.datastore.p14c.PingOneForCustomersDataStore" maskAttributeValues="false"/>
+    <cus:custom-source id="Other-8717278C22FD36FEC96C40E03A816E85FEEA75A5" description="P14CMYPING-DS" driverClassName="com.pingidentity.plugins.datastore.p14c.PingOneForCustomersDataStore" maskAttributeValues="false"/>
 </cus:custom-sources>

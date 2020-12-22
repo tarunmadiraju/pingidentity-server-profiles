@@ -3,9 +3,10 @@
     <urn:Fields>
         <urn:Field name="Environment ID">13f48a3a-6ed9-4d67-9b65-c2256df981d9</urn:Field>
         <urn:Field name="Client ID">978f3d5d-39f6-49c7-9c3f-57db6608e739</urn:Field>
-        <urn:Field name="Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..CiavvuRZA0ZgJwOCExItrw.RL_XHHB4epFPLd3-tj-lbe1NzwirOAAIT1caVF0b9ayhkKIT6272Yk0eZpVxrMe5HjdMq9z4kubfRwc5qo5Ycd48Ux3Xf-iLS4-kf182SJ0.wD7Ppke7IIFFNCk7fctIHQ</urn:Field>
+        <urn:Field name="Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4yLjAuMTMifQ..BokYGqj9Ax3wt_gxCDlixg.zpywnzkZ33iKDazWipJn_gq8DHebifi2If_1g39PGoocSpfVGWejpbgnQTgFFlX9D3iQQlbH5Uarti7oAOKgtH9IvLwEVogHJSUBUuCt0P0.YR1RtPGOoVMg6S6qVkEUYw</urn:Field>
         <urn:Field name="PingOne API Service">https://api.pingone.com/v1</urn:Field>
         <urn:Field name="PingOne Authorization Service">https://auth.pingone.com</urn:Field>
+        <urn:Field name="Read Timeout">1000</urn:Field>
         <urn:Field name="Connection Timeout">10000</urn:Field>
         <urn:Field name="Retry Request">true</urn:Field>
         <urn:Field name="Maximum Retries Limit">5</urn:Field>
@@ -17,6 +18,7 @@
     <urn:AdvancedFields>
         <urn:Field name="PingOne API Service">https://api.pingone.com/v1</urn:Field>
         <urn:Field name="PingOne Authorization Service">https://auth.pingone.com</urn:Field>
+        <urn:Field name="Read Timeout">1000</urn:Field>
         <urn:Field name="Connection Timeout">10000</urn:Field>
         <urn:Field name="Retry Request">true</urn:Field>
         <urn:Field name="Maximum Retries Limit">5</urn:Field>
@@ -26,6 +28,11 @@
         <urn:Field name="Custom Proxy Port"/>
     </urn:AdvancedFields>
     <urn:Tables>
-        <urn:Table name="Custom Attributes Details"/>
+        <urn:Table name="Custom Attributes Details">
+            <urn:Row defaultRow="false">
+                <urn:Field name="Local Attribute">popu.id</urn:Field>
+                <urn:Field name="PingOne for Customers Attribute">/population/id</urn:Field>
+            </urn:Row>
+        </urn:Table>
     </urn:Tables>
 </urn:AdapterConfiguration>

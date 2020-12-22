@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:AuthnSelectionConfig lastModifiedMillis="1606259001142" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
+<urn:AuthnSelectionConfig lastModifiedMillis="1608667368069" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
     <urn:AuthnSelectionTrees>
         <urn:AuthnSelectionTree treeName="Social-login-oidc" disabled="false" authnApiApp="">
             <urn:AstRoot context="">
@@ -23,6 +23,7 @@
                             <urn:ExpectedValue>identity.registration</urn:ExpectedValue>
                             <urn:Result>registration</urn:Result>
                         </urn:attributeRule>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -31,6 +32,7 @@
                         <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <urn:AuthnSourceKey type="ADAPTER">Google</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -64,6 +66,7 @@
                             <urn:AuthnSourceKey type="ADAPTER">PingIDSDKPF</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                             <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFormPD" Value="username"/>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -89,6 +92,7 @@
                 <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     <urn:AuthnSourceKey type="ADAPTER">HTMLFormPD</urn:AuthnSourceKey>
                     <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                    <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                 </urn:AstAction>
                 <urn:AstChild context="Fail">
                     <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -114,6 +118,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFormPD</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -131,6 +136,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFormPD</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -140,6 +146,7 @@
                             <urn:AuthnSourceKey type="ADAPTER">PingID</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                             <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFormPD" Value="username"/>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -158,6 +165,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFORMAD</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -167,6 +175,7 @@
                             <urn:AuthnSourceKey type="ADAPTER">P1MFAV2</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                             <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFORMAD" Value="username"/>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -185,6 +194,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFORMDB</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -203,10 +213,29 @@
         <urn:AuthnSelectionTree treeName="PingAccess" disabled="false" authnApiApp="">
             <urn:AstRoot context="">
                 <urn:AstAction authnSelectorId="PA" xsi:type="urn:AuthnSelectorActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                <urn:AstChild context="Externallogin">
+                    <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <urn:AuthnSourceKey type="IDP_CONN">UJk7fkbdJPPJVn1g72AtILgYOOY</urn:AuthnSourceKey>
+                        <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
+                    </urn:AstAction>
+                    <urn:AstChild context="Fail">
+                        <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                    </urn:AstChild>
+                    <urn:AstChild context="Success">
+                        <urn:AstAction apcId="smHHo4nmBNUncT5e" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <urn:AttributeMapping>
+                                <urn1:AttributeMap Name="subject" Type="IdP Connection" AttributeSourceId="UJk7fkbdJPPJVn1g72AtILgYOOY" Value="SAML_SUBJECT" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                            </urn:AttributeMapping>
+                        </urn:AstAction>
+                    </urn:AstChild>
+                </urn:AstChild>
                 <urn:AstChild context="IdentityF">
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFORMPINGID</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -225,6 +254,7 @@
                         <urn:AuthnSourceKey type="ADAPTER">PingIDMFA</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                         <urn:InputIdMapping Type="Context" Value="context.RequestedUser"/>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -242,6 +272,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFORMPINGID</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -259,6 +290,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFormPD</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -281,6 +313,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFormPD</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -290,6 +323,7 @@
                             <urn:AuthnSourceKey type="ADAPTER">PingID</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                             <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFormPD" Value="username"/>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -308,6 +342,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFormPD</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -317,6 +352,7 @@
                             <urn:AuthnSourceKey type="ADAPTER">PingID</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                             <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFormPD" Value="username"/>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -335,6 +371,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFormPD</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -352,6 +389,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFORMDB</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -372,6 +410,7 @@
                 <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     <urn:AuthnSourceKey type="ADAPTER">HTMLFormPD</urn:AuthnSourceKey>
                     <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                    <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                 </urn:AstAction>
                 <urn:AstChild context="Fail">
                     <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -395,6 +434,7 @@
                 <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     <urn:AuthnSourceKey type="ADAPTER">Kerberos</urn:AuthnSourceKey>
                     <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                    <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                 </urn:AstAction>
                 <urn:AstChild context="Fail">
                     <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -426,6 +466,7 @@
                         <urn:ExpectedValue>companyx.com</urn:ExpectedValue>
                         <urn:Result>companyx</urn:Result>
                     </urn:attributeRule>
+                    <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                 </urn:AstAction>
                 <urn:AstChild context="Fail">
                     <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -434,6 +475,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">x509</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -452,6 +494,7 @@
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFORMAD</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                         <urn:InputIdMapping Type="Adapter" AttributeSourceId="IdentityF" Value="subject"/>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -475,6 +518,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFORMfaspozad</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -498,6 +542,7 @@
                             <urn:ExpectedValue>google</urn:ExpectedValue>
                             <urn:Result>google users</urn:Result>
                         </urn:attributeRule>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -506,6 +551,7 @@
                         <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <urn:AuthnSourceKey type="ADAPTER">Google</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -533,6 +579,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFormPD</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -542,6 +589,7 @@
                             <urn:AuthnSourceKey type="ADAPTER">PingID</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                             <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFormPD" Value="username"/>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -560,6 +608,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFORMAD</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -577,6 +626,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFORMAD</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -586,6 +636,7 @@
                             <urn:AuthnSourceKey type="ADAPTER">P1MFAV2</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                             <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFORMAD" Value="username"/>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -604,6 +655,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFORMDB</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -621,6 +673,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFORMP1</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -638,6 +691,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">IdentityF</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -647,6 +701,7 @@
                             <urn:AuthnSourceKey type="ADAPTER">PingID</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                             <urn:InputIdMapping Type="Adapter" AttributeSourceId="IdentityF" Value="subject"/>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -665,6 +720,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">IdentityF</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -682,6 +738,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">Kerberos</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -699,6 +756,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">Kerberos</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -708,6 +766,7 @@
                             <urn:AuthnSourceKey type="ADAPTER">PingID</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                             <urn:InputIdMapping Type="Adapter" AttributeSourceId="Kerberos" Value="Username"/>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -726,6 +785,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFORMAD</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -735,6 +795,7 @@
                             <urn:AuthnSourceKey type="ADAPTER">PingIDSDKPF</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                             <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFORMAD" Value="username"/>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -768,6 +829,7 @@
                         <urn:ExpectedValue>pingidentity.com</urn:ExpectedValue>
                         <urn:Result>company2</urn:Result>
                     </urn:attributeRule>
+                    <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                 </urn:AstAction>
                 <urn:AstChild context="Fail">
                     <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -776,6 +838,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="IDP_CONN">UJk7fkbdJPPJVn1g72AtILgYOOY</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -793,6 +856,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFormPD</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -819,6 +883,7 @@
                         <urn:ExpectedValue>FIDO</urn:ExpectedValue>
                         <urn:Result>FIDO</urn:Result>
                     </urn:attributeRule>
+                    <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                 </urn:AstAction>
                 <urn:AstChild context="Fail">
                     <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -827,6 +892,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">PingID</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -846,6 +912,7 @@
                         <urn:AuthnSourceKey type="ADAPTER">PingID</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                         <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFORMFIDO" Value="username"/>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>

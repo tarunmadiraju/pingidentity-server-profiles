@@ -17,6 +17,7 @@
         <con:item name="HTMLFORMDB">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
         <con:item name="HTMLFORMP1">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
         <con:item name="PingIDMFA">com.pingidentity.adapters.pingid.PingIDAdapter</con:item>
+        <con:item name="P1RISK">com.pingidentity.adapters.pingone.risk.PingOneRiskManagementIdpAdapter</con:item>
     </con:map>
     <con:map name="IdpAdapterInstanceParents"/>
     <con:map name="SpAuthnAdapterInstances">

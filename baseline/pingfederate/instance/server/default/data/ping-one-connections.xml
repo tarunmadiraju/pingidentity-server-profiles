@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pingOneConnectionsConfig>
+    <connections>
+        <active>true</active>
+        <creationDate>2020-12-18T23:21:59.430Z</creationDate>
+        <credentialId>f5ba79dd-d6a9-4dde-b144-b2f6b4d3117d</credentialId>
+        <description>P14C-MYPING-DEFAULT-ENVIRONMENT</description>
+        <encryptedCredential>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiIxMC4yLjAuMTMifQ..WMPvNCXXY1-RBABh5Hz0bw.Qvaj8BPlggZOZvi6MVAUFdeqsjKoD7-b9xvsgo3D-vw_lvbaTSaQt1JbxIwf-Yckk8VL1H_YEmY6-hAXiA7t6cCB0GG0Mtb3J6IT_rQrQCRmSjtWA-8Uizb2zdecU0ivwCTkB6swg5CEhpP_KZ_BIqVMFd8jMF5aNSqIUucIdY7lyEGZQampM5LfkaqI02ZUOZL6N_azVSXbWDRO_09TCLv5PZtR2x9lPKGuI_4AS5stKD_SuQ36fE1p0IgUpiX5c0vQnJkPUAVTQQiM7cBQyjVGWGgeaYTqVRPveNFcFS3nvkbc-mq61Uq93aNJkqTASWhjux5NjiKLhj-Yi3yHvKs4EJnkAZZDKKRTRJetFR0j9PQbdul7RUNXfT-nUAoI7zzDquqn3oPI0-5EqARi29NzzK0YA-hhg9PhXGTXGrIT6XizJ00iUtqoweaoJUW84WYESpqLc49m2fbSmBnFwsNxsf4MYcuiVk9MMo3eHA8yOz3okVgWy5oZT4zn8ThjCChhhgiKMpgwhEMBp0KE1QYoD1o9gVsCI4rkzqJ2iyy2_4sgnaCkGX7-K9j60PwDYxhg84vcgJpZlEWRVaM2TMu41TG4scEfg41XvqE8V9Kw9gPVXUrHJQZ_gjfDeyIVYcxrUbRRhrcf3ufF_W3fsbV7s6jwaKztFI1KPhgrquaUv6HAU-iCf5t2DZyxU5D-DiRWmDHoDDAZKFW5uPbcYw45UFK1gFSRF-Z_YWNawOn-28PrY6B61isY_DgnKmQosJO5eslGq2GpUg77ZrL26ZqyJSWOy6PWu6J6U8z2hf-4g9xbHr0JQaAsNRFc6Q-36sk8znn7Au4Dz0z3KQdoTuKJ2alz8HwCnL_bcPvaOrqGW8YPEiydi_y5DiBZnz7MkuulQT4dqvK5G0kmgR-crCLJriXMtaMBFfXpLrmWVKQKlAUFSzejXoNlEEmWU7x72JdiV0sa3HngIWnWIZEBARhnyl9HJKburTepYZ9ZNomDQGji2q64o7CbzxAaTtblAahwNCh1JSUnJoW3BqNnTDPWBu41mpaETDcBave7qIm28I_z8S5ncgVdln8X-SuJikC_lp5ntUEMWiZNRuUWgBk7ZL5LF6LlZq9fL7OS_kKok4Pdug1UlIqHDVqaU5Q2LGHdYb1Nu7tIwOcN5eV2oFz9xNFiWWwhAq-oHsa4YQtV786E6brTAM5hDy5SyOrD4iLAhlSjD7TsfZmnPcyY97sL_VSCp6uV9E8KbbvYLaRGqdHj6hcUTQeB7yXLOkJl4vhHuiGYEP3EOPSY8stWDXxGk-2lGmb1Gu9rbqgT1kp4Bx9Lq_KOeaaaiBjLMvpBgYFq7L8oyAAQKsgJ0Zo1ZAf3UgMRCKPe1hs1PJBIhdBHP3u60v3L8i6_cmI9bKK8icW_QEVf5Lh_g_R2gMdwC3akLEKlNcivjR4q188yb0JfxdecTHndKB0USuOD58SN5O45ZIz2qkaX3-Ib1nLGLjJmKUJ8tiamiSTQUoet0uJgGkjIemO5b8VeUqREQlxM1wdVKvagq8_jER4Yt1W7Jo9GxoWHhu3kdHsIu1b0YSdMzLptvnzNlPX5sK6IwrMbcvH8ysMLppiK4tQFTxprZA.lqjTORDkRe2TByU1_t4AVA</encryptedCredential>
+        <environmentId>13f48a3a-6ed9-4d67-9b65-c2256df981d9</environmentId>
+        <id>KUl0MvkdIKctsroP9BBJ3d</id>
+        <name>internal_tarunm_1627775790</name>
+        <organizationName>internal_tarunm_1627775790</organizationName>
+        <pingOneAuthenticationApiEndpoint>https://auth.pingone.com</pingOneAuthenticationApiEndpoint>
+        <pingOneConnectionId>7b36f3a9-72cf-4f56-b3d4-eb6ac59072d1</pingOneConnectionId>
+        <pingOneManagementApiEndpoint>https://api.pingone.com</pingOneManagementApiEndpoint>
+        <region>North America</region>
+    </connections>
+</pingOneConnectionsConfig>

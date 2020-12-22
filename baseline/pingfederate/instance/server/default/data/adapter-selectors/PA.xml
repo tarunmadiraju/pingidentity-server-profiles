@@ -9,6 +9,7 @@
     <urn:Tables/>
     <urn:ExtendedContractAttributes>
         <urn:AttributeName>PINGID</urn:AttributeName>
+        <urn:AttributeName>Externallogin</urn:AttributeName>
         <urn:AttributeName>IdentityF</urn:AttributeName>
     </urn:ExtendedContractAttributes>
 </urn:PluginConfiguration>
